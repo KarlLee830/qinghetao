@@ -1,0 +1,33 @@
+@import '@common/styles/index.scss';
+
+.dzqp-post-widget {
+  margin: 10px 16px 0;
+  padding: 0 24px;
+  display: flex;
+  height: 50px;
+  background-color: $text-bg-color;
+  border-radius: $border-radius-small;
+  font-size: $font-size-label;
+  align-items: center;
+  justify-content: space-between;
+  &.dzqp-pc,
+  &.dzqp-mini {
+    margin: 10px 0 0;
+  }
+
+  &__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+    color: $primary-color;
+    font-size: 20px !important;
+  }
+
+  &__text {
+    display: inline-block;
+    margin-left: $margin-10;
+  }
+}

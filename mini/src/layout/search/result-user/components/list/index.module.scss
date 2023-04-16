@@ -1,0 +1,14 @@
+@import '@common/styles/index.scss';
+
+.container {
+  overflow: hidden;
+}
+.list {
+  height: 100%;
+  min-height: 500px;
+}
+:global {
+  .dzq-pull-refresh__loading {
+    font-size: $font-size-primary;
+  }
+}

@@ -1,0 +1,192 @@
+@import '@common/styles/index.scss';
+
+.body {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: $mask-bg-color;
+  top: 0;
+  left: 0;
+  z-index: $zindex-popup;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: $white;
+  border-radius: $border-radius-big $border-radius-big 0 0;
+  overflow: hidden;
+  padding: $padding-4n;
+  box-sizing: border-box;
+  position: relative;
+
+  :global {
+    .dzq-textarea__inner {
+      background: $text-bg-color2;
+      padding: $padding-2n $padding-3n;
+      height: 80px !important;
+      resize: none;
+      font-size: $font-size-base;
+      -webkit-appearance: none; // ios下去除上面阴影
+      overflow: auto;
+
+      &:placeholder {
+        color: $disabled-color;
+      }
+    }
+    .dzq-textarea {
+      border: none;
+    }
+  }
+}
+
+.safeArea {
+  background: $white;
+  width: 100%;
+  height: constant(safe-area-inset-bottom); ///兼容 IOS<11.2/
+  height: env(safe-area-inset-bottom); ///兼容 IOS>11.2/
+}
+
+.keyboard {
+  background: $white;
+}
+
+.placeholder {
+  color: $disabled-color;
+}
+
+.main {
+  background: $white;
+  width: 100%;
+  position: relative;
+
+  .valueScroll {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    padding: $padding-2n 0;
+    background: $text-bg-color2;
+    border-radius: $border-radius-small;
+  }
+}
+
+.button {
+  padding-top: rem($margin-4n);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.operates {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .operate {
+    margin-right: rem($margin-6n);
+    color: $text-color-regular;
+
+    &.actived {
+      color: $primary-color;
+    }
+  }
+}
+
+.input {
+  width: 100% !important;
+  
+  // height: 64px;
+}
+
+.divider {
+  margin: 0 -50% 0 -50% !important;
+  width: 200% !important;
+  // transform: translateX(-50%);
+}
+
+.ok {
+  font-size: $font-size-base;
+  line-height: $font-line-height-base;
+  color: $primary-color;
+}
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  Text {
+    margin-top: $margin-1n;
+  }
+}
+
+.emojis {
+  // position: absolute;
+  // left: 0;
+  // bottom: 50px;
+  height: 218px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: $zindex-dialog;
+  overflow-y: scroll;
+  background: $white;
+  border-top: $border-solid-1;
+  // padding-bottom: constant(safe-area-inset-bottom); ///兼容 IOS<11.2/
+  // padding-bottom: env(safe-area-inset-bottom); ///兼容 IOS>11.2/
+
+  :global {
+    .dzq-toolbar-emoji {
+      border-radius: 0;
+    }
+  }
+}
+
+.atSelect {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: $zindex-dialog;
+  overflow-y: scroll;
+}
+
+.imageUpload {
+  margin: $margin-2n 0;
+
+  :global {
+    .dzq-upload.is-card {
+      padding: 0;
+    }
+    .dzq-upload__area,
+    .dzq-upload-list-card__item {
+      width: rem(109) !important;
+      height: rem(109) !important;
+      margin: 0 rem(8) rem(8) 0;
+    }
+  }
+}
+
+.disabled {
+  color: $disabled-color;
+}

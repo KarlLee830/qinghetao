@@ -1,0 +1,22 @@
+@import '@common/styles/index.scss';
+.container {
+  background: $body-bg-color;
+}
+
+.body {
+  background: $white;
+
+  .commentItems {
+    border-bottom: $border-solid-1;
+
+    :global {
+      .dzq-comment {
+        padding: rem($padding-2n) 0 rem($padding-4n);
+      }
+    }
+
+    &.isLastOne {
+      border-bottom: none;
+    }
+  }
+}

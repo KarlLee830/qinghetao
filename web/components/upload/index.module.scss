@@ -1,0 +1,151 @@
+/* stylelint-disable */
+@import '@common/styles/index.scss';
+
+.text-grey {
+  color: $text-color-secondary;
+}
+
+.flex-column-center {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+$background-color: $body-bg-color;
+$width: rem(169);
+
+.dzq-custom-upload {
+  display: inline-block;
+
+  .dzq-upload {
+    display: inline-block;
+    padding: 0;
+  }
+
+  .dzq-upload-list-list__item {
+    display: none;
+  }
+}
+
+.dzq-upload-reset {
+  :global {
+    .dzq-upload {
+      width: auto;
+      padding: 0 rem($padding-4n) rem($padding-4n);
+
+      &.is-card {
+        .dzq-upload-list-card {
+          margin-right: rem(-$margin-5);
+          font-size: 0;
+        }
+
+        .dzq-upload__area,
+        .dzq-upload-list-card__item {
+          padding: 0;
+          margin: 0 rem($margin-5) rem($margin-5) 0;
+          width: $width;
+          height: $width;
+          font-size: 0;
+          color: $text-color-secondary;
+          background-color: $background-color;
+          border-color: $background-color;
+          border-radius: $border-radius-small;
+          overflow: hidden;
+          .dzq-icon-DeleteOutlined {
+            color: $white;
+          }
+          &.is-error {
+            border-color: $error-color;
+            color: $error-color;
+          }
+        }
+
+        .dzq-upload-list-card__thumbUrl {
+          // width: $width;
+          // height: $width;
+          object-fit: cover;
+          border-radius: $border-radius-small;
+          width: 100%;
+          height: 100%;
+        }
+
+        .dzq-upload-list-card__operate {
+          top: auto;
+          bottom: 0;
+          width: 100%;
+          height: rem(40);
+          line-height: rem(40);
+          text-align: center;
+          background-color: $mask-bg-color;
+        }
+
+        .dzq-upload__btntext {
+          margin-top: rem($margin-2n);
+        }
+
+        .dzq-progress-circle__area {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .dzq-upload-list-list {
+        flex-direction: column;
+        .dzq-upload-list-list__name {
+          width: 45vw;
+          line-height: rem(32);
+          @include text-ellipsis();
+        }
+        .dzq-button--text {
+          width: 100%;
+          height: 52px;
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        .dzq-upload__btntext {
+          margin-left: rem($margin-2n);
+        }
+
+        .dzq-upload-list-list__item {
+          margin-top: 0;
+          margin-bottom: rem($margin-2n);
+          border-radius: $border-radius-small;
+          background-color: $background-color;
+          border: 0;
+        }
+
+        .dzq-upload-list-list__info {
+          padding-right: 0;
+          background-color: $background-color;
+          border: 0;
+        }
+
+        .dzq-upload-list-list__icon {
+          color: $success-color;
+        }
+
+        .dzq-upload-list-list__operate {
+          width: rem(40);
+          margin: 0;
+          text-align: center;
+          :global {
+            color: $text-color-secondary;
+          }
+        }
+      }
+
+      .dzq-button--text {
+        font-size: $font-size-base;
+        color: $text-color-secondary;
+        background-color: $background-color;
+        border: 0;
+      }
+
+      .dzq-upload__btntext {
+        display: inline-block;
+        font-size: $font-size-base;
+      }
+    }
+  }
+}

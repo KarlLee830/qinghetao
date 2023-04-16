@@ -1,0 +1,26 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.container {
+  height: 100vh;
+}
+
+.content {
+  @include content;
+  .button {
+    @include button;
+  }
+  .input {
+    @include input;
+    @include passwordInput;
+  }
+  .title {
+    @include title;
+  }
+  .functionalRegion {
+    @include functionalRegion;
+  }
+  .tips{
+    @include titleTips;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,61 @@
+@import '@common/styles/index.scss';
+
+.container {
+  width: 100%;
+  background: $white;
+  // padding: rem($padding-4n) rem($padding-6n) 0 rem($padding-6n);
+  border-radius: rem($border-radius-small);
+  box-sizing: border-box;
+
+  &.isEmpty {
+    padding-bottom: rem($padding-4n);
+  }
+}
+
+.header {
+  margin-bottom: rem($margin-4n);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: normal;
+  background: $white;
+  line-height: rem(22);
+
+  .number {
+    font-size: rem($font-size-middle);
+    color: $text-color-primary;
+  }
+
+  .sort {
+    font-size: rem($font-size-primary);
+    color: $text-color-secondary;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .sortText {
+      padding-left: rem($padding-2n);
+      cursor: pointer;
+    }
+    .sortIcon {
+      cursor: pointer;
+    }
+  }
+}
+
+.body {
+  background: $white;
+
+  .commentItems {
+    border-bottom: $border-solid-1;
+
+    &:first-child {
+      margin-top: rem(-$margin-6n);
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

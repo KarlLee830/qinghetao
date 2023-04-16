@@ -1,0 +1,52 @@
+@import '@common/styles/index.scss';
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .header {
+        height: 70px;
+        display: flex;
+        align-items: center;
+
+        .img {
+            height: 38px;
+            width: 38px;
+            border-radius: 19px;
+            background: $body-bg-color;
+            margin-right: 8px;
+        }
+
+        .title {
+            background: $body-bg-color;
+            height: 18px;
+            width: 100px;
+            
+        }
+
+        .subTitle {
+            background: $body-bg-color;
+            height: 18px;
+            width: 200px;
+            margin-top: 4px;
+        }
+    }
+
+    .content {
+        flex: 1;
+        background: $body-bg-color;
+    }
+
+    .footer {
+        height: 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .bottom {
+            height: 20px;
+            width: 50px;
+            background: $body-bg-color;
+        }
+    }
+}

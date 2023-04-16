@@ -1,0 +1,42 @@
+@import '@common/styles/index.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem($padding-6n) 0;
+  border-radius: $border-radius-small;
+}
+
+.initContainer {
+  background: $white;
+}
+
+.init {
+  font-size: rem($font-size-primary);
+
+  * {
+    color: $loading-text-color;
+  }
+}
+
+.loadMore {
+  font-size: rem($font-size-label);
+
+  * {
+    color: $loading-text-color;
+  }
+}
+
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem($font-size-primary);
+  color: $loading-text-color;
+
+  .text {
+    margin-left: rem(8);
+  }
+}

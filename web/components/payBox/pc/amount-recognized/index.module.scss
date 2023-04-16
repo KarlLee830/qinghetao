@@ -1,0 +1,64 @@
+@import '@common/styles/index.scss';
+
+#amountContainer {
+  .asBtn {
+    border-radius: rem(5);
+    height: rem(36);
+    padding: 0;
+    line-height: rem(36);
+    :global {
+      .dzq-spin__icon {
+        width: rem(14);
+        height: rem(14);
+      }
+    }
+  }
+}
+
+// 外部容器
+.amountWrapper {
+  background: $white;
+  min-height: rem(280);
+  width: rem(400);
+  font-size: rem($font-size-large);
+  line-height: rem(21);
+  padding: rem($padding-6n);
+  box-sizing: border-box;
+  border-radius: $border-radius-small;
+  // overflow-y: auto;
+  .amountAddUp {
+    font-size: rem($font-size-base);
+    height: rem(60);
+    border-radius: rem(5);
+    background: var(--color-warn10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color-primary;
+  }
+  .amountMoney {
+    color: $error-color;
+    font-weight: 600;
+    font-size: rem(20);
+  }
+  .amountSubmit {
+    width: rem(248);
+    margin: rem($margin-6n) auto 0;
+    text-align: right;
+    font-size: rem($font-size-middle);
+  }
+  .asBtn {
+    font-size: rem(14);
+  }
+  .amountCloseBtn {
+    position: absolute;
+    right: rem(24);
+    top: rem(22);
+    cursor: pointer;
+    color: $text-color-secondary;
+    text-shadow: 0 -1 0 0;
+    &:hover {
+      color: $info-color;
+    }
+  }
+}

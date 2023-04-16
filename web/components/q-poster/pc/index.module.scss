@@ -1,0 +1,125 @@
+@import '@common/styles/index.scss';
+
+.list {
+  width: 100%;
+  /*background: var(--color-white);*/
+  
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .prefix {
+      color: var(--color-text-secondary);
+      word-break: keep-all;
+    }
+    .title {
+      color: var(--color-text-primary);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .itemH5 {
+    height: rem(36);
+    border-bottom: rem(1) solid var(--border-line-color);
+    // box-sizing: border-box;
+    position: relative;
+    
+    &:last-child{
+      border-bottom: rem(1) solid transparent;
+    }
+    .prefix {
+      font-size: rem($font-size-primary);
+      line-height: 1.5;
+      margin-right: rem($padding-4n);
+      width: rem(28);
+      overflow: hidden;
+      flex-shrink: 1;
+      position: relative;
+      top: rem(1);
+    }
+    .title {
+      flex: 1;
+      font-size: rem($font-size-primary);
+      line-height: 1.5;
+      position: relative;
+      top: rem(1);
+      .richText{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        word-break: break-all;
+        font-size: rem(14);
+        width: 96%;
+      }
+      :global {
+        .qq-emotion, .dzq-img {
+          height: rem(20);
+          width: rem(20);
+          position: relative;
+          top: rem(-1);
+        }
+      }
+      
+    }
+  }
+  .itemPC {
+    cursor: pointer;
+    height: rem(38);
+    border-radius: rem(5);
+    
+    .prefix {
+      font-size: rem($font-size-middle);
+      line-height: rem($font-line-height-small);
+      margin-right: rem($margin-3n);
+      @include media('l-pc') {
+        margin-right: rem($margin-10);
+      }
+      @include media('s-pc') {
+        margin-right: rem($margin-10);
+      }
+    }
+    .title {
+      font-size: rem($font-size-middle);
+      line-height: rem($font-line-height-small);
+      &:hover{
+        color: $primary-color;
+      }
+      .richText{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        word-break: break-all;
+        font-size: rem($font-size-middle);
+        a {
+          color: $primary-color;
+          &:hover {
+            color: $primary-color6;
+          }
+        }
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      :global {
+        .qq-emotion, .dzq-img {
+          height: rem(20);
+          width: rem(20);
+          position: relative;
+          top: rem(-1);
+        }
+      }
+    }
+  }
+}
+.bodyimg {
+	border-radius: 4px;
+  margin-bottom: 10px;
+  height: 281px;
+	width: 100%;
+}
+.bodyimg img {
+	border-radius: 4px;
+	
+}
+

@@ -1,0 +1,87 @@
+@import '@common/styles/index.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  .img {
+    border-right: rem(1) solid $white;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  .imgAfter2 {
+    position: relative;
+    left: rem(-4);
+    z-index: 9;
+  }
+  .imgAfter3 {
+    position: relative;
+    left: rem(-8);
+    z-index: 8;
+  }
+  .imgAfter4 {
+    position: relative;
+    left: rem(-12);
+    z-index: 7;
+  }
+  .imgAfter5 {
+    position: relative;
+    left: rem(-16);
+    z-index: 6;
+  }
+  .imgAfter6 {
+    position: relative;
+    left: rem(-20);
+    z-index: 5;
+  }
+  .imgAfter7 {
+    position: relative;
+    left: rem(-24);
+    z-index: 4;
+  }
+  .imgAfter8 {
+    position: relative;
+    left: rem(-28);
+    z-index: 3;
+  }
+  .imgAfter9 {
+    position: relative;
+    left: rem(-32);
+    z-index: 2;
+  }
+  .imgAfter10 {
+    position: relative;
+    left: rem(-36);
+    z-index: 1;
+  }
+  .moreIcon {
+    position: absolute;
+    right: rem(0);
+    bottom: rem(2.5);
+    transform: translateX(50%);
+    color: $text-color-secondary;
+    width: rem(20);
+    height: rem(12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    border-radius: rem(6);
+    border: $border-solid-1;
+    box-sizing: border-box;
+    z-index: 10;
+    .icon {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.maxWidth204 {
+  max-width: rem(204);
+}
+
+.maxWidth104{
+  max-width: rem(104);
+}

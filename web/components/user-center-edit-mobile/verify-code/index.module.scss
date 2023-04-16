@@ -1,0 +1,18 @@
+@import '@common/styles/index.scss';
+
+.verifyCodeBtn {
+  .btn {
+    min-width: rem(96);
+    height: rem(36);
+    font-size: rem($font-size-primary);
+  }
+
+}
+
+.verifyCodeBgColor {
+  :global {
+    .dzq-button--primary.is-mouseenter {
+      @include button-primary()
+    }
+  }
+}

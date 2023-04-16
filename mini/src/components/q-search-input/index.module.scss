@@ -1,0 +1,51 @@
+@import '@common/styles/index.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*background-color: $white;*/
+  padding: rem($padding-4n);
+  padding-bottom: rem($padding-2n);
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: rem($padding-4n);
+  padding-right: rem($padding-4n);
+  width: 100%;
+  height: rem(30);
+  border-radius: rem(30);
+  background-color: var(--background-color-text2);
+  box-sizing: border-box;
+  .inputWrapperIcon {
+    color: var(--color-text-secondary);
+  }
+  .deleteIcon {
+    color: var(--border-color-hover);
+  }
+  .input {
+    flex: 1;
+    margin-left: rem(0.6);
+    background-color: transparent;
+    width: inherit;
+    input {
+      border: 0;
+      background-color: inherit;
+      font-size: var(--font-size-primary);
+      line-height: var(--font-line-height-primary);
+    }
+  }
+}
+.cancel {
+  margin-left: rem($padding-4n);
+  font-size: rem($font-size-primary);
+  line-height: var(--font-line-height-primary);
+  color: var(--color-text-secondary);
+  word-break: keep-all;
+}
+
+.hiddenBottom {
+  padding-bottom: 0;
+}

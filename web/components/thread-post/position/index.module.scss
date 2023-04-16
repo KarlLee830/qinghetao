@@ -1,0 +1,32 @@
+@import '@common/styles/index.scss';
+.position {
+  .tag {
+    @include tag-default;
+
+    &:after {
+      display: none;
+    }
+
+    :global {
+      .dzq-icon-PositionOutlined {
+        margin-right: rem($margin-1n);
+      }
+
+      .dzq-icon-CloseOutlined {
+        margin-left: $margin-2n !important;
+        font-size: 12px !important;
+        transform: scale(.85);
+      }
+
+      .dzq-tag-text {
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .checked {
+    @include tag-checked;
+  }
+}
+

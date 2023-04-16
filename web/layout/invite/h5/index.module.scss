@@ -1,0 +1,306 @@
+@import '@common/styles/index.scss';
+.content{
+  height: 100%;
+  background: $white;
+
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 55px;
+    min-height: calc(100vh - 100px);
+  }
+  // 头部
+  .header{
+    height: rem(164);
+    background-color: $primary-color;
+    background-image: url('/dzq-img/invite-banner-bg.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+  // 用户信息 start
+  .user_info{
+    height: rem(170);
+    background: $comment-bg-color;
+    position: relative;
+  }
+  .user_info_author{
+    width: rem(120);
+    height: rem(120);
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    top: rem(-120);
+    border-radius: $border-radius-circle;
+    background: $white;
+    border: rem(3) solid $white;
+    overflow: hidden;
+    z-index: 3;
+    :global(.dzq-avatar__img),:global(.dzq-avatar__text) {
+      width: rem(118);
+      height: rem(118);
+    }
+  }
+  .user_info_content{
+    width: calc(100vw - 32px);
+    position: absolute;
+    margin-left: calc(16px - 50vw);
+    left: 50%;
+    top: rem(-60);
+    background: $white;
+    border-radius: rem($border-radius-small);
+    text-align: center;
+    padding: 0 rem($padding-4n) rem($padding-4n);
+    box-sizing: border-box;
+  }
+  .user_info_name{
+    @include text-ellipsis;
+    font-weight: 600;
+    font-size: rem($font-size-middle);
+    line-height: rem($font-line-height-base);
+    color: $text-color-primary;
+    opacity: 1;
+    margin-top: rem($padding-1n * 17);
+  }
+  .user_info_tag{
+    font-weight: normal;
+    font-size: rem($font-size-small);
+    line-height: rem($font-line-height-small);
+    color: $text-color-secondary;
+    padding-top: $padding-1n;
+  }
+  .memberBadgeBox {
+    padding-top: $padding-1n;
+  }
+  .user_info_invite{
+    width: 100%;
+    height: rem(78);
+    border-radius: rem($border-radius-small);
+    background: $comment-bg-color;
+    margin-top: $margin-2n;
+  }
+  @mixin userInfoInvite {
+    width: 50%;
+    height: rem(78);
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    .invite_num_title{
+      @include text-ellipsis;
+      font-weight: normal;
+      font-size: $font-size-base;
+      line-height: $font-line-height-base;
+      color: $text-color-regular;
+      opacity: 1;
+      padding-top: rem($padding-4n);
+    }
+    .invite_num_content{
+      @include text-ellipsis;
+      font-weight: 600;
+      font-size: $font-size-middle;
+      line-height: $font-line-height-middle;
+      color: $text-color-primary;
+    }
+  }
+  .invite_num{
+    @include userInfoInvite;
+  }
+  .invite_money{
+    @include userInfoInvite;
+    border-left: rem(1) solid $white;
+  }
+  // 用户信息 end
+
+  // 邀请列表 start
+  .invite_list{
+    background: $white;
+    box-sizing: border-box;
+    padding: rem($padding-4n) rem($padding-4n) 0;
+  }
+  .invite_list_title{
+    font-size: rem($font-size-middle);
+    vertical-align: middle;
+    height: rem(24);
+    padding-bottom: rem($padding-4n);
+  }
+  .invite_list_titleIcon{
+    line-height: rem($font-line-height-base);
+    float: left;
+  }
+  .invite_list_titleText{
+    line-height: rem($font-line-height-base);
+    float: left;
+    font-weight: 600;
+    color: $text-color-primary;
+    padding-left: rem($padding-2n);
+  }
+  .invite_list_header{
+    height: rem(36);
+    padding: 0 rem($padding-2n);
+    box-sizing: border-box;
+    border-radius: rem($border-radius-small) rem($border-radius-small) 0 0;
+    background: $comment-bg-color;
+    font-weight: normal;
+    font-size: rem($font-size-base);
+    text-align: left;
+    color: $text-color-regular;
+    display: flex;
+  }
+  @mixin inviteListName {
+    @include text-ellipsis;
+    width: 34%;
+    float: left;
+    display: flex;
+    align-items: center;
+  }
+  @mixin inviteListMoney {
+    width: 29%;
+    float: left;
+    display: flex;
+    align-items: center;
+    span {
+      @include text-ellipsis;
+    }
+  }
+  @mixin inviteListTime {
+    float: left;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    span {
+      @include text-ellipsis;
+    }
+  }
+  .invite_list_headerName,.invite_list_itemName{
+    @include inviteListName;
+  }
+  .invite_list_headerMoney{
+    @include inviteListMoney;
+  }
+  .invite_list_headerTime{
+    @include inviteListTime;
+  }
+  .invite_list_item{
+    position: relative;
+    align-items: center;
+    display: flex;
+    height: rem(54);
+    line-height: rem(54);
+    padding: 0 rem($padding-2n);
+    box-sizing: border-box;
+    font-size: rem($font-size-base);
+  }
+  .invite_list_itemName{
+    @include inviteListName;
+    box-sizing: border-box;
+    padding-right: rem($padding-14);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    .invite_list_itemAvatar {
+      width: rem(18);
+      height: rem(18);
+      border-radius: $border-radius-circle;
+      line-height: rem($font-line-height-xs);
+      flex-shrink: 0;
+    }
+    span{
+      font-weight: normal;
+      padding-left: rem($padding-2n);
+      color: $text-color-primary;
+      @include text-ellipsis;
+    }
+  }
+  .invite_list_itemMoney{
+    @include inviteListMoney;
+    box-sizing: border-box;
+    padding-right: rem($padding-14);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: normal;
+    font-size: rem($font-size-middle);
+    color: $error-color;
+  }
+  .invite_list_itemTime{
+    @include inviteListTime;
+    @include text-ellipsis;
+    color: $text-color-secondary;
+  }
+  .invite_list_itemLine{
+    height: rem(1);
+    width: calc(100vw - 64px);
+    background: $border-color;
+    position: absolute;
+    left: rem(16);
+    bottom: 0;
+  }
+  // 邀请列表 end
+
+  // 邀请朋友 start
+  .invite_bottom{
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    padding: rem($padding-2n) rem($padding-4n);
+    background: $white;
+    border-top: $border-solid-1;
+    .invite_bottom_button{
+      width: 100%;
+      height: rem(42);
+      background: $primary-color;
+      font-weight: normal;
+      line-height: rem($font-line-height-base);
+      text-align: center;
+      color: $white;
+      font-size: rem($font-size-middle);
+    }
+  }
+  // 邀请朋友 end
+
+  .refreshView {
+    height: rem(40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem($font-size-primary);
+    color: $text-color-placeholder;
+  }
+  .loadMoreContainer {
+    flex: 1;
+    padding: rem($padding-4n);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $text-color-placeholder;
+  }
+  .bottom_tips_wrap {
+    min-height: rem(40);
+  }
+  .noMoreLeft{
+    background-color: #e5e5e5;
+    width: rem(79);
+    height: rem(1);
+    float: left;
+    margin-right: rem($margin-4n);
+  }
+  .noMoreRight{
+    background-color: #e5e5e5;
+    width: rem(79);
+    height: rem(1);
+    float: right;
+    margin-left: rem($margin-4n);
+  }
+  .lineSty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem($font-size-primary);
+    color: $text-color-placeholder;
+    padding: rem($padding-6n) 0 rem($padding-2n);
+    line-height: rem($font-line-height-small);
+  }
+}

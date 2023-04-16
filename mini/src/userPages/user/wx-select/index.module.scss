@@ -1,0 +1,29 @@
+@import '@common/styles/mixin/login.scss';
+.container {
+  @include mini_container;
+  .button {
+    @include mini_button;
+  }
+  .btn_select {
+    @include btn_select;
+  }
+  .btn_wx {
+    @include btn_wx;
+  }
+  .btn_user {
+    @include btn_user;
+  }
+  .btn_phone {
+    @include btn_phone;
+  }
+}
+.content {
+  @include mini_content;
+  .title {
+    @include mini_title;
+  }
+  .tips{
+    @include mini_tips;
+    margin-bottom: 0;
+  }
+}

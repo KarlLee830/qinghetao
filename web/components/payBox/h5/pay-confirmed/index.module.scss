@@ -1,0 +1,147 @@
+@import '@common/styles/index.scss';
+@import '@common/styles/mixin/index.scss';
+
+.payBox {
+  background: $white;
+  padding: rem($padding-6n) rem($padding-4n) rem($padding-4n) rem($padding-4n);
+  height: rem(337);
+  box-sizing: border-box;
+
+  .moneyUnit {
+    font-size: $font-size-large;
+  }
+
+  .title {
+    text-align: center;
+    p {
+      font-size: rem($paybox-pay-text-font-size);
+      font-weight: 600;
+    }
+  }
+
+  .list {
+    margin-top: rem($margin-2n);
+
+    :global {
+      .dzq-checkbox-wrap {
+        padding: 0;
+      }
+      .is-checked {
+        border: none;
+        .dzq-checkbox--radio {
+          &::after {
+            border: none;
+          }
+        }
+      }
+    }
+
+    .listItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: rem($padding-4n) 0;
+
+      &:first-child {
+        /*border-bottom: 1px solid $paybox-border-line-color;*/
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        // width: 50%;
+        flex-shrink: 0;
+        .icon {
+          margin-right: rem($margin-2n);
+        }
+        .text {
+          font-size: rem($font-size-primary);
+          color: $text-color-primary;
+        }
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // width: 50%;
+        flex: 1;
+        word-break: break-all;
+        .subText {
+          font-size: rem($font-size-label);
+          color: $text-color-secondary;
+          margin-right: rem($margin-4n);
+        }
+        .textPrimary {
+          font-size: $font-size-label;
+          color: $primary-color;
+        }
+        .textButton {
+          font-size: rem($font-size-label);
+        }
+
+        :global {
+          .dzq-checkbox--radio {
+            border-radius: rem($border-radius-small);
+            &::after {
+              border-radius: rem($border-radius-small);
+            }
+          }
+        }
+      }
+    }
+  }
+  .tips {
+    padding: rem($padding-2n) 0;
+    text-align: center;
+    font-size: rem($font-size-primary);
+    color: $text-color-secondary;
+  }
+
+  .btnBox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: rem($margin-2n);
+    height: rem(60);
+    box-sizing: border-box;
+    padding-left: rem($padding-4n);
+    padding-right: rem($padding-4n);
+    padding-bottom: calc(16px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+    padding-bottom: calc(16px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+
+    &::before {
+      content: '';
+      display: block;
+      // width: 100%;
+      height: rem(1);
+      background: $border-color;
+      position: relative;
+      top: rem(-8);
+      margin: 0 rem(-$margin-4n);
+    }
+
+    .btn {
+      height: rem(42);
+      font-size: rem($font-size-base);
+      line-height: rem($font-line-height-base);
+      border-radius: 5px;
+      padding: 0;
+      line-height: rem(42);
+    }
+  }
+}
+
+.payBoxCloseIcon {
+  position: absolute;
+  right: rem(3);
+  top: rem(5);
+  width: rem(40);
+  height: rem(40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-color-secondary;
+  cursor: pointer;
+}

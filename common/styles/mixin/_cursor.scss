@@ -1,0 +1,9 @@
+
+@mixin cursor-on-pc {
+  @media screen and (min-width: 1080px) {
+    cursor: pointer;
+  }
+  -webkit-tap-highlight-color: transparent;
+}
+
+

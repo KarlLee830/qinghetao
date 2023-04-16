@@ -1,0 +1,81 @@
+@import '@common/styles/index.scss';
+
+.container {
+  width: 100%;
+  background: $border-color;
+  border-radius: rem($border-radius-big) rem($border-radius-big) 0 0;
+  overflow: hidden;
+  padding: rem(20) rem(20) 0 rem(20);
+  box-sizing: border-box;
+
+  .more {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, rem(40));
+    grid-row-gap: rem(16);
+    justify-content: space-between;
+    padding-bottom: rem(16);
+
+    .moreItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .icon {
+        width: rem(40);
+        height: rem(40);
+        text-align: center;
+        line-height: rem(40);
+        background: $white;
+        border-radius: $border-radius-small;
+        color: $text-color-regular;
+
+        > div {
+          font-size: rem(26) !important;
+        }
+      }
+
+      .text {
+        margin-top: rem($padding-2n);
+        text-align: center;
+        color: $text-color-regular;
+        font-size: rem($font-size-small);
+        white-space: nowrap;
+      }
+
+      &.actived {
+        .icon,
+        .text {
+          color: $primary-color;
+        }
+      }
+    }
+
+    &.flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .moreItem {
+        margin-right: rem(32);
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  width: 100%;
+  background: $white;
+
+  .cancel {
+    width: 100%;
+    height: rem(44);
+    border: none;
+    font-size: rem($font-size-base);
+    color: $text-color-regular;
+  }
+}

@@ -1,0 +1,59 @@
+@import '@common/styles/index.scss';
+
+
+.container {
+  display: flex;
+  margin: rem(24);
+  .wrapper {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    margin-right: rem(32);
+    color: $text-color-regular;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .line {
+      display: none;
+    }
+  }
+  .wrapperActive {
+    font-weight: 600;
+    color: #0265ff;
+
+    .line {
+      display: none;
+      width: rem(24);
+      height: rem(2);
+      background-color: #0265ff;
+      margin-top: rem(4);
+    }
+  }
+  .childrenWrapper {
+    box-sizing: border-box;
+    position: absolute;
+    top: rem(40);
+    left: rem(-60);
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    z-index: 1000;
+    border-radius: rem(5);
+    border: 1px solid $border-color;
+    padding: 0 rem(16);
+
+
+    .subItem {
+      box-sizing: border-box;
+      width: rem(144);
+      height: rem(50);
+      text-align: center;
+      line-height: rem(50);
+      color: #808080;
+      font-size: 14px;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}

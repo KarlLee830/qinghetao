@@ -1,0 +1,28 @@
+@import '@common/styles/index.scss';
+.container {
+  background-color: #2469F6;
+  padding: $padding-6n $padding-4n;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+  margin: 0 rem(10);
+  border-radius: rem(10) rem(10) 0 0;
+  .rule {
+    display: flex;
+  }
+  .dot {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: $padding-2n;
+    Text {
+      display: inline-block;
+      width: rem(8);
+      height: rem(8);
+      border-radius: rem(8);
+      background-color: $white;
+    };
+  }
+  .text {
+  }
+}

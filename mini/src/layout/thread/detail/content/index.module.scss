@@ -1,0 +1,250 @@
+@import '@common/styles/index.scss';
+
+.container {
+  background: $white;
+  padding: $padding-4n;
+}
+
+.header {
+  background: $white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.userInfo {
+  flex: 1;
+}
+
+.more {
+  line-height: 20px;
+  padding-left: $padding-1n;
+  color: $text-color-secondary;
+}
+
+.essence {
+  margin-right: $margin-2n;
+}
+
+.body {
+  margin-top: $margin-6n;
+
+  > View {
+    margin-bottom: $margin-4n;
+  }
+}
+
+.title {
+  color: $text-color-primary;
+  line-height: 21px;
+  font-weight: bold;
+  font-size: $font-size-middle;
+  word-break: break-all;
+}
+
+.image {
+  width: 100%;
+}
+
+.reward {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: $margin-4n;
+}
+
+.rewardBody {
+  text-align: center;
+  margin-bottom: $margin-4n;
+}
+
+.rewardContianer {
+  margin-bottom: $margin-6n;
+}
+
+.redPacketLikeNum {
+  text-align: center;
+  margin-top: $margin-5n;
+  font-size: rem($font-size-label);
+  color: $text-color-secondary;
+}
+
+.rewardButton {
+  margin: 0 auto;
+  padding: 0;
+  width: 156px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payButton {
+  margin: 0 auto;
+  padding: 0;
+  width: 234px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-base;
+  font-weight: normal;
+}
+
+.payIcon {
+  margin-right: $margin-2n;
+}
+
+.rewardext {
+  font-size: $font-size-base;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $text-color-secondary;
+  font-size: $font-size-primary;
+  height: 24px;
+}
+
+.buyBtn {
+  margin-top: $margin-4n;
+  padding: 0;
+  width: 100%;
+  height: 36px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .buyText {
+    // margin-left: $margin-2n;
+    line-height: 20px;
+  }
+}
+
+.tag {
+  display: inline-block;
+  color: $text-color-regular;
+  background: #f0f1f3; // TODO:token
+  font-size: $font-size-label;
+  padding: 6.5px $padding-1n;
+  border-radius: $border-radius-small;
+  margin-bottom: $padding-4n;
+  line-height: 12px;
+}
+
+.thumbs {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: $font-size-primary;
+}
+
+.liked {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.actived {
+  color: $primary-color;
+}
+
+.likeReward {
+  margin-left: $margin-4n;
+}
+
+.examine {
+  padding: $padding-2n 0;
+  background: $error-color;
+  color: $white;
+  text-align: center;
+  font-size: $font-size-base;
+}
+
+.rewardText {
+  padding: $padding-4n $padding-4n 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: $border-radius-small;
+  text-align: center;
+
+  .rewardMoney {
+    line-height: 20px;
+    font-size: $font-size-primary;
+    color: $text-color-primary;
+  }
+  .rewardNumber {
+    line-height: 17px;
+    color: $error-color;
+  }
+
+  .rewardTime {
+    margin-top: $margin-1n;
+    font-size: $font-size-label;
+    color: $text-color-secondary;
+    text-align: center;
+  }
+}
+
+.likedNumber {
+  margin-left: $margin-2n;
+}
+
+.shareCount {
+  font-size: $font-size-small;
+}
+
+.product {
+  padding: 0;
+  background: none;
+}
+
+.icon {
+  color: $text-color-secondary;
+}
+
+
+.moneyList{
+  text-align: center;
+  width: 249px;
+  margin: 30px auto 0;
+  .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color:$text-color-primary;
+    &::after{
+      width: 76px;
+      height: 1px;
+      background-color: #EEEEEE;
+      content: '';
+      margin-left: 15px;
+    }
+    &::before{
+      content: '';
+      width: 76px;
+      height: 1px;
+      background-color: #EEEEEE;
+      margin-right: 15px;
+    }
+  }
+
+  .itemList{
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .itemAvatar{
+      margin: 5px 3px 0;
+      :global {
+        .dzq-avatar__text {
+          font-size: $font-size-label;
+        }
+      }
+    }
+  }
+}

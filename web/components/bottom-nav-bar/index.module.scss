@@ -1,0 +1,57 @@
+@import '@common/styles/index.scss';
+
+.footer {
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  background: $white;
+  /*border-top: $border-solid-1;*/
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: rem(8);
+  padding-bottom: constant(safe-area-inset-bottom);  ///兼容 IOS<11.2/
+  padding-bottom: env(safe-area-inset-bottom);  ///兼容 IOS>11.2/
+  height: rem(56);
+  z-index: 1000;
+
+  .item {
+    margin-top: rem(2);
+    flex: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $text-color-secondary;
+  }
+  .active {
+    color: $primary-color;
+  }
+  .text {
+    font-size: rem($font-size-label);
+    line-height: rem($font-line-height-small);
+  }
+  .addIconWrapper {
+    display: inline-flex;
+    flex: 1;
+    justify-content: center;
+  }
+  .addIcon {
+    height: rem(48);
+    line-height: rem(48);
+    width: rem(48);
+    background: $primary-color;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.placeholder {
+  width: 100%;
+  padding-bottom: constant(safe-area-inset-bottom);  ///兼容 IOS<11.2/
+  padding-bottom: env(safe-area-inset-bottom);  ///兼容 IOS>11.2/
+  height: rem(64);
+}

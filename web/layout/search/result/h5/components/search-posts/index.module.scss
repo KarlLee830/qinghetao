@@ -1,0 +1,11 @@
+@import '@common/styles/index.scss';
+.list {
+  .listItem {
+    padding: 0;
+  }
+  .hr {
+    height: rem(10);
+    background-color: $text-bg-color2;
+    margin: 0 rem(-16);
+  }
+}

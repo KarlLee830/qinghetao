@@ -1,0 +1,42 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "transform-runtime": {
+          "useESModules": false
+        },
+        "preset-env": {
+          "targets": {
+            "browsers": [
+              ">0.03%"
+            ]
+          },
+          "useBuiltIns": "usage",
+          "corejs": 3
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ],
+    [
+      "@discuzqsdk/discuz-babel-plugin-import",
+      {
+        "libraryName": "@discuzqsdk/design",
+        "libraryDirectory": "dist/components"
+      }
+    ]
+  ]
+}

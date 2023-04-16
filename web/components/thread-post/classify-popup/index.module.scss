@@ -1,0 +1,105 @@
+@import '@common/styles/index.scss';
+
+.tan {
+  :global { /* stylelint-disable-line */
+    .popup-cacel {
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
+      font-size: $font-size-base;
+      color: $text-color-regular;
+      // border-top: $border-solid-1;
+    }
+    .dzq-popup__container {
+      width: 100vw;
+      margin-right: rem(-$margin-10);
+      padding: rem($padding-4n) 0;
+      background: $white;
+      border-radius: rem($border-radius-big) rem($border-radius-big) 0 0;
+      //   box-shadow: 0 -1px 15px 0 rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+    .dzq-popup__overlay {
+      background-color: $mask-bg-color !important;
+    }
+  }
+}
+.wrapper {
+  overflow: hidden;
+  margin: 0 rem($margin-4n);
+  &.pc {
+    margin: rem($margin-base * 8) 0;
+
+    .popup-title {
+      display: flex;
+      align-items: center;
+      color: $text-color-primary;
+      :global {
+        .dzq-icon {
+          color: $text-color-primary;
+        }
+      }
+    }
+
+    :global {
+      .dzq-icon {
+        margin-right: $margin-2n;
+      }
+    }
+  }
+}
+.popup-title {
+  font-size: $font-size-middle;
+  font-weight: 700;
+  color: $text-color-primary;
+}
+.popup-content {
+  padding: rem($padding-4n) 0 rem(6);
+  border-bottom: $border-solid-1;
+  :global { /* stylelint-disable-line */
+    .dzq-button {
+      @include button-default;
+      @include text-ellipsis;
+      max-width: rem(310);
+      margin-right: rem($margin-10);
+      margin-bottom: rem($margin-10);
+    }
+
+    .dzq-button.active,
+    .dzq-button.is-mouseenter {
+      @include button-default;
+      @include button-primary;
+      font-weight: normal;
+    }
+    .dzq-button.is-pc {
+      margin-right: $margin-4n;
+      margin-bottom: $margin-4n;
+    }
+  }
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+.popup-content__children {
+  margin-bottom: rem(6);
+  // border-top: $border-solid-1;
+  // border-bottom: $border-solid-1;
+  :global { /* stylelint-disable-line */
+    .dzq-button.active {
+      @include button-primary-light-active;
+    }
+    .dzq-buton,
+    .dzq-button.is-mouseenter {
+      @include button-primary-light;
+    }
+  }
+}
+.pc {
+  .popup-content {
+    padding-top: $padding-4n;
+    padding-bottom: 0;
+  }
+  .popup-content__children {
+    margin-bottom: 0;
+  }
+}

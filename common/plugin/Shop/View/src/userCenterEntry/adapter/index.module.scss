@@ -1,0 +1,27 @@
+@import '@common/styles/index.scss';
+
+.userCenterActionItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.pc {
+    padding: rem($padding-6n) 0;
+  }
+
+  &.h5, &.mini {
+    padding: rem($padding-4n) 0;
+  }
+}
+.userCenterActionItemDesc {
+  margin-top: rem($margin-2n);
+  color: $text-color-regular;
+  font-size: rem($font-size-small);
+}
+
+.dzq-qrcode-close {
+  position: absolute;
+  right: rem(24);
+  top: rem(29);
+}

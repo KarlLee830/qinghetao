@@ -1,0 +1,20 @@
+@import '@common/styles/index.scss';
+
+.container {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .title {
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-color-primary;
+  }
+  :global(.dzq-dropdown__trigger) {
+    font-size: 24px;
+    color: $primary-color;
+  }
+  :global(.dzq-dropdown-menu__item) {
+    padding: 10px 0;
+  }
+}

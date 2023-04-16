@@ -1,0 +1,33 @@
+@import '@common/styles/index.scss';
+
+.userCenterColumnStyle {
+  justify-content: space-between;
+}
+
+.userCenterAction {
+  display: flex;
+  flex-wrap: wrap;
+
+  .userCenterActionItem, .userCenterPluginActionItem {
+    cursor: pointer;
+    min-width: rem(60);
+    width: percentage(100/4/100);
+  }
+
+  .userCenterActionItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: rem($padding-4n) 0;
+
+    .userCenterActionItemIcon {
+    }
+
+    .userCenterActionItemDesc {
+      margin-top: rem($margin-2n);
+      color: $text-color-regular;
+      font-size: rem($font-size-small);
+    }
+  }
+}

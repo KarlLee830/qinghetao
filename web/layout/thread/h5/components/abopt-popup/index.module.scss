@@ -1,0 +1,130 @@
+@import '@common/styles/index.scss';
+
+.container {
+  background: $white;
+  border-radius: rem($border-radius-big) rem($border-radius-big) 0 0;
+}
+
+.main {
+  padding: rem($padding-4n) rem($padding-4n) 0;
+  border-bottom: $border-solid-1;
+}
+
+.header {
+  font-weight: bold;
+  font-size: rem($font-size-middle);
+  line-height: rem(17.8);
+  text-align: left;
+  color: $text-color-primary;
+}
+
+.body {
+  width: 100%;
+  .percentage {
+    display: flex;
+    flex-direction: column;
+    border-bottom: $border-solid-1;
+    .text {
+      font-weight: normal;
+      font-size: rem($font-size-primary);
+      line-height: rem(17.8);
+      text-align: left;
+      color: $text-color-regular;
+      padding: rem($padding-4n) 0 rem($padding-2n) 0;
+    }
+    .slider {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: rem($padding-3n);
+      position: relative;
+      .perCent {
+        color: $text-color-primary;
+      }
+      .maxMoney {
+        color: $error-color;
+        font-size: $font-size-small;
+        position: absolute;
+        right: 0;
+        bottom: rem(1);
+      }
+      :global {
+        .dzq-slider__progress--active {
+          height: rem(4);
+          border-radius: rem(2) 0 0 rem(2);
+        }
+        .dzq-slider__progress--stick {
+          height: rem(4);
+        }
+        .dzq-slider__progress--max {
+          height: rem(4);
+          border-radius: 0 rem(2) rem(2) 0;
+        }
+        .dzq-slider__feature {
+          height: rem(4);
+          // border-radius: 0 rem(2) rem(2) 0;
+          // background: $border-shadow-color;
+        }
+        .dzq-slider__value {
+          font-size: rem($font-size-small);
+          margin-left: rem(4);
+          width: rem(20);
+          text-align: right;
+        }
+        .dzq-slider__progress__button {
+          width: rem(10);
+          height: rem(10);
+          border: rem(8) solid $primary-color;
+        }
+      }
+    }
+  }
+  .rewardMoney {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: rem($font-size-primary);
+    font-weight: normal;
+    padding: rem($padding-4n) 0;
+    .text {
+      line-height: rem(17.8);
+      text-align: left;
+      color: $text-color-regular;
+    }
+    .moneyNum {
+      line-height: rem(16.8);
+      text-align: left;
+      color: $text-color-primary;
+    }
+    :global {
+      .dzq-input {
+        width: rem(90);
+        height: rem(30);
+        .dzq-input__inner {
+          width: rem(90);
+          height: rem(30);
+        }
+      }
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  padding: rem($padding-2n) rem($padding-4n) rem(19);
+
+  .cancel {
+    width: rem(167);
+    height: rem(42);
+    border-radius: rem($border-radius-small);
+    color: $text-color-primary;
+    background: $text-bg-color2;
+  }
+  .ok {
+    width: rem(167);
+    height: rem(42);
+    border-radius: rem($border-radius-small);
+    background: $primary-color;
+  }
+}

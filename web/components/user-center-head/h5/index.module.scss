@@ -1,0 +1,164 @@
+@import '@common/styles/index.scss';
+
+.h5box {
+  width: 100%;
+  min-height: rem(196);
+  position: relative;
+  margin-top: rem(-$margin-10);
+  background-color: $white;
+  padding: rem($padding-4n);
+  box-sizing: border-box;
+  border-radius: rem($border-radius-big) rem($border-radius-big) 0 0;
+  .h5boxTop {
+    position: relative;
+    height: rem(60);
+  }
+  .headImgBox {
+    position: absolute;
+    left: rem(60);
+    top: 60%;
+    transform: translateX(-50%) translateY(-100%);
+    .avatarWrap {
+      max-width: none;
+    }
+    :global {
+      .dzq-avatar {
+        border: rem(3) solid;
+        box-sizing: border-box;
+      }
+    }
+  }
+  .text {
+    width: 100%;
+    // text-align: center;
+    font-size: rem($font-size-primary);
+    color: $text-color-primary;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.2;
+    color: $text-color-regular;
+    margin-top: rem(12);
+  }
+  .userMessageList {
+    display: flex;
+    position: absolute;
+    right: 0;
+    width: calc(100% - 152px);
+    align-items: center;
+    justify-content: center;
+    line-height: rem($font-line-height-base);
+  }
+  .userMessageListItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 76%;
+    > span:nth-child(1) {
+      font-size: rem($font-size-base);
+      color: $text-color-primary;
+    }
+    > span:nth-child(2) {
+      font-size: rem($font-size-middle);
+      font-weight: 600;
+      word-break: break-all;
+      color: $text-color-primary;
+      text-overflow: -o-ellipsis-lastline;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+  .userNameOrTeam {
+    display: flex;
+    align-items: center;
+    line-height: rem($font-line-height-small);
+    .userNickname {
+      display: block;
+      font-size: rem($font-size-large);
+      font-weight: 600;
+      color: $text-color-primary;
+      margin-right: rem($margin-2n);
+      height: rem(28);
+      @include text-ellipsis();
+    }
+    .memberBadge {
+      flex-shrink: 0;
+    }
+    .groupName {
+      font-size: rem($font-size-small);
+      color: $text-color-regular;
+      flex-shrink: 0;
+    }
+  }
+  .userBtn {
+    margin-top: rem($margin-4n);
+    display: flex;
+    justify-content: flex-start;
+    .btn {
+      width: 100%;
+      height: rem(42);
+      font-size: rem($font-size-middle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: rem(5);
+      padding: 0;
+      line-height: rem(42);
+    }
+    .btn:nth-child(2) {
+      margin-left: rem($margin-2n);
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+    .actionButtonContentWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .userBtnText {
+        margin-left: rem($margin-2n);
+      }
+    }
+  }
+  .userFriendsBtn {
+    background: $warn-color;
+    border-color: $warn-color;
+  }
+  .userFollowedBtn {
+    background: $button-primary-disabled-bg-color;
+    border-color: $button-primary-disabled-bg-color;
+  }
+  .shieldBtn {
+    position: absolute;
+    top: rem(-48);
+    right: rem(16);
+    min-width: rem(86);
+    height: rem(36);
+    line-height: rem(36);
+    border-radius: rem(5);
+    background-color: rgba(11, 11, 55, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem($padding-2n);
+    box-sizing: border-box;
+    :global {
+      .dzq-icon {
+        color: $white;
+      }
+    }
+    .shieldText {
+      font-size: rem($font-size-base);
+      color: $white;
+      margin-left: rem($margin-1n);
+    }
+  }
+}

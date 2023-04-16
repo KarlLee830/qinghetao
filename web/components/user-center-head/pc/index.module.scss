@@ -1,0 +1,210 @@
+@import '@common/styles/index.scss';
+
+@mixin uploadStyles {
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $mask-bg-color;
+  color: $white;
+}
+
+.box {
+  width: 100%;
+  min-height: rem(54);
+  position: relative;
+  background: $white;
+  box-sizing: border-box;
+  border-radius: 0 0 rem($border-radius-small) rem($border-radius-small);
+
+  .boxTop {
+    position: absolute;
+    width: 100%;
+    top: rem(-81);
+    display: flex;
+    height: rem(136);
+    padding: 0 rem(24) 0 rem(65);
+    box-sizing: border-box;
+  }
+  .headImgBox {
+    position: relative;
+    width: rem(120);
+    height: rem(120);
+    
+    .avatarWrap {
+      max-width: none;
+    }
+
+    :global {
+      .dzq-avatar {
+        border: rem(3) solid;
+        box-sizing: border-box;
+      }
+    }
+
+    .userCenterEditCameraIcon {
+      position: absolute;
+      width: rem(34);
+      height: rem(34);
+      background-color: $primary-color;
+      border-radius: 50%;
+      right: 0;
+      bottom: 0;
+      box-sizing: border-box;
+      border: rem(2) solid $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      :global {
+        .dzq-icon {
+          color: $white;
+        }
+      }
+    }
+  }
+  .contentBox {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .userNameOrTeam {
+    height: rem(120);
+    padding-top: rem(13);
+    padding-left: rem(24);
+    box-sizing: border-box;
+    overflow: hidden;
+    .username {
+      font-weight: 600;
+      font-size: rem(20);
+      line-height: rem($font-line-height-small);
+      color: $white;
+      @include text-ellipsis();
+    }
+    .memberBadge {
+      margin-top: rem(10);
+    }
+    .groupName {
+      font-size: rem($font-size-base);
+      line-height: rem($font-line-height-small);
+      color: $white;
+      margin-top: rem(4);
+    }
+    .text {
+      position: absolute;
+      bottom: rem(16);
+      font-size: rem($font-size-primary);
+      line-height: rem($font-line-height-small);
+      color: $text-color-primary;
+      left: rem(210);
+      right: 0;
+      @include text-ellipsis();
+    }
+    .otherText {
+      right: rem(280);
+    }
+  }
+  .upload {
+    cursor: pointer;
+    flex-shrink: 0;
+    .uploadIcon {
+      margin-right: rem(6);
+    }
+    .uploadText {
+      display: flex;
+      align-items: center;
+    }
+    padding-top: rem(48);
+    font-size: rem($font-size-small);
+    line-height: rem(22);
+    color: $white;
+  }
+  .otherUserBtn {
+    position: absolute;
+    right: rem($margin-6n);
+    bottom: rem(9);
+    text-align: right;
+    .shieldBtn {
+      position: absolute;
+      top: rem(-32);
+      right: 0;
+      font-size: rem($font-size-primary);
+      line-height: rem($font-line-height-small);
+      color: $white;
+      cursor: pointer;
+      min-width: rem(86);
+      height: rem(36);
+      line-height: rem(36);
+      border-radius: rem(5);
+      background-color: rgba(11, 11, 55, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: rem($padding-2n);
+      box-sizing: border-box;
+      &:hover {
+        background-color: rgba(11, 11, 55, 0.5);
+      }
+      :global {
+        .dzq-icon {
+          margin-right: rem($margin-1n);
+          margin-top: rem(2);
+        }
+      }
+    }
+  }
+  .userBtn {
+    margin-top: rem(26);
+    display: flex;
+    align-items: center;
+    .btn {
+      width: rem(113);
+      height: rem(36);
+      line-height: rem(36);
+      padding: 0;
+      font-size: rem($font-size-primary);
+      :global {
+        .dzq-icon {
+          vertical-align: middle;
+        }
+        .dzq-spin {
+          margin-top: rem(1);
+        }
+      }
+    }
+    .btn:nth-child(2) {
+      margin-left: rem($margin-2n);
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+    .userBtnText {
+      vertical-align: middle;
+      margin-left: rem($margin-2n);
+    }
+    .userFriendsBtn {
+      background: $warn-color;
+      border-color: $warn-color;
+    }
+    .userFollowedBtn {
+      background: $button-primary-disabled-bg-color;
+      border-color: $button-primary-disabled-bg-color;
+    }
+  }
+}
+
+// 上传样式
+.uploadAvatar {
+  @include uploadStyles();
+  z-index: 0;
+  .uploadText {
+    margin-left: rem($margin-2n);
+  }
+}

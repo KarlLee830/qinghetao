@@ -1,0 +1,100 @@
+@import '@common/styles/index.scss';
+
+.title {
+  font-size: $font-size-middle;
+  line-height: $font-line-height-small;
+  color: $text-color-primary;
+}
+
+.content {
+  display: flex;
+  padding: rem($padding-4n);
+  background: $body-bg-color;
+  border-radius: $border-radius-small;
+  margin-bottom: rem($margin-4n);;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .content-left {
+    width: 82px;
+    height: 82px;
+    border-radius: $border-radius-small;
+
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .content-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    margin-left: $margin-2n;
+    margin-right: $margin-2n;
+    position: relative;
+
+    .content-title {
+      font-size: $font-size-base;
+      line-height: $font-line-height-base;
+      color: $text-color-regular;
+      @include lamp-clamp(2);
+    }
+
+    .content-price {
+      display: inline-block;
+      margin-top: $margin-2n;
+      font-size: $font-size-large;
+      line-height: $font-line-height-large;
+      color: $error-color;
+      font-weight: 700;
+    }
+  }
+}
+
+.delete-icon {
+  position: absolute;
+  bottom: 0;
+  right: -14px;
+  padding: $padding-5;
+
+  :global {
+    color: $text-color-secondary;
+  }
+}
+
+.good-add-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 114px;
+  background: $text-bg-color;
+  border-radius: 5px;
+
+  .good-add-text {
+    font-size: 14px;
+    line-height: 18px;
+    color: $text-color-secondary;
+  }
+}
+
+
+.post-good-box.pc {
+  margin-left: 0;
+  margin-right: 0;
+
+  .content-title {
+    max-width: 670px;
+  }
+
+  .delete-icon {
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform: translate(0, 50%);
+  }
+}

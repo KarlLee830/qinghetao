@@ -1,0 +1,198 @@
+@import '@common/styles/index.scss';
+
+
+.wrapper {
+  :global {
+    .dzq-tabs__bar {
+      box-shadow: none;
+    }
+  }
+}
+
+.mobileTabPanel {
+  flex-direction: column;
+  padding: 0 16px !important;
+  border-top: 10px solid #f4f6f7 !important;
+  border-bottom: 10px solid #f4f6f7 !important;
+  align-items: center;
+
+  .mobileOperation {
+    flex-direction: row !important;
+    width: 100%;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 24px 0 16px 0;
+
+
+    .mobileUpgradePrice {
+      font-weight: normal;
+      line-height: 21px;
+      text-align: left;
+      color: #f50026;
+      margin-bottom: 5px;
+
+      .price {
+        font-size: 24px;
+      }
+    }
+
+    .mobileUpgradeBtn {
+      margin: 0 !important;
+    }
+  }
+}
+
+.tabPanel {
+  border-top: 1px solid #d5d5d5;
+  border-bottom: 1px solid #d5d5d5;
+  padding: 24px 120px;
+  display: flex;
+  justify-content: space-between;
+
+  .operation {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .upgradePrice {
+        font-weight: normal;
+        line-height: 21px;
+        text-align: left;
+        color: #f50026;
+        margin-bottom: 30px;
+
+        .price {
+          font-size: 40px;
+        }
+      }
+      .time {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: left;
+        color: #8590a6;
+      }
+    }
+
+    .upgradeBtn {
+      width: 144px;
+      height: 40px !important;
+      border-radius: 5px;
+      background: linear-gradient(to right, #f4daaf 0%, #eabc6c 100%) !important;
+      border: none !important;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 28.53px;
+      text-align: left;
+      color: #624a1e !important;
+      margin-top: 30px;
+    }
+
+  }
+
+
+}
+.tips {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+  color: #393b42;
+  white-space: pre-line;
+
+  .title {
+    padding: 23px 0 8px 0;
+    font-weight: bold;
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+    color: #393b42;
+  }
+}
+
+.symbol {
+  font-size: 16px;
+}
+
+
+.memberShipCardWrapper {
+  background-color: $white;
+  width: 100%;
+  height: rem(170);
+  border-radius: rem(5);
+  box-shadow: $border-shadow-color-8;
+  margin-top: rem($margin-4n);
+  padding: rem($padding-4n);
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.MemberShipCardContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .roleType {
+    font-weight: bold;
+    font-size: rem($font-size-middle-extra);
+    line-height: rem(25);
+    text-align: left;
+    color: $text-color-primary;
+    height: rem(25);
+  }
+  .tagline {
+    font-size: rem($font-size-primary);
+    height: rem(20);
+    line-height: rem(20);
+    color: $text-color-primary;
+    margin: rem($margin-10) 0 rem(18);
+  }
+  .RenewalFee {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .btn {
+      width: rem(66) !important;
+      height: rem(36);
+
+      @media only screen and (max-width: 1200px) {
+        width: rem(80);
+      }
+
+      padding: 0;
+      line-height: rem(36);
+      border-radius: rem(5);
+      flex-shrink: 0;
+    }
+    .feeTimer {
+      color: $text-color-regular;
+      font-size: rem($font-size-primary);
+      height: rem(20);
+      line-height: rem(20);
+      width: 100%;
+      text-align: right;
+      .feeDay {
+        font-size: rem($font-size-h1);
+        color: $primary-color;
+      }
+      .noTimeDate {
+        text-align: right;
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+

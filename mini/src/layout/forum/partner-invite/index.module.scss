@@ -1,0 +1,113 @@
+@import '@common/styles/index.scss';
+
+.content{
+  background-color: $white;
+  padding-bottom: rem(120);
+}
+.hot,.users{
+  padding: $padding-4n;
+  padding-bottom: 0;
+  padding-top: 0;
+  &.popularContents{
+    padding-bottom: 0;
+  }
+}
+.users{
+  border-bottom: rem(10) solid $text-bg-color2;
+}
+.spinner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $text-color-placeholder;
+  height: rem(60);
+}
+.maskLayer{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: $zindex-tooltip;
+  pointer-events: auto;
+}
+.bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  // height: rem(92);
+  background-color: $white;
+  border-top: $border-solid-1;
+  box-sizing: border-box;
+  padding: $padding-2n $padding-4n $padding-4n;
+  text-align: center;
+  z-index: $zindex-popup;
+  .bottom_title{
+    font-weight: normal;
+    font-size: $font-size-label;
+    color: $text-color-secondary;
+    margin-bottom: $margin-2n;
+    .tips {
+      color: $primary-color;
+    }
+    View {
+      display: inline;
+    }
+    .expire {
+      margin-left: $margin-2n;
+      padding-left: $padding-2n;
+      border-left: $border-solid-1;
+    }
+  }
+  .bottom_button_wrap {
+    @include ios-safe-area-inset-bottom;
+  }
+  .bottom_button{
+    height: rem(42);
+    line-height: rem(42);
+    border-color: $primary-color;
+    background-color: $primary-color;
+    border-radius: $border-radius-small;
+    font-size: $font-size-middle;
+    color: $white;
+  }
+  .bottom_tips{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: calc(100% + 12px);
+    padding: rem($padding-2n);
+    text-align: center;
+    font-size: rem($font-size-label);
+    color: $white;
+    width: calc(100vw - 32px);
+    box-sizing: border-box;
+    border-radius: rem($border-radius-small);
+    background: $text-color-regular;
+    .bottom_tips_img{
+      width: rem(18);
+      height: rem(18);
+      flex-shrink: 0;
+      border-radius: $border-radius-circle;
+      line-height: rem($font-line-height-xs);
+    }
+    .bottom_tips_text{
+      padding-left: rem($padding-2n);
+      line-height: rem($font-line-height-xs);
+      text-align: left;
+    }
+    .bottom_tips_arrows{
+      position: absolute;
+      bottom: rem(-16);
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border: rem(8) solid transparent;
+      border-top: rem(8) solid $text-color-regular;
+    }
+  }
+}

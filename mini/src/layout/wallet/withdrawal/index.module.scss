@@ -1,0 +1,169 @@
+@import '@common/styles/index.scss';
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  .topBar {
+    position: fixed;
+    top: 54px;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+
+    :global {
+      .dzq-icon {
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+        width: 40px;
+        padding-left: $padding-10;
+        transform: rotate(180deg);
+        font-size: $font-size-middle;
+        color: $white;
+      }
+    }
+  }
+
+  .totalAmount {
+    width: 100%;
+    height: 211px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: $white;
+    text-align: center;
+    // background: $primary-color url('https://cloudcache.tencentcs.com/operation/dianshi/other/walletbackground.d038c3fcc736f8c7bb086e90c5abe4df9b946fc0.png') 100% no-repeat padding-box;
+    background-color: $primary-color;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    background-size: 100% 100%;
+
+    .moneyTitle {
+      height: 20px;
+
+      font-weight: normal;
+      font-size: $font-size-primary;
+      line-height: 20px;
+      margin: 14px 0 $margin-1n;
+    }
+    .moneyNum {
+      height: 42px;
+
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 42px;
+      margin-bottom: 54px;
+    }
+  }
+
+  .moneyInput {
+    width: 343px;
+    height: 168px;
+    border-radius: $border-radius-small;
+    background: $white;
+    margin-top: -38px;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: $padding-2n 0;
+  padding-bottom: calc(8px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+  padding-bottom: calc(8px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+  background: $white;
+  border-top: $border-solid-1;
+
+  .button {
+    width: 343px;
+    height: 42px;
+    padding: 0;
+    border-radius: $border-radius-small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttonContent {
+    height: 100%;
+    font-size: $font-size-middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.bgBtnColor {
+  :global {
+    .dzq-button--primary.is-mouseenter {
+      @include button-primary();
+    }
+  }
+}
+
+/* 顶部title样式 */
+.topBarTitle {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: $padding-4n;
+  box-sizing: border-box;
+  text-align: center;
+  max-width: calc(100% - 100px);
+  justify-content: space-between;
+  .customCapsule {
+    font-size: $font-size-middle;
+    line-height: $font-line-height-base;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-shrink: 0;
+    margin-right: $margin-2n;
+    :global(.dzq-icon) {
+      font-weight: bold;
+      color: $white;
+    }
+  }
+  .fullScreenTitle {
+    font-size: $font-size-middle;
+    color: $white;
+    max-width: 200px;
+    @include text-ellipsis();
+  }
+}
+
+.payment {
+  flex: 1;
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+.title {
+  font-size: rem($font-size-middle);
+  color: $text-color-primary;
+  margin-top: rem(rem($margin-4n));
+}
+
+.info {
+  margin-top: rem($margin-2n);
+  font-size: rem($font-size-base);
+  color: $text-color-regular;
+  line-height: $font-line-height-base;
+  word-break: break-all;
+}

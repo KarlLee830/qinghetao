@@ -1,0 +1,77 @@
+/* stylelint-disable */
+@import '@common/styles/index.scss';
+.react-multi-carousel-list {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative
+}
+
+.react-multi-carousel-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, transition
+}
+
+.react-multi-carousel-dot-list {
+  position: absolute;
+  bottom: 4px;
+  display: flex;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center
+}
+
+.react-multi-carousel-dot button {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  opacity: 1;
+  padding: 5px 5px 5px 5px;
+  box-shadow: none;
+  transition: background .5s;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $primary-color10;
+  padding: 0;
+  margin: 0;
+  margin-right: 6px;
+  outline: 0;
+  cursor: pointer
+}
+
+.react-multi-carousel-dot button:hover:active {
+  background: $primary-color;
+}
+
+.react-multi-carousel-dot--active button {
+  background: $primary-color;
+}
+
+.react-multi-carousel-item {
+  transform-style: preserve-3d;
+  backface-visibility: hidden
+}
+
+@media all and (-ms-high-contrast:none),
+(-ms-high-contrast:active) {
+  .react-multi-carousel-item {
+    flex-shrink: 0 !important
+  }
+
+  .react-multi-carousel-track {
+    overflow: visible !important
+  }
+}

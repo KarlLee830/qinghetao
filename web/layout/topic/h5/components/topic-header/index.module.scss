@@ -1,0 +1,33 @@
+@import '@common/styles/index.scss';
+
+.container {
+  padding: rem($padding-4n);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  .title {
+    font-size: rem($font-size-middle);
+    line-height: rem($font-line-height-primary);
+    color: $text-color-primary;
+    font-weight: 600;
+  }
+  :global(.dzq-dropdown__trigger) {
+    font-size: rem($font-size-primary);
+    color: $primary-color;
+  }
+  :global(.dzq-dropdown-menu__item) {
+    padding: rem($padding-10) 0;
+  }
+}
+.sortDropdown {
+  color: $text-color-secondary;
+  font-size: $font-size-base;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: rem(20);
+  .icon {
+    margin-right: rem($padding-2n);
+  }
+}

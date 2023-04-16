@@ -1,0 +1,28 @@
+@import '@common/styles/index.scss';
+.container {
+  background-color: $comment-bg-color;
+  width: 100%;
+  .content {
+    width: 100%;
+    min-width: rem(652);
+  }
+  .title {
+    padding: 0 rem($padding-6n);
+    border-radius: rem($border-radius-small);
+    background: $white;
+  }
+  .right {
+    // width: rem(286);
+    overflow: hidden;
+  }
+  .threadStyle {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .rightSide {
+    position: relative !important;
+  }
+
+}
+

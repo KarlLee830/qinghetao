@@ -1,0 +1,43 @@
+@import '@common/styles/index.scss';
+
+.setTop {
+  width: 100%;
+  height: 44px;
+  background: $success-color9;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  color: $success-color;
+  display: none;
+  z-index: $zindex-popup;
+
+  .setTopIcon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: $border-radius-circle;
+    line-height: 20px;
+    color: $white;
+    background: $success-color;
+    margin-right: $margin-2n;
+
+    .icon {
+      font-size: $font-size-small !important;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.inTop {
+  display: block;
+  transition: all 2s;
+  // TODO: 更换token
+  opacity: 1;
+}
+.outTop {
+  transition: all 2s;
+  // TODO:
+  opacity: 0;
+}

@@ -1,0 +1,105 @@
+@import '@common/styles/index.scss';
+
+.list {
+  width: 100%;
+}
+
+.list.fixed {
+  .left {
+    position: fixed;
+    z-index: $zindex-backtotop;
+  }
+
+  .right {
+    position: fixed !important;
+    z-index: $zindex-normal;
+  }
+
+  .top {
+    position: fixed;
+    z-index: $zindex-backtotop;
+  }
+
+  @include media('xl-pc') {
+    .center {
+      width: rem(750) !important;
+      left: calc((100vw - 750px - 300px - 330px - 40px) / 2 + 320px) !important;
+    }
+
+    .left {
+      margin-right: rem(20);
+      width: 296px;
+      top: 110px;
+      left: calc((100vw - 750px - 300px - 330px - 40px) / 2);
+    }
+
+    .right {
+      margin-left: rem(20);
+      width: rem(330);
+      top: 110px;
+      right: calc((100vw - 750px - 300px - 330px - 40px) / 2);
+    }
+  }
+
+  @include media('l-pc') {
+    .center {
+      width: 52% !important;
+      left: calc((100vw - 52% - 20% - 22% - 2.8%) / 2 + 21.4%) !important;
+    }
+
+    .left {
+      margin-right: 1.4%;
+      width: calc(20% - 4px);
+      top: 110px;
+      left: calc((100vw - 52% - 20% - 22% - 2.8%) / 2);
+    }
+
+    .right {
+      margin-left: 1.4%;
+      width: 22%;
+      top: 110px;
+      right: calc((100vw - 52% - 20% - 22% - 2.8%) / 2);
+    }
+  }
+
+  @include media('s-pc') {
+    .center {
+      width: 44% !important;
+      left: calc((100vw - 44% - 24% - 27% - 2%) / 2 + 25%) !important;
+    }
+
+    .left {
+      margin-right: 1%;
+      width: calc(24% - 4px);
+      top: 110px;
+      left: calc((100vw - 44% - 24% - 27% - 2%) / 2);
+    }
+
+    .right {
+      margin-left: 0.9%;
+      width: 27%;
+      top: 110px;
+      right: calc((100vw - 44% - 24% - 27% - 2%) / 2);
+    }
+  }
+  @include heightMedia($media-min-height) {
+    .left {
+      top: 110px;
+    }
+
+    .right {
+      top: 110px;
+    }
+  }
+}
+
+.scrollArea {
+  overflow: hidden overlay !important;
+  // @include scrollbar();
+
+  // // 滚动条上的滚动滑块
+  // &::-webkit-scrollbar-thumb {
+  //   background: rgba(0, 0, 0, 0.5);
+  //   border-radius: 4px;
+  // }
+}

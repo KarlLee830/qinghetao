@@ -1,0 +1,108 @@
+@import '@common/styles/index.scss';
+
+@mixin img {
+  width: rem(18);
+  height: rem(18);
+  line-height: rem(18);
+  border-radius: 50%;
+  border: rem(1) solid $white;
+  background: $text-color-secondary;
+  display: inline-block;
+}
+
+@mixin heightMiddle {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.content{
+  padding: 0 rem($padding-4n);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: calc(100vh - 205px);
+  .list{
+    border-bottom: $border-solid-1;
+    height: rem(52);
+    font-size: rem($font-size-base);
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    .label{
+      @include heightMiddle;
+      color: $text-color-regular;
+      white-space: nowrap;
+      flex: 1;
+    }
+    .right{
+      @include heightMiddle;
+      @include text-ellipsis;
+      flex: 1;
+      display: flex;
+      place-content: flex-end;
+    }
+    .list_text_ellipsis {
+      @include text-ellipsis;
+      margin-right: $margin-2n;
+    }
+  }
+  .forum_agent{
+    @include heightMiddle;
+    height: rem(52);
+    display: flex;
+    align-items: center;
+    .forum_agent_img{
+      @include img;
+    }
+    .forum_agent_name{
+      padding-left: rem($padding-2n);
+    }
+  }
+  .forum_member{
+    @include heightMiddle;
+    height: rem(52);
+    display: flex;
+    align-items: center;
+    .forum_member_img{
+      @include img;
+      line-height: $font-line-height-xs;
+    }
+    &>div:nth-child(2){
+      position: relative;
+      left: rem(-4);
+      z-index: 2;
+    }
+    &>div:nth-child(3){
+      position: relative;
+      left: rem(-8);
+      z-index: 3;
+    }
+  }
+}
+.forum_users_list{
+  height: 100%;
+  overflow: scroll;
+}
+.forum_users_popup {
+  height: 60%;
+  overflow-y: scroll;
+  background: $white;
+}
+.popup_introduce {
+  padding: $padding-4n;
+  height: 60vh;
+  background: $white;
+  z-index: $zindex-popup;
+  overflow-y: auto;
+  .introduce_content {
+    font-weight: normal;
+    color: $text-color-primary;
+    font-size: $font-size-base;
+    line-height: $font-line-height-small;
+    pre {
+      white-space: pre-wrap;
+    }
+  }
+}

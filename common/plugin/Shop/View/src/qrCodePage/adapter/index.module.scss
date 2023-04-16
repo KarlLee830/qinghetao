@@ -1,0 +1,16 @@
+@import '@common/styles/index.scss';
+
+.qrcode-page {
+  height: 100vh;
+  background-color: #f5f7f8;
+  overflow-y: hidden;
+}
+.qrcode-content {
+  height: rem(430);
+  border-radius: rem(10);
+  background: #fff;
+  margin: rem(10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

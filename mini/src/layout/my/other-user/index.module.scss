@@ -1,0 +1,100 @@
+@import '@common/styles/index.scss';
+
+.mobileLayout {
+  background: $white;
+
+
+  .loadingBox {
+    height: 400px;
+  }
+}
+
+.unit {
+  &::before {
+    content: '';
+    display: block;
+    height: 10px;
+    // 目前没有定义这个颜色变量
+    background: #f4f6f7;
+  }
+}
+
+.dividerContainer {
+  padding-left: $padding-4n;
+  padding-right: $padding-4n;
+
+  :global {
+    .dzq-divider {
+      margin: 0;
+    }
+  }
+}
+
+.divider {
+  margin: $margin-2n 0;
+}
+
+.threadHeader {
+  padding: 0 $padding-4n;
+}
+
+.threadUnit {
+  padding: $padding-4n;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .threadTitle {
+    font-weight: 600;
+    font-size: $font-size-middle;
+    color: $text-color-primary;
+    margin-right: 12px;
+  }
+
+  .threadCount {
+    font-size: $font-size-small;
+    // 这个目前也没有定义
+    color: $text-color-secondary;
+  }
+}
+
+.loadingSpin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 380px;
+}
+/* 顶部title样式 */
+.topBar {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: $padding-4n;
+  box-sizing: border-box;
+  text-align: center;
+  max-width: calc(100% - 100px);
+  justify-content: space-between;
+  z-index: 1;
+  .customCapsule {
+    font-size: $font-size-middle;
+    line-height: $font-line-height-base;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-shrink: 0;
+    margin-right: $margin-2n;
+    :global(.dzq-icon) {
+      font-weight: bold;
+      color: $white;
+    }
+  }
+  .fullScreenTitle {
+    font-size: $font-size-middle;
+    color: $white;
+    max-width: 200px;
+    @include text-ellipsis();
+  }
+}

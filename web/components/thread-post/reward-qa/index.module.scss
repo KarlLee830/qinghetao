@@ -1,0 +1,85 @@
+@import '@common/styles/index.scss';
+.rewards {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: -webkit-fill-available;
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+  background-color: $white;
+  z-index: $zindex-popup;
+  .line-box {
+    display: flex;
+    margin: 0 rem($margin-4n);
+    height: 52px;
+    font-size: $font-size-base;
+    border-bottom: $border-solid-1;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .label {
+    color: $text-color-regular;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    color: $text-color-primary;
+    :global {
+      .dzq-icon {
+        transform: scale(.6);
+        color: $icon-color;
+      }
+      .dzq-input {
+        max-width: rem(200px);
+        border: none;
+      }
+      .dzq-input__inner {
+        border: none;
+        text-align: right;
+      }
+    }
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    border-top: $border-solid-1;
+    padding: rem($padding-2n) rem($padding-4n);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    :global {
+      .dzq-button {
+        flex:1;
+        @include button-default;
+        height: rem(42);
+        &:first-child {
+          margin-right: rem($margin-10);
+        }
+        &:last-child {
+          @include button-primary;
+        }
+      }
+    }
+  }
+}
+
+
+.pc {
+  z-index: $zindex-dialog !important;
+
+  .rewards {
+    position: static;
+    width: 100%;
+    height: 106px;
+    min-height: 106px;
+    .line-box:last-child {
+      border-bottom: none;
+    }
+  }
+}

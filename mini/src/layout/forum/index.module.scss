@@ -1,0 +1,113 @@
+@import '@common/styles/index.scss';
+
+@mixin img {
+  width: rem(20);
+  height: rem(20);
+  line-height: $font-line-height-xs;
+  border-radius: $border-radius-circle;
+  border: rem(1) solid $white;
+  box-sizing: border-box;
+  background: $text-color-secondary;
+  display: inline-block;
+}
+
+@mixin lineHeight52 {
+  line-height: rem(52);
+}
+
+.content{
+  padding: 0 $padding-4n;
+  background-color: $white;
+  .list{
+    border-bottom: $border-solid-1;
+    height: rem(52);
+    font-size: $font-size-base;
+    font-weight: normal;
+    .label{
+      float: left;
+      color: $text-color-regular;
+      @include lineHeight52;
+    }
+    .right{
+      float: right;
+      color: $text-color-primary;
+      @include lineHeight52;
+    }
+    .textEllipsis {
+      max-width: 50%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .list_text_ellipsis {
+      @include text-ellipsis;
+      margin-right: $margin-2n;
+    }
+  }
+  .forum_agent{
+    @include lineHeight52;
+    height: rem(52);
+    display: flex;
+    align-items: center;
+    .forum_agent_img{
+      @include img;
+    }
+    .forum_agent_name{
+      padding-left: $padding-2n;
+    }
+  }
+  .forum_member{
+    @include lineHeight52;
+    height: rem(52);
+    display: flex;
+    align-items: center;
+    .forum_member_img{
+      @include img;
+    }
+    &>view:nth-child(2){
+      position: relative;
+      left: rem(-4);
+      z-index: $zindex-backtotop;
+    }
+    &>view:nth-child(3){
+      position: relative;
+      left: rem(-8);
+      z-index: $zindex-backtotop;
+    }
+    .icon{
+      font-size: rem(10) !important;
+      transform: translate(0, rem(.5));
+    }
+  }
+}
+.forum_users_list{
+  height: 100%;
+  overflow: scroll;
+}
+.forum_users_popup {
+  height: 60%;
+  overflow-y: scroll;
+  background: $white;
+}
+
+.popup_introduce {
+  padding: $padding-4n;
+  height: 60vh;
+  background: $white;
+  z-index: $zindex-popup;
+  overflow-y: scroll;
+  @include ios-safe-area-inset-bottom;
+  box-sizing: border-box;
+  .introduce_content {
+    font-weight: normal;
+    color: $text-color-primary;
+    font-size: $font-size-base;
+    line-height: $font-line-height-small;
+    .introduce_pre {
+      white-space: pre-wrap;
+    }
+  }
+}

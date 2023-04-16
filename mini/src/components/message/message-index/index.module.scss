@@ -1,0 +1,14 @@
+@import "@common/styles/index.scss";
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: $body-bg-color;
+  border-top: $border-solid-1;
+
+  .container__inner {
+    flex: 1;
+    overflow: hidden;
+  }
+}

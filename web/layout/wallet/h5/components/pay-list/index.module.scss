@@ -1,0 +1,63 @@
+@import '@common/styles/index.scss';
+
+.container {
+  padding: rem($padding-4n) rem($padding-4n) 0;
+  background: $white;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    font-weight: normal;
+    padding-bottom: rem($padding-2n);
+    color: $text-color-primary;
+    font-size: rem($font-size-primary);
+    line-height: rem(16);
+
+    .money {
+        font-weight: 600;
+        font-size: rem($font-size-middle);
+        text-align: left;
+    }
+
+    :global {
+        .qq-emotion {
+            width: rem(14) !important;
+            height: rem(14) !important;
+            vertical-align: text-top;
+            display: inline-block !important;
+            flex-shrink: 0;
+          }
+      
+          .dzq-richText {
+            font-size: $font-size-primary;
+            overflow: hidden;
+            word-break: break-all;
+            max-width: rem(140);
+            @include text-ellipsis();
+      
+            .dzq-a {
+              display: inline;
+            }
+          }
+    }
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: $border-solid-1;
+  
+  font-weight: normal;
+  font-size: rem($font-size-label);
+  .time {
+    text-align: left;
+    color: $text-color-secondary;
+    padding-bottom: rem($padding-4n);
+  }
+  .payStatusTrue {
+    color: $text-color-regular;
+  }
+  .payStatusFalse {
+    color: $primary-color;
+  }
+}

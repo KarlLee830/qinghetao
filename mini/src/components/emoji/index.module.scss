@@ -1,0 +1,58 @@
+@import '@common/styles/index.scss';
+.dzq-emoji {
+  position: absolute !important;
+  bottom: 45px;
+  left: 0;
+  right: 0;
+  margin: 0 rem($margin-4n);
+  height: rem(175);
+  border-radius: rem($border-radius-small);
+  background-color: $white;
+  &__icon {
+    margin: rem($margin-1n);
+    width: rem(25);
+    height: rem(25);
+  }
+  &__slide {
+    height: rem(145);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+.h5 {
+  margin: 0;
+  margin-left: 2px;
+  position: absolute;
+  bottom: 54px;
+  height: 200px;
+  width: 390px;
+  overflow-y: scroll;
+  z-index: $zindex-dialog;
+  .dzq-emoji__icon {
+    margin: $margin-1n;
+    cursor: pointer;
+  }
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, .09);
+    border-radius: 100px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .09);
+    border-radius: 100px;
+  }
+}
+
+.h5 {
+  position: static !important;
+  display: flex;
+  flex-flow: wrap;
+  padding: $padding-10 0 $padding-10 $padding-10;
+  width: 100%;
+  min-height: 200px;
+  height: 100%;
+  margin-left: 0;
+}

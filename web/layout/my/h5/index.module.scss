@@ -1,0 +1,64 @@
+@import '@common/styles/index.scss';
+
+.mobileLayout {
+  /*background: $white;*/
+  width: 100%;
+}
+
+.unit {
+  &::before {
+    content: '';
+    display: block;
+    height: rem(10);
+    background: $spacer-bg-color;
+  }
+}
+.unit2 {
+	margin-top: rem(10);
+}
+.dividerContainer {
+  padding-left: rem($padding-4n);
+  padding-right: rem($padding-4n);
+  :global {
+    .dzq-divider {
+      margin: 0;
+    }
+  }
+}
+
+.divider {
+  margin: rem($margin-2n) 0;
+}
+.qzuoyou10 {
+	@media only screen and (max-width: 780px) {
+	  margin-left: rem(10);
+	  margin-right: rem(10);
+	}
+	border-radius: 6px;
+	background-color: #ffffff;
+}
+.threadUnit {
+  padding: rem($padding-4n);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: rem(52);
+  box-sizing: border-box;
+  /*@media only screen and (max-width: 780px) {
+    margin-left: rem(10);
+    margin-right: rem(10);
+
+  }*/
+
+  .threadTitle {
+    font-weight: 600;
+    font-size: rem($font-size-middle);
+    color: $text-color-primary;
+    margin-right: rem($margin-3n);
+  }
+
+  .threadCount {
+    font-size: rem($font-size-small);
+    color: $text-color-secondary;
+  }
+}

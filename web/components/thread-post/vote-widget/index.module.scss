@@ -1,0 +1,36 @@
+
+@import '@common/styles/index.scss';
+
+.vote-widget {
+  // margin: 0 16px;
+  background: $text-bg-color;
+  border-radius: 5px;
+  height: rem(49px);
+  font-size: rem(12px);
+  line-height: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+
+  .left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .text {
+      margin-left: 10px;
+    }
+
+    .icon {
+      color: $primary-color;
+      font-size: 20px !important;
+      font-weight: bold;
+    }
+  }
+
+  .right {
+
+  }
+}
+

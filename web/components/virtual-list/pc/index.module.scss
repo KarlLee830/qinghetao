@@ -1,0 +1,391 @@
+@import '@common/styles/index.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $body-bg-color;
+  overflow-x: hidden;
+}
+
+.body{
+  width: 100%;
+  min-width: rem(800);
+  padding-top: rem($padding-5n);
+  height: 100%;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  // flex-direction: column;
+  flex-direction: row;
+  background: $body-bg-color;
+  overflow-y: auto;
+  border-radius: rem(5);
+  scrollbar-width: none; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+  ::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+  }
+  // 不需要限制最大宽度。这个会影响鼠标的滚动区域，所以改成padding
+  &.col-1{
+    .wrapper {
+      padding: 0 calc((100vw - 1100px) / 2);
+    }
+  }
+  &.col-2{
+    .wrapper {
+      padding: 0 calc((100vw - 1100px) / 2);
+    }
+  }
+  &.col-3{
+    .wrapper {
+      padding: 0 calc((100vw - 1420px) / 2);
+    }
+  }
+  @include media('xl-pc') {
+    padding-top: rem($padding-5n);
+    &.col-1{
+      .center {
+        width: rem(1100);
+      }
+    }
+    &.col-2{
+      .center {
+        width: rem(731);
+      }
+      .right {
+        margin-left: rem(10);
+        width: rem(300);
+      }
+    }
+    &.col-3{
+      .center {
+        width: rem(750);
+      }
+      .left {
+        margin-right: rem(20);
+        width: rem(300);
+      }
+      .right {
+        margin-left: rem(20);
+        width: rem(330);
+      }
+    }
+  }
+  @include media('l-pc') {
+    padding-top: rem($padding-5n);
+    &.col-1{
+      .center {
+        width: 100%;
+      }
+    }
+    &.col-2{
+      .center {
+        width: 66%;
+      }
+      .right {
+        margin-left: 0.9%;
+        width: 30%;
+      }
+    }
+    &.col-3{
+      .center {
+        width: 52%;
+      }
+      .left {
+        margin-right: 1.4%;
+        width: 20%;
+      }
+      .right {
+        margin-left: 1.4%;
+        width: 22%;
+      }
+    }
+  }
+  @include media('s-pc'){
+    padding-top: rem($padding-4n);
+    &.col-1{
+      .center {
+        width: 100%;
+      }
+    }
+    &.col-2{
+      .center {
+        width: 66.5%;
+      }
+      .right {
+        margin-left: 1%;
+        width: 28%;
+      }
+    }
+    &.col-3{
+      .center {
+        width: 44%;
+      }
+      .left {
+        margin-right: 1%;
+        width: 24%;
+      }
+      .right {
+        margin-left: 0.9%;
+        width: 27%;
+      }
+    }
+  }
+
+  .center {
+    position: relative;
+    // max-width: rem(750);
+    display: flex;
+    flex-direction: column;
+    flex: -1;
+    flex-shrink: 0;
+  }
+
+  .left {
+    position: sticky;
+    top: rem(0);
+    // max-width: rem(300);
+    flex: -1;
+    flex-shrink: 0;
+  }
+
+  .right {
+    position: sticky;
+    top: rem(0);
+    // max-width: rem(330);
+    flex: -1;
+    flex-shrink: 0;
+    &.home-right {
+      top: rem(-125);
+    }
+    @include media('xl-pc') {
+      &.home-right {
+        top: rem(-135);
+      }
+    }
+  }
+}
+
+// 高度自适应
+.container {
+  :global {
+    .detail {
+      @include heightMedia(780px, 700px) {
+        .right-recommend-item:nth-last-child(-n + 2) {
+          display: none;
+        }
+      }
+
+      @include heightMedia(700px, 620px) {
+        .right-recommend-item:nth-last-child(-n + 3) {
+          display: none;
+        }
+      }
+
+      @include heightMedia(620px, 540px) {
+        .right-recommend-item:nth-last-child(-n + 4) {
+          display: none;
+        }
+      }
+
+      // 如果小于默认高度不吸顶
+      @include heightMedia(540px) {
+        .baselayout-right {
+          position: static;
+        }
+      }
+    }
+
+    .home {
+      @include heightMedia(660px, 580px) {
+        .right-recommend-item:nth-last-child(-n + 2) {
+          display: none;
+        }
+      }
+      @include heightMedia(580px, 500px) {
+        .right-recommend-item:nth-last-child(-n + 3) {
+          display: none;
+        }
+      }
+      @include heightMedia(500px, 420px) {
+        .right-recommend-item:nth-last-child(-n + 4) {
+          display: none;
+        }
+      }
+      // 如果小于默认高度不吸顶
+      @include heightMedia(415px) {
+        .baselayout-right {
+          position: static;
+        }
+      }
+    }
+
+    // 这几个页面只有一个潮流话题和版权，如果要增加模块或者更改啥，需要再单独处理一下
+    .mybuy,
+    .mylike,
+    .mycollect,
+    .search-result-post,
+    .search-result-user {
+      @include heightMedia(650px, 595px) {
+        .pop-topic div:nth-last-child(1) {
+          display: none;
+        }
+      }
+      @include heightMedia(595px, 545px) {
+        .pop-topic div:nth-last-child(-n + 2) {
+          display: none;
+        }
+      }
+      @include heightMedia(545px, 495px) {
+        .pop-topic div:nth-last-child(-n + 3) {
+          display: none;
+        }
+      }
+      @include heightMedia(495px, 445px) {
+        .pop-topic div:nth-last-child(-n + 4) {
+          display: none;
+        }
+      }
+      @include heightMedia(445px, 395px) {
+        .pop-topic div:nth-last-child(-n + 5) {
+          display: none;
+        }
+      }
+      @include heightMedia(395px) {
+        .baselayout-right {
+          position: static;
+        }
+      }
+    }
+
+    .myblock-page {
+      @include heightMedia(470px) {
+        .baselayout-right {
+          position: static;
+        }
+      }
+    }
+    .mymessage-page {
+      // 这里暂时这样处理。等消息系列页面一起调整
+      min-height: 940px;
+      @include heightMedia(940px) {
+        padding-top: 70px;
+        .baselayout-right {
+          position: static;
+        }
+      }
+    }
+    .mywallet-page {
+      @include heightMedia(620px) {
+        .baselayout-right {
+          position: static;
+        }
+      }
+    }
+    .topic-detail-activeuser,
+    .search-result-topic {
+      @include heightMedia(655px, 600px) {
+        .active-users-item:nth-last-child(1) {
+          display: none;
+        }
+      }
+      @include heightMedia(600px, 545px) {
+        .active-users-item:nth-last-child(-n + 2) {
+          display: none;
+        }
+      }
+
+      @include heightMedia(545px, 490px) {
+        .active-users-item:nth-last-child(-n + 3) {
+          display: none;
+        }
+      }
+    }
+    .topic-detail-page,
+    .search-result-topic,
+    .search-page {
+      @include heightMedia(440px) {
+        .baselayout-right {
+          position: static;
+        }
+      }
+    }
+    .mydraft {
+      @include heightMedia(1000px, 945px) {
+        .user-center-friends-item:nth-last-child(-n + 2) {
+          display: none;
+        }
+      }
+      @include heightMedia(945px, 890px) {
+        .user-center-friends-item:nth-last-child(-n + 3) {
+          display: none;
+        }
+      }
+      @include heightMedia(890px) {
+        .user-center-friends-mini {
+          display: flex !important;
+        }
+
+        .user-center-friends-item {
+          display: none;
+        }
+      }
+      @include heightMedia(830px, 775px) {
+        .pop-topic div:nth-last-child(1) {
+          display: none;
+        }
+      }
+
+      @include heightMedia(775px, 725px) {
+        .pop-topic div:nth-last-child(-n + 2) {
+          display: none;
+        }
+      }
+
+      @include heightMedia(725px, 670px) {
+        .pop-topic div:nth-last-child(-n + 3) {
+          display: none;
+        }
+      }
+
+      @include heightMedia(670px, 615px) {
+        .pop-topic div:nth-last-child(-n + 4) {
+          display: none;
+        }
+      }
+
+      @include heightMedia(615px, 560px) {
+        .pop-topic div:nth-last-child(-n + 5) {
+          display: none;
+        }
+      }
+
+      @include heightMedia(560px) {
+        .baselayout-right {
+          position: static;
+        }
+      }
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  // padding: rem(20) 0;
+}
+
+
+
+.list {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}

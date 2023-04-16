@@ -1,0 +1,63 @@
+@import '@common/styles/index.scss';
+.container {
+  flex: 1;
+  width: 100%;
+  .activeItem {
+    color: $primary-color !important;
+    position: relative;
+    font-weight: 600;
+  }
+
+  :global {
+    .dzq-menu{
+      
+      @include media('s-pc') {
+        justify-content: space-between;
+      }
+    }
+    .dzq-menu--horizontal {
+      box-sizing: border-box;
+      // padding-top: rem(8);
+      border-top-left-radius: rem($border-radius-small);
+      border-top-right-radius: rem($border-radius-small);
+      display: flex;
+      align-items: center;
+    }
+    .dzq-submenu__title {
+      .dzq-icon {
+        font-size: rem(10) !important; // Menu组件里面的icon写死了12px大小
+      }
+    }
+
+    .dzq-menu--horizontal .dzq-submenu > .dzq-menu .dzq-menu-item.is-divided:last-child {
+      border-bottom: none !important; // 组件库中有相应逻辑但被加了important
+    }
+
+    .dzq-submenu__title.is-active {
+      font-weight: 600;
+    }
+
+    .dzq-menu .dzq-menu-item.is-active {
+      font-weight: 600;
+    }
+
+    .dzq-submenu > .dzq-menu .dzq-menu-item.is-active {
+      font-weight: initial;
+    }
+  }
+}
+
+.label{
+  position: relative;
+  .line {
+    position: absolute;
+    bottom: rem(12);
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+    height: 2px;
+    border-radius: rem(1);
+    background: $primary-color;
+  }
+  
+}

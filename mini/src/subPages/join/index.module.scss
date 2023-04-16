@@ -1,0 +1,17 @@
+@import '@common/styles/index.scss';
+
+.page{
+
+  background: $white;
+}
+.text {
+  margin-top: 200px;
+  color: $text-color-primary;
+  text-align: center;
+  font-size: $font-size-large + px;
+}
+
+.btnBox{
+  padding: 0 50px;
+  margin-top: 50px;
+}

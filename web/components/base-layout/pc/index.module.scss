@@ -1,0 +1,641 @@
+@import '@common/styles/index.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  background: $body-bg-color;
+  overflow: hidden;
+
+  // scrollbar-width: none; /* Firefox */
+  // scrollbar-color: transparent transparent; /* Firefox */
+  // ::-webkit-scrollbar {
+  //   display: none; /* Chrome Safari */
+  // }
+}
+
+.body {
+  width: 100%;
+  min-width: rem(800);
+  padding-top: rem($padding-5n);
+  // height: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
+  flex-direction: row;
+  background: $body-bg-color;
+  overflow-y: auto;
+  border-radius: rem(5);
+
+  // scrollbar-width: none; /* Firefox */
+  // scrollbar-color: transparent transparent; /* Firefox */
+  // ::-webkit-scrollbar {
+  //   display: none; /* Chrome Safari */
+  // }
+  // 不需要限制最大宽度。这个会影响鼠标的滚动区域，所以改成padding
+  &.col-1 {
+    .wrapper {
+      padding: 0 calc((100vw - 1420px) / 2);
+    }
+  }
+
+  &.col-2 {
+    .wrapper {
+      padding: 0 calc((100vw - 1420px) / 2);
+    }
+  }
+
+  &.col-3 {
+    .wrapper {
+      padding: 0 calc((100vw - 1420px) / 2);
+    }
+  }
+
+  @include media('xl-pc') {
+    padding-top: rem(10);
+
+    &.col-1 {
+      .center {
+        width: rem(1420);
+      }
+    }
+
+    &.col-2 {
+      .center {
+        width: rem(1110);
+      }
+
+      .right {
+        margin-left: rem(10);
+        width: rem(300);
+      }
+    }
+
+    &.col-3 {
+      .center {
+        width: rem(1110);
+      }
+
+      .left {
+        margin-right: rem(20);
+        width: rem(300);
+      }
+
+      .right {
+        margin-left: rem(20);
+        width: rem(330);
+      }
+    }
+  }
+
+  @include media('l-pc') {
+    padding-top: rem(10);
+
+    &.col-1 {
+      .center {
+        width: 100%;
+      }
+    }
+
+    &.col-2 {
+      .center {
+        width: 66%;
+      }
+
+      .right {
+        margin-left: 0.9%;
+        width: 30%;
+      }
+    }
+
+    &.col-3 {
+      .center {
+        width: 52%;
+      }
+
+      .left {
+        margin-right: 1.4%;
+        width: 20%;
+      }
+
+      .right {
+        margin-left: 1.4%;
+        width: 22%;
+      }
+    }
+  }
+
+  @include media('s-pc') {
+    padding-top: rem($padding-10);
+
+    &.col-1 {
+      .center {
+        width: 100%;
+      }
+    }
+
+    &.col-2 {
+      .center {
+        width: 66.5%;
+      }
+
+      .right {
+        margin-left: 1%;
+        width: 30%;
+      }
+    }
+
+    &.col-3 {
+      .center {
+        width: 44%;
+      }
+
+      .left {
+        margin-right: 1%;
+        width: 24%;
+      }
+
+      .right {
+        margin-left: 0.9%;
+        width: 27%;
+      }
+    }
+  }
+  @include heightMedia($media-min-height) {
+    padding-top: rem($padding-10);
+  }
+
+  .center {
+    position: relative;
+    // max-width: rem(750);
+    display: flex;
+    flex-direction: column;
+    flex: -1;
+    flex-shrink: 0;
+  }
+
+  .left {
+    position: sticky;
+    top: rem(0);
+    // max-width: rem(300);
+    flex: -1;
+    flex-shrink: 0;
+  }
+
+  .right {
+    position: sticky;
+    top: rem(0);
+    // max-width: rem(330);
+    flex: -1;
+    flex-shrink: 0;
+
+    &.home-right {
+      top: 0;
+    }
+
+    // @include media('xl-pc') {
+    //   &.home-right {
+    //     top: rem(-135);
+    //   }
+    // }
+  }
+}
+
+@mixin common() {
+  .qrcode {
+    padding: $padding-10 $padding-2n;
+    >div {
+      &:first-child {
+        height: 68px;
+        margin-right: $margin-10;
+      }
+      canvas,
+      img {
+        width: 68px !important;
+      }
+    }
+    p {
+      font-size: $font-size-primary;
+      &:last-child {
+        margin-top: $margin-1n;
+      }
+    }
+  }
+
+  :global {
+    .dzq-richText {
+      p {
+        font-size: $font-size-primary !important;
+      }
+    }
+  }
+}
+// 高度自适应
+.container {
+  :global {
+    .detail {
+      @include widthAndHeightMedia($media-min-width, $media-min-height) {
+        @include common;
+        .baselayout-right.is-userinfo-show {
+          top: -220px !important;
+        }
+      }
+      @include heightMedia(500px) {
+        .baselayout-right.is-userinfo-show {
+          top: 0 !important;
+        }
+      }
+      @include heightMedia($media-second-height) {
+        .qrcode {
+          display: none;
+        }
+
+        .copyright {
+          margin-top: 0;
+        }
+      }
+      .right-recommend-item:nth-child(1),
+      .right-recommend-item:nth-child(n+1) {
+        display: block;
+      }
+      @include heightMedia(700px) {
+        .right-recommend-item:nth-last-child(-n + 2) {
+          display: none;
+        }
+      }
+      @include heightMedia(690px) {
+        .right-recommend-item:nth-last-child(-n + 3) {
+          display: none;
+        }
+      }
+      @include heightMedia(625px) {
+        .right-recommend-item:nth-last-child(-n + 4) {
+          display: none;
+        }
+      }
+      @include heightMedia(565px) {
+        .right-recommend-item:nth-last-child(-n + 5) {
+          display: none;
+        }
+      }
+      @include heightMedia(500px) {
+        .recommend {
+          display: none;
+        }
+      }
+    }
+
+    .home {
+      @include widthAndHeightMedia($media-min-width, $media-min-height) {
+        .dzq-menu {
+          &-item,
+          .dzq-submenu__title {
+            font-size: $font-size-primary;
+          }
+          &-item {
+            padding-top: $padding-3n;
+            padding-bottom: $padding-3n;
+          }
+        }
+        .top-news-item {
+          height: 32px;
+          div {
+            font-size: $font-size-primary;
+          }
+          :global {
+            .dzq-richText {
+              font-size: $font-size-primary;
+            }
+          }
+        }
+        @include common;
+      }
+      @include heightMedia($media-second-height) {
+        .qrcode {
+          display: none;
+        }
+        .copyright {
+          margin-top: 0;
+        }
+      }
+      .right-recommend-item:nth-child(1),
+      .right-recommend-item:nth-child(n+1) {
+        display: block;
+      }
+
+      @include heightMedia(590px) {
+        .right-recommend-item:nth-last-child(-n + 2) {
+          display: none;
+        }
+      }
+
+      @include heightMedia(520px) {
+        .right-recommend-item:nth-last-child(-n + 3) {
+          display: none;
+        }
+      }
+      @include heightMedia(450px) {
+        .right-recommend-item:nth-last-child(-n + 4) {
+          display: none;
+        }
+      }
+      @include heightMedia(380px) {
+        .right-recommend-item:nth-last-child(-n + 5) {
+          display: none;
+        }
+      }
+    }
+
+    // 这几个页面只有一个潮流话题和版权，如果要增加模块或者更改啥，需要再单独处理一下
+    .mybuy,
+    .mylike,
+    .mycollect,
+    .search-result-post,
+    .search-result-user {
+      .pop-topic div:nth-child(1),
+      .pop-topic div:nth-child(n + 1),
+      .pop-topic div:nth-child(n + 2) {
+        display: flex;
+      }
+      @include heightMedia(650px, 595px) {
+        .pop-topic div:nth-last-child(1) {
+          display: none;
+        }
+
+        .pop-topic div:nth-last-child(-n + 2) {
+          border-bottom: none;
+        }
+      }
+
+      @include heightMedia(595px, 545px) {
+        .pop-topic div:nth-last-child(-n + 2) {
+          display: none;
+        }
+
+        .pop-topic div:nth-last-child(-n + 3) {
+          border-bottom: none;
+        }
+      }
+
+      @include heightMedia(545px, 495px) {
+        .pop-topic div:nth-last-child(-n + 3) {
+          display: none;
+        }
+
+        .pop-topic div:nth-last-child(-n + 4) {
+          border-bottom: none;
+        }
+      }
+
+      @include heightMedia(495px, 445px) {
+        .pop-topic div:nth-last-child(-n + 4) {
+          display: none;
+        }
+
+        .pop-topic div:nth-last-child(-n + 5) {
+          border-bottom: none;
+        }
+      }
+
+      @include heightMedia(445px, 395px) {
+        .pop-topic div:nth-last-child(-n + 5) {
+          display: none;
+        }
+
+        .pop-topic div:nth-last-child(-n + 6) {
+          border-bottom: none;
+        }
+      }
+
+      @include heightMedia(395px) {
+        .baselayout-right {
+          position: static;
+        }
+      }
+    }
+
+    .myblock-page {
+      @include heightMedia(470px) {
+        .baselayout-right {
+          position: static;
+        }
+      }
+    }
+
+    // 暂时注释，类名必须存在，等待消息系列页面一起调整。
+    .mymessage-page {
+      // @include heightMedia(940px) {
+      //   min-height: 940px;
+      //   padding-top: 70px;
+
+      //   .baselayout-right {
+      //     position: static;
+      //   }
+      // }
+    }
+
+    .mywallet-page {
+      @include heightMedia(620px) {
+        .baselayout-right {
+          position: static;
+        }
+      }
+    }
+
+    .topic-detail-activeuser,
+    .search-result-topic {
+      @include heightMedia(655px, 600px) {
+        .active-users-item:nth-last-child(1) {
+          display: none;
+        }
+      }
+
+      @include heightMedia(600px, 545px) {
+        .active-users-item:nth-last-child(-n + 2) {
+          display: none;
+        }
+      }
+
+      @include heightMedia(545px, 490px) {
+        .active-users-item:nth-last-child(-n + 3) {
+          display: none;
+        }
+      }
+    }
+
+    .topic-detail-page,
+    .search-result-topic,
+    .search-page {
+      @include heightMedia(440px) {
+        .baselayout-right {
+          position: static;
+        }
+      }
+    }
+
+    .mydraft {
+      @include heightMedia(1000px, 945px) {
+        .user-center-friends-item:nth-last-child(-n + 2) {
+          display: none;
+        }
+
+        .user-center-friends-item:nth-child(n + 2),
+        .user-center-friends-item:nth-child(1) {
+          display: block;
+        }
+      }
+
+      @include heightMedia(945px, 890px) {
+        .user-center-friends-item:nth-last-child(-n + 3) {
+          display: none;
+        }
+
+        .user-center-friends-item:nth-child(n + 2),
+        .user-center-friends-item:nth-child(1) {
+          display: block;
+        }
+      }
+
+      @include heightMedia(890px) {
+        .user-center-friends-mini {
+          display: flex !important;
+        }
+
+        .user-center-friends-item {
+          display: none !important;
+        }
+      }
+      .pop-topic div:nth-child(1),
+      .pop-topic div:nth-child(n + 1),
+      .pop-topic div:nth-child(n + 2) {
+        display: flex;
+      }
+      @include heightMedia(830px, 775px) {
+        .pop-topic div:nth-last-child(1) {
+          display: none;
+        }
+        .pop-topic div:nth-last-child(-n + 2) {
+          border-bottom: none;
+        }
+      }
+
+      @include heightMedia(775px, 725px) {
+        .pop-topic div:nth-last-child(-n + 2) {
+          display: none;
+        }
+
+        .pop-topic div:nth-last-child(-n + 3) {
+          border-bottom: none;
+        }
+      }
+
+      @include heightMedia(725px, 670px) {
+        .pop-topic div:nth-last-child(-n + 3) {
+          display: none;
+        }
+
+        .pop-topic div:nth-last-child(-n + 4) {
+          border-bottom: none;
+        }
+      }
+
+      @include heightMedia(670px, 615px) {
+        .pop-topic div:nth-last-child(-n + 4) {
+          display: none;
+        }
+
+        .pop-topic div:nth-last-child(-n + 5) {
+          border-bottom: none;
+        }
+      }
+
+      @include heightMedia(615px, 560px) {
+        .pop-topic div:nth-last-child(-n + 5) {
+          display: none;
+        }
+
+        .pop-topic div:nth-last-child(-n + 6) {
+          border-bottom: none;
+        }
+      }
+
+      @include heightMedia(560px) {
+        .baselayout-right {
+          position: static;
+        }
+      }
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  // padding: rem(20) 0;
+}
+
+.list {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+// 接入虚拟滚动采用fixed方式进行布局
+.list.fixed {
+  .left {
+    position: fixed;
+  }
+
+  .center {
+    position: relative;
+    left: -12px;
+  }
+
+  .right {
+    position: fixed;
+  }
+
+  @include media('xl-pc') {
+    .left {
+      top: 77px;
+      left: calc(50vw - 710px);
+    }
+
+    .right {
+      top: 77px;
+      right: calc(50vw - 710px);
+    }
+  }
+
+  @include media('l-pc') {
+    .left {
+      top: 77px;
+      left: 20px;
+    }
+
+    .right {
+      top: 77px;
+      right: 20px;
+    }
+  }
+
+  @include media('s-pc') {
+    .left {
+      top: 74px;
+      left: 14px;
+    }
+
+    .right {
+      top: 74px;
+      right: 14px;
+    }
+  }
+}

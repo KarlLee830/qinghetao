@@ -1,0 +1,60 @@
+@mixin scrollbar() {
+  width: 100%;
+  /* 兼容火狐 */
+  scrollbar-width: thin;
+  scrollbar-color: $border-shadow-color transparent;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:hover {
+    // 整个滚动条
+    &::-webkit-scrollbar {
+      display: block;
+      margin-right: -8px;
+      width: 8px;
+      border-radius: $border-radius-small;
+    }
+  }
+
+  // 滚动条轨道
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  // 滚动条上的滚动滑块
+  &::-webkit-scrollbar-thumb {
+    background: $border-shadow-color;
+    border-radius: 4px;
+  }
+
+}
+
+@mixin verticalScrollbar($size: 4px)  {
+  /* 兼容火狐 */
+  scrollbar-width: thin;
+  scrollbar-color: $border-shadow-color $border-color;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &:hover{
+    &::-webkit-scrollbar {
+      display: block;
+      width: $size;
+      height: $size;
+      border-radius: $size;
+    }
+    &::-webkit-scrollbar-track {
+      background: $border-color;
+    }
+    &::-webkit-scrollbar-corner {
+      background: $border-color;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $border-shadow-color;
+      border-radius: $size;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.container {
+  height: 100vh;
+}
+
+.content {
+  @include content;
+  .button {
+    @include button;
+  }
+  .functionalRegion {
+    @include functionalRegion;
+    line-height: rem($font-line-height-base);
+    text-align: center;
+    margin-top: rem($margin-4n * 2);
+  }
+  .icon{
+    width: rem(327);
+    text-align: center;
+    .icon__img {
+      width: rem(150);
+      height: rem(150);
+      display: inline-block;
+    }
+  }
+}
+
+// ------------------PC
+.pc_container {
+  @include pc_container;
+}
+.pc_content {
+  width: 300px;
+  margin: $margin-5n auto 0;
+  padding-bottom: $padding-10 * 3;
+  .pc_functionalRegion {
+    @include functionalRegion;
+    font-weight: 600;
+    font-size: $font-size-large;
+    line-height: $font-line-height-large;
+    color: $text-color-primary;
+    text-align: center;
+    padding-bottom: $padding-4n * 2;
+  }
+  .pc_button {
+    @include pc_button;
+  }
+  .pc_icon{
+    width: 327px;
+    text-align: center;
+    .icon__img {
+      width: 150px;
+      height: 150px;
+      display: inline-block;
+    }
+  }
+}

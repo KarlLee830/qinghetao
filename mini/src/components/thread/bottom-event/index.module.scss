@@ -1,0 +1,127 @@
+@import '@common/styles/index.scss';
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: $margin-4n 0 $margin-2n;
+}
+.userImg {
+  @include cursor-on-pc;
+  display: flex;
+  align-items: center;
+  .numText {
+    line-height: 24px;
+    font-size: $font-size-label;
+    color: $text-color-secondary;
+    margin-left: $margin-2n;
+  }
+}
+.commentSharing {
+  @include cursor-on-pc;
+  display: flex;
+  .division {
+    line-height: 24px;
+    font-size: $font-size-label;
+    color: $text-color-secondary;
+    margin: 0 $padding-base;
+  }
+  .commentNum {
+    line-height: 24px;
+    font-size: $font-size-label;
+    color: $text-color-secondary;
+  }
+}
+.users {
+  margin: 0;
+}
+
+.operation {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: $border-color solid 1px;
+  box-sizing: border-box;
+}
+.operations {
+  height: 52px;
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: $border-color solid 1px;
+  box-sizing: border-box;
+}
+.fabulous {
+  @include cursor-on-pc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $padding-10 0;
+  flex: 1;
+
+  &:first-child {
+    justify-content: flex-start;
+  }
+
+  &:last-child {
+    justify-content: flex-end;
+  }
+
+  .fabulousIcon {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-primary;
+  }
+  .fabulousPost {
+    margin-left: $margin-2n;
+    font-size: $font-size-primary;
+    color: $text-color-secondary;
+    height: 35px;
+    display: flex;
+    align-items: center;
+  }
+  .fabulousCancel {
+    margin-left: $margin-2n;
+    font-size: $font-size-primary;
+    color: $primary-color;
+    height: 35px;
+    display: flex;
+    align-items: center;
+  }
+  :global{
+    .like, .share{
+      position: relative;
+      top: -1px;
+    }
+  }
+  .icon {
+    color: $text-color-secondary;
+
+    &.likedColor {
+      color: $primary-color;
+    }
+    &.dislikedColor {
+      color: $text-color-secondary;
+    }
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  :global {
+    .dzq-icon {
+      cursor: none;
+    }
+  }
+}
+
+.hongbaoMini{
+  height:16px;
+  width: 17px;
+  display: inline-block;
+  position: relative;
+  top:1px;
+}

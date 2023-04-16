@@ -1,0 +1,103 @@
+@import '@common/styles/index.scss';
+
+.contain {
+  background-color: $body-bg-color;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+//   height: 100vh;
+  min-height: calc(100vh - 104px);
+}
+.experienceContain {
+  min-height: auto;
+  overflow: scroll;
+}
+.poster {
+  position: fixed;
+  top: 0;
+  left: 1000px;
+  text-align: left;
+  // letter-spacing: 1px;
+  word-break: break-all;
+  width: 100%;
+}
+.imgbox {
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+  padding: 10px 10px 10px 10px;
+  overflow: auto;
+  .centImage {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 10px #dfe0e3;
+  }
+}
+.experienceImgbox {
+  padding: 0 rem(10) rem(20);
+  overflow: visible;
+  .centImage {
+    border-radius: 0 0 10px 10px;
+    box-shadow: none;
+  }
+}
+.shareBtn {
+  &.hasHidePart{
+    height: 104px;
+  }
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  flex: 0 0 74px;
+  background-color: $body-bg-color;
+  border-radius: 10px, 10px, 0px, 0px;
+  box-shadow: 0px 0px 8px #dfe0e3;
+  padding-bottom: constant(safe-area-inset-bottom); ///兼容 IOS<11.2/
+  padding-bottom: env(safe-area-inset-bottom); ///兼容 IOS>11.2/
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .checkbox{
+    height: rem(10px);
+    padding-left: rem(18);
+    width: 100%;
+  }
+  .btn {
+    width: 343px;
+    height: 42px;
+    border-radius: 5px;
+    background: #2469f6;
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    color: $white;
+    border: 0px;
+  }
+  .wxBtn {
+    width: 343px;
+    padding: rem(20) 0;
+    font-family: 'PingFang SC';
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: $text-color-primary;
+  }
+}
+
+.emptyHeight {
+  height: 104px;
+  padding-bottom: constant(safe-area-inset-bottom); ///兼容 IOS<11.2/
+  padding-bottom: env(safe-area-inset-bottom); ///兼容 IOS>11.2/
+}
+.experienceEmptyHeight {
+  height: 98px;
+}
+.experience {
+  margin-top: $margin-10;
+  font-size: rem(14);
+  line-height: rem(26);
+  color: #4f5a70;
+}

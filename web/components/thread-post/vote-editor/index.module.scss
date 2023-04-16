@@ -1,0 +1,315 @@
+@import '@common/styles/index.scss';
+
+.vote-editor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
+  @media screen and (max-width: 800px) {
+    height: 100vh;
+    height: -webkit-fill-available;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+  }
+
+  background-color: $white;
+  z-index: $zindex-popup;
+  .line-box {
+    display: flex;
+    margin: 0 rem($margin-4n);
+    height: 52px;
+    font-size: $font-size-base;
+    border-bottom: $border-solid-1;
+    align-items: center;
+    justify-content: space-between;
+    color: $text-color-primary;
+  }
+  .label {
+    color: $text-color-regular;
+    min-width: 28px;
+
+    .tips {
+      margin-left: 8px;
+      font-size: 12px;
+      color: $text-color-secondary;
+    }
+  }
+  :global {
+    .dzq-card__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .dzq-checkbox-wrap {
+      -webkit-tap-highlight-color: transparent;
+
+      &:last-child {
+        margin: 0;
+      }
+      .dzq-checkbox {
+        border: $border-solid-1;
+        border-radius: $border-radius-small !important;
+        background-color: $text-bg-color2;
+        &:after {
+          border: none !important;
+        }
+      }
+      .dzq-checkbox__label.is-checked {
+        color: $text-color-primary;
+      }
+      &.is-checked {
+        .dzq-checkbox__icon {
+          color: $primary-color;
+          font-size: $font-size-label !important;
+        }
+        .dzq-checkbox {
+          background-color: $checkbox-checked-bg-color;
+          border: none;
+        }
+      }
+    }
+
+    .dzq-input {
+      display: inline-block;
+      margin-right: 3px;
+      width: rem(260);
+      .dzq-input__inner {
+        border: none;
+        padding: 0;
+        text-align: left;
+        padding-right: $padding-1n;
+      }
+    }
+  }
+
+  .times {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    :global {
+      .dzq-icon {
+        transform: scale(.6);
+        color: $icon-color;
+        margin-top: 2px;
+      }
+      .dzq-input {
+        max-width: rem(200px);
+        border: none;
+      }
+      .dzq-input__inner {
+        border: none;
+        text-align: right;
+      }
+    }
+  }
+
+  .delete-icon {
+    margin-bottom: 2px;
+    font-size: 16px;
+    position: absolute;
+    right: 24px;
+  }
+
+  .item {
+    :global {
+      .react-datepicker__tab-loop {
+        width: 0;
+      }
+
+      .react-datepicker {
+        // 整个盒子
+        transform: scale(0.7);
+        transform-origin: center bottom;
+        display: flex;
+        height: 342px;
+        font-size: $font-size-middle;
+        border-radius: $border-radius-small;
+        overflow: hidden;
+        &__header,
+        &-time__header {
+          padding-top: 16px;
+          font-size: $font-size-middle;
+          border-radius: 0;
+          border: $border-solid-1;
+          background: $white;
+        }
+        &-time__header {
+          padding-top: 0;
+        }
+        &__time-container {
+          border-left: $border-solid-1;
+        }
+        &__current-month,
+        &__day-name {
+          font-size: $font-size-middle;
+          color: $text-color-primary;
+        }
+        &__time-container,
+        &__time-box {
+          width: 90px;
+        }
+        &__time-list {
+          @include scrollbar();
+        }
+        &__day--weekend,
+        &__time-list-item,
+        &__day {
+          font-size: $font-size-base;
+          color: $text-color-regular;
+        }
+        &__day--disabled {
+          font-size: $font-size-base;
+          color: $text-color-placeholder;
+        }
+        &__day--selected {
+          color: $white;
+          background-color: $primary-color;
+          border-radius: $border-radius-small;
+        }
+        &__day--today {
+          color: $white;
+          background-color: $primary-color6;
+          border-radius: $border-radius-small;
+        }
+        &__month {
+          margin: $margin-4n;
+        }
+      }
+      .react-datepicker__day-name,
+      .react-datepicker__day,
+      .react-datepicker__time-name {
+        width: 24px !important;
+        height: 24px !important;
+        line-height: 24px !important;
+        margin-left: 10px !important;
+        margin-bottom: 8px !important;
+        margin-top: 8px !important;
+      }
+
+      .react-datepicker__day:hover,
+      .react-datepicker__month-text:hover,
+      .react-datepicker__quarter-text:hover,
+      .react-datepicker__year-text:hover,
+      .react-datepicker__day--keyboard-selected {
+        background-color: $primary-color;
+        border-radius: $border-radius-small;
+        color: $white;
+      }
+      .react-datepicker__day--disabled:hover {
+        background-color: $white;
+        color: $text-color-placeholder;
+      }
+      .react-datepicker__time-list {
+        height: 280px !important;
+      }
+      .react-datepicker__time-list-item {
+        height: 20px;
+        display: flex;
+        align-items: center;
+      }
+      .react-datepicker__time-list-item--selected {
+        height: 20px;
+        background-color: $primary-color !important;
+      }
+
+      .react-datepicker__navigation {
+        border: $border-radius-big solid transparent;
+        &--previous {
+          border-right-color: $border-color;
+        }
+        &--next {
+          border-left-color: $border-color;
+        }
+      }
+      .react-datepicker__input-container {
+        input {
+          margin-right: 2px;
+          max-width: rem(220px);
+          border: 0;
+          color: $text-color-primary;
+          font-size: $font-size-base;
+          cursor: pointer;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.add-btn {
+  justify-content: center !important;
+  border-bottom: none !important;
+  span {
+    margin-left: 8px;
+  }
+  :global {
+    .dzq-button {
+      width: rem(160px);
+      @include button-default;
+      height: rem(36px);
+      display: flex;
+      align-item: center;
+
+      &.is-mouseenter {
+        color: $text-color-regular;
+        background-color: $button-info-bg-color;
+        border-radius: $border-radius-small;
+        border: none;
+      }
+    }
+  }
+}
+
+.btn {
+  position: absolute;
+  background: $white;
+  bottom: 0;
+  display: flex;
+  width: rem(343);
+  border-top: $border-solid-1;
+  padding: rem($padding-2n) rem($padding-4n);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  :global {
+    .dzq-button {
+      flex:1;
+      @include button-default;
+      height: rem(42px);
+      &:first-child {
+        margin-right: rem($margin-10);
+      }
+      &:last-child {
+        @include button-primary;
+      }
+    }
+  }
+}
+
+.pc {
+  z-index: $zindex-dialog;
+  .vote-editor {
+    position: static;
+    width: 100%;
+    min-height: 240px;
+    max-height: 476px;
+    overflow-y: auto;
+    overflow-y: overlay;
+    padding-right: 16px;
+    margin-right: -16px;
+
+    @include scrollbar();
+  }
+
+  .delete-icon {
+    right: -12px;
+  }
+
+  :global {
+    .dzq-modal__container {
+      max-height: 600px;
+    }
+  }
+}

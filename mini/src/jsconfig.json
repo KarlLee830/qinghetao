@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@common/*": ["../../../common/*"],
+            "@server/*": ["../../../common/server/*"],
+            "@utils/*": ["../../../common/utils/*"],
+            "@components/*": ["./components/*"],
+            "@layout/*": ["./layout/*"],
+            "@store/*": ["../../../common/store/*"],
+            "@middleware/*": ["./middleware/*"],
+            "@config/*": ["../../../common/config/*"],
+            "@pages/*": ["./pages/*"]
+        }
+    },
+    "include": ["../../../**/*"],
+    "exclude": ["../node_modules/**", "../../node_modules/**", "../../web/node_modules/**", "../dist/**", "../../web/dzq-default-web/**", "../../web/dzq-default-web-static/**"]
+}

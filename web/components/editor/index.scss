@@ -1,0 +1,298 @@
+/* stylelint-disable */
+@import '@common/styles/index.scss';
+
+.dvditor.h5 {
+  .vditor-bubble-toolbar {
+    display: none !important;
+  }
+
+  .vditor-ir pre.vditor-reset,
+  .vditor-wysiwyg pre.vditor-reset {
+    padding-top: rem($padding-2n) !important;
+  }
+}
+
+.dvditor {
+  position: relative;
+  border: none !important;
+  background-color: $white;
+
+
+  .editor-upload-error {
+    border: 3px solid $error-color;
+  }
+
+  .vditor-reset {
+    overflow: hidden;
+    ol {
+      list-style-type: decimal;
+    }
+    ul,
+    ol {
+      padding-left: 2 * $padding-4n;
+      margin-top: $margin-4n;
+      margin-bottom: $margin-4n;
+      display: block;
+      line-height: $font-line-height-base;
+    }
+    h1 {
+      margin: $margin-4n 0;
+      font-size: $font-size-h1;
+    }
+    h2 {
+      margin: $margin-4n 0;
+      font-size: $font-size-h2;
+    }
+    h3 {
+      margin: $margin-4n 0;
+      font-size: $font-size-h3;
+    }
+    h4 {
+      margin: $margin-4n 0;
+      font-size: $font-size-h4;
+    }
+    h5 {
+      margin: $margin-4n 0;
+      font-size: $font-size-h5;
+    }
+    h6 {
+      margin: $margin-4n 0;
+      font-size: $font-size-h6;
+    }
+    p,
+    strong,
+    div,
+    a {
+      margin-bottom: 0;
+      // line-height: $font-line-height-middle;
+      line-height: 1.6;
+      font-size: $font-size-middle;
+      line-break: strict;
+      word-break: break-word;
+    }
+    p {
+      margin-bottom: $margin-4n;
+    }
+    code[data-marker="`"] {
+      color: $success-color;
+      display: inline-block;
+      font-size: $font-size-middle;
+      white-space: pre;
+      background: $black;
+      vertical-align: top;
+      border-radius: $border-radius-small;
+      padding-left: $padding-1n !important;
+      padding-right: $padding-1n !important;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      line-height: 1.2;
+    }
+    $codeFamily: "SFMono-Regular",
+      "Menlo,Monaco",
+      "Consolas",
+      "Liberation Mono",
+      "Courier New",
+      "monospace" !important;
+    pre code {
+      padding: 19px 9px;
+      border-radius: $border-radius-small;
+      font-size: $font-size-middle;
+      font-family: $codeFamily;
+      color: $success-color !important;
+      background: $black;
+      span,
+      p,
+      div {
+        font-family: $codeFamily;
+      }
+    }
+    blockquote {
+      padding-left: $padding-10;
+      margin: $margin-10 0;
+      border-left: 6px solid $blockquote-border;
+      color: $blockquote-text-color;
+      p {
+        margin-bottom: 0;
+        line-height: $font-line-height-base;
+      }
+    }
+    img {
+      border-radius: $border-radius-small;
+    }
+    video {
+      max-width: 100%;
+    }
+  }
+  &.no-focus {
+    .vditor-toolbar {
+      display: none !important;
+    }
+  }
+
+  &__placeholder {
+    height: 36px;
+    width: 100%;
+  }
+
+  .vditor-ir pre.vditor-reset,
+  .vditor-wysiwyg pre.vditor-reset {
+    // height: 178px;
+    padding: rem(16) !important;
+    font-size: $font-size-middle;
+    color: $text-color-primary;
+    &:empty::before {
+      display: block;
+      line-height: $font-line-height-middle;
+      font-size: $font-size-middle;
+
+      color: $text-color-primary;
+    }
+
+    &:before {
+      color: $text-color-placeholder !important;
+    }
+
+    &:focus {
+      background-color: $white;
+    }
+
+    img[alt$=":dzqemoji"] {
+      width: 30px;
+    }
+
+    img[alt^="attachmentId-"], img[alt=uploadError] {
+      max-width: 95% !important;
+      display: block;
+      padding: 0 5px;
+    }
+  }
+
+  .vditor-ir {
+
+    p,
+    strong,
+    span,
+    div,
+    a {
+      margin-bottom: 0;
+      line-height: $font-line-height-middle;
+      font-size: $font-size-middle;
+
+    }
+
+    strong {
+      font-weight: bolder;
+    }
+  }
+
+  .vditor-wysiwyg {
+
+    strong {
+      font-weight: bolder;
+    }
+
+    .vditor-panel {
+      span {
+        display: none !important;
+      }
+      span[aria-label^="语言"],
+      span[aria-label^="链接"],
+      span[aria-label^="文本（不能为空）"],
+      span[aria-label^="图片地址"],
+      span[aria-label^="替代文本"],
+      span[aria-label^="标题"],
+      span[aria-label^="行"],
+      span[aria-label^="列"] {
+        display: inline-block !important;
+        &::before,
+        &::after {
+          content: '';
+          display: none;
+        }
+      }
+    }
+  }
+
+  .vditor-toolbar--hide {
+    display: none;
+  }
+
+  .vditor-toolbar {
+    position: absolute;
+    width: 100%;
+    padding: 0 !important;
+    height: 42px;
+    left: 0;
+    top: 177px;
+    background-color: $white;
+    border: 0;
+    border-top: $border-solid-1;
+
+    &__item {
+      font-size: $font-size-middle;
+
+      button {
+        font-size: $font-size-middle;
+      }
+
+      .dzq-icon {
+        color: $icon-color;
+      }
+    }
+
+    .vditor-counter {
+      display: none;
+    }
+  }
+
+  .vditor-toolbar__item svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .vditor-ir,
+  .vditor-wysiwyg {
+
+    .vditor-reset>h1:before,
+    .vditor-reset>h2:before,
+    .vditor-reset>h3:before,
+    .vditor-reset>h4:before,
+    .vditor-reset>h5:before,
+    .vditor-reset>h6:before,
+    .vditor-toc:before,
+    div.vditor-wysiwyg__block:before,
+    div[data-type="link-ref-defs-block"]:before,
+    div[data-type="footnotes-block"]:before {
+      content: '';
+    }
+
+    .vditor-wysiwyg__block::before {
+      content: '';
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+      background-color: rgba(0, 0, 0, .09);
+      border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, .09);
+      border-radius: 100px;
+    }
+  }
+
+  .vditor-content {
+    border: none;
+  }
+}
+
+.dvditor.pc {
+  padding-bottom: $padding-4n;
+
+  .vditor-ir pre.vditor-reset,
+  .vditor-wysiwyg pre.vditor-reset {
+    padding: 0 !important;
+  }
+}

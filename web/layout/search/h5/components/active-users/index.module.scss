@@ -1,0 +1,48 @@
+@import '@common/styles/index.scss';
+
+.list {
+  padding: rem($padding-4n) 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .itemRow{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: rem($padding-6n);
+    width: 100%;
+    justify-content: space-between;
+  }
+  .lastRow{
+    margin-bottom: 0;
+  }
+  .item {
+    // width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .avatarImg {
+      margin: 0 auto;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    .avatar {
+      width: rem(38);
+      height: rem(38);
+      margin: 0 auto;
+      line-height: 0;
+    }
+    .name {
+      width: rem(50);
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-top: rem(12);
+      font-size: rem($font-size-primary);
+      line-height: rem(18);
+      color: $text-color-primary;
+    }
+  }
+}

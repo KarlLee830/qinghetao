@@ -1,0 +1,56 @@
+@import '@common/styles/index.scss';
+
+.container {
+  padding: $padding-4n 0;
+  background-color: $white;
+  border-bottom: 1px solid $border-color;
+
+  .title {
+    font-size: $font-size-middle;
+    line-height: $font-line-height-middle;
+    font-weight: $font-weight-regular;
+    color: $text-color-primary;
+  }
+  .content {
+    display: box;
+    font-size: $font-size-base;
+    line-height: 26px;
+    max-height: 49px;
+    margin: 14px 0 8px;
+    @include lamp-clamp($line: 2);
+    .richText{
+      display: inline-block;
+      text-overflow: -o-ellipsis-lastline;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      :global {
+        .dzq-p {
+          font-size: $font-size-base;
+        }
+        .dzq-img.qq-emotion {
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+  .tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .tag {
+      font-size: $font-size-base;
+      line-height: $font-line-height-middle;
+      color: $text-color-secondary;
+    }
+    .dot {
+      margin: 0 7px;
+      color: $text-color-secondary;
+    }
+  }
+}
+

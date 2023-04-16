@@ -1,0 +1,42 @@
+@import '@common/styles/index.scss';
+.wrapper {
+  position: relative;
+  margin: $margin-4n auto;
+  &.h5 {
+    margin: $margin-4n;
+  }
+
+  &__delete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top-left-radius: $border-radius-small;
+    border-top-right-radius: $border-radius-small;
+    background-color: $mask-bg-color;
+    z-index: 1;
+
+    :global {
+      .dzq-icon {
+        margin-right: $margin-10;
+        color: $white;
+      }
+    }
+  }
+}
+.richtext {
+  border-radius: $border-radius-small;
+  overflow: hidden;
+  :global {
+    iframe {
+      border-radius: $border-radius-small;
+      overflow: hidden;
+      width: 100%;
+      height: 600px;
+    }
+  }
+}

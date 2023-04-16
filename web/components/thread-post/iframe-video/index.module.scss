@@ -1,0 +1,143 @@
+@import '@common/styles/index.scss';
+
+.radio-reverse {
+  margin-top: $margin-10;
+  :global {
+    .dzq-checkbox {
+      &-wrap {
+        padding: $padding-4n 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        word-break: break-all;
+        border-bottom: $border-solid-1;
+      }
+
+      &__label {
+        margin: 0 !important;
+        color: $text-color-regular !important;
+        &.is-checked {
+          color: $primary-color !important;
+        }
+      }
+    }
+  }
+}
+.network {
+  :global {
+    .dzq-checkbox {
+      &-wrap {
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}
+.item {
+  padding: $padding-2n 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .label {
+    width: 145px;
+    margin-right: $margin-2n;
+  }
+  :global {
+    .dzq-input {
+      flex: 1;
+      .dzq-input__inner {
+        -webkit-appearance: none;
+        outline: none;
+      }
+    }
+  }
+  .label,
+  .right {
+    font-size: $font-size-primary;
+    color: $text-color-regular;
+    line-height: $font-line-height-small;
+  }
+  .left {
+    margin-top: $margin-1n;
+    margin-right: $margin-2n;
+    font-size: $font-size-middle;
+    color: $text-color-primary;
+    line-height: $font-line-height-small;
+  }
+  &.flextop {
+    align-items: flex-start;
+  }
+  .right {
+    flex: 1;
+  }
+}
+.popup {
+  .radio-reverse {
+    margin: 0;
+  }
+  :global {
+    .dzq-popup__container {
+      padding: 0 4.2vw $padding-4n;
+      padding-bottom: calc(16px + constant(safe-area-inset-bottom));
+      padding-bottom: calc(16px + env(safe-area-inset-bottom));
+      background-color: $white;
+    }
+    .dzq-checkbox.dzq-checkbox--radio {
+      display: none;
+    }
+    .dzq-checkbox {
+      &-wrap {
+        padding: $padding-4n 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        border-bottom: $border-solid-1;
+      }
+
+      &__label {
+        margin: 0 !important;
+        font-size: $font-size-middle !important;
+        color: $text-color-regular !important;
+
+        &.is-checked {
+          color: $primary-color !important;
+        }
+      }
+    }
+  }
+  .btn {
+    position: static;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin-top: $margin-6n;
+    justify-content: space-between;
+    border: none;
+    text-align: center;
+
+    :global {
+      .dzq-button {
+        @include button-default;
+        width: 44vw;
+        height: 42px;
+        padding: 0;
+        margin: 0;
+
+        &:last-child {
+          @include button-primary;
+        }
+
+        &.is-disabled {
+          color: $white;
+          background-color: $disabled-color;
+        }
+      }
+    }
+    .confirmbtn {
+      margin-right: 0 !important;
+      @include button-primary;
+    }
+  }
+}

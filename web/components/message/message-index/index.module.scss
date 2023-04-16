@@ -1,0 +1,14 @@
+@import "@common/styles/index.scss";
+.wrapper {
+  height: 100%;
+  background: $body-bg-color;
+
+  &.mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: $border-radius-small $border-radius-small 0 0;
+    overflow: hidden;
+  }
+}

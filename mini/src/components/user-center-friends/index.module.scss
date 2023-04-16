@@ -1,0 +1,92 @@
+@import '@common/styles/index.scss';
+
+.friendItem {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  padding: rem($padding-2n) 0;
+  margin: 0 $margin-4n;
+}
+
+.friendInfo {
+  display: flex;
+
+  .friendTextInfo {
+    padding-left: rem($padding-2n);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .friendName {
+      font-size: rem($font-size-base);
+      color: $text-color-primary;
+      line-height: rem(20);
+    }
+
+    .friendGroup {
+      font-size: rem($font-size-small);
+      color: $text-color-secondary;
+      line-height: rem(17);
+    }
+  }
+}
+
+.friendAction {
+  .friendActionFollow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(72);
+    height: rem(25);
+
+    view {
+      font-size: rem($font-size-small);
+      &:last-child {
+        padding-left: rem($padding-5);
+      }
+    }
+  }
+
+  .friendActionFriend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $warn-color;
+    border-color: $warn-color;
+    width: rem(72);
+    height: rem(25);
+
+    view {
+      padding-left: rem($padding-5);
+      font-size: rem($font-size-small);
+    }
+  }
+
+  .friendActionFollowed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $button-primary-disabled-bg-color;
+    border-color: $button-primary-disabled-bg-color;
+    width: rem(72);
+    height: rem(25);
+
+    view {
+      padding-left: rem($padding-5);
+      font-size: rem($font-size-small);
+    }
+  }
+  :global {
+    .dzq-button {
+      padding: 0;
+    }
+  }
+}
+
+.iconScale {
+  transform: scale(0.8);
+}

@@ -1,0 +1,36 @@
+@import '@common/styles/mixin/login.scss';
+.container {
+  @include mini_container;
+  .button {
+    @include mini_button;
+  }
+  .exit {
+    @include mini_button;
+    @include button_exit;
+    &:hover {
+      @include button_exit;
+    }
+    &:active{
+      @include button_exit;
+    }
+    margin-top: $margin-4n;
+    padding: 0;
+    .clickBtn {
+      @include button_exit;
+      width: 100%
+    }
+  }
+}
+.content {
+  @include mini_content;
+  .title {
+    @include mini_title;
+  }
+  .tips{
+    @include mini_tips;
+    margin-bottom: 0;
+  }
+  .functionalRegion {
+    @include functionalRegion;
+  }
+}

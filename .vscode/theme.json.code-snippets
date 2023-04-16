@@ -1,0 +1,185 @@
+{
+	// Place your discuz-fe 工作区 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+  // TODO: 待更新到 discuz-theme-snippets
+  "primary-color": {
+    "prefix": "#2469f6",
+    "body": "$$primary-color"
+  },
+  "primary-color2": {
+    "prefix": "#3977f6",
+    "body": "$$primary-color2"
+  },
+  "primary-color3": {
+    "prefix": "#4f87f7",
+    "body": "$$primary-color3"
+  },
+  "primary-disabled-color": {
+    "prefix": "#7ba5f9",
+    "body": "$$primary-disabled-color",
+    "description": "--color-primary5"
+  },
+  "primary-color6": {
+    "prefix": "#91b3fa",
+    "body": "$$primary-color6"
+  },
+  "primary-color7": {
+    "prefix": "#a7c3fb",
+    "body": "$$primary-color7"
+  },
+  "primary-color8": {
+    "prefix": "#bcd1fc",
+    "body": "$$primary-color8"
+  },
+  "primary-color9": {
+    "prefix": "#d3e1fd",
+    "body": "$$primary-color9"
+  },
+  "primary-color10": {
+    "prefix": "#e8f0fe",
+    "body": "$$primary-color10"
+  },
+  "primary-color20": {
+    "prefix": "#0545c8",
+    "body": "$$primary-color20"
+  },
+  "$info-color": {
+    "prefix": "#5087f8",
+    "body": "$$info-color"
+  },
+  "$success-color": {
+    "prefix": "#3ac15f",
+    "body": "$$success-color"
+  },
+  "$success-color6": {
+    "prefix": "#9ce0ae",
+    "body": "$$success-color6"
+  },
+  "$success-color9": {
+    "prefix": "#d7f3df",
+    "body": "$$success-color9"
+  },
+  "$warn-color": {
+    "prefix": "#ffc300",
+    "body": "$$warn-color"
+  },
+  "$warn-color6": {
+    "prefix": "#ffe17f",
+    "body": "$$warn-color6"
+  },
+  "$warn-color9": {
+    "prefix": "#fff3cc",
+    "body": "$$warn-color9"
+  },
+  "$error-color": {
+    "prefix": "#e02433",
+    "body": "$$error-color"
+  },
+  "$error-color2": {
+    "prefix": "#e33947",
+    "body": "$$error-color2"
+  },
+  "$error-color6": {
+    "prefix": "#ef9198",
+    "body": "$$error-color6"
+  },
+  "$error-color9": {
+    "prefix": "#f9d3d6",
+    "body": "$$error-color9"
+  },
+  "$orange-color": {
+    "prefix": "#f66524",
+    "body": "$$orange-color"
+  },
+  "$disabled-color": {
+    "prefix": "#c5c6cb",
+    "body": "$$disabled-color"
+  },
+  "$disabled-color2": {
+    "prefix": "#d0d1d5",
+    "body": "$$disabled-color2"
+  },
+  "$disabled-color3": {
+    "prefix": "#dcdde0",
+    "body": "$$disabled-color3"
+  },
+  "$disabled-color5": {
+    "prefix": "#f4f4f5",
+    "body": "$$disabled-color5"
+  },
+  "black": {
+    "prefix": "#000",
+    "body": "$$black"
+  },
+  "white": {
+    "prefix": "#fff",
+    "body": "$$white"
+  },
+  "$body-bg-color": {
+    "prefix": "#f5f7f8",
+    "body": "$$body-bg-color",
+    "description": "全局背景色，pc移动端一致，另外评论框，评论，附件，语音，模块与模块之间的间距背景色也是"
+  },
+  "$mask-bg-color": {
+    "prefix": "rgba(0, 0, 0, 0.5)",
+    "body": "$$mask-bg-color"
+  },
+  "$text-color-primary": {
+    "prefix": "#0b0b37",
+    "body": "$$text-color-primary"
+  },
+  "$text-color-regular": {
+    "prefix": "#4f5a70",
+    "body": "$$text-color-regular"
+  },
+  "$text-color-secondary": {
+    "prefix": "#8590a6",
+    "body": "$$text-color-secondary"
+  },
+  "$text-color-placeholder": {
+    "prefix": "#c5c6cb",
+    "body": "$$text-color-placeholder",
+    "description": "border hover 的颜色还有 loading 文字和这个一致"
+  },
+  "$box-color-placeholder": {
+    "prefix": "#f1f3f4",
+    "body": "$$box-color-placeholder"
+  },
+  "$blockquote-text-color": {
+    "prefix": "#6a737d",
+    "body": "$$blockquote-text-color"
+  },
+  "$text-bg-color": {
+    "prefix": "#f9fafb",
+    "body": "$$text-bg-color"
+  },
+  "$text-bg-color2": {
+    "prefix": "#eff1f3",
+    "body": "$$text-bg-color2",
+    "description": "灰色标签（编辑器付费、红包设置之后的显示的背景色），灰色按钮（取消）背景色"
+  },
+  "$border-solid-1": {
+    "prefix": "border",
+    "body": "1px solid $$border-color",
+    "description": "1px solid #eee"
+  },
+  "shadow": {
+    "prefix": "box-shadow",
+    "body": "$$border-shadow-color-8",
+    "description": "0 0 8px 0 #f1f3f4"
+  }
+}

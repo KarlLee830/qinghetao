@@ -1,0 +1,51 @@
+@import '@common/styles/index.scss';
+@import '@common/styles/index.scss';
+
+.threadFirstItem {
+    position: relative;
+    
+    &::before {
+        content: '';
+        display: none;
+    }
+}
+
+.threadItem {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 10px;
+        background: $spacer-bg-color;
+    }
+}
+
+.threadStickFlag {
+    position: absolute;
+    border-top: 24px solid $primary-color;
+    border-right: 24px solid transparent;
+    width: 0;
+    height: 0;
+  
+    top: 0;
+    left: 0;
+    color: $white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+  
+    cursor: auto;
+  
+    :global {
+      .dzq-icon {
+        font-size: 12px !important;
+        margin-right: 4px;
+        position: relative;
+        top: -15px;
+        left: 10px;
+      }
+    }
+  }

@@ -1,0 +1,68 @@
+@import '@common/styles/index.scss';
+
+.container {
+  overflow: hidden;
+
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-y: overlay;
+  }
+
+}
+
+.wrapperH5Center {
+  .bottomView {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.refreshView {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: $text-color-placeholder;
+  padding: 24px 0;
+  line-height: $font-line-height-small;
+  .spin {
+    margin-right: 4px;
+  }
+  .noMoreLeft{
+    background-color: #e5e5e5;
+    width: 79px;
+    height: 1px;
+    float: left;
+    margin-right: $margin-4n;
+  }
+  .noMoreRight{
+    background-color: #e5e5e5;
+    width: 79px;
+    height: 1px;
+    float: right;
+    margin-left: $margin-4n;
+  }
+  .lineSty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.bottomViewBox {
+  height: 380px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

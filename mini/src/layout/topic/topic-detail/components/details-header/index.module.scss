@@ -1,0 +1,72 @@
+@import '@common/styles/index.scss';
+.contain{
+  height: 107px;
+  z-index: 0;
+  Image {
+    position:absolute;
+    z-index:2;
+    width: 100%;
+    height: 107px;
+    background: $white;  }
+  .container {
+    z-index: 3;
+    position: relative;
+    box-sizing: border-box;
+    padding: 24px $padding-4n;
+    //background: var( --color-white);
+    overflow: hidden;
+    height: 107px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .title {
+      font-size: $font-size-middle;
+      line-height: 22px;
+      color: $text-color-primary;
+      font-weight: 700;
+    }
+    .siteInfo {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      align-items: center;
+      color: $text-color-regular;
+      Button {
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+      }
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .text {
+        font-size: $font-size-primary;
+        color: $text-color-secondary;
+        line-height: 20px;
+      }
+      .content {
+        font-size: $font-size-primary;
+        color: $text-color-secondary;
+        padding-left: $padding-base;
+      }
+      .shareIcon {
+        display: inline-block;
+        padding-right: 6px;
+        color: $text-color-secondary;
+      }
+    }
+    .rightIcon {
+      margin-left: 4px;
+      color: $text-color-secondary;
+    }
+    .hr {
+      height: 16px;
+      width: 1px;
+      opacity: 0.75;
+      background-color: $border-color;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import "@common/styles/index.scss";
+@mixin flex() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  height: calc(100vh - constant(safe-area-inset-bottom));
+  height: calc(100vh - env(safe-area-inset-bottom));
+  background: $body-bg-color;
+
+  .header {
+    @include flex();
+    width: 100%;
+    padding: $padding-4n $padding-4n $padding-2n;
+    background: $white;
+
+    .input-box {
+      flex: 1;
+      @include flex();
+      padding: 0 $padding-2n;
+      background: $text-bg-color2;
+      opacity: 0.78;
+      border-radius: $border-radius-small;
+
+      .icon-box {
+        flex: 0 0 32px;
+        height: 32px;
+        height: 36px;
+        display: flex;
+      }
+      .search-icon {
+        margin: auto;
+        color: $icon-color-light;
+      }
+      .delete-icon {
+        margin: auto;
+        color: $disabled-color;
+      }
+    }
+
+    .btn-cancel {
+      flex-basis: 44px;
+      font-size: $font-size-primary;
+      color: $text-color-secondary;
+      text-align: right;
+    }
+  }
+
+  :global {
+    .dzq-input {
+      width: 100%;
+      background: $text-bg-color2;
+      opacity: 0.78;
+
+      .dzq-input__inner {
+        height: 36px;
+        padding: 0;
+        font-size: $font-size-middle;
+        color: $text-color-primary;
+        background: $text-bg-color2;
+        opacity: 0.78;
+        border: none;
+      }
+
+      .input-placeholder {
+        color: $text-color-placeholder;
+      }
+    }
+  }
+
+  .list {
+    flex: 1;
+  }
+
+  .topic-item {
+    background: $white;
+
+    .topic-item__inner {
+      @include flex();
+      padding: rem($padding-4n) 0;
+      margin: 0 rem($margin-4n);
+      border-top: $border-solid-1;
+    }
+    &:first-child .topic-item__inner {
+      border-top: none;
+    }
+
+    .item-left {
+      max-width: 240px;
+
+      .name {
+        line-height: 20px;
+        font-size: $font-size-primary;
+        color: $text-color-primary;
+        @include lamp-clamp(2);
+      }
+    }
+
+    .item-right {
+      font-size: $font-size-small;
+      color: $text-color-secondary;
+      white-space: nowrap;
+    }
+  }
+}

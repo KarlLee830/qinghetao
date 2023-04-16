@@ -1,0 +1,139 @@
+@import '@common/styles/index.scss';
+
+.thread-link{
+  text-decoration: none;
+  display: block;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 0 rem($padding-4n);
+  padding-bottom: 0;
+  background: $white;
+  @media only screen and (max-width: 780px) {
+    margin-bottom: rem(10);
+    margin-left: rem(10);
+    margin-right: rem(10);
+    border-radius: 6px;
+  }
+  /*margin-bottom: rem(10);
+  margin-left: rem(10);
+  margin-right: rem(10);
+  border-radius: 6px;*/
+}
+// &:hover {
+//   background: rgba(229, 242, 255, 0.3);
+// }
+.title {
+  @include cursor-on-pc;
+  @include text-ellipsis;
+  display: inline-block;
+  font-size: rem($font-size-middle);
+  font-weight: bold;
+  line-height: rem(22);
+  color: $text-color-primary;
+  width: 100%;
+}
+
+.header {
+  padding: rem($padding-4n) 0;
+  display: flex;
+}
+
+.headerIcon {
+  width: 30px;
+  color: $primary-color;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+
+  > div:not(:last-child) {
+    margin-bottom: rem($margin-4n);
+  }
+}
+
+.wrapperPC {
+  position: relative;
+  overflow: hidden;
+
+  > div:not(:last-child) {
+    margin-bottom: rem($margin-6n);
+  }
+
+  .title {
+    margin-bottom: rem($margin-4n) !important;
+  }
+}
+
+.cover {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: rem(-16);
+  bottom: 0;
+  background-color: $mask-bg-color;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.payContent {
+  min-height: rem(40);
+}
+.bottom {
+  height: rem(52);
+  display: flex;
+  align-items: center;
+  border-top: $border-color solid rem(1);
+  margin-top: rem(12);
+}
+.pay {
+  margin: rem(16) rem(50) 0 rem(50);
+}
+.button {
+  width: 100%;
+  height: rem(36);
+  font-size: rem($font-size-middle);
+  .payIcon {
+    margin-right: rem($margin-2n);
+  }
+}
+
+
+.containerBottom {
+  margin-bottom: rem(10);
+  @media only screen and (max-width: 780px) {
+    margin-left: rem(10);
+    margin-right: rem(10);
+    border-radius: 6px;
+  }
+  /**/
+}
+
+.containerPC {
+  padding: 0 rem($padding-6n);
+  border-radius: rem(5);
+  @include media('l-pc') {
+    padding: 0 rem($padding-4n);
+  }
+  @include media('s-pc') {
+    padding: 0 rem($padding-4n);
+  }
+  .header {
+    padding: rem($padding-4n) 0;
+  }
+}
+
+.wrapperView {
+  display: flex;
+
+  .placeholder {
+    flex: 1;
+    height: auto;
+  }
+}

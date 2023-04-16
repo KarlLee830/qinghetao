@@ -1,0 +1,48 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.container {}
+
+.content {
+  @include content;
+  .title {
+    @include title;
+  }
+  .button {
+    @include button;
+  }
+  .functionalRegion {
+    @include functionalRegion;
+  }
+  .tips{
+    @include titleTips;
+    margin-bottom: 0;
+  }
+}
+
+// ------------------PC
+.pc_body_background{
+  @include pc_body_background;
+}
+
+.pc_container {
+  @include pc_container;
+}
+.pc_content {
+  @include pc_content;
+  .pc_title {
+    @include pc_title;
+  }
+  .pc_button {
+    @include pc_button;
+  }
+  .pc_otherLogin_title {
+    @include pc_otherLoginText;
+    font-size: $font-size-base;
+  }
+  .pc_functionalRegion {
+    @include pc_functionalRegion;
+  }
+  .pc_tips{
+    @include pc_titleTips;
+  }
+}

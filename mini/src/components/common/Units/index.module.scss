@@ -1,0 +1,220 @@
+@import '@common/styles/index.scss';
+
+@mixin img {
+  height: 169px;
+  width: 169px;
+  border-radius: $border-radius-small;
+  background: $body-bg-color;
+  display: flex;
+  align-items: center;
+}
+
+@mixin atta {
+  height: 52px;
+  border-radius: $border-radius-small;
+  background: $body-bg-color;
+  display: flex;
+  align-items: center;
+  margin-bottom: $margin-2n;
+}
+
+.upload-atta {
+  @include atta;
+  justify-content: center;
+  color: $text-color-secondary;
+
+  .text {
+    line-height: 52px;
+    margin-left: $margin-2n;
+    font-size: $font-size-primary;
+  }
+}
+
+.upload-img {
+  @include img;
+  justify-content: center;
+  flex-direction: column;
+  color: $text-color-secondary;
+  margin-bottom: $margin-5;
+
+  .text {
+    margin-top: $margin-2n;
+    font-size: $font-size-primary;
+  }
+}
+
+.atta {
+  @include atta;
+  justify-content: space-between;
+  padding: 0 16px; // 无变量
+
+  .left {
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .name {
+    line-height: 52px;
+    color: $text-color-primary;
+    margin-left: $margin-2n;
+    font-size: $font-size-primary;
+    display: inline-block;
+    white-space: nowrap;
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .size {
+    line-height: 52px;
+    color: $text-color-regular;
+    font-size: $font-size-label;
+  }
+
+  .icon {
+    width: 17px;
+    height: 20px;
+  }
+}
+
+.img {
+  @include img;
+  justify-content: space-between;
+  margin-bottom: $margin-2n;
+  position: relative;
+  overflow: hidden;
+
+  Image {
+    // object-fit: cover;
+    // width: 100%;
+    // height: 100%;
+  }
+
+  .delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: $white;
+    background-color: $mask-bg-color;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+.product {
+  height: 114px;
+  padding: $padding-10;
+  border-radius: $border-radius-small;
+  background: $body-bg-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .image {
+    width: 82px;
+    height: 82px;
+  }
+  .content {
+    width: 225px;
+
+    .desc {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      font-size: $font-size-primary;
+      line-height: $font-line-height-primary;
+      text-align: left;
+      color: $text-color-regular;
+      margin-bottom: $margin-2n;
+    }
+
+    .opera {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .price {
+        font-size: $font-size-large;
+        line-height: $font-line-height-large;
+        text-align: left;
+        color: $error-color;
+      }
+    }
+  }
+}
+
+.video-box {
+  position: relative;
+  margin: 0 auto;
+
+  .video-delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top-left-radius: $border-radius-small;
+    border-top-right-radius: $border-radius-small;
+    background-color: rgba($color: $black, $alpha: .5);
+    z-index: 1;
+
+    :global {
+      .dzq-icon {
+        margin-right: $margin-10;
+        color: $white;
+      }
+    }
+  }
+
+}
+
+.video {
+  // margin-top: 8px;
+  width: 100%;
+  border-radius: $border-radius-small;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  border-radius: $border-radius-small;
+  background: $text-bg-color2;
+  color: $text-color-regular;
+  padding: $padding-1n $padding-2n;
+  margin: $margin-2n $margin-2n $margin-2n 0;
+  font-size: $font-size-label;
+  width: fit-content;
+
+  .tag-text {
+    @include text-ellipsis();
+    line-height: 24px;
+  }
+
+  .remove {
+    margin-left: $margin-2n;
+  }
+}
+
+.attachmentInfo {
+  :global {
+    .dzq-divider__text {
+      padding: 0;
+      color: $text-color-placeholder;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}

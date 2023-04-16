@@ -1,0 +1,13 @@
+@import '@common/styles/index.scss';
+.main {
+  :global {
+    .dzq-action-sheet__content {
+      padding: 0 0;
+      margin: 0 $margin-4n;
+    }
+    .dzq-action-sheet__bottom {
+      border-top: none;
+      padding: $padding-4n 0;
+    }
+  }
+}

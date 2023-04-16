@@ -1,0 +1,17 @@
+@import '@common/styles/index.scss';
+.container {
+  overflow: hidden;
+  //cursor: pointer;
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    border-radius: $border-radius-small;
+    background: $body-bg-color;
+  }
+  .payBox {
+    width: 180px;
+    height: 20px;
+  }
+}

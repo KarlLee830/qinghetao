@@ -1,0 +1,18 @@
+@import '@common/styles/index.scss';
+.modal{
+  width: 375px;
+  padding: $padding-5n * 2 0;
+  background: $white;
+  border-radius: $border-radius-big $border-radius-big 0 0;
+  .button {
+    width: 327px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-middle;
+    border-radius: $border-radius-small;
+    background: $primary-color;
+    color: $white;
+  }
+}

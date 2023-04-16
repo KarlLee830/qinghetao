@@ -1,0 +1,36 @@
+@import '@common/styles/index.scss';
+.loadMoreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spinner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color-placeholder;
+    height: 60px;
+}
+
+:global {
+    .user-center-users-list {
+        &::-webkit-scrollbar {
+            display: block;
+            width: 8px;
+            border-radius: $border-radius-small;
+        }
+
+
+        // 滚动条轨道
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        // 滚动条上的滚动滑块
+        &::-webkit-scrollbar-thumb {
+            background: $border-shadow-color;
+            border-radius: 4px;
+        }
+    }
+  }

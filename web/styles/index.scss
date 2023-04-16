@@ -1,0 +1,50 @@
+@import '@discuzqsdk/theme/src/index.scss'; // 包括了主题 + 组件样式
+@import '@common/styles/index.scss';
+@import './reset.scss';
+@import './lib/react-datapicker.scss';
+
+.dzq-toast--mask {
+  z-index: $zindex-toast;
+}
+.dzq-modal {
+  z-index: $zindex-dialog;
+}
+
+.dzq-input__inner {
+  &::placeholder {
+    color: $text-color-placeholder;
+  }
+}
+// 默认的icon颜色
+.dzq-icon {
+  // color: $icon-color;
+  cursor: pointer;
+}
+
+.dzq-avatar__img {
+  vertical-align: baseline;
+  border-radius: $border-radius-circle;
+}
+
+.dzq-pre {
+  .dzq-br {
+    display: block;
+  }
+}
+
+.dzq-p {
+  .dzq-br {
+    display: block;
+  }
+}
+
+.dzq-comment{
+  .dzq-br {
+    display: block;
+  }
+}
+
+* {
+  font-family: $font-family;
+}
+

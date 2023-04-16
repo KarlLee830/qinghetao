@@ -1,0 +1,36 @@
+@import '@common/styles/index.scss';
+.tag-local-data {
+  &.h5,
+  &.pc {
+    @include tag-default;
+  }
+  &.h5 {
+    margin-bottom: rem($margin-4n);
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &:after {
+    display: none;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .local-open {
+    margin-left: 4px;
+    font-size: $font-size-label;
+    color: $primary-color;
+  }
+
+  &.pc {
+    margin-right: rem($margin-4n);
+    :global {
+      .dzq-icon-CloseOutlined {
+        font-size: 12px !important;
+        transform: scale(.85);
+      }
+    }
+  }
+}

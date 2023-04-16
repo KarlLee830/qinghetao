@@ -1,0 +1,95 @@
+@import '@common/styles/index.scss';
+
+.popup {
+    max-height: 90%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.container {
+    box-sizing: border-box;
+    padding: rem(25) rem(16) 0 rem(16);
+    padding-bottom: constant(safe-area-inset-bottom); ///兼容 IOS<11.2/
+    padding-bottom: env(safe-area-inset-bottom); ///兼容 IOS>11.2/
+    background-color: $white;
+    border-top-right-radius: rem($border-radius-big);
+    border-top-left-radius: rem($border-radius-big);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .content {
+        flex: 1;
+        overflow: hidden;
+    }
+
+    .moduleWrapper {
+        margin-bottom: rem(8);
+    }
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: rem(11);
+    }
+
+    // .list {
+    //     overflow-y: scroll;
+    //     height: 100%;
+    //     width: 100%;
+    //     overflow-x: hidden;
+    // }
+
+    .title {
+        font-weight: bold;
+        font-size: rem($font-size-middle);
+        line-height: 24px;
+        text-align: left;
+        color: $text-color-primary;
+        margin-bottom: rem(16);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .span {
+        font-size: rem($font-size-primary);
+        width: 100%;
+        height: rem(36);
+        border-radius: rem($border-radius-small);
+        background: $text-bg-color2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $text-color-primary;
+    }
+
+    .active {
+        background: $primary-color;
+        color: $white;
+    }
+
+
+}
+
+.footer {
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+
+    .button {
+        width: rem(167);
+        height: rem(42);
+        margin-bottom: rem(24);
+        font-size: rem($font-size-middle);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .cancel {
+        color: $text-color-regular;
+        background: $text-bg-color2;
+        border-radius: $border-radius-small;
+    }
+}

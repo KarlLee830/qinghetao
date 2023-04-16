@@ -1,0 +1,64 @@
+@import '@common/styles/index.scss';
+
+.container {
+  padding: $padding-4n $padding-4n 0;
+  background: $white;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  font-weight: normal;
+  padding-bottom: $padding-2n;
+  color: $text-color-primary;
+  font-size: $font-size-primary;
+  line-height: 20px;
+
+  .money {
+    font-weight: 600;
+    font-size: $font-size-middle;
+    text-align: left;
+  }
+  :global {
+    .qq-emotion {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      display: inline-block !important;
+      flex-shrink: 0;
+    }
+
+    .dzq-richText--mini {
+      height: 20px;
+      font-size: $font-size-primary;
+      overflow: hidden;
+      word-break: break-all;
+      max-width: 200px;
+      line-height: 20px;
+      @include text-ellipsis();
+
+      .dzq-a {
+        display: inline;
+      }
+    }
+  }
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: $border-solid-1;
+  font-weight: normal;
+  font-size: $font-size-label;
+  .time {
+    line-height: 17px;
+    text-align: left;
+    color: $text-color-secondary;
+    padding-bottom: $padding-4n;
+  }
+  .payStatusTrue {
+    color: $text-color-regular;
+  }
+  .payStatusFalse {
+    color: $primary-color;
+  }
+}

@@ -1,0 +1,199 @@
+@import '@common/styles/index.scss';
+
+.wrapper {
+  width: 100%;
+  background: $white;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+
+  View,
+  Text {
+    box-sizing: content-box;
+  }
+
+  /*内容展示区*/
+  .block {
+    flex: 1 0 100%;
+    width: 100%;
+    padding-top: $margin-4n;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s;
+  }
+
+  .avatar {
+    flex: 0 0 38px;
+    height: 38px;
+    margin-left: $margin-2n;
+    padding: 0 $padding-2n;
+
+    :global {
+      .dzq-avatar {
+        width: 38px;
+        height: 38px;
+        font-size: $font-size-large;
+        color: $white;
+        text-align: center;
+        line-height: 38px;
+        background: $text-color-secondary;
+
+        .dzq-avatar__img {
+          width: 100%;
+          height: 100%;
+          vertical-align: top;
+        }
+
+        .dzq-avatar__text {
+          width: 100%;
+          height: 100%;
+          line-height: 38px;
+        }
+      }
+    }
+  }
+
+  .detail {
+    flex: 1;
+    padding-bottom: $padding-4n;
+    margin-right: $margin-4n;
+    font-size: $font-size-middle;
+    border-bottom: $border-solid-1;
+    overflow: hidden;
+    &.border-none {
+      border: none;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      height: 20px;
+
+      .name {
+        max-width: 120px;
+        font-weight: 600;
+        font-size: $font-size-primary;
+        text-align: left;
+        line-height: 20px;
+        color: $text-color-primary;
+      }
+
+      .amount {
+        font-weight: 600;
+        font-size: $font-size-middle;
+        line-height: 20px;
+        text-align: right;
+        color: $error-color;
+      }
+    }
+
+    .middle {
+      padding-top: $margin-1n;
+      font-size: $font-size-primary;
+      color: $text-color-secondary;
+      line-height: 20px;
+
+      .content-html {
+        overflow: hidden;
+        word-break: break-all;
+      }
+
+      .url {
+        color: var(--color-primary2);
+      }
+
+      :global {
+        .qq-emotion {
+          width: 20px;
+          height: 20px;
+          vertical-align: text-top;
+          display: inline-block !important;
+        }
+
+        .dzq-richText--mini {
+          @include lamp-clamp(3);
+          line-height: 20px;
+
+          .dzq-a {
+            display: inline;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      margin-top: $margin-2n;
+    }
+
+    .time {
+      font-weight: normal;
+      font-size: $font-size-small;
+      line-height: 20px;
+      text-align: left;
+      color: $text-color-secondary;
+    }
+
+    /*私信详情*/
+    &.detail-chat {
+      margin-left: $margin-2n;
+    }
+    /*帖子详情*/
+    &.detail-account {
+      margin-left: $margin-2n;
+      .middle {
+
+        :global{
+          .dzq-richText--mini {
+            font-size: $font-size-primary;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+    /*财务详情*/
+    &.detail-financial {
+      top: 0;
+      .middle {
+        .content-html {
+          .financial-content {
+            height: 20px;
+          }
+        }
+      }
+    }
+    /*账号详情*/
+    &.detail-thread {
+      .top {
+        padding: 8px 8px 0;
+        background: $body-bg-color;
+        border-radius: 5px 5px 0 0;
+      }
+      .middle {
+        padding: $padding-2n;
+        padding-top: $padding-1n;
+        font-size: $font-size-middle;
+        color: $text-color-primary;
+        line-height: 24px;
+        background: $body-bg-color;
+        border-radius: 0 0 5px 5px;
+
+        .tip {
+          color: $primary-color;
+          padding-right: $padding-5;
+          display: inline;
+        }
+
+      }
+    }
+  }
+
+  .single-line {
+    @include text-ellipsis();
+  }
+
+  .multiple-line {
+    @include lamp-clamp(3);
+  }
+}

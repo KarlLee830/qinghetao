@@ -1,0 +1,90 @@
+@import '@common/styles/index.scss';
+
+.list {
+  width: 100%;
+  padding: rem($padding-6n) 0;
+  cursor: pointer;
+  .item {
+    display: flex;
+    margin-bottom: rem(22);
+    .imgBox {
+      width: rem(116);
+      height: rem(116);
+      flex: 0 0 rem(116);
+      background: $text-color-secondary;
+      text-align: center;
+      line-height: rem(116);
+      font-size: rem($font-line-height-large);
+      color: $white;
+      border-radius: rem($border-radius-small);
+    }
+    .img {
+      width: 100%;
+      height: 100%;
+    }
+    .content {
+      padding: rem($padding-1n) rem($padding-6n) 0;
+      flex: 1;
+    }
+    .title {
+      font-size: rem($font-size-middle);
+      line-height: rem($font-line-height-middle);
+      color: $text-color-primary;
+      font-weight: 700;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .num {
+      display: flex;
+      align-items: center;
+      font-size: rem($font-size-label);
+      line-height: rem(17);
+      color: $text-color-secondary;
+      margin: rem($margin-2n) 0;
+      .numItem {
+        margin-right: rem($font-size-label);
+        .numIcon {
+          margin-right: rem($margin-1n);
+        }
+      }
+      .viewBox {
+        .numIcon {
+          margin-right: rem(6.19);
+        }
+      }
+    }
+    .text {
+      font-size: rem($font-size-primary);
+      line-height: rem($font-line-height-primary);
+      color: $text-color-primary;
+      height: rem(44);
+      display: box;
+      box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+  }
+  .item:last-child {
+    margin-bottom: 0;
+  }
+
+  .richContent {
+    display: box;
+    font-size: rem($font-size-middle);
+    line-height: rem(26);
+    max-height: rem(50);
+    margin: rem($padding-4n) 0;
+    @include lamp-clamp($line: 2);
+    .richText{
+      text-overflow: -o-ellipsis-lastline;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      box-orient: vertical;
+      font-size: rem($font-size-middle);
+    }
+  }
+}

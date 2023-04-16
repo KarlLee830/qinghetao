@@ -1,0 +1,21 @@
+// 标签默认标签
+@mixin tag-default {
+  display: inline-flex;
+  padding: rem(0 $padding-2n);
+  height: 25px;
+  line-height: 24px;
+  font-size: $font-size-label;
+  color: $text-color-regular;
+  border: none;
+  border-radius: $border-radius-small;
+  background: $tag-info-bg-color;
+  align-items: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+// 选中标签的颜色：位置
+@mixin tag-checked {
+  color: $text-color-primary-color;
+  background-color: $tag-primary-lighter-color;
+}

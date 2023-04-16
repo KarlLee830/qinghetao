@@ -1,0 +1,53 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+
+.pc_container {
+  @include pc_container;
+}
+.pc_content {
+  padding: $padding-5n $padding-10 * 8 $padding-10 * 3;
+  box-sizing: border-box;
+  background: $white;
+  z-index: $zindex-popup;
+  overflow-y: auto;
+  text-align: left;
+  .title {
+    text-align: center;
+    font-weight: 600;
+    font-size: $font-size-large;
+    color: $text-color-primary;
+    padding-bottom: rem(32);
+  }
+  .item_title {
+    font-weight: 700;
+  }
+  .item_content {
+    font-weight: normal;
+    font-size: $font-size-middle;
+    line-height: $font-line-height-middle;
+    color: $text-color-primary;
+    margin-bottom: $margin-6n;
+    pre {
+      white-space: pre-wrap;
+    }
+  }
+  .bottom {
+    width: 100%;
+    padding: 0 $padding-6n;
+    box-sizing: border-box;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: $white;
+    .bottom_content {
+      padding: $padding-3n 0;
+      font-weight: normal;
+      font-size: $font-size-base;
+      line-height: $font-line-height-small;
+      color: $text-color-regular;
+      border-top: $border-solid-1;
+      cursor: pointer;
+    }
+  }
+}

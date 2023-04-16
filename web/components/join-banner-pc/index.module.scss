@@ -1,0 +1,47 @@
+@import '@common/styles/index.scss';
+.content_header {
+  display: flex;
+  min-height: rem(169);
+  flex-direction: column;
+  width: 100%;
+  background-color: $primary-color;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    max-height: 88px;
+    position: relative;
+    object-fit: contain;
+    place-self: flex-start;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.joinInfo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: $margin-4n;
+  font-weight: normal;
+  font-size: $font-size-base;
+  line-height: $font-line-height-middle;
+  color: $white;
+  flex-direction: row;
+  box-sizing: border-box;
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 0 $padding-3n;
+  }
+  .text {
+    font-size: rem($font-size-middle);
+    line-height: rem($font-line-height-base);
+    color: $white;
+    font-weight: normal;
+  }
+  .content {
+    padding-left: rem($padding-2n);
+  }
+}

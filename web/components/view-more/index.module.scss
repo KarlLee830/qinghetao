@@ -1,0 +1,17 @@
+@import '@common/styles/index.scss';
+
+.loadMore {
+  @include cursor-on-pc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  font-size: rem($font-size-primary);
+  line-height: rem($font-line-height-primary);
+  color: $primary-color;
+  padding-top: $padding-2n;
+  .icon {
+    margin-left: $margin-2n;
+  }
+}

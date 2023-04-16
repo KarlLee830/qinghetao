@@ -1,0 +1,142 @@
+@import '@common/styles/index.scss';
+
+@mixin input {
+  box-sizing: border-box;
+
+  :global {
+    .dzq-input__inner {
+      font-size: $font-size-base;
+      border: none;
+      padding: 0;
+      height: 18px;
+      line-height: 18px;
+      border-radius: 0;
+      text-align: right;
+      -webkit-tap-highlight-color: transparent;
+
+      &::placeholder {
+        color: $text-color-placeholder;
+        font-size: $font-size-base;
+      }
+    }
+  }
+}
+
+.inputPlaceholder {
+  color: $text-color-placeholder;
+  font-size: $font-size-base;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: $white;
+  border-radius: $border-radius-big $border-radius-big 0 0;
+  overflow: hidden;
+  padding: $padding-4n;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: $font-size-middle;
+  font-weight: 600;
+}
+
+.rewardInput {
+  margin-top: $margin-4n;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: $border-solid-1;
+  padding-bottom: $padding-4n;
+  color: $text-color-regular;
+  font-size: $font-size-primary;
+
+  .prepend {
+    word-break: keep-all;
+  }
+
+  .input {
+    flex: 1;
+    @include input;
+  }
+
+  .append {
+    padding-left: $padding-1n;
+  }
+}
+
+.rewardList {
+  width: 100%;
+  margin-top: $margin-4n;
+  display: grid;
+  grid-template-columns: repeat(4, 76px);
+  justify-content: space-between;
+
+  .reward {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius-small;
+    font-size: rem($font-size-primary);
+    width: 76px;
+    height: 36px;
+    background: $text-bg-color2;
+    color: $text-color-primary;
+    margin-bottom: $margin-4n;
+
+    &.actived {
+      background: $primary-color;
+      color: $white;
+    }
+  }
+}
+
+.percentage {
+  display: flex;
+  align-items: center;
+
+  .text {
+    margin-right: $margin-2n;
+    font-size: $font-size-primary;
+  }
+}
+
+.divider {
+  margin: 0;
+  width: 200%;
+  margin-left: -40px;
+}
+
+.button {
+  padding-top: $margin-2n;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .ok {
+    width: 50%;
+    height: 42px;
+    line-height: $font-line-height-base;
+    font-size: $font-size-middle;
+    margin-left: $margin-2n;
+  }
+  .cancel {
+    width: 50%;
+    height: 42px;
+    line-height: $font-line-height-base;
+    color: $text-color-regular;
+    background: $text-bg-color2;
+    border: none;
+    font-size: $font-size-middle;
+  }
+}

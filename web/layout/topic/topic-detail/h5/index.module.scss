@@ -1,0 +1,14 @@
+@import '@common/styles/index.scss';
+.themeContent {
+  margin-top: rem($margin-10);
+  .item {
+    margin-bottom: rem($margin-10);
+  }
+}
+.bottomViewBox {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,88 @@
+@import '@common/styles/index.scss';
+
+.wrapper {
+  width: 100%;
+
+  :global {
+    .dzq-popup__overlay {
+      width: 100%;
+      background: $black;
+      opacity: 0.5;
+    }
+
+    .dzq-popup__container {
+      padding: 0 16px;
+      background: #fff;
+      border-radius: 10px 10px 0 0;
+      overflow: hidden;
+    }
+
+    .dzq-button {
+      max-width: 300px;
+      min-width: 75px;
+      padding: 8px 10px;
+      font-size: $font-size-primary;
+      font-weight: normal;
+      color: $text-color-primary;
+      line-height: $font-line-height-primary;
+      background: $text-bg-color2;
+      border: none;
+      border-radius: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .title {
+    margin-top: $margin-4n;
+    font-size: $font-size-middle;
+    color: $text-color-primary;
+    font-weight: $font-weight-regular;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-size: $font-size-base;
+    text-align: center;
+    :global { /* stylelint-disable-line */
+      .dzq-button {
+        max-width: 310px;
+        margin-right: $margin-10;
+        margin-bottom: $margin-10;
+      }
+    }
+  }
+
+  .content-parent {
+    padding: $padding-4n 0;
+    border-bottom: 1px solid $border-color;
+    .active {
+      color: $white;
+      background: $primary-color;
+    }
+  }
+
+  .content-child {
+    padding: $margin-4n 0;
+    border-bottom: 1px solid $border-color;
+
+    .active {
+      color: $primary-color;
+      background-color: $primary-color10;
+    }
+  }
+
+  .btn {
+    height: 44px;
+    line-height: 44px;
+    font-size: $font-size-primary;
+    color: $text-color-regular;
+    text-align: center;
+    @include ios-safe-area-inset-bottom;
+  }
+}

@@ -1,0 +1,21 @@
+@import '@common/styles/index.scss';
+
+.tag-local-data {
+  @include tag-default;
+  margin-bottom: rem($margin-2n);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  &:after {
+    display: none;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .local-open {
+    margin-left: 4px;
+    font-size: $font-size-label;
+    color: $primary-color;
+  }
+}

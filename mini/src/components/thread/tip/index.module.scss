@@ -1,0 +1,65 @@
+@import '@common/styles/index.scss';
+.w24 {
+  width: 24px;
+}
+
+.w44 {
+  width: 44px;
+}
+.container {
+  position: relative;
+  max-width: 102px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .img {
+    border-right: 1px solid $white;
+    border-radius: 50%;
+    z-index: 5;
+  }
+  .imgAfter2 {
+    position: relative;
+    left: -4px;
+    z-index: 4;
+  }
+  .imgAfter3 {
+    position: relative;
+    left: -8px;
+    z-index: 3;
+  }
+  .imgAfter4 {
+    position: relative;
+    left: -12px;
+    z-index: 2;
+  }
+  .imgAfter5 {
+    position: relative;
+    left: -16px;
+    z-index: 1;
+  }
+
+  .moreIcon {
+    position: absolute;
+    right: -10px;
+    bottom: 2.5px;
+    color: $text-color-secondary;
+    width: 20px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    border-radius: 6px;
+    border: $border-solid-1;
+    box-sizing: border-box;
+    z-index: 5;
+    .icon {
+      transform: rotate(90deg);
+    }
+  }
+  :global {
+    .dzq-avatar__text {
+      font-size: $font-size-label;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import '@common/styles/index.scss';
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem($padding-6n) 0;
+  border-bottom: 1px solid $border-color;
+  box-sizing: border-box;
+  background-color: $white;
+  .title {
+    font-size: rem($font-size-middle-extra);
+  }
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem($padding-4n) 0;
+  border-bottom: 1px solid $border-color;
+  box-sizing: border-box;
+  background-color: $white;
+  .title {
+    font-size: rem($font-size-middle);
+  }
+}
+.title {
+  font-weight: 700;
+  line-height: rem($font-line-height-primary);
+  color: $text-color-primary;
+  margin-left: rem($padding-2n);
+  @include lamp-clamp(1);
+}
+.left {
+  display: flex;
+  align-items: center;
+  height: rem($font-line-height-primary);
+  width: 60%;
+}
+.right {
+  display: flex;
+  align-items: center;
+  height: rem($font-line-height-primary);
+  cursor: pointer;
+  .rightIcon {
+    margin-left: rem($margin-1n);
+    color: $text-color-secondary;
+  }
+}
+.noMargin {
+  margin-left: 0;
+}
+.more {
+  display: flex;
+  align-items: center;
+  @include cursor-on-pc;
+  font-size: rem($font-size-primary);
+  color: $text-color-primary;
+  line-height: rem($font-line-height-primary);
+  &:hover {
+    color: $primary-color;
+    .rightIcon {
+      color: $primary-color !important;
+    }
+  }
+}
+.num {
+  font-size: rem($font-size-label);
+  color: $text-color-secondary;
+  margin-left: rem($margin-2n);
+  line-height: rem($font-line-height-primary);
+}
+.text {
+  font-size: rem($font-size-label);
+  color: $text-color-regular;
+  line-height: rem($font-line-height-primary);
+}
+.icon1 {
+  color: $success-color;
+}
+.icon2 {
+  color: $warn-color;
+}
+.icon3 {
+  color: $error-color;
+}

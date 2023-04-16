@@ -1,0 +1,88 @@
+@import '@common/styles/index.scss';
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: $comment-bg-color;
+}
+
+.header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $white;
+  font-size: $font-size-primary;
+  font-weight: bold;
+  padding: 0 $padding-4n;
+  margin-bottom: $margin-10;
+  font-weight: normal;
+  text-align: left;
+  color: $text-color-secondary;
+
+  .totalMoneyNumber {
+    font-weight: $font-weight-regular;
+  }
+}
+
+.body {
+  background: $white;
+  .content {
+    font-weight: normal;
+    padding: $padding-4n 0;
+    margin: 0 $margin-4n;
+    border-bottom: $border-solid-1;
+    .upper {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      color: $text-color-primary;
+      overflow: hidden;
+      .title {
+        font-weight: normal;
+        font-size: $font-size-primary;
+      }
+      .amount {
+        font-weight: $font-weight-regular;
+        font-size: $font-size-middle;
+        margin-left: $margin-2n;
+        flex-shrink: 0;
+      }
+    }
+    .normalText {
+      overflow: hidden;
+      :global {
+        .qq-emotion {
+          width: 14px;
+          height: 14px;
+          display: inline-block;
+          flex-shrink: 0;
+        }
+        .dzq-richText--mini {
+          font-size: $font-size-primary;
+          color: $text-color-primary;
+          overflow: hidden;
+          word-break: break-all;
+          @include text-ellipsis();
+
+          .dzq-a {
+            display: inline;
+          }
+        }
+      }
+    }
+    .lower {
+      display: flex;
+      justify-content: space-between;
+
+      font-size: $font-size-label;
+      text-align: left;
+      color: $text-color-secondary;
+      padding-top: $padding-2n;
+    }
+  }
+}
+.body + View {
+  margin-bottom: constant(safe-area-inset-bottom); ///兼容 IOS<11.2/
+  margin-bottom: env(safe-area-inset-bottom); ///兼容 IOS>11.2/
+}

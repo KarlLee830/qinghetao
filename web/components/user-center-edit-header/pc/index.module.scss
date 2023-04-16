@@ -1,0 +1,145 @@
+@import '@common/styles/index.scss';
+
+@mixin uploadStyles {
+  transition: all .5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $mask-bg-color;
+  color: $white;
+}
+
+.userCenterEditHeader {
+  position: relative;
+  width: rem(1100);
+  min-height: rem(246);
+  .userCenterEditHeaderImg {
+    width: 100%;
+    height: rem(153);
+    background:  no-repeat;
+    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background-color: rgba(11, 11, 55, 0.16);
+    }
+  }
+  // background-color: pink;
+  .headImgBox{
+    position: absolute;
+    left: 50%;
+    top: rem(193);
+    transform: translateX(-50%) translateY(-100%);
+
+    .avatarWrap {
+      max-width: none;
+    }
+
+    :global {
+      .dzq-avatar {
+        border: rem(3) solid;
+        box-sizing: border-box;
+      }
+    }
+  }
+  .userCenterupload {
+    position: absolute;
+    top: rem(120);
+    right: rem(24);
+    font-size: rem($font-size-small);
+    line-height: 22px;
+    color: $text-color-secondary;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .userCenteruploadIcon {
+      margin-right: rem($margin-1n);
+    }
+    .uploadIcon {
+      margin-right: rem(6);
+    }
+  }
+  .userCenterReturn {
+    top: rem(177);
+    right: rem(24);
+    font-size: rem($font-size-base);
+    .userCenterReturnIcon {
+      margin-right: rem(6);
+    }
+  }
+  .userCenterEditDec {
+    position: absolute;
+    top: rem(221);
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: $text-color-primary;
+    font-size: rem($font-size-middle-extra);
+    font-weight: 600;
+    line-height: rem(25);
+    text-align: center;
+  }
+  .userCenterEditCameraIcon {
+    position: absolute;
+    width: rem(34);
+    height: rem(34);
+    background-color: $primary-color;
+    border-radius: 50%;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    border: rem(2) solid $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    :global {
+      .dzq-icon {
+        color: $white;
+      }
+    }
+  }
+}
+
+.bgContent {
+  position: relative;
+  // 上传背景图片样式
+  .uploadBgUrl {
+    @include uploadStyles();
+    z-index: 0;
+    border-radius: 0;
+    .uploadText {
+      margin-left: rem($margin-2n);
+    }
+  }
+  .uploadCon {
+    display: flex;
+    align-items: center;
+    margin-top: rem(-$margin-6n);
+  }
+}
+
+// 上传样式
+.uploadAvatar {
+  @include uploadStyles();
+  z-index: 0;
+  .uploadText {
+    margin-left: rem($margin-2n);
+  }
+}

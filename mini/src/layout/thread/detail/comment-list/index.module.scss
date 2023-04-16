@@ -1,0 +1,49 @@
+@import '@common/styles/index.scss';
+.container {
+  background: $body-bg-color;
+}
+
+.header {
+  height: 54px;
+  padding: 0 $padding-4n;
+  display: flex;
+  justify-content: space-between;
+  background: $white;
+  border-bottom: $border-solid-1;
+  flex: 0 0 54px;
+
+  .number {
+    font-size: $font-size-middle;
+    text-align: left;
+    color: $text-color-primary;
+    line-height: 54px;
+  }
+  .sort {
+    display: flex;
+    align-items: center;
+    font-size: $font-size-primary;
+    line-height: 54px;
+    text-align: left;
+    color: $text-color-secondary;
+    .sortText {
+      padding-left: $padding-2n;
+    }
+    .sortIcon {
+      font-size: $font-size-primary !important;
+      position: relative;
+      top: -1.2px;
+    }
+  }
+}
+
+.body {
+  background: $white;
+
+  .commentItems {
+    border-bottom: $border-solid-1;
+
+    &.isLastOne {
+      border-bottom: none;
+    }
+  }
+}

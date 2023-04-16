@@ -1,0 +1,102 @@
+@import '@common/styles/index.scss';
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: $comment-bg-color;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.positionSticky {
+  top: 0;
+}
+:global {
+  .is-userinfo-show {
+    top: -255px !important;
+
+    &.is-operate-show {
+      top: -316px !important;
+    }
+  }
+}
+
+.bottom {
+  margin-top: rem($margin-10);
+  width: 100%;
+}
+
+.editCmment {
+  position: relative;
+  width: rem(600);
+  background: $white;
+  margin: auto;
+  padding: rem(24);
+  border-radius: $border-radius-small;
+
+  .close {
+    position: absolute;
+    top: rem(16);
+    right: rem(16);
+    cursor: pointer;
+    color: $text-color-secondary;
+    font-size: rem(18);
+  }
+
+  .title {
+    font-size: rem(16);
+    margin-bottom: rem(16);
+  }
+
+  .user {
+    margin-bottom: rem(16);
+  }
+}
+
+.authorInfo {
+  width: 100%;
+  max-height: rem(306);
+  background: $white;
+  margin-bottom: rem(10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius-small;
+}
+
+.qrcode {
+  margin-top: rem(10);
+}
+
+.recommend {
+  width: 100%;
+  background: $white;
+  border-radius: $border-radius-small;
+}
+
+.copyright {
+  width: 100%;
+  padding-bottom: 2 * $padding-10;
+}
+
+.examinePosition {
+  height: rem(52);
+}
+
+.showMore {
+  @include cursor-on-pc;
+  padding: 16px 0;
+  background: $white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  font-size: rem($font-size-primary);
+  line-height: rem($font-line-height-primary);
+  color: $primary-color;
+  .icon {
+    margin-left: rem(9);
+    transform: rotateZ(90deg);
+  }
+}

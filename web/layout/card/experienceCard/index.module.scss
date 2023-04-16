@@ -1,0 +1,124 @@
+@import '@common/styles/index.scss';
+.container {
+  background-color: #2469F6;
+  padding: $padding-6n 0;
+}
+.header {
+  padding: 0 $padding-4n;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+  .rule {
+    display: flex;
+  }
+  .dot {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: $padding-2n;
+    span {
+      display: inline-block;
+      width: rem(8);
+      height: rem(8);
+      border-radius: rem(8);
+      background-color: $white;
+    };
+  }
+  .text {
+  }
+}
+.main {
+  width: calc(100% - 20);
+  margin: 0 $margin-10 0;
+  background: $white;
+  border-radius: 5px;
+  text-align: center;
+  color: #4f5a70;
+  .title {
+    padding-top: $padding-6n;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #0b0b37;
+  }
+  .tips {
+    padding-top: $padding-1n;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .avatar {
+    padding-top: $padding-4n;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .avatarWrap {
+    max-width: none;
+    width: 120px;
+    height: 120px;
+    background: #0b0b37;
+    margin: 0 auto;
+    border-radius: 120px;
+  }
+  .nickname {
+    padding-top: $padding-4n;
+    font-size: 16px;
+    line-height: 22px;
+    color: #0b0b37;
+  }
+  .invite {
+    padding-top: $padding-4n;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .card__time {
+    padding-top: $padding-2n;
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .expiration__time {
+    padding-top: $padding-4n;
+    font-size: 14px;
+    line-height: 22px;
+    color: #8590a6;
+  }
+  .footer {
+    position: relative;
+    margin-top: $margin-4n;
+    .miniCodeWrap {
+      margin: 0 auto;
+      width: 80%;
+      padding: $padding-4n 0 $padding-6n;
+      border-top: 1px dashed #707070;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .miniCode {
+        .footerImg {
+          width: rem(96);
+          height: rem(96);
+        }
+      }
+      .miniCodeTips {
+        padding-top: $padding-10;
+      }
+    }
+    .notch {
+      width: rem(16);
+      height: rem(16);
+      border-radius: rem(16);
+      background: #2469F6;
+      position: absolute;
+    }
+    .notch:nth-child(2) {
+      top: rem(-8);
+      left: rem(-8);;
+    }
+    .notch:nth-child(3) {
+      top: rem(-8);
+      right: rem(-8);;
+    }
+  }
+}
+

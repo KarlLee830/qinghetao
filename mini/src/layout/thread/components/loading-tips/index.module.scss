@@ -1,0 +1,43 @@
+@import '@common/styles/index.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $padding-6n 0;
+  border-radius: $border-radius-small;
+}
+
+.initContainer {
+  background: $white;
+}
+
+.init {
+  font-size: $font-size-primary;
+
+  view {
+    color: $loading-text-color;
+  }
+}
+
+.loadMore {
+  font-size: $font-size-label;
+  margin-bottom: constant(safe-area-inset-bottom); ///兼容 IOS<11.2/
+  margin-bottom: env(safe-area-inset-bottom); ///兼容 IOS>11.2/
+
+  view {
+    color: $loading-text-color;
+  }
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-primary;
+  color: $loading-text-color;
+
+  .text {
+    margin-left: $margin-2n;
+  }
+}

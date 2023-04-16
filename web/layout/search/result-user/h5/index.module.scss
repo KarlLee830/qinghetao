@@ -1,0 +1,31 @@
+@import '@common/styles/index.scss';
+
+.page {
+  height: 100vh;
+  display: flex;
+  padding-top: rem($padding-4n);
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: $white;
+  .list {
+    flex: 1;
+  }
+}
+.searchInput {
+  padding: 0 rem($padding-4n);
+  margin-bottom: rem($padding-4n);
+}
+
+.userItem {
+  padding: rem($padding-4n);
+  &:after {
+    content: ' ';
+    position: absolute;
+    right: rem(16);
+    left: rem(16);
+    height: rem(1);
+    bottom: 0;
+    background-color: $border-color;
+  }
+}

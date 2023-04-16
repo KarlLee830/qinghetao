@@ -1,0 +1,193 @@
+@import '@common/styles/index.scss';
+
+@mixin uploadStyles {
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $mask-bg-color;
+  color: $white;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: $body-bg-color;
+  height: 100vh;
+  justify-content: center;
+}
+
+.headerbox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: rem(230);
+  // @include media('s-pc') {
+  //   width: 100%;
+  // }
+
+  // @include media('l-pc') {
+  //   width: 100%;
+  //   max-width: rem(1100);
+  // }
+  @include media('s-pc') {
+    min-height: rem(220);
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  @include media('s-pc') {
+    padding: 0 1.5%;
+    width: 97% !important;
+  }
+
+  @include media('l-pc') {
+    // width: 95%;
+    padding: 0 calc((100vw - 1070px) / 2);
+  }
+
+  @include media('xl-pc') {
+    padding: 0 calc((100vw - 1100px) / 2);
+  }
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  // @include media('s-pc') {
+  //   width: 98%;
+  // }
+
+  // @include media('l-pc') {
+  //   width: 95%;
+  //   max-width: rem(1100);
+  // }
+
+  // @include media('xl-pc') {
+  //   width: rem(1100);
+  // }
+}
+
+.center {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  margin-top: rem($margin-10);
+  @include media('s-pc') {
+    margin-top: 0;
+  }
+}
+
+.left {
+  position: sticky;
+  top: rem(0);
+  margin-right: rem($margin-5n);
+  margin-top: rem($margin-10);
+  width: rem(300);
+  @include media('s-pc') {
+    margin-top: 0;
+  }
+}
+
+.right {
+  position: sticky;
+  margin-left: rem($margin-10);
+  top: rem(0);
+  padding-top: rem($margin-10);
+  width: 32%;
+  @include media('s-pc') {
+    padding-top: 0;
+  }
+}
+.slideWrap {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  .right {
+    width: calc(32% - 10px);
+  }
+}
+
+.list {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.userHeader {
+  margin-top: rem($margin-5n);
+  width: 100%;
+  @include media('s-pc') {
+    margin-top: rem($margin-10);
+  }
+  // @include media('s-pc') {
+  //   width: 98%;
+  // }
+
+  // @include media('l-pc') {
+  //   width: 95%;
+  //   max-width: rem(1100);
+  // }
+
+  // @include media('xl-pc') {
+  //   width: rem(1100);
+  // }
+}
+
+.headImgWrapper {
+  position: relative;
+  border-radius: rem($border-radius-small) rem($border-radius-small) 0 0;
+  overflow: hidden;
+  display: block;
+
+  > div {
+    height: rem(153);
+  }
+}
+
+// 上传背景图片样式
+.uploadBgUrl {
+  @include uploadStyles();
+  z-index: 0;
+  border-radius: 0;
+  .uploadText {
+    margin-left: rem($margin-2n);
+  }
+}
+.uploadCon {
+  display: flex;
+  align-items: center;
+}
+
+.spinLoading {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: $white;
+  border-radius: rem(5);
+  color: $loading-text-color;
+
+  span {
+    color: $loading-text-color;
+  }
+}

@@ -1,0 +1,193 @@
+@import '@common/styles/index.scss';
+.content{
+  position: relative;
+}
+
+// 右侧卡片内容 start
+.user_card_wrap {
+  width: 100%;
+  border-radius: $border-radius-small;
+  box-shadow: $border-shadow-color;
+  background: $white;
+  box-sizing: border-box;
+  padding: $padding-3n * 7 $padding-6n $padding-3n;
+  margin-bottom: $margin-5n;
+  .user_card_main {
+    width: 100%;
+    border-radius: $border-radius-small;
+    background: $primary-color;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: $padding-1n * 17 $padding-4n $padding-4n;
+    text-align: center;
+    position: relative;
+    .user_card_avatar {
+      width: 120px;
+      height: 120px;
+      box-sizing: border-box;
+      position: absolute;
+      left: 50%;
+      margin-left: -60px;
+      top: -60px;
+      border-radius: 50%;
+      background: $white;
+      border: 2px solid $primary-color;
+      overflow: hidden;
+      z-index: 3;
+      :global(.dzq-avatar__img),:global(.dzq-avatar__text) {
+        width: 116px;
+        height: 116px;
+        line-height: 116px;
+      }
+
+    }
+    .user_card_info {
+    }
+    .user_info_name {
+      font-weight: 600;
+      font-size: $font-size-middle;
+      line-height: $font-line-height-base;
+      color: $white;
+      opacity: 1;
+    }
+    .user_info_tag {
+      font-size: $font-size-small;
+      line-height: $font-line-height-small;
+      color: $white;
+      padding-top: $padding-1n;
+    }
+    .site_info {
+      width: 100%;
+      border-radius: $border-radius-small;
+      background: $comment-bg-color;
+      margin: auto;
+      display: flex;
+      margin: $margin-2n auto 0;
+    }
+    .site_status_list {
+      @include text-ellipsis;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: $padding-4n 0;
+    }
+    .site_status_label {
+      font-weight: normal;
+      font-size: $font-size-base;
+      line-height: $font-line-height-base;
+      color: $text-color-regular;
+      opacity: 1;
+
+    }
+    .site_status_item {
+      @include text-ellipsis;
+      font-weight: 600;
+      font-size: $font-size-middle;
+      line-height: $font-line-height-middle;
+      color: $primary-color;
+      padding-top: $padding-1n;
+    }
+
+  }
+  .pc_bottom_tips {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: $padding-4n;
+    .pc_bottom_img {
+      width: 20px;
+      height: 20px;
+      border-radius: $border-radius-circle;
+      flex-shrink: 0;
+    }
+    .pc_bottom_text {
+      font-weight: 600;
+      font-size: $font-size-base;
+      line-height: $font-line-height-base;
+      padding-left: $padding-2n;
+      color: $text-color-regular;
+      opacity: 1;
+    }
+  }
+  .user_card_button {
+    @include cursor-on-pc;
+    width: 100%;
+    height: 36px;
+    border-radius: $border-radius-small;
+    background: $primary-color;
+    margin-top: $margin-4n;
+    font-size: $font-size-base;
+    line-height: $font-line-height-base;
+    color: $white;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bottom_title {
+    text-align: center;
+    font-weight: normal;
+    font-size: rem($font-size-label);
+    color: $text-color-secondary;
+    padding-top: $padding-3n;
+    .tips {
+      color: $primary-color;
+    }
+    .expire {
+      margin-left: $margin-2n;
+      padding-left: $padding-2n;
+      border-left: $border-solid-1;
+    }
+  }
+}
+.maskLayer{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: $zindex-popup;
+  pointer-events: auto;
+}
+
+.content_header {
+  display: flex;
+  min-height: rem(169);
+  flex-direction: column;
+  width: rem(1100);
+  background-color: $primary-color;
+  margin-top: $margin-5n;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  .logo {
+    height: 74px;
+    margin: 0 auto;
+    margin-top: $margin-4n * 2;
+  }
+}
+.joinInfo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: $margin-4n;
+  font-weight: normal;
+  font-size: $font-size-base;
+  line-height: $font-line-height-middle;
+  color: $white;
+  flex-direction: row;
+  box-sizing: border-box;
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 0 $padding-3n;
+  }
+  .text {
+    font-size: rem($font-size-middle);
+    line-height: rem($font-line-height-base);
+    color: $white;
+    font-weight: normal;
+  }
+  .content {
+    padding-left: rem($padding-2n);
+  }
+}

@@ -1,0 +1,17 @@
+@import '@common/styles/index.scss';
+
+.list {
+  width: 100%;
+  .userItem {
+    padding: $padding-4n 0;
+    &:after {
+      content: ' ';
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 1px;
+      bottom: 0;
+      background-color: $border-color;
+    }
+  }
+}

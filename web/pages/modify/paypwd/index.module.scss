@@ -1,0 +1,69 @@
+@import '@common/styles/index.scss';
+
+.title{
+  color: $text-color-primary;
+  font-size: rem($font-size-middle);
+  padding: rem($padding-4n);
+  margin-top: rem($margin-4n);
+}
+
+.payList{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem($padding-4n);
+  .payListItem{
+    border-bottom: $border-solid-1;
+    width: rem(46);
+    height: rem(49);
+    text-align: center;
+    line-height: rem(49);
+    font-size: rem($font-size-large);
+    &:not(:last-child) {
+      margin-right: rem($margin-2n);
+    }
+
+    &.curr{
+      border-bottom-color: $black;
+    }
+    &.activation{
+      border-bottom-color: $black;
+    }
+  }
+}
+
+.keyboard{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  .line{
+    display: flex;
+    align-items: center;
+    .column{
+      box-sizing: border-box;
+      flex:1;
+      font-size: rem($font-size-large);
+      color: $text-color-primary;
+      height: rem(50);
+      text-align: center;
+      border: 1px solid $border-color;
+      border-bottom: none;
+      border-right: none;
+      line-height: rem(50);
+    }
+    .special{
+      box-sizing: border-box;
+      flex:1;
+      font-size: rem($font-size-middle);
+      color: $text-color-primary;
+      height: rem(50);
+      text-align: center;
+      border: 1px solid $border-color;
+      border-bottom: none;
+      border-right: none;
+      line-height: rem(50);
+      background: #ededed;
+    }
+  }
+}

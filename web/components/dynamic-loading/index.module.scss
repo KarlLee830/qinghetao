@@ -1,0 +1,13 @@
+@import '@common/styles/index.scss';
+
+.loadingBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(20) 0;
+    width: 100%;
+    .text{
+        font-size: rem($font-size-primary);
+        color: $text-color-placeholder;
+    }
+}

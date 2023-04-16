@@ -1,0 +1,161 @@
+@import '@common/styles/index.scss';
+.container {
+  padding: rem($padding-4n);
+  padding-bottom: rem($padding-6n);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: $white;
+  border-radius: $border-radius-small;
+
+  .header {
+    font-weight: $font-weight-regular;
+    line-height: rem($font-line-height-primary);
+    text-align: left;
+    font-size: rem(18);
+    color: $text-color-primary;
+    padding-bottom: rem($padding-4n);
+    border-bottom: $border-solid-1;
+  }
+
+  .info {
+    padding-bottom: rem($padding-6n);
+
+    .AuthorInfo {
+      display: flex;
+      padding: rem($padding-6n) 0;
+
+      .avatar{
+        cursor: pointer;
+      }
+      .information {
+        padding-left: rem($padding-2n);
+        font-weight: normal;
+        font-size: rem($font-size-primary);
+        line-height: rem(16);
+        text-align: left;
+        .name {
+          width: rem(200);
+          @include text-ellipsis();
+          cursor: pointer;
+          color: $text-color-primary;
+          font-weight: $font-weight-regular;
+          padding: rem($padding-1n) 0;
+        }
+        .dynamic {
+          color: $text-color-secondary;
+          font-size: rem($font-size-primary);
+        }
+      }
+    }
+
+    .theme {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 rem($padding-2n);
+
+      .themeInfo {
+        font-weight: normal;
+
+        .title {
+          font-size: rem($font-size-primary);
+          line-height: rem(16);
+          text-align: center;
+          color: $text-color-regular;
+        }
+        .number {
+          height: rem(28);
+          line-height: rem(28);
+          font-weight: $font-weight-regular;
+          font-size: rem($font-size-large);
+          text-align: center;
+          color: $text-color-primary;
+          padding-top: rem($padding-2n);
+        }
+      }
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    padding-top: rem($padding-6n);
+    border-top: $border-solid-1;
+
+    .follow {
+      width: rem(114);
+      height: rem(36);
+      margin-right: rem($margin-6n);
+    }
+
+    .privateLetter {
+      width: rem(114);
+      height: rem(36);
+      border: 1px solid $primary-color;
+      color: $primary-color;
+    }
+
+    .btnItem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btnIcon {
+      margin-right: rem($margin-2n);
+    }
+  }
+
+  .is-followed {
+    // TODO:token
+    background: $primary-disabled-color;
+    border-color: $primary-disabled-color;
+  }
+
+  .with-followed {
+    // TODO:token
+    background: $warn-color;
+    border-color: $warn-color;
+  }
+
+  // 嵌套的真深
+  @include widthAndHeightMedia($media-min-width, $media-min-height) {
+    padding: $padding-3n 14px;
+    .header {
+      padding-bottom: $padding-3n;
+      font-size: $font-size-primary;
+    }
+    .info {
+      padding-bottom: $padding-2n;
+      .AuthorInfo {
+        padding: $padding-10 0;
+        .information {
+          .dynamic {
+            font-size: $font-size-small;
+          }
+        }
+      }
+      .theme {
+        .themeInfo {
+          .title {
+            font-size: $font-size-small;
+            line-height: 16px;
+          }
+          .number {
+            height: auto;
+            padding-top: 2px;
+            font-size: $font-size-middle;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+    .btn {
+      padding-top: $padding-3n;
+      .follow,
+      .privateLetter {
+        height: 33px;
+      }
+    }
+  }
+}

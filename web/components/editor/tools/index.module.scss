@@ -1,0 +1,17 @@
+@import '@common/styles/index.scss';
+
+.dzq-tools-category {
+  display: flex;
+  align-items: center;
+  &__text {
+    display: inline-block;
+    margin: 0 rem($margin-2n) 0 rem($margin-1n);
+    font-size: $font-size-label;
+    color: $text-color-regular;
+  }
+  &__tag {
+    max-width: 200px;
+    @include tag-default;
+    @include text-ellipsis;
+  }
+}

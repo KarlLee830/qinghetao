@@ -1,0 +1,73 @@
+@import '@common/styles/index.scss';
+
+.container {
+  padding: rem($padding-4n) rem($padding-4n) 0;
+  background: $white;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  font-weight: normal;
+  padding-bottom: rem($padding-2n);
+  .text {
+    
+    font-size: rem($font-size-primary);
+    text-align: left;
+    color: $text-color-primary;
+    line-height: rem(16);
+
+    :global {
+      .qq-emotion {
+        width: rem(14);
+        height: rem(14);
+        display: inline-block !important;
+        flex-shrink: 0;
+      }
+
+      .dzq-richText {
+        font-size: $font-size-primary;
+        overflow: hidden;
+        word-break: break-all;
+        max-width: rem(140);
+        line-height: rem(16);
+        @include text-ellipsis();
+
+        .dzq-a {
+          display: inline;
+        }
+      }
+    }
+  }
+  .money {
+    
+    font-size: rem($font-size-middle);
+    text-align: left;
+    color: $error-color;
+  }
+  .text {
+    
+    font-size: rem($font-size-primary);
+    text-align: left;
+    color: $text-color-primary;
+    // line-height: rem(16);
+  }
+  .money {
+    
+    font-size: rem($font-size-middle);
+    text-align: left;
+    color: $error-color;
+  }
+}
+
+.time {
+  
+  font-weight: normal;
+  font-size: rem($font-size-label);
+  text-align: left;
+  color: $text-color-secondary;
+  padding-bottom: rem($padding-4n);
+  border-bottom: solid rem(1) $border-color;
+  height: rem(16);
+  line-height: rem(16);
+}

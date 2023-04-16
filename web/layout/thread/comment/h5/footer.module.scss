@@ -1,0 +1,85 @@
+@import '@common/styles/index.scss';
+
+.inputClick {
+  flex: 1;
+  :global {
+    .dzq-input__prefix-icon {
+      width: rem(48);
+      color:  $text-color-regular
+    }
+    .dzq-input.is-disabled .dzq-input__inner {
+      background-color: $body-bg-color;
+      -webkit-appearance: none; // ios下去除上面阴影
+    }
+    .dzq-input__inner {
+      border-radius: rem(18);
+      background-color: $text-bg-color !important;
+      border: 1px solid #fefefe !important;
+      padding-left: rem(42) !important;
+      &::placeholder {
+        color: $text-color-regular!important;
+        font-size: rem(14);
+        line-height: rem(24);
+        text-align: left;
+      }
+    }
+  }
+  .input {
+    width: 100%;
+  }
+}
+
+.icon {
+  margin-left: rem($margin-6n);
+  display: inline-block;
+  position: relative;
+
+  // TODO:暂未提供token
+  color: $text-color-secondary;
+
+  :first-child {
+    margin-left: 0;
+  }
+}
+.content {
+  position: absolute;
+  font-size: rem(12);
+  text-align: left;
+  color: $text-color-secondary;
+  line-height: rem(17);
+  width: rem(24);
+  background-color: $white;
+  padding-left: rem(4);
+  left: rem(10);
+  bottom: rem(12);
+}
+.badge {
+  min-width: rem(17);
+  height: rem(17);
+  font-size: rem(12);
+  text-align: center;
+  color: $white;
+  background: $error-color;
+  border-radius: rem(8.5);
+  padding: 0 rem(6);
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: rem(-8.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(50%);
+  .text{
+    font-size: rem(12);
+    line-height: rem(17);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.83);
+  }
+}
+
+.isCricle {
+  width: rem(17);
+}

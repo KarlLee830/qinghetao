@@ -1,0 +1,63 @@
+@import '@common/styles/index.scss';
+// .searchWrap {
+//   background: $body-bg-color;
+//   width: 100%;
+.searchContent {
+  width: 100%;
+  .section {
+    padding: 0 rem($padding-6n);
+    background: $white;
+    border-radius: rem($border-radius-small);
+    box-shadow: 0 0 rem($padding-2n) rgba(241, 243, 244, 0.16);
+    margin-bottom: rem($margin-10);
+  }
+}
+.postTitle {
+  padding: 0 rem($padding-6n);
+  border-radius: rem($border-radius-small);
+  background: $white;
+}
+.searchRight {
+  width: 100%;
+  overflow: hidden;
+}
+.threadContent {
+  border-radius: rem($border-radius-small);
+  padding: 0 rem($padding-6n);
+  margin-bottom: rem(16);
+}
+
+.topic {
+  padding: rem(12) 0;
+}
+
+.loading {
+  width: 100%;
+  height: rem(60);
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  color: $text-color-placeholder;
+  border-bottom-left-radius: $border-radius-small;
+  border-bottom-right-radius: $border-radius-small;
+}
+
+.noData {
+  background-color: $white;
+  border-bottom-left-radius: $border-radius-small;
+  border-bottom-right-radius: $border-radius-small;
+}
+
+.noDataView {
+  height: rem(100);
+  background-color: $white;
+  border-radius: $border-radius-small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem($font-size-base);
+  line-height: rem($font-line-height-base);
+  color: $disabled-color;
+  margin-bottom: rem(20);
+}
+

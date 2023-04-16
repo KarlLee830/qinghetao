@@ -1,0 +1,55 @@
+{
+  "name": "discuz-fe",
+  "version": "1.0.0",
+  "description": "Discuz! Q Front-end project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "cd ./mini && npm install && cd ../web && npm install",
+    "dev:web": "cd ./web && npm run dev",
+    "dev:mini": "cd ./mini && npm run dev:weapp",
+    "lint:js:fix": "eslint --ext .js,.ts,.tsx,.jsx ./ --max-warnings 0 --fix",
+    "lint:js": "eslint --ext .js,.ts,.tsx,.jsx ./ --max-warnings 0",
+    "lint:css": "stylelint **/*.scss --fix",
+    "lint": "npm run lint:js && npm run lint:css"
+  },
+  "keywords": [
+    "discuz",
+    "Discuz!",
+    "Q",
+    "web",
+    "mini"
+  ],
+  "author": "Discuz-FE",
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^2.22.1",
+    "eventemitter3": "^4.0.7"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "12.0.1",
+    "@commitlint/config-conventional": "12.0.1",
+    "commitizen": "4.2.3",
+    "eslint": "7.22.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-config-tencent": "1.0.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-react": "7.22.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "husky": "5.2.0",
+    "lint-staged": "10.5.4",
+    "prettier": "2.2.1",
+    "stylelint": "13.12.0",
+    "stylelint-config-prettier": "8.0.2",
+    "stylelint-config-rational-order": "0.1.2",
+    "stylelint-config-standard": "21.0.0",
+    "stylelint-prettier": "1.2.0",
+    "stylelint-scss": "3.19.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}

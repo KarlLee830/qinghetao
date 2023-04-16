@@ -1,0 +1,15 @@
+@import '@common/styles/index.scss';
+
+
+.list {
+  flex: 1;
+  background-color: $body-bg-color;
+}
+.listItem {
+  margin-bottom: 10px;
+}
+
+.topBox {
+  padding-bottom: 8px;
+  background: $white;
+}

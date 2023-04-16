@@ -1,0 +1,70 @@
+
+@import '@common/styles/index.scss';
+.container {
+  width: 100%;
+  overflow: hidden;
+  padding: rem($padding-6n);
+  background: $white;
+  border-radius: rem($border-radius-small);
+  box-sizing: border-box;
+  .stepsItem {
+    display: flex;
+    margin-bottom: rem(40);
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    .line {
+      width: rem(2);
+      height: rem(45);
+      background: $border-color;
+      position: absolute;
+      top: rem($font-line-height-small);
+      left: rem($padding-2n + 1px);
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .icon {
+      margin-left: rem($margin-4n);
+    }
+    .content {
+      font-weight: normal;
+      font-size: rem($font-size-primary);
+      line-height: rem($font-line-height-primary);
+      color: $text-color-primary;
+      margin-left: rem($margin-2n);
+    }
+    .itemActive {
+      font-weight: 600;
+      color: $primary-color;
+    }
+  }
+  .circle {
+    width: rem($padding-4n);
+    height: rem($padding-4n);
+    background: transparent;
+    border: 2px solid $border-color;
+    border-radius: 50%;
+  }
+  .circleBox {
+    width: rem($padding-4n);
+    height: rem($padding-4n);
+    background: transparent;
+    border: 2px solid $primary-color;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .innerRing {
+      width: rem($margin-1n);
+      height: rem($margin-1n);
+      background: $primary-color;
+      border-radius: 50%;
+    }
+  }
+
+  .badgeMargin {
+    margin-left: 32px;
+    margin-bottom: 3px;
+  }
+}

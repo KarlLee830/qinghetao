@@ -1,0 +1,30 @@
+@import '@common/styles/index.scss';
+
+.container {
+  .container-inner {
+    padding: 8px 16px;
+  }
+
+  .textarea {
+    width: 100%;
+    padding: 0;
+    font-size: 16px;
+    color: $text-color-primary;
+    line-height: 16px;
+    text-align: left;
+    resize: none;
+  }
+
+  .textarea-editing {
+    line-height: 26px;
+  }
+
+  .textarea-min-height {
+    min-height: 78px;
+  }
+
+  .textarea-placeholder {
+    font-size: 16px;
+    color: $text-color-placeholder;
+  }
+}

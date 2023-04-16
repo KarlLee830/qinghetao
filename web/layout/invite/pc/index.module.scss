@@ -1,0 +1,290 @@
+@import '@common/styles/index.scss';
+.container {
+  width: 100%;
+  background-color: $white;
+  box-sizing: border-box;
+  padding: $padding-6n;
+  margin-bottom: $margin-4n;
+  border-radius: $border-radius-small;
+}
+// 左侧列表内容 start
+.invite_list {
+  .invite_list_title {
+    padding-bottom: $padding-6n;
+    display: flex;
+    align-items: center;
+    font-size: $font-size-middle;
+    line-height: $font-line-height-base;
+    font-weight: 600;
+    color: $text-color-primary;
+    .title_text {
+      padding-left: $padding-2n;
+    }
+  }
+  @mixin list_nickname {
+    width: 61%;
+    padding-left: $padding-4n;
+    box-sizing: border-box;
+    span {
+      @include text-ellipsis;
+    }
+  }
+  @mixin list_money {
+    width: 19%;
+    span {
+      @include text-ellipsis;
+    }
+  }
+  @mixin list_timer {
+    flex: 1;
+    span {
+      @include text-ellipsis;
+    }
+  }
+  .invite_list_label {
+    width: 100%;
+    border-radius: $border-radius-small $border-radius-small 0 0;
+    height: 36px;
+    background: $body-bg-color;
+    box-sizing: border-box;
+    padding: $padding-2n 0;
+    display: flex;
+    @mixin user_label_item{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-size: $font-size-base;
+      line-height: $font-line-height-xs;
+      color: $text-color-regular;
+    }
+
+    .list_label_nickname,.list_label_money,.list_label_timer {
+      @include user_label_item;
+    }
+    .list_label_nickname {
+      @include list_nickname;
+    }
+    .list_label_money {
+      @include list_money;
+    }
+    .list_label_timer {
+      @include list_timer;
+    }
+  }
+  .invite_list_main {
+    .list_main_wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 54px;
+      box-sizing: border-box;
+      padding: $padding-2n 0;
+      border-bottom: $border-solid-1;
+    }
+    .list_main_nickname,.list_main_money,.list_main_timer {
+      display: flex;
+      align-items: center;
+      line-height: $font-line-height-base;
+      color: $text-color-primary;
+    }
+    .list_main_nickname {
+      @include list_nickname;
+    }
+    .user_value_avatar {
+      border-radius: $border-radius-circle;
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+    }
+    .user_value_name {
+      @include text-ellipsis;
+      padding-left: $padding-4n;
+      font-weight: normal;
+      font-size: $font-size-base;
+      line-height: $font-line-height-xs;
+      color: $text-color-primary;
+    }
+    .list_main_money {
+      @include list_money;
+      font-weight: 600;
+      font-size: $font-size-middle;
+      line-height: $font-line-height-xs;
+      color: $error-color;
+    }
+    .list_main_timer {
+      @include list_timer;
+      @include text-ellipsis;
+      font-weight: normal;
+      font-size: $font-size-base;
+      line-height: $font-line-height-small;
+      text-align: left;
+      color: $text-color-secondary;
+    }
+  }
+}
+// 左侧列表内容 end
+// 右侧卡片内容 start
+.user_card_wrap {
+  width: 100%;
+  border-radius: $border-radius-small;
+  background-color: $primary-color;
+  background-image: url('/dzq-img/invite-card-bg.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  box-shadow: $border-shadow-color;
+  box-sizing: border-box;
+  padding: $padding-3n * 7 $padding-6n $padding-6n;
+  margin-bottom: $margin-5n;
+  .user_card_main {
+    width: 100%;
+    border-radius: $border-radius-small;
+    background: $white;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: $padding-1n * 17 $padding-4n $padding-4n;
+    text-align: center;
+    position: relative;
+    .user_card_avatar {
+      width: 120px;
+      height: 120px;
+      box-sizing: border-box;
+      position: absolute;
+      left: 50%;
+      margin-left: -60px;
+      top: -60px;
+      border-radius: $border-radius-circle;
+      background: $white;
+      border: 1px solid $white;
+      overflow: hidden;
+      z-index: 3;
+      :global(.dzq-avatar__img),:global(.dzq-avatar__text) {
+        width: 118px;
+        height: 118px;
+      }
+
+    }
+    .user_card_info {
+    }
+    .user_info_name {
+      @include text-ellipsis;
+      font-weight: 600;
+      font-size: $font-size-middle;
+      line-height: $font-line-height-base;
+      color: $text-color-primary;
+      opacity: 1;
+    }
+    .user_info_tag {
+      font-size: $font-size-small;
+      line-height: $font-line-height-small;
+      color: $text-color-secondary;
+      padding-top: $padding-1n;
+    }
+    .memberBadgeBox {
+      padding-top: $padding-1n;
+    }
+    .user_info_invite {
+      width: 100%;
+      height: 78px;
+      border-radius: $border-radius-small;
+      background: $comment-bg-color;
+      margin: $margin-2n auto 0;
+    }
+    @mixin userInfoInvite {
+      width: 50%;
+      height: 78px;
+      display: inline-block;
+      .invite_num_title{
+        font-weight: normal;
+        font-size: $font-size-base;
+        line-height: $font-line-height-base;
+        color: $text-color-regular;
+        opacity: 1;
+        padding-top: $padding-4n;
+      }
+      .invite_num_content{
+        font-weight: 600;
+        font-size: $font-size-middle;
+        line-height: $font-line-height-middle;
+        color: $text-color-primary;
+        @include text-ellipsis;
+      }
+    }
+    .invite_num{
+      @include userInfoInvite;
+    }
+    .invite_money{
+      @include userInfoInvite;
+      width: calc(50% - 1px);
+      border-left: 1px solid $white;
+    }
+  }
+  .user_card_button {
+    @include cursor-on-pc;
+    width: 100%;
+    height: 36px;
+    border-radius: $border-radius-small;
+    background: $white;
+    margin-top: $margin-5n;
+    font-size: $font-size-base;
+    line-height: $font-line-height-base;
+    color: $primary-color;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.user_center_wrap {
+  padding-left: $padding-4n !important;
+  padding-right: $padding-4n !important;
+}
+.invite_list_nodata {
+  padding-top: $padding-2n;
+}
+.loadMoreContainer {
+  flex: 1;
+  padding: $padding-4n;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $text-color-placeholder;
+}
+.content_header {
+  min-height: 10px;
+}
+
+// 高度自适应
+:global {
+  .invite-pc {
+    @include heightMedia(1050px, 995px) {
+      .user-center-friends-item:nth-last-child(-n + 2) {
+        display: none;
+      }
+      .user-center-friends-item:nth-child(n + 2),
+      .user-center-friends-item:nth-child(1) {
+        display: block;
+      }
+    }
+    @include heightMedia(995px, 940px) {
+      .user-center-friends-item:nth-last-child(-n + 3) {
+        display: none;
+      }
+      .user-center-friends-item:nth-child(n + 2),
+      .user-center-friends-item:nth-child(1) {
+        display: block;
+      }
+    }
+    .user-center-friends-mini {
+      display: none;
+    }
+    @include heightMedia(940px) {
+      .user-center-friends-mini {
+        display: flex !important;
+      }
+      .user-center-friends-item {
+        display: none !important;
+      }
+    }
+  }
+}

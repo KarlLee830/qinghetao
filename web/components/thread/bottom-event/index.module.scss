@@ -1,0 +1,123 @@
+@import '@common/styles/index.scss';
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: rem(16) 0 rem(8);
+}
+.userImg {
+  display: flex;
+  align-items: center;
+  cursor: default;
+  .portrait {
+    @include cursor-on-pc;
+  }
+  .numText {
+    line-height: rem(24);
+    font-size: rem($font-size-label);
+    color: $text-color-secondary;
+    margin-left: rem($margin-2n);
+  }
+}
+.commentSharing {
+  display: flex;
+  .division {
+    line-height: rem(24);
+    font-size: rem($font-size-label);
+    color: $text-color-secondary;
+    margin: 0 rem($padding-base);
+  }
+  .commentNum {
+    line-height: rem(24);
+    font-size: rem($font-size-label);
+    color: $text-color-secondary;
+  }
+}
+.users {
+  margin: 0;
+}
+.operation {
+  height: rem(52);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: $border-color solid rem(1);
+  box-sizing: border-box;
+}
+.operations {
+  height: rem(52);
+  display: flex;
+  margin-top: rem(16);
+  align-items: center;
+  justify-content: space-between;
+  border-top: $border-color solid rem(1);
+  box-sizing: border-box;
+}
+
+.fabulousContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  &:first-child {
+    justify-content: flex-start;
+  }
+
+  &:last-child {
+    justify-content: flex-end;
+  }
+}
+
+.fabulous {
+  @include cursor-on-pc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $padding-10 0;
+
+  .fabulousPost {
+    margin-left: rem(8);
+    font-size: rem($font-size-primary);
+    color: $text-color-secondary;
+  }
+  .fabulousCancel {
+    margin-left: rem(8);
+    font-size: rem($font-size-primary);
+    color: $primary-color;
+  }
+  :global{
+    .like, .share{
+      position: relative;
+      top: rem(-1);
+    }
+  }
+  .icon {
+    color: $text-color-secondary;
+
+    &.likedColor {
+      color: $primary-color;
+    }
+    &.dislikedColor {
+      color: $text-color-secondary;
+    }
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  :global {
+    .dzq-icon {
+      @include cursor-on-pc;
+      cursor: initial;
+    }
+  }
+}
+
+.hongbaoMini{
+  height: 16px;
+  width: 17px;
+  display: inline-block;
+  position: relative;
+  top:1px;
+}

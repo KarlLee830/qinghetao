@@ -1,0 +1,23 @@
+@import '@common/styles/index.scss';
+
+.container {
+  background: $-white;
+  text-align: center;
+  padding: rem($padding-4n) 0;
+}
+
+.init {
+  font-size: rem($font-size-primary);
+
+  * {
+    color: $loading-text-color;
+  }
+}
+
+.loadMore {
+  font-size: rem($font-size-label);
+
+  * {
+    color: $loading-text-color;
+  }
+}

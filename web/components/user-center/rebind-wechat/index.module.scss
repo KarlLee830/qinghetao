@@ -1,0 +1,25 @@
+@import '@common/styles/index.scss';
+@import '@common/styles/index.scss';
+
+.wechatRebindContent {
+  :global {
+    .dzq-modal__container {
+      width: rem(409);
+      height: rem(423);
+      border-radius: rem($border-radius-small);
+      background: $white;
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem($margin-6n);
+    :global {
+      .dzq-icon {
+        font-size: $font-size-base !important;
+      }
+    }
+  }
+}

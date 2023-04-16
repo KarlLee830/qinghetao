@@ -1,0 +1,62 @@
+@import '@common/styles/index.scss';
+
+.content {
+  padding: $padding-6n;
+  padding-bottom: 0;
+  height: 100%;
+  h3 {
+    font-size: rem($font-size-large);
+    color: $text-color-primary;
+    letter-spacing: 1px;
+  }
+}
+
+.labelInfo {
+  .labelValue {
+    :global {
+      .dzq-input {
+        width: 100%;
+      }
+      .dzq-input__inner {
+        width: 100%;
+        height: rem(62);
+        line-height: rem(62);
+        border: none;
+        border-bottom: 1px solid $border-color;
+        border-radius: 0;
+      }
+      .dzq-input__icon {
+        line-height: rem(62);
+      }
+    }
+  }
+}
+
+#resetPayPwdContent {
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 32px);
+    // border-top: 1px solid $border-color;
+    padding: rem($padding-2n) rem($padding-4n) rem($padding-4n);
+    display: flex;
+    padding-bottom: calc(16px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+    padding-bottom: calc(16px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+    .btn {
+      height: rem(42);
+      font-size: $font-size-middle;
+      margin: auto;
+      border-radius: $border-radius-small;
+      line-height: rem(42);
+      padding: 0;
+    }
+  }
+}
+
+.bgBtnColor {
+  :global {
+    .dzq-button--primary.is-mouseenter {
+      @include button-primary();
+    }
+  }
+}

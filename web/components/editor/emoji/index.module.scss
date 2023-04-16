@@ -1,0 +1,90 @@
+@import "@common/styles/index.scss";
+.dzq-emoji {
+  position: absolute !important;
+  bottom: 45px;
+  left: 0;
+  right: 0;
+  margin: 0 rem($margin-4n);
+  padding-bottom: rem($padding-10);
+  height: rem(175);
+  border-radius: rem($border-radius-small);
+  border: $border-solid-1;
+  background-color: $white;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+    width: rem(30);
+    height: rem(30);
+    margin: rem(2);
+    &:last-child {
+      margin-right: auto;
+    }
+  }
+
+  &__slide {
+    height: rem(145);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+.pc,
+.h5 {
+  padding: $padding-2n;
+  margin: 0;
+  margin-left: 2px;
+  position: absolute;
+  bottom: 54px;
+  height: 200px;
+  width: 390px;
+  overflow-y: auto;
+  overflow-y: overlay;
+  z-index: $zindex-dialog;
+  .dzq-emoji__icon {
+    cursor: pointer;
+  }
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.09);
+    border-radius: 100px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.09);
+    border-radius: 100px;
+  }
+}
+@supports not (overflow-y: overlay) {
+  .pc{
+    scrollbar-width: thin;
+    scrollbar-color: $border-shadow-color transparent;
+  }
+}
+.h5 {
+  position: static !important;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  padding: $padding-2n $padding-4n;
+  width: calc(100vw - 16px * 2);
+  height: 200px;
+  margin-left: 0;
+}
+.atTop {
+  position: absolute !important;
+  left: -15px;
+  top: rem(52);
+  right: 0;
+  margin: 0 rem($margin-4n);
+  padding-bottom: rem($padding-10);
+  height: rem(175);
+  border-radius: rem($border-radius-small);
+  border: $border-solid-1;
+  background-color: $white;
+}

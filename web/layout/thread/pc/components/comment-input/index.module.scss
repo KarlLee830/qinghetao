@@ -1,0 +1,118 @@
+@import '@common/styles/index.scss';
+
+.container {
+  background: $white;
+  border: $border-solid-1;
+  border-radius: rem($border-radius-small);
+  position: relative;
+}
+
+.main {
+  &.hasHongbao{
+    background-color: $body-bg-color;
+    padding-left: 30px;
+    .hongbaoMini{
+      width: 16px;
+      height: 22px;
+      display: inline-block;
+      position: absolute;
+      top:12px;
+      left:18px;
+      z-index: 9;
+    }
+  }
+
+
+  :global {
+    .dzq-textarea {
+      border: none;
+      border-radius: rem($border-radius-small) rem($border-radius-small) 0 0;
+      padding-bottom: rem($padding-2n);
+      .dzq-textarea__inner {
+        padding: rem($padding-3n) rem($padding-4n);
+        font-size: rem($font-size-middle);
+        background-color: $comment-bg-color;
+        resize: none;
+      }
+    }
+  }
+}
+
+.input {
+  width: 100% !important;
+  box-sizing: border-box;
+  background-color: $comment-bg-color !important;
+  overflow: hidden;
+}
+.heightMiddle {
+  height: rem(116);
+}
+.heightLabel {
+  height: rem(76);
+}
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    margin-top: rem($margin-1n);
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: rem(52);
+  padding: 0 rem(16);
+  border-top: $border-solid-1;
+  position: relative;
+
+  .linkBtn {
+    display: flex;
+    color: #8a95ac;
+    .btnIcon {
+      line-height: rem(52);
+      padding-right: rem($padding-6n);
+    }
+  }
+
+  .button {
+    width: rem(100);
+    height: rem(36);
+    border-radius: rem($border-radius-small);
+    box-sizing: border-box;
+    font-size: rem($font-size-primary);
+  }
+}
+
+.actived {
+  color: $primary-color;
+}
+
+.divider {
+  margin: 0;
+}
+
+.imageUpload {
+  padding: rem($padding-4n) rem($padding-4n) rem($padding-3n);
+
+  :global {
+    .dzq-upload.is-card {
+      padding: 0;
+    }
+    .dzq-upload__area,
+    .dzq-upload-list-card__item {
+      width: rem(109) !important;
+      height: rem(109) !important;
+      margin: 0 rem(8) rem(8) 0;
+    }
+  }
+}
+
+.disabled {
+  color: $disabled-color;
+}
+

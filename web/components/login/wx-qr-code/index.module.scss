@@ -1,0 +1,99 @@
+@import '@common/styles/index.scss';
+.orCode{
+  width: rem(327);
+  margin-top: $margin-2n;
+  position: relative;
+  text-align: center;
+  .orCode__img {
+    margin-top: $margin-5n;
+    display: inline-block;
+    img {
+      width: rem(150);
+      height: rem(150);
+      display: inline-block;
+      border: $border-solid-1;
+    }
+  }
+  .orCode_mini {
+    img {
+      overflow: hidden;
+      border-radius: $border-radius-circle;
+      padding: $padding-4n;
+    }
+  }
+  .orCode__text {
+    font-size: rem($font-size-small);
+    padding: $padding-5n $padding-5n 0;
+    text-align: center;
+    line-height: $font-line-height-small;
+  }
+}
+
+// ----------------------PC
+.pc_orCode {
+  width: 210px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+
+  .pc_orCode__img {
+    width: 198px;
+    height: 198px;
+    box-sizing: border-box;
+    text-align: center;
+    border: $border-solid-1;
+    margin-left: $margin-5;
+    img {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+  }
+  .pc_orCode__text {
+    padding-top: $padding-6n;
+    font-weight: $font-weight-light;
+    font-size: $font-size-middle;
+    line-height: $font-line-height-middle;
+    color: $text-color-primary;
+  }
+}
+.pc_orCode_mini {
+  overflow: hidden;
+  border-radius: $border-radius-circle;
+  padding: $padding-4n;
+}
+
+.invalid {
+  .pc_orCode__img,
+  .orCode__img {
+    filter: blur(1px);
+  }
+  .codeMask {
+    position: absolute;
+    top: 0;
+    width: 198px;
+    height: 198px;
+    background-color: $mask-bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    cursor: pointer;
+    margin-left: $margin-5;
+  }
+  .miniCodeMask {
+    border-radius: $border-radius-circle;
+  }
+  &.orCode {
+    .codeMask {
+      width: rem(150);
+      height: rem(150);
+      margin-top: $margin-5n;
+      margin-left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+  .h5_miniCodeMask {
+    padding: $padding-4n;
+  }
+}

@@ -1,0 +1,348 @@
+@import '@common/styles/index.scss';
+@mixin content {
+  padding: rem($padding-6n * 2) rem($padding-6n) $padding-2n;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+}
+@mixin title {
+  font-weight: 700;
+  font-size: rem($font-size-large);
+  line-height: rem($font-line-height-large);
+  text-align: left;
+  color: $text-color-primary;
+  place-self: flex-start;
+}
+@mixin input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: $margin-2n;
+  padding: rem($padding-4n) 0;
+  border-bottom: $border-solid-1;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  :global(.dzq-input__inner) {
+    font-size: rem($font-size-middle);
+    border: none;
+    padding: 0;
+    height: auto;
+    line-height: rem($font-line-height-base);
+    border-radius: 0;
+    -webkit-tap-highlight-color: transparent;
+    &::placeholder {
+      color: $text-color-placeholder;
+    }
+  }
+  // TODO: 眼睛样式问题
+  :global(.dzq-input__icon){
+    position: relative;
+    font-size: rem($font-size-middle) !important;
+    width: rem(24);
+    height: rem(24);
+    line-height: rem($font-line-height-base);
+  }
+}
+@mixin passwordInput {
+  :global(.is-select){
+    color: $primary-color !important;
+  }
+}
+@mixin button {
+  width: 100%;
+  height: rem(42);
+  margin-top: rem($margin-4n * 2);
+  font-size: rem($font-size-middle);
+  padding: rem($padding-10) 0;
+  box-sizing: border-box;
+  color: $white;
+  background: $primary-color;
+  border: $primary-color;
+  &:hover {
+    background: $primary-color;
+    border: $primary-color;
+  }
+  &:active{
+    background: $primary-color6;
+    border-color: $primary-color6;
+  }
+  &:global(.is-disabled){
+    background-color: $disabled-color;
+    border-color: $disabled-color;
+  }
+}
+@mixin button_exit {
+  color: $text-color-secondary;
+  background: $text-bg-color2;
+  border: $text-bg-color2;
+}
+@mixin functionalRegion {
+  margin-top: rem($margin-6n);
+  font-size: rem($font-size-base);
+  text-align: center;
+  .clickBtn{
+    color: $primary-color;
+    cursor: pointer;
+  }
+}
+@mixin otherLoginText {
+  margin-top: rem($margin-4n * 2);
+  font-size: rem($font-size-small);
+  text-align: center;
+  line-height: rem($font-line-height-middle);
+  font-weight: normal;
+  color: $icon-color;
+  span {
+    cursor: pointer;
+    color: $primary-color;
+  }
+}
+@mixin otherLoginBtn {
+  border-radius: $border-radius-circle;
+  margin: 0 rem($margin-4n);
+  width: rem(40);
+  height: rem(40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: $comment-bg-color;
+}
+@mixin titleTips {
+  place-self: flex-start;
+  font-size: rem($font-size-middle);
+  margin: rem($margin-4n * 2) 0;
+  line-height: rem($font-line-height-large);
+  text-align: left;
+  color: $text-color-primary;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: rem(30);
+    height: rem(30);
+  }
+  .tips_user {
+    display: flex;
+    line-height: rem($font-line-height-large);
+    flex-direction: row;
+  }
+  :global(.dzq-avatar), :global(.dzq-avatar__text){
+    font-size: rem($font-size-small);
+    width: rem(30);
+    height: rem(30);
+    line-height: rem($font-line-height-large);
+  }
+}
+@mixin btn_select {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  :global(.dzq-icon){
+    margin-right: $margin-2n;
+  }
+}
+@mixin btn_wx {
+  background-color: $success-color !important;
+}
+@mixin btn_user {
+  background-color: $primary-color !important;
+  margin-top: $margin-4n;
+}
+@mixin btn_phone {
+  background-color: $warn-color !important;
+  margin-top: $margin-4n;
+}
+
+@mixin otherLogin_button {
+  margin: rem($margin-4n);
+  display: flex;
+  justify-content: center;
+}
+
+// ------------PC;
+
+@mixin pc_container {
+  width: 100%;
+  border-radius: $border-radius-small;
+  background: $white;
+  box-shadow: $border-shadow-color-8;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: $padding-10 * 5;
+  min-height: calc(100vh - 235px);
+  overflow: hidden;
+}
+@mixin pc_content {
+  width: 300px;
+  margin: $margin-5n auto 0;
+}
+@mixin pc_title {
+  font-weight: 600;
+  font-size: $font-size-large;
+  line-height: $font-line-height-large;
+  color: $text-color-primary;
+  text-align: center;
+  padding-bottom: $padding-4n * 2;
+}
+@mixin pc_button {
+  width: 300px;
+  height: 36px;
+}
+@mixin pc_otherLoginText {
+  margin-top: $margin-4n * 2;
+  font-weight: normal;
+  font-size: $font-size-small;
+  line-height: $font-line-height-middle;
+  color: $icon-color;
+  span {
+    cursor: pointer;
+    color: $primary-color;
+  }
+}
+
+@mixin pc_otherLoginBtn {
+  cursor: pointer;
+  border-radius: $border-radius-circle;
+  background: $comment-bg-color;
+  margin: 0 $margin-4n;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@mixin pc_input {
+  width: 300px;
+  margin-bottom: $margin-6n;
+  -webkit-tap-highlight-color: transparent;
+  :global(.dzq-input__icon){
+    font-size: $font-size-middle !important;
+  }
+}
+
+@mixin pc_functionalRegion {
+  margin-top: $margin-4n;
+  text-align: center;
+  font-size: $font-size-base;
+  .clickBtn{
+    color: $primary-color;
+    cursor: pointer;
+  }
+}
+@mixin pc_tips {
+  font-weight: normal;
+  font-size: $font-size-base;
+  line-height: $font-line-height-base;
+  text-align: left;
+  color: $text-color-regular;
+  padding-bottom: $padding-2n;
+}
+@mixin pc_titleTips {
+  margin-bottom: $margin-4n * 2;
+  font-size: $font-size-middle;
+  line-height: $font-line-height-large;
+  text-align: left;
+  color: $text-color-primary;
+  img {
+    width: 30px;
+    height: 30px;
+    margin: 0 $margin-2n;
+  }
+}
+@mixin pc_body_background {
+  background: $body-bg-color;
+}
+@mixin pc_bottom {
+  height: 68px;
+  box-sizing: border-box;
+  padding: $padding-6n 0;
+  text-align: center;
+  font-weight: normal;
+  font-size: $font-size-small;
+  line-height: $font-line-height-small;
+  color: $text-color-secondary;
+  background: $body-bg-color;
+}
+
+// -------------------------------------小程序
+@mixin mini_container {
+  background-color: $white;
+  height: 100vh;
+}
+@mixin mini_content {
+  padding: $padding-6n * 2 $padding-6n;
+}
+@mixin mini_title {
+  font-weight: 600;
+  font-size: $font-size-large;
+  line-height: $font-line-height-large;
+  text-align: left;
+  color: $text-color-primary;
+}
+@mixin mini_functionalRegion {
+  text-align: center;
+  .clickBtn{
+    color: $primary-color;
+    cursor: pointer;
+  }
+}
+@mixin mini_tips {
+  font-size: $font-size-middle;
+  margin: $margin-4n * 2 0;
+  line-height: $font-line-height-middle;
+  text-align: left;
+  color: $text-color-primary;
+  display: flex;
+  flex-direction: column;
+}
+@mixin mini_button {
+  width: 327px;
+  height: 42px;
+  margin-top: $margin-4n * 2;
+  font-size: $font-size-middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+@mixin mini_input_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 19px;
+  z-index: $zindex-tooltip;
+}
+@mixin mini_input {
+  width: 327px;
+  box-sizing: border-box;
+  padding: $padding-6n 0 $padding-4n;
+  height: 62px;
+  border-bottom: $border-solid-1;
+  -webkit-tap-highlight-color: transparent;
+  :global(.dzq-input__inner) {
+    width: calc(100% - 36px);
+    font-size: $font-size-middle;
+    border: none;
+    padding: 0;
+    height: 22px;
+    line-height: $font-line-height-base;
+    border-radius: 0;
+    &::placeholder {
+      color: $text-color-placeholder;
+    }
+  }
+  :global(.dzq-icon-EyeOutlined) {
+    @include mini_input_icon;
+  }
+  :global(.dzq-input__icon){
+    @include mini_input_icon;
+    font-size: $font-size-middle !important;
+  }
+}

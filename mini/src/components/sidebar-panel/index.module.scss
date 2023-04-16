@@ -1,0 +1,74 @@
+@import '@common/styles/index.scss';
+
+.container {
+  width: 100%;
+  background-color: $white;
+  box-sizing: border-box;
+  .header {
+    font-size: $font-size-middle;
+    color: $text-color-primary;
+    display: flex;
+    align-items: center;
+  }
+
+  .spinner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color-placeholder;
+    height: 60px;
+  }
+}
+
+.containerPC {
+  border-radius: $border-radius-small;
+}
+
+.containerPlane {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  max-width: 750px;
+  padding: 0 $padding-6n;
+  background-color: $white;
+}
+
+.bottom {
+  margin-bottom: 10px;
+}
+
+.small {
+  max-width: 330px;
+  padding: 0 $padding-4n;
+  .header {
+    height: 54px;
+  }
+}
+
+.containerH5 {
+  padding: 0 $padding-4n;
+}
+
+.normal {
+  max-width: 750px;
+  padding: 0 $padding-6n;
+  .header {
+    height: 70px;
+  }
+}
+
+.large {
+  max-width: 100%;
+  padding: 0 $padding-6n;
+  .header {
+    height: 70px;
+  }
+}
+
+.bottomView {
+  min-height: 40px;
+  background-color: $white;
+  // border-bottom-left-radius: $border-radius-small;
+  // border-bottom-right-radius: $border-radius-small;
+}
+

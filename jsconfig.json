@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@common/*": ["./common/*"],
+            "@server/*": ["./common/server/*"],
+            "@utils/*": ["./common/utils/*"],
+            "@store/*": ["./common/store/*"],
+            "@config/*": ["./common/config/*"],
+        }
+    },
+    "include": ["./**/*"],
+    "exclude": ["./node_modules/**", "./web/node_modules/**", "./web/dzq-default-web/**", "./web/dzq-default-web-static/**", "./mini/node_modules/**", "./mini/dist/**"]
+}

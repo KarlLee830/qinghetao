@@ -1,0 +1,28 @@
+@import '@common/styles/index.scss';
+:global {
+  .datepicker-wheel {
+    border-top: 1px solid #eee !important;
+    border-bottom: 1px solid #eee !important;
+  }
+
+  .datepicker-navbar-btn {
+    color: $text-color-regular !important;
+    width: 145px;
+    height: 90px;
+    background-color: $text-bg-color2;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 40px;
+      background: #f7f7f7;
+      left: 168px;
+    }
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "@styles/index.scss";
+.emoji-container {
+  margin: 0 auto;
+
+  .emoji-container__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: $padding-2n $padding-4n;
+    height: 208px;
+    background: white;
+    overflow: auto;
+  }
+
+  .emoji-item {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+
+    &:last-child {
+      margin-right: auto;
+    }
+  }
+}

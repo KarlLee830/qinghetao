@@ -1,0 +1,201 @@
+@import '../vars.scss';
+
+.dialogBox {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 52px;
+  // padding: 0 $padding-4n 68px $padding-4n;
+  // margin-bottom: constant(safe-area-inset-bottom);  ///兼容 IOS<11.2/
+  // margin-bottom: env(safe-area-inset-bottom);
+}
+
+.box__inner {
+
+  .itself {
+    .msgContent {
+      background-color: $white;
+      &:before {
+        border-right-color: $white;
+      }
+    }
+  }
+}
+
+.msgTime {
+  display: flex;
+  justify-content: center;
+  margin: rem(8) 0;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16.8px;
+  text-align: left;
+  color: $border-color-hover;
+}
+
+.persona {
+  display: flex;
+  margin: rem(16) 0;
+}
+
+.profileIcon {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: $im-profile-icon-size;
+  height: $im-profile-icon-size;
+}
+
+.msgImgContent {
+  padding: 8px !important;
+}
+
+.msgContent {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 8px 16px;
+  word-break: break-word;
+  flex-wrap: wrap;
+  border-radius: rem($border-radius-small);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: left;
+  color: $text-color-primary;
+  :global {
+    .qq-emotion {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &:before {
+    content: "";
+    border: 12px solid;
+    border-color: transparent;
+    position: absolute;
+    top: 8px;
+  }
+}
+
+.msgImage {
+  border-radius: rem($border-radius-small);
+  width: 100%;
+  height: 100%;
+}
+
+.msgImage-container {
+  position: relative;
+
+  .status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: rem($border-radius-small);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .uploading {
+    background: $black;
+    opacity: 0.5;
+  }
+
+  .fail {
+    background: $disabled-color;
+  }
+
+  .failMsg {
+    font-size: 12px;
+    line-height: 26px;
+    color: $white;
+  }
+
+  .failIcon {
+    color: $white;
+  }
+
+  .loadingIcon {
+    animation: loading 2s linear infinite;
+    color: $white;
+  }
+
+  .redDot {
+    position: absolute;
+    left: -24px;
+    bottom: 0;
+    color: $error-color;
+    cursor: pointer;
+  }
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.myself {
+  flex-direction: row-reverse;
+  .msgImage-container {
+    margin-left: $im-msg-space-aside;
+    margin-right: $im-gap-btw-icon-and-msg;
+  }
+
+  .msgContent {
+    @include text-font;
+    margin-left: $im-msg-space-aside;
+    margin-right: $im-gap-btw-icon-and-msg;
+    background-color: $primary-color;
+    &:before {
+      border-left-color: $primary-color;
+      right: -20px;
+    }
+  }
+  .msgSelect{
+    background-color: $body-bg-select2 !important;
+    &:before{
+      border-left-color: $body-bg-select2 !important;
+    }
+  }
+}
+
+.itself {
+  flex-direction: row;
+  .msgImage-container {
+    margin-right: $im-msg-space-aside;
+    margin-left: $im-gap-btw-icon-and-msg;
+  }
+
+  .msgContent {
+    @include text-font($color: $text-color-primary);
+    margin-right: $im-msg-space-aside;
+    margin-left: $im-gap-btw-icon-and-msg;
+    background-color: $comment-bg-color;
+    &:before {
+      border-right-color: $comment-bg-color;
+      left: -20px;
+    }
+  }
+  .msgSelect{
+    background-color: $body-bg-select !important;
+    &:before{
+      border-right-color: $body-bg-select !important;
+    }
+  }
+}

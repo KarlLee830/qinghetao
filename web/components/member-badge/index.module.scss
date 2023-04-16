@@ -1,0 +1,100 @@
+@import '@common/styles/index.scss';
+
+.memberBadgeBox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  .memberBadgeIcon {
+    z-index: 1;
+  }
+
+  .memberBadgeName {
+    box-sizing: border-box;
+    position: relative;
+    top: 1px;
+    display: flex;
+    align-items: center;
+    @include text-ellipsis;
+
+    .memberBadgeNameText {
+      font-size: 10px;
+      max-width: rem(120);
+      height: 16px;
+      line-height: 16px;
+      @include text-ellipsis;
+    }
+
+    &_1 {
+      color: #696969;
+    }
+    &_2 {
+      color: #8b6a36;
+    }
+    &_3 {
+      color: #55618c;
+    }
+    &_4 {
+      color: #683b41;
+    }
+  }
+
+  &.default {
+    .memberBadgeIcon {
+      width: rem(16);
+      height: rem(16);
+    }
+    .memberBadgeName {
+      padding-left: rem(3);
+      &_5 {
+        color: #2A2B35;
+      }
+    }
+  }
+
+  &.bg {
+    .memberBadgeIcon {
+      width: rem(24);
+      height: rem(24);
+    }
+    .memberBadgeName {
+      left: rem(-9);
+      height: rem(20);
+      padding-left: rem(10);
+      line-height: rem(20);
+      padding-right: rem(7);
+      border-radius: 0 rem(10) rem(10) 0;
+      border-width: 0.4px;
+      border-style: solid;
+
+      &_1 {
+        border-color: #f9f9f9;
+        background: linear-gradient(45deg, #fff 0%, #d3d3d3 100%);
+      }
+      &_2 {
+        border-color: #f9f4ea;
+        background: linear-gradient(45deg, #fff 0%, #e8d2ab 100%);
+      }
+      &_3 {
+        border-color: #eceff7;
+        background: linear-gradient(45deg, #fff 0%, #c0c8e4 100%);
+      }
+      &_4 {
+        border-color: #f4edee;
+        background: linear-gradient(45deg, #fff 0%, #d7bbbe 100%);
+      }
+      &_5 {
+        color: #ffe6d1;
+        border-color: #fce3cd;
+        background: linear-gradient(45deg, #3f4551 0%, #181924 100%);
+      }
+    }
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .memberBadgeName{
+    font-size: 12px;
+    zoom: 0.83;
+  }
+}

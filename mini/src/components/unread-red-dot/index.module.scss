@@ -1,0 +1,58 @@
+@import "@common/styles/index.scss";
+
+:global {
+  .normal-badge {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .badge__circle {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 17px;
+      height: 17px;
+      font-size: 12px;
+      line-height: 17px;
+      text-align: center;
+      color: $white !important;
+      background: $error-color !important;
+      border-radius: 50%;
+    }
+  }
+
+  .middle-badge {
+    .badge__circle {
+      right: -18px;
+      width: 26px;
+      border-radius: 8px/50%;
+    }
+  }
+
+  .large-badge {
+    .badge__circle {
+      right: -28px;
+      width: 36px;
+      border-radius: 8px/50%;
+    }
+  }
+
+  .avatar-badge {
+    width: 38px;
+    height: 38px;
+    .badge__circle {
+      top: 0;
+    }
+    &.middle-badge {
+      .badge__circle {
+        right: -12px;
+      }
+    }
+    &.large-badge {
+      .badge__circle {
+        right: -12px;
+      }
+    }
+  }
+}

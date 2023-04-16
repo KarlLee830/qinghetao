@@ -1,0 +1,184 @@
+@import '@common/styles/index.scss';
+
+.additionalWrapper {
+  :global {
+    .dzq-modal__container {
+      width: rem(409);
+      height: rem(498);
+      border-radius: rem($border-radius-small);
+      background: $white;
+      box-sizing: border-box;
+      padding: 0;
+      margin-right: 4px;
+    }
+    .dzq-modal__body {
+      padding: rem($padding-6n);
+    }
+  }
+}
+
+.additionalContent {
+  height: rem(428);
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: rem(-$margin-6n);
+  padding: rem($padding-6n);
+  box-sizing: border-box;
+  padding-top: 0;
+  margin-top: rem($margin-6n);
+  &::-webkit-scrollbar {
+    display: block;
+    width: rem(4);
+    border-radius: $border-radius-small;
+  }
+  // 滚动条轨道
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  // 滚动条上的滚动滑块
+  &::-webkit-scrollbar-thumb {
+    background: $border-shadow-color;
+    border-radius: rem(4);
+  }
+}
+
+.additionalContainer {
+  .additionInfoLoading {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    :global {
+      .dzq-spin {
+        color: $text-color-secondary;
+      }
+    }
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem($margin-6n);
+  }
+  .titleValue {
+    flex: 1;
+    text-align: center;
+    font-size: rem($font-size-middle);
+    color: $text-color-primary;
+    font-weight: $font-weight-regular;
+  }
+  .additionItem {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: rem($font-size-primary);
+    padding: rem($padding-4n) 0;
+    border-bottom: $border-solid-1;
+    .additionLabel {
+      flex-shrink: 0;
+      color: $text-color-regular;
+      height: rem(20);
+      line-height: rem(20);
+      margin-right: rem(46);
+      max-width: rem(108);
+      @include text-ellipsis();
+    }
+    .additionValue {
+      color: $text-color-primary;
+      min-height: rem(20);
+      line-height: rem(20);
+      :global {
+        .dzq-icon {
+          cursor: auto;
+        }
+      }
+      .additionFile {
+        margin-left: rem($margin-1n);
+      }
+    }
+    .additionNormalText {
+      color: $text-color-secondary;
+    }
+    .checkboxValue {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .singleText {
+      @include text-ellipsis();
+    }
+    .mutipleLineText {
+      word-break: break-all;
+    }
+    .errorImage {
+      width: rem(343);
+      height: rem(215);
+      border-radius: rem(5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      background-color: #eee;
+      :global {
+        .dzq-icon {
+          cursor: auto;
+        }
+      }
+    }
+    .errorImage:nth-child(1) {
+      margin-bottom: rem($margin-10);
+    }
+  }
+  .additionIdentityCard {
+    flex-direction: column;
+    .additionLabel {
+      align-self: flex-start;
+      flex-shrink: 0;
+      max-width: rem(108);
+      @include text-ellipsis();
+    }
+    .cardItem {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin-top: rem($margin-4n);
+    }
+    .identityCard {
+      width: rem(343);
+      height: rem(215);
+      border-radius: rem(5);
+      background: #eee;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .iCardText {
+        position: absolute;
+        z-index: 1;
+        color: $text-color-regular;
+      }
+    }
+    .identityImg {
+      width: rem(343);
+      height: rem(215);
+      border-radius: rem(5);
+    }
+    .identityCardBottom {
+      margin-bottom: rem($margin-5n);
+    }
+  }
+  .additionTips {
+    margin-top: rem(14);
+    color: $text-color-secondary;
+    font-size: rem($font-size-small);
+    .note {
+      color: $error-color;
+    }
+  }
+}

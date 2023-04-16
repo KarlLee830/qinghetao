@@ -1,0 +1,93 @@
+@import '@common/styles/index.scss';
+
+.container {
+  background: $white;
+  border-radius: rem($border-radius-big) rem($border-radius-big) 0 0;
+  padding: rem($padding-4n);
+}
+
+.header {
+  width: 100%;
+  font-size: rem($font-size-label);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: $border-solid-1;
+  padding-bottom: rem($padding-4n);
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem($font-size-middle);
+    font-weight: $font-weight-regular;
+    color: $text-color-primary;
+  }
+
+  .reason {
+    color: $text-color-regular;
+    white-space: nowrap;
+    color: $text-color-secondary;
+  }
+}
+
+.body {
+  .reportTitle {
+    height: rem(50);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid rem(1) $border-color;
+    font-size: rem($font-size-base);
+    color: $text-color-regular;
+    :global {
+      .dzq-checkbox-wrap {
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+  }
+}
+
+.textarea {
+  :global {
+    .dzq-textarea {
+      width: 100%;
+    }
+    .dzq-textarea__inner {
+      background: $text-bg-color2;
+      padding: $padding-2n $padding-3n;
+      height: 80px !important;
+      resize: none;
+      font-size: $font-size-base;
+      -webkit-appearance: none; // ios下去除上面阴影
+    }
+  }
+}
+
+.input {
+  margin-top: rem($margin-2n);
+  width: 100%;
+  height: rem(76);
+  margin-bottom: rem($margin-4n);
+  border: $border-solid-1;
+}
+
+.button {
+  margin-top: rem($margin-2n);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ok {
+    width: rem(167);
+    height: rem(42);
+  }
+  .cancel {
+    width: rem(167);
+    height: rem(42);
+    background: $button-info-bg-color;
+    border: none;
+    margin-right: rem($margin-4n);
+  }
+}

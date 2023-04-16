@@ -1,0 +1,48 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+
+.container {
+  @include mini_container;
+  .button {
+    @include mini_button;
+  }
+  .input {
+    @include mini_input;
+  }
+  .captchaInput{
+    position: relative;
+  }
+}
+.content {
+  @include mini_content;
+  .title {
+    @include mini_title;
+  }
+  .tips{
+    @include mini_tips;
+    margin-bottom: 0;
+  }
+  .statusIcon {
+    margin-bottom: rem($margin-6n);
+  }
+  .statusBottom {
+    font-size: $font-size-large;
+    line-height: $font-line-height-primary;
+    color: $text-color-primary;
+    font-weight: 700;
+  }
+}
+.statusContent {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: rem(110);
+}
+.hint {
+  font-size: $font-size-base;
+  line-height: $font-line-height-base;
+  color: $text-color-secondary;
+  margin-top: rem($margin-2n);
+}

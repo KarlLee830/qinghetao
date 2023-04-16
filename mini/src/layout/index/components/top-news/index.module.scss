@@ -1,0 +1,70 @@
+@import '@common/styles/index.scss';
+
+.list {
+  width: 100%;
+  background: $white;
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .prefix {
+      color: $text-color-secondary;
+      word-break: keep-all;
+    }
+    .title {
+      color: $text-color-primary;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .itemH5 {
+    height: 36px;
+    border-bottom: 1px solid $border-color;
+    // box-sizing: border-box;
+    position: relative;
+    
+    &:last-child{
+      border-bottom: 1px solid transparent;
+    }
+    .prefix {
+      font-size: $font-size-primary;
+      line-height: 1.5;
+      margin-right: $padding-4n;
+      width: 28px;
+      overflow: hidden;
+      flex-shrink: 1;
+      position: relative;
+      top: 1px;
+    }
+    .title {
+      flex:1;
+      font-size: $font-size-primary;
+      line-height: 1.5;
+      position: relative;
+      top: 1px;
+
+      :global {
+        .dzq-richText--mini {
+          font-size: 14px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          word-break: break-all;
+          View, Image {
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          .qq-emotion {
+            height: 20px;
+            width: 20px;
+            min-width: 20px;
+          }
+        }
+      }
+
+    }
+  }
+
+}

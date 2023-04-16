@@ -1,0 +1,54 @@
+@import '@common/styles/index.scss';
+.indexLeft {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  .indexLeftBox {
+    width: 100%;
+  }
+}
+.indexRight {
+  width: 100%;
+  .indexRightCon {
+    margin-top: rem($margin-5n);
+    @include media('l-pc') {
+      margin-top: rem($margin-10);
+    }
+    @include media('s-pc') {
+      margin-top: rem($margin-10);
+    }
+    border-radius: rem($border-radius-small);
+    overflow: hidden;
+  }
+}
+.themeBox {
+  overflow: hidden;
+  margin-top: rem($margin-10);
+  @include media('l-pc') {
+    margin-top: rem($margin-10);
+  }
+  @include media('s-pc') {
+    margin-top: rem($margin-10);
+  }
+  .themeItem {
+    margin-bottom: rem($margin-10);
+  }
+}
+
+.backTop {
+  visibility: visible;
+  position: fixed;
+  right: rem(20);
+  bottom: rem(20);
+}
+.footer {
+  height: rem(40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem($font-size-primary);
+  color: $text-color-secondary;
+  .spin {
+    margin-right: rem(4);
+  }
+}

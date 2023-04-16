@@ -1,0 +1,115 @@
+@import '@common/styles/index.scss';
+
+
+.tips {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+  color: #393b42;
+  white-space: pre-line;
+
+  .title {
+    padding: 23px 0 8px 0;
+    font-weight: bold;
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+    color: #393b42;
+  }
+}
+
+.symbol {
+  font-size: 16px;
+}
+
+
+.memberShipCardWrapper {
+  background-color: $white;
+  width: 100%;
+  height: rem(170);
+  border-radius: rem(5);
+  // border: rem(1) solid $white;
+  box-shadow: $border-shadow-color-8;
+  margin-top: rem($margin-4n);
+  padding: rem($padding-4n);
+  box-sizing: border-box;
+  // background-image: url('/dzq-img/ship-card-pc.png');
+  // background-size: 100% rem(169);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.memberShipNoMargin {
+  margin: 0 !important;
+  max-width: rem(340);
+}
+
+.MemberShipCardContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .roleType {
+    font-weight: bold;
+    font-size: rem($font-size-middle-extra);
+    line-height: rem(25);
+    text-align: left;
+    color: $text-color-primary;
+    height: rem(25);
+  }
+  .tagline {
+    font-size: rem($font-size-primary);
+    height: rem(20);
+    line-height: rem(20);
+    color: $text-color-primary;
+    margin: rem($margin-10) 0 rem(18);
+  }
+  .RenewalFee {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .btn {
+      width: rem(66) !important;
+      height: rem(36);
+
+      @media only screen and (max-width: 1200px) {
+        width: rem(80);
+      }
+
+      padding: 0;
+      line-height: rem(36);
+      border-radius: rem(5);
+      flex-shrink: 0;
+    }
+    .feeTimer {
+      color: $text-color-regular;
+      font-size: rem($font-size-primary);
+      height: rem(20);
+      line-height: rem(20);
+      width: 100%;
+      text-align: right;
+      position: relative;
+      .feeDayContainer {
+        position: absolute;
+        top: rem(-30);
+        right: 0;
+      }
+      .feeDay {
+        font-size: rem($font-size-h1);
+        color: $primary-color;
+      }
+      .noTimeDate {
+        text-align: right;
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,79 @@
+$s-pc: 800px;
+$l-pc: 1080px;
+$xl-pc: 1420px;
+
+@mixin media($devices){
+    @if $devices == s-pc{
+        @media only screen and (min-width: $s-pc) and (max-width: $l-pc){
+            @content;
+        }
+    }
+    @else if $devices == l-pc{
+        @media only screen and (min-width: $l-pc) and (max-width: $xl-pc){
+            @content;
+        }
+    }
+    @else if $devices == xl-pc{
+        @media only screen and (min-width: $xl-pc){
+            @content;
+        }
+    }
+}
+
+$media-min-width: 1200px;
+$media-min-height: 700px;
+$media-second-height: 800px;
+$media-detail-min-height: 1072px;
+@mixin widthAndHeightMedia($width: 0, $height: 0) {
+  @if $width and not $height {
+    @media only screen and (max-width: $width) {
+      @content;
+    }
+  }
+
+  @if not $width and $height {
+    @media only screen and (max-height: $height) {
+      @content;
+    }
+  }
+
+  @if $width and $height {
+    @media screen {
+      @media only screen and (max-width: $width), (max-height: $height) {
+        @content;
+      }
+    }
+  }
+}
+
+// 最小高度
+$s-height-pc: 750px; // 定这个像素是发现首页右侧栏：扫码 + 推荐 + 版本号 之后的高度
+$detail-height-pc: $s-height-pc;
+$home-height-pc: 650px;
+
+/**
+ * 目前只针对小于等于 $s-height-pc 的屏幕尺寸做处理
+ * 所以有需要的页面只需要进行如下编写，在需要的样式中：
+ * .test {
+      @include heightMedia() {
+        ... ...
+      }
+ * }
+ */
+@mixin heightMedia($max: $s-height-pc, $min: 0) {
+  @if $max {
+    @media only screen and (max-height: $max) {
+      @content;
+    }
+  }
+  // @else if $max and $min {
+  //   @media only screen and (min-height: $min) and (max-height: $max) {
+  //     @content;
+  //   }
+  // }
+  // @else if not $max and $min {
+  //   @media only screen and (min-height: $min) {
+  //     @content;
+  //   }
+  // }
+}

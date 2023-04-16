@@ -1,0 +1,87 @@
+@import '@common/styles/index.scss';
+
+.user {
+  height: 70px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $border-color;
+  margin: 0 16px;
+  .left {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .right {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .image {
+    flex: none;
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+    margin-right: 8px;
+    border-radius: 50%;
+    &.empty {
+      background-color: $mask-bg-color;
+    }
+  }
+  .name {
+    flex: 1;
+    font-size: 14px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+  }
+  .group {
+    flex: 1;
+    font-size: 12px;
+    line-height: 24px;
+    color: $text-color-secondary;
+    margin-right: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+  }
+}
+/* topic */
+.topic {
+  padding: 8px 16px;
+  border-bottom: 1px solid $border-color;
+  .title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: $font-weight-bold;
+  }
+  .content {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 0 8px;
+  }
+  .tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0 8px;
+    .tag {
+      font-size: 12px;
+      line-height: 22px;
+      margin-right: 8px;
+      color: $text-color-secondary;
+    }
+  }
+}
+
+.hr {
+  height: 10px;
+  background-color: $body-bg-color;
+}

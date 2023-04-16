@@ -1,0 +1,25 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+
+.container {
+  @include mini_container;
+  .button {
+    @include mini_button;
+  }
+  .input {
+    @include mini_input;
+  }
+  .captchaInput{
+    position: relative;
+  }
+}
+.content {
+  @include mini_content;
+  .title {
+    @include mini_title;
+  }
+  .tips{
+    @include mini_tips;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,244 @@
+@import '@common/styles/index.scss';
+.commentList {
+  padding: rem($padding-2n) rem($padding-4n) rem($padding-4n);
+  .header {
+    display: flex;
+    justify-content: flex-end;
+
+    .showGet {
+      width: 100%;
+      padding-left: rem(48);
+      display: flex;
+      justify-content: space-between;
+
+      .revise {
+        font-size: rem($font-size-primary);
+        text-align: left;
+        color: $text-color-secondary;
+      }
+
+      .headerRigth {
+        display: flex;
+        .redpacket {
+          margin-left: rem($margin-4n);
+        }
+        .showMoneyNum {
+          font-size: rem($font-size-label);
+          text-align: left;
+          color: $text-color-primary;
+          margin-left: rem($margin-2n);
+          .moneyNumber {
+            color: $error-color;
+          }
+        }
+        .more {
+          margin-top: rem($margin-2n);
+          font-size: rem($font-size-label);
+          text-align: left;
+          color: $text-color-primary;
+          margin-left: rem($margin-6n);
+          .moreIcon {
+            margin-top: rem(1);
+            line-height: rem(20);
+            color: $text-color-secondary;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    display: flex;
+    padding-top: rem($padding-2n);
+    .commentListAvatar {
+      margin-right: rem($margin-2n);
+    }
+    .commentListContent {
+      width: 100%;
+      .commentListContentText {
+        padding: rem($padding-2n) rem($padding-3n);
+        border-radius: rem($border-radius-small);
+        background: $body-bg-color;
+
+        &.active {
+          background: $primary-color10;
+        }
+
+        .commentHeader {
+          display: flex;
+          justify-content: space-between;
+          .userInfo {
+            display: flex;
+            .commentListName {
+              max-width: rem(100);
+              font-weight: bold;
+              font-size: rem($font-size-primary);
+              line-height: rem(20);
+              text-align: left;
+              color: $text-color-primary;
+              @include text-ellipsis();
+            }
+            .masterBox {
+              padding-top:rem(2);
+              padding-left: rem($padding-2n);
+              flex: none;
+              .masterText {
+                border-radius: rem(2);
+                background: $primary-color;
+                display: inline-block;
+                font-size: rem(14);
+                -webkit-text-size-adjust:none;
+                -webkit-transform : scale(0.83,0.83);
+                line-height: rem(15);
+                padding: rem(2) rem(4);
+                text-align: center;
+                width: rem(40);
+                color: $white;
+              }
+            }
+            .groupsBox {
+              display: flex;
+              align-items: center;
+              padding-left: $padding-2n;
+            }
+            .groups {
+              color: $text-color-secondary;
+              font-size: $font-size-label;
+              max-width: rem(100);
+              white-space: nowrap;
+              overflow: hidden;
+              line-height: rem(20);
+              text-overflow: ellipsis;
+            }
+          }
+          .isApproved {
+            font-size: $font-size-primary;
+            color: $error-color;
+            line-height: rem(20);
+          }
+        }
+        .commentListText {
+          margin-top: rem($margin-1n);
+          font-size: rem($font-size-middle);
+          line-height: rem(24);
+          text-align: left;
+          word-break: break-all;
+          color: $text-color-primary;
+          :global {
+            .qq-emotion {
+              width: rem(22);
+              height: rem(22);
+            }
+
+            .dzq-p {
+              margin-bottom: 0;
+            }
+          }
+
+          // p {
+          //   line-height: rem(24);
+          // }
+
+          // img {
+          //   height: rem(22);
+          // }
+
+          // &.isShowOne {
+          //   @include lamp-clamp(3);
+
+          //   p {
+          //     @include lamp-clamp(3);
+          //   }
+          // }
+        }
+
+        .imageDisplay {
+          margin-top: rem($margin-2n);
+        }
+      }
+      .commentListFooter {
+        .commentBtn {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: rem($font-size-primary);
+          line-height: rem(16.8);
+          text-align: left;
+          color: $text-color-secondary;
+          padding-top: rem($padding-2n);
+          .commentTime {
+            // flex: 1;
+            font-size: rem($font-size-label);
+          }
+          .commentLiked {
+            // flex: 1;
+          }
+          .commentLike {
+            // flex: 1;
+            color: $primary-color;
+          }
+          .commentReply {
+            // flex: 1;
+          }
+          .commentDelete {
+            // flex: 1;
+          }
+          .commentAdopt {
+            // flex: 1;
+          }
+        }
+        .moreReply {
+          // font-weight: $font-weight-regular;
+          font-weight: bold;
+          font-size: rem($font-size-primary);
+          line-height: rem($font-line-height-middle);
+          text-align: left;
+          color: $text-color-primary;
+          padding-top: rem($padding-4n);
+        }
+      }
+    }
+  }
+  .extra {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .extraBottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    > div {
+      margin-left: rem(24);
+    }
+  }
+}
+
+.imageNumber {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.image {
+  width: rem(13);
+  height: rem(18);
+}
+
+.rewardImage {
+  width: rem(18);
+  height: rem(18);
+}
+
+.hongbaoLikeNum{
+  display: flex;
+  align-items: center;
+  margin:0 5px;
+  font-size: 12px;
+  .iconzan{
+    color: $orange-color;
+    margin-right: 5px;
+  }
+  >span{
+    color: $error-color;
+  }
+}

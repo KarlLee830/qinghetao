@@ -1,0 +1,30 @@
+@import '@common/styles/index.scss';
+
+.topicContent {
+  width: 100%;
+  border-radius: rem($border-radius-small);
+}
+.themeContent {
+  margin-top: rem($margin-10);
+}
+.topicRight {
+  width: 100%;
+  overflow: hidden;
+  .section {
+    margin-bottom: rem($margin-10);
+    padding: 0 rem($padding-6n);
+    background: $white;
+    border-radius: rem($border-radius-small);
+    box-shadow: 0 0 rem($padding-2n) rgba(241, 243, 244, 0.16);
+  }
+}
+.bottomViewBox {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+

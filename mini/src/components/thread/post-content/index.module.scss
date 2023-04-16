@@ -1,0 +1,134 @@
+@import '@common/styles/index.scss';
+
+.container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  .contentWrapper{
+    .content {
+      :global{
+        iframe{
+          max-width: 100%;
+        }
+      }
+      @include cursor-on-pc;
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      line-height: $font-line-height-middle;
+      font-size: $font-size-middle !important;
+      color: $text-color-primary;
+      // margin-top: $padding-1n;
+      word-break: break-all;
+
+      img {
+        &:not(:global(.qq-emotion)) {
+          // max-width: 100%;
+          // max-height: 2px;
+          overflow: hidden;
+        }
+      }
+
+      :global(.dzq-img) {
+        width: 100%;
+        display: inline-block;
+      }
+
+
+      :global(.qq-emotion) {
+        height: 30px;
+        width: 30px;
+        margin-top: -1px;
+        vertical-align: middle;
+      }
+    }
+
+    :global(.dzq-richText) {
+      overflow: hidden;
+    }
+    
+    :global(.dzq-richText--mini .dzq-p) {
+      // margin-bottom: 0;
+      text-align: justify;
+      word-break: break-word;
+    }
+    :global(.dzq-strong) {
+      display: inline;
+    }
+    // :global(.dzq-p) {
+    //   display: flex;
+    //   align-items: center;
+    // }
+  }
+
+  .hideCover {
+    position: relative;
+    overflow: hidden;
+    max-height: 165px;
+    &:after {
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: 0;
+      content: '';
+      width: 100%;
+      height: 165px;
+      background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    }
+    &.bg {
+      &:after {
+        background: linear-gradient(rgba(255, 255, 255, 0), $body-bg-color);
+      }
+    }
+  }
+  .showMore {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    font-size: $font-size-primary;
+    line-height: $font-line-height-primary;
+    color: $primary-color;
+    .icon {
+      margin-left: 9px;
+      transform: rotateZ(90deg);
+    }
+    .icon_d{
+      margin-left: 9px;
+      transform: rotateZ(-90deg);
+    }
+
+  }
+  .payInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .hidePercent {
+      font-weight: normal;
+      font-size: $font-size-primary;
+      line-height: $font-line-height-primary;
+      text-align: left;
+      color: $primary-color;
+    }
+    .payButton {
+      margin-top: $padding-4n;
+      line-height: 16.8px;
+    }
+    .payButtonIcon {
+      margin-right: $padding-2n;
+      width: 13.93px;
+      height: 16.62px;
+      background-color: $white;
+    }
+  }
+  .shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: $zindex-popup;
+    cursor: pointer;
+  }
+}

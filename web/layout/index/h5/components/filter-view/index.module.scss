@@ -1,0 +1,138 @@
+
+@import '@common/styles/index.scss';
+.popup{
+  max-height: 90%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.container {
+  box-sizing: border-box;
+  padding: rem($padding-4n) rem($padding-4n) 0 rem($padding-4n);
+  padding-bottom: constant(safe-area-inset-bottom);  ///兼容 IOS<11.2/
+  padding-bottom: env(safe-area-inset-bottom);  ///兼容 IOS>11.2/
+  background-color: $white;
+  border-top-right-radius: rem($border-radius-big);
+  border-top-left-radius: rem($border-radius-big);
+  position: relative;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  .content {
+    flex: 1;
+    overflow: hidden;
+  }
+  .containerIcon {
+    position: absolute;
+    right: rem(16);
+    top: rem(25);
+  }
+  .searchIcon {
+    color: $icon-color-light;
+  }
+  .moduleWrapper {
+    margin-bottom: rem(8);
+  }
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: rem(11);
+  }
+  .childrenWrapper {
+    border-top: 1px solid $border-color;
+    margin-top: rem(5) !important;
+    padding-top: rem(11);
+    padding-bottom: rem(11);
+  }
+
+  .list {
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: rem($font-size-middle);
+    line-height: 24px;
+    text-align: left;
+    // color: $text-color-primary;
+    margin-bottom: rem(16);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .span {
+    font-size: rem($font-size-primary);
+    width: 100%;
+    height: rem(36);
+    border-radius: rem($border-radius-small);
+    background: $text-bg-color2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color-primary;
+  }
+
+  .active {
+    background: $primary-color;
+    color: $white;
+  }
+
+  .childrenSpan {
+    font-size: rem($font-size-primary);
+    line-height: rem(36);
+    width: 100%;
+    height: rem(36);
+    display: block;
+    text-align: center;
+    border-radius: rem($border-radius-small);
+    background: $primary-color10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color-primary;
+  }
+
+  .childrenActive {
+    background: $primary-color10;
+    color: $primary-color;
+  }
+
+
+}
+
+.footer {
+  background-color: $white;
+  text-align: center;
+  height: rem(110);
+  .button {
+    width: rem(290);
+    height: rem(42);
+    margin: $padding-2n 0;
+    font-size: rem($font-size-middle);
+    display: inline-block;
+  }
+  .footerBtn {
+    position: relative;
+    // height: rem(53);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem($font-size-middle);
+    color: $text-color-regular;
+    &:before {
+      content: ' ';
+      position: absolute;
+      right: rem(-16);
+      left: rem(-16);
+      height: 1px;
+      top: 0;
+      background-color: $border-color;
+    }
+    .footerBtnText {
+      padding: rem($padding-4n) 0;
+    }
+  }
+}

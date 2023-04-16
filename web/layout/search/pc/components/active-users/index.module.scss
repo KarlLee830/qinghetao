@@ -1,0 +1,37 @@
+@import '@common/styles/index.scss';
+
+.list {
+  width: 100%;
+  cursor: pointer;
+  .item {
+    display: flex;
+    padding: rem($padding-4n) 0;
+    border-bottom: 1px solid $border-color;
+    &:last-child {
+      border-bottom: none;
+    }
+    .content {
+      width: 79%;
+      .name {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: rem($font-size-primary);
+        line-height: rem($padding-5n);
+        color: $text-color-primary;
+        font-weight: 700;
+      }
+      .groupName {
+        font-size: rem($font-size-primary);
+        line-height: rem($font-line-height-small);
+        color: $text-color-secondary;
+      }
+    }
+    .avatar {
+      width: rem(38);
+      height: rem(38);
+      margin-right: rem($margin-4n);
+    }
+  }
+}

@@ -1,0 +1,161 @@
+@import '@common/styles/index.scss';
+
+.listItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  // padding: $padding-3n 0;
+  padding-top: $padding-3n;
+  padding-bottom: $padding-3n;
+  background-color: $white;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .header {
+    position: relative;
+    height: 38px;
+    margin-right: 12px;
+    box-sizing: border-box;
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: -2px;
+      right: -4px;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      border: $white solid 1px;
+      text-align: center;
+      line-height: 20px;
+      color: $white;
+      &.like {
+        background-color: $error-color;
+      }
+      &.heart {
+        background-color: $warn-color;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: $font-size-primary;
+    .title {
+      max-width: 100px;
+      @include lamp-clamp(2);
+      color: $text-color-primary;
+      line-height: 20px;
+    }
+    .subTitle {
+      color: $text-color-secondary;
+      line-height: 17px;
+      font-size: $font-size-small;
+    }
+  }
+
+  .footer {
+    font-size: $font-size-label;
+    color: $text-color-secondary;
+    display: flex;
+    align-items: center;
+    .label {
+      margin-right: 7px;
+    }
+    .rightIcon {
+      margin-right: 3px;
+    }
+  }
+  .button {
+    height: 25px;
+    width: 72px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+.additional {
+  display: block;
+  padding: 0 !important;
+  overflow-x: scroll;
+
+  &-wrapper {
+    padding: $padding-4n;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: $border-solid-1;
+    white-space: nowrap;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+    .img-wrapper{
+      justify-content: flex-start;
+    }
+    .img {
+      display: inline-block;
+    }
+  }
+
+  &-user {
+    display: flex;
+    width: 100px;
+    align-items: center;
+    font-size: $font-size-base;
+    color: $text-color-primary;
+
+    .img {
+      width: 38px;
+      display: inline-block;
+    }
+
+    .title {
+      width: 35px;
+      margin-left: 4px;
+      @include text-ellipsis();
+    }
+  }
+
+  &-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  &-name {
+    width: 25%;
+    @include lamp-clamp(1);
+    font-size: $font-size-base;
+    color: $text-color-primary;
+  }
+
+  &-item {
+    display: inline-block;
+    min-width: 22%;
+    margin-right: 3%;
+    font-size: $font-size-base;
+    color: $text-color-primary;
+    &:last-child{
+      min-width: 25%;
+      margin-right: 0;
+    }
+  }
+  .button {
+    display: inline-flex !important;
+  }
+}

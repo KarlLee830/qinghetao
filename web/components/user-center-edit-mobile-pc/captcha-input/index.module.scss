@@ -1,0 +1,64 @@
+@import '@common/styles/index.scss';
+@import '@common/styles/index.scss';
+
+.payList{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .payListItem{
+    border-bottom: $border-solid-1;
+    width: rem(40);
+    height: rem(52);
+    text-align: center;
+    line-height: rem(52);
+    font-size: rem($font-size-middle);
+    &:not(:last-child) {
+      margin-right: rem($margin-2n);
+    }
+
+    &.curr{
+      border-bottom-color: $border-color-hover;
+    }
+    &.activation{
+      border-bottom-color: $border-color-hover;
+    }
+  }
+}
+
+.keyboard{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: rem(80);
+  z-index: 1111;
+  background-color: $white;
+  .line{
+    display: flex;
+    align-items: center;
+    .column{
+      box-sizing: border-box;
+      flex: 1;
+      font-size: rem($font-size-large);
+      color: $text-color-primary;
+      height: rem(50);
+      text-align: center;
+      border: 1px solid $border-color;
+      border-bottom: none;
+      border-right: none;
+      line-height: rem(50);
+    }
+    .special{
+      box-sizing: border-box;
+      flex: 1;
+      font-size: rem($font-size-middle);
+      color: $text-color-primary;
+      height: rem(50);
+      text-align: center;
+      border: 1px solid $border-color;
+      border-bottom: none;
+      border-right: none;
+      line-height: rem(50);
+      background: $comment-bg-color;
+    }
+  }
+}

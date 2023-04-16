@@ -1,0 +1,35 @@
+{
+    "name_cn":"投票贴插件",
+    "name_en":"CustomActApply",
+    "description":"发帖增加投票贴",
+    "type":9,
+    "app_id":"asdasdasd",
+    "version": "1.0.0",
+    "status":1,
+    "icon":"https:\/\/discuz.chat\/dzq-img\/active.png",
+    "filter_enable":false,
+    "author":{
+        "name":"angelzou",
+        "email":"angelzou@tencent.com"
+    },
+    "view": {
+        "entry": {
+            "target": "plugin_post",
+            "hookName": "post_extension_entry_hook",
+            "platform": ["pc", "h5", "mini"],
+            "disables": false
+        },
+        "display": {
+            "target": ["plugin_index", "plugin_detail"],
+            "hookName": "thread_extension_display_hook",
+            "platform": ["pc", "h5", "mini"],
+            "disables": false
+        },
+        "post": {
+            "target": "plugin_post",
+            "hookName": "post_extension_content_hook",
+            "platform": ["pc", "h5", "mini"],
+            "disables": false
+        }
+    }
+}

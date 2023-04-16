@@ -1,0 +1,178 @@
+@import '@common/styles/index.scss';
+
+.placeholderH5{// 样式未使用，cdn暂时不做处理
+  width: 100%;
+  height: rem(258);background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-image: url("https://cloudcache.tencentcs.com/operation/dianshi/other/test.b1d9db4f0dd70933eddb3f0411f24291439ea287.png");
+}
+
+.container {
+  width: 100%;
+
+  Image {
+    border-radius: $border-radius-small;
+    object-fit: cover;
+    background-color: $body-bg-color;
+    width: 100%;
+    height: 100%;
+  }
+
+  .flatItem{
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .containerNum5 {
+    .bigImages {
+      height: 126px;
+      margin-top: 0 !important;
+      margin-bottom: $margin-1n !important;
+      .col {
+        height: 100%;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+    }
+    .smallImages {
+      height: 111px;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      .col {
+        position: relative;
+        height: 100%;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+    }
+  }
+
+  .containerNum4 {
+    height: 260px;
+    margin-bottom: 0 !important;
+    .col {
+      height: 100%;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    .smallCol {
+      height: 33.33%;
+    }
+    .smallRow {
+      width: 100%;
+    }
+  }
+
+  .containerNum3 {
+    &.panorama,
+    &.transverse{
+      .bigImages {
+        height: 126px;
+        margin-bottom: 4px;
+      }
+      .smallImages {
+        height: 126px;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        .col {
+          height: 100%;
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+        }
+      }
+    }
+
+    &.long,
+    &.longitudinal{
+      height: 258px;
+      .col {
+        height: 258px;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .smallCol {
+        height: calc(50% + 2px);
+      }
+      .smallRow{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .containerNum2 {
+    height: 260px;
+    margin-bottom: 0 !important;
+    &.panorama{
+      height: 193px;
+    }
+    &.transverse{
+      height: 260px;
+    }
+    &.long{
+      height: 260px;
+    }
+    &.longitudinal{
+      height: 260px;
+    }
+    .col {
+      height: 100%;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+  }
+
+  .containerNum1 {
+    height: 260px;
+    &.panorama{
+      width: 100%;
+      height: 193px;
+    }
+    &.transverse{
+      width: 100%;
+      height: 260px;
+    }
+    &.long{
+      width: 170px;
+      height: 260px;
+    }
+    &.longitudinal{
+      width: 170px;
+      height: 260px;
+    }
+
+  }
+}
+
+.modalBox {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  left: 2px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: $font-size-large;
+  color: $white;
+  border-radius: $border-radius-small;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

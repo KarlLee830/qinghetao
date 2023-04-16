@@ -1,0 +1,119 @@
+@import '@common/styles/index.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: $white;
+  border-radius: rem($border-radius-big) rem($border-radius-big) 0 0;
+  overflow: hidden;
+  padding: rem($padding-4n);
+  box-sizing: border-box;
+
+  :global {
+    .dzq-textarea__inner {
+      background: $text-bg-color2;
+      padding: rem($padding-2n) rem($padding-3n);
+      height: 80px !important;
+      resize: none;
+      font-size: $font-size-base;
+
+      &::placeholder {
+        color: $disabled-color;
+      }
+    }
+  }
+}
+
+.safeArea {
+  background: $white;
+  width: 100%;
+  height: constant(safe-area-inset-bottom); ///兼容 IOS<11.2/
+  height: env(safe-area-inset-bottom); ///兼容 IOS>11.2/
+}
+
+.main {
+  background: $white;
+  width: 100%;
+  position: relative;
+}
+
+.divider {
+  margin: 0 -50% 0 -50% !important;
+  width: 200% !important;
+  // transform: translateX(-50%);
+}
+
+.button {
+  padding-top: rem($margin-4n);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.operates {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .operate {
+    margin-right: rem(24);
+    color: $text-color-regular;
+
+    &.actived {
+      color: $primary-color;
+    }
+  }
+}
+
+.emojis {
+  :global {
+    .dzq-toolbar-emoji {
+      border-radius: 0;
+    }
+  }
+}
+
+.input {
+  width: 100% !important;
+}
+
+.ok {
+  font-size: rem($font-size-base);
+  line-height: rem($font-line-height-base);
+  color: $primary-color;
+}
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    margin-top: rem($margin-1n);
+  }
+}
+
+.imageUpload {
+  margin: rem(8) 0;
+
+  :global {
+    .dzq-upload.is-card {
+      padding: 0;
+    }
+    .dzq-upload__area,
+    .dzq-upload-list-card__item {
+      width: rem(109) !important;
+      height: rem(109) !important;
+      margin: 0 rem(8) rem(8) 0;
+    }
+  }
+}
+
+.disabled {
+  color: $disabled-color;
+  pointer-events: none;
+}

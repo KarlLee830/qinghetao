@@ -1,0 +1,15 @@
+babel.config.js
+commitlint.config.js
+node_modules/*
+dist/*
+config/*
+.vscode
+mini/config/*
+web/config/*
+mini/node_modules/*
+web/node_modules/*
+web/dzq-default-web
+web/dzq-default-web-static
+mini/dist/*
+mini/*.js
+web/*.js

@@ -1,0 +1,23 @@
+@import '@common/styles/index.scss';
+
+$im-pagebed-padding: rem($padding-4n);
+$im-profile-icon-size: rem(38);
+$im-gap-btw-icon-and-msg: rem(16);
+$im-msg-space-aside: $im-pagebed-padding + $im-profile-icon-size + $im-gap-btw-icon-and-msg;
+
+@mixin im-pagebed {
+  padding: 0 $im-pagebed-padding;
+}
+
+@mixin text-font(
+  $font-size: rem($font-size-primary),
+  $font-weight: rem($font-line-height-small),
+  $line-height: rem(30),
+  $color: $white
+) {
+  
+  font-size: rem(16);
+  font-weight: normal;
+  line-height: rem(26);
+  color: $color;
+}

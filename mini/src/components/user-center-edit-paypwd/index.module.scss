@@ -1,0 +1,70 @@
+@import '@common/styles/index.scss';
+@import '@common/styles/mixin/login.scss';
+
+.content {
+  padding: $padding-6n;
+  padding-bottom: 0;
+  height: 100%;
+  .setTtile {
+    display: block;
+    font-size: $font-size-large;
+    color: $text-color-primary;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  .paypwdInput {
+    height: 62px;
+    box-sizing: border-box;
+    .input {
+      @include input;
+      @include passwordInput;
+    }
+  }
+}
+
+.labelInfo {
+  .labelValue {
+    .input {
+      @include input;
+      @include passwordInput;
+    }
+  }
+  .tips {
+    width: 100%;
+    font-size: rem($font-size-primary);
+    text-align: right;
+    color: $primary-color;
+    margin-top: rem($margin-6n);
+  }
+}
+
+#setPayPwdContent {
+  height: 100vh;
+  background-color: $white;
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    // border-top: 1px solid $border-color;
+    padding: rem($padding-2n) rem($padding-4n) rem($padding-4n);
+    display: flex;
+    padding-bottom: calc(16px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+    padding-bottom: calc(16px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+    .btn {
+      height: 42px;
+      line-height: 42px;
+      padding: 0;
+      font-size: $font-size-middle;
+      margin: auto;
+      border-radius: $border-radius-small;
+    }
+  }
+}
+
+.bgBtnColor {
+  :global {
+    .dzq-button--primary.is-mouseenter {
+      @include button-primary();
+    }
+  }
+}

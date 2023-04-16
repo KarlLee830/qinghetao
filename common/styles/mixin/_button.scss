@@ -1,0 +1,27 @@
+@mixin button-default {
+  display: inline-block;
+  height: rem(36);
+  padding: rem(0 10);
+  line-height: $font-line-height-base;
+  font-size: $font-size-base;
+  color: $text-color-regular;
+  background-color: $button-info-bg-color;
+  border-radius: $border-radius-small;
+  border: none;
+  text-align: center;
+}
+
+@mixin button-primary {
+  color: $white;
+  background-color: $button-primary-bg-color;
+}
+
+@mixin button-primary-light {
+  color: $text-color-primary;
+  background-color: $button-primary-light-bg-color;
+}
+
+@mixin button-primary-light-active {
+  color: $primary-color;
+  background-color: $button-primary-light-bg-color;
+}

@@ -1,0 +1,107 @@
+@import '@common/styles/index.scss';
+@import '@common/styles/index.scss';
+
+@mixin captchaBtn {
+  position: absolute;
+  right: 8px;
+  bottom: 0;
+  text-align: center;
+  line-height: 44px;
+  border-radius: $border-radius-small;
+  font-size: $font-size-base;
+  color: $icon-color;
+  cursor: pointer;
+  padding-right: $padding-2n;
+}
+
+.userMobileWrapper {
+  :global {
+    .dzq-modal__container {
+      width: rem(409);
+      height: rem(423);
+      border-radius: rem($border-radius-small);
+      background: $white;
+      box-sizing: border-box;
+      padding: rem($padding-6n);
+    }
+    .dzq-modal__body {
+      padding: 0;
+    }
+  }
+}
+
+.setUserWrapper {
+  :global {
+    .dzq-modal__container {
+      height: rem(206);
+    }
+  }
+}
+
+.userMobileContent {
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem($margin-6n);
+  }
+  .titleValue {
+    flex: 1;
+    text-align: center;
+    font-size: rem($font-size-middle);
+    color: $text-color-primary;
+    font-weight: $font-weight-regular;
+    letter-spacing: 1px;
+  }
+  .inputItem {
+    margin-bottom: rem($margin-6n);
+    .labelName {
+      font-size: rem($font-size-base);
+      color: $text-color-regular;
+    }
+    .labelValue {
+      position: relative;
+    }
+    :global {
+      .dzq-input {
+        width: 100%;
+        height: rem(44);
+        margin-top: rem($margin-4n);
+      }
+      .dzq-input__inner {
+        width: 100%;
+        height: rem(44);
+      }
+      .dzq-icon {
+        line-height: rem(44);
+      }
+    }
+  }
+  .sendCaptcha {
+    @include captchaBtn;
+    color: $primary-color;
+    &:hover {
+      color: $text-color-secondary;
+    }
+  }
+  .bottom {
+    position: absolute;
+    bottom: rem(24);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn {
+    width: rem(248);
+    height: rem(36);
+    border-radius: $border-radius-small;
+    padding: 0;
+    line-height: rem(36);
+  }
+  .tips {
+    text-align: right;
+    color: $primary-color;
+    cursor: pointer;
+  }
+}

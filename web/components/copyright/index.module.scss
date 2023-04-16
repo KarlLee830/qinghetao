@@ -1,0 +1,59 @@
+
+@import '@common/styles/index.scss';
+.container {
+  font-size: $font-size-small;
+  line-height: $font-line-height-xs;
+  &.center {
+    text-align: center;
+    .beian > a {
+      justify-content: center;
+    }
+  }
+  .text > a {
+    text-decoration: unset;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .beian {
+    padding-top: rem($padding-1n);
+  }
+
+  .beian > a > img {
+    width: rem(28);
+    height: rem(20);
+    padding-right: rem($padding-2n);
+  }
+
+  &.h5 {
+    margin-top: rem($margin-10);
+    margin-bottom: rem($margin-10);
+    .text > a {
+      color: $copyright-text-color;
+    }
+    .beian > a {
+      display: flex;
+      text-align: center;
+      align-content: center;
+      justify-content: center;
+    }
+  }
+
+  &.pc {
+    margin-top: rem($margin-10);
+    margin-bottom: rem($margin-10);
+    // PC登录等页面
+    &.mode_login {
+      margin: $margin-5n 0 auto;
+    }
+    .text > a {
+      color: $text-color-secondary;
+    }
+    .beian > a {
+      display: flex;
+      text-align: center;
+      align-content: center;
+    }
+  }
+}

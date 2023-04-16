@@ -1,0 +1,220 @@
+@import '@common/styles/index.scss';
+.recommend {
+  width: 100%;
+  box-sizing: border-box;
+  background: $white;
+  padding: 0 rem($padding-4n);
+  padding-bottom: 0;
+  border-radius: rem($border-radius-small);
+  overflow-y: auto;
+  .recommendContent {
+    font-weight: 600;
+    font-size: rem(18);
+    padding: rem(16) 0;
+    color: $text-color-primary;
+  }
+}
+
+@mixin item() {
+  .right-recommend-item {
+    p {
+      font-size: $font-size-primary !important;
+    }
+
+    >div:first-child {
+      padding-top: $padding-10 !important;
+    }
+
+    >div:last-child {
+      margin-top: $margin-2n !important;
+    }
+  }
+
+  .right-recommend-title {
+    font-size: $font-size-primary !important;
+  }
+
+  .right-recommend-switch {
+    height: 42px !important;
+    padding-top: $padding-2n !important;
+  }
+}
+:global {
+  .home,
+  .detail {
+    @include widthAndHeightMedia($media-min-width, $media-min-height) {
+      @include item;
+    }
+  }
+  // .detail {
+  //   @include widthAndHeightMedia($media-min-width, $media-detail-min-height) {
+  //     @include item;
+  //   }
+  // }
+}
+@include heightMedia(625px) {
+  .recommendBottomView {
+    height: auto !important;
+    max-height: 400px;
+  }
+}
+
+.recommendBox {
+  cursor: pointer;
+  width: 100%;
+  padding-bottom: rem(10);
+  border-top: $border-solid-1;
+  .recommendTitle {
+    display: flex;
+    padding-top: rem($margin-4n);
+    .recommendSort {
+      margin-right: rem($margin-2n);
+      font-size: rem($font-size-primary);
+      line-height: rem($font-line-height-small);
+    }
+    .recommenText {
+      flex: 1;
+      font-size: rem($font-size-middle);
+      line-height: rem($font-line-height-small);
+      color: $text-color-primary;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      :global {
+        .qq-emotion {
+          height: rem(20);
+          width: rem(20);
+          position: relative;
+          top: rem(-2);
+        }
+      }
+    }
+  }
+  .browse {
+    width: 100%;
+    display: flex;
+    margin-top: rem($margin-10);
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .browseBox {
+      font-size: rem($font-size-label);
+      line-height: rem($font-line-height-small);
+      color: $text-color-secondary;
+      flex-shrink: 0;
+      .browseIcon {
+        margin-right: rem($margin-1n);
+      }
+    }
+    .browseButtom {
+      display: flex;
+      .browseSurplus {
+        font-size: rem($font-size-label);
+        line-height: rem($font-line-height-primary);
+        color: $text-color-primary;
+        .surNumber {
+          color: $error-color;
+        }
+      }
+      .browseCategory {
+        display: flex;
+        :global{
+          .dzq-tag{
+            margin-left: rem($margin-2n);
+          }
+        }
+        @include media('xl-pc') {
+          .lg{
+            display: block;
+          }
+          .sm{
+            display: none;
+          }
+        }
+        @include media('l-pc') {
+          .lg{
+            display: block;
+          }
+          .sm{
+            display: none;
+          }
+        }
+        // 因为当有4个的时候会展示不了
+        @include widthAndHeightMedia(1250px) {
+          .lg {
+            display: none;
+          }
+
+          .sm {
+            display: block;
+          }
+        }
+        @include media('s-pc') {
+          .lg{
+            display: none;
+          }
+          .sm{
+            display: block;
+          }
+        }
+
+      }
+    }
+  }
+}
+.recommendSwitch {
+  width: 100%;
+  height: rem(52);
+  border-top: $border-solid-1;
+  cursor: pointer;
+  text-align: center;
+  padding-top: rem($padding-4n);
+  box-sizing: border-box;
+  .switchBox {
+    font-size: rem($font-size-primary);
+    line-height: rem($font-line-height-primary);
+    color: $text-color-regular;
+    .switchIcon {
+      margin-right: rem($margin-2n);
+      color: $text-color-secondary;
+    }
+  }
+}
+.itemIndex1 {
+  color: $error-color;
+}
+.itemIndex2 {
+  color: $error-color;
+  opacity: 0.8;
+}
+.itemIndex3 {
+  color: $error-color;
+  opacity: 0.6;
+}
+.itemIndex4 {
+  color: $error-color;
+  opacity: 0.5;
+}
+.itemIndex5 {
+  color: $warn-color;
+}
+.itemIndex6 {
+  color: $warn-color;
+  opacity: 0.8;
+}
+.itemIndex7 {
+  color: $warn-color;
+  opacity: 0.6;
+}
+.itemIndex8 {
+  color: $warn-color;
+  opacity: 0.5;
+}
+.itemIndex9 {
+  color: $warn-color;
+  opacity: 0.4;
+}
+.itemIndex10 {
+  color: $warn-color;
+  opacity: 0.3;
+}

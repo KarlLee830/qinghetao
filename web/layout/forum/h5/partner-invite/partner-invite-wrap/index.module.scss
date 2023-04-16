@@ -1,0 +1,114 @@
+@import '@common/styles/index.scss';
+.page {
+  background-color: $text-bg-color2;
+}
+
+// 右侧卡片内容 start
+.user_card_wrap {
+  width: 340px;
+  border-radius: $border-radius-small;
+  box-shadow: $border-shadow-color;
+  background: $white;
+  box-sizing: border-box;
+  padding: $padding-3n * 7 $padding-6n $padding-4n;
+  margin-bottom: $margin-5n;
+  .user_card_main {
+    width: 292px;
+    height: 218px;
+    border-radius: $border-radius-small;
+    background: $primary-color;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: $padding-1n * 17 $padding-4n $padding-4n;
+    text-align: center;
+    position: relative;
+    .user_card_avatar {
+      width: 120px;
+      height: 120px;
+      box-sizing: border-box;
+      position: absolute;
+      left: 50%;
+      margin-left: -60px;
+      top: -60px;
+      border-radius: $border-radius-circle;
+      background: $white;
+      border: 1px solid $white;
+      overflow: hidden;
+      z-index: 3;
+      :global(.dzq-avatar__img),:global(.dzq-avatar__text) {
+        width: 118px;
+        height: 118px;
+      }
+
+    }
+    .user_card_info {
+    }
+    .user_info_name {
+      font-weight: 600;
+      font-size: $font-size-middle;
+      line-height: $font-line-height-base;
+      color: $white;
+      opacity: 1;
+    }
+    .user_info_tag {
+      font-size: $font-size-small;
+      line-height: $font-line-height-small;
+      color: $white;
+    }
+    .site_info {
+      width: 260px;
+      height: 78px;
+      border-radius: $border-radius-small;
+      background: $comment-bg-color;
+      margin: auto;
+      display: flex;
+    }
+    .site_status_list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: $padding-4n 0;
+    }
+    .site_status_label {
+      font-weight: normal;
+      font-size: $font-size-base;
+      line-height: $font-line-height-base;
+      color: $text-color-regular;
+      opacity: 1;
+
+    }
+    .site_status_item {
+      font-weight: 600;
+      font-size: $font-size-middle;
+      line-height: $font-line-height-middle;
+      color: $primary-color;
+      padding-top: $padding-1n;
+    }
+
+  }
+  .user_card_button {
+    width: 292px;
+    height: 36px;
+    border-radius: $border-radius-small;
+    background: $primary-color;
+    margin-top: $margin-5n;
+    font-size: $font-size-base;
+    line-height: $font-line-height-base;
+    color: $white;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bottom_title {
+    text-align: center;
+    font-weight: normal;
+    font-size: rem($font-size-label);
+    color: $text-color-secondary;
+    padding-top: $padding-2n;
+    span {
+      color: $primary-color;
+    }
+  }
+}
+

@@ -1,0 +1,72 @@
+@import '@common/styles/index.scss';
+
+.list {
+  width: 100%;
+  cursor: pointer;
+  .item {
+    display: flex;
+    align-items: center;
+    font-size: rem($font-size-primary);
+    line-height: rem(54);
+    height: rem(54);
+    border-bottom: 1px solid $border-color;
+    &:last-child {
+      border-bottom: none;
+    }
+    .index {
+      font-size: inherit;
+      line-height: rem($font-line-height-primary);
+      margin-right: rem($padding-2n);
+      text-align: center;
+    }
+    .text {
+      font-size: inherit;
+      line-height: rem($font-line-height-primary);
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .footerItem {
+    margin-bottom: 0;
+  }
+}
+
+.itemIndex1 {
+  color: $error-color;
+}
+.itemIndex2 {
+  color: $error-color;
+  opacity: 0.8;
+}
+.itemIndex3 {
+  color: $error-color;
+  opacity: 0.6;
+}
+.itemIndex4 {
+  color: $error-color;
+  opacity: 0.5;
+}
+.itemIndex5 {
+  color: $warn-color;
+}
+.itemIndex6 {
+  color: $warn-color;
+  opacity: 0.8;
+}
+.itemIndex7 {
+  color: $warn-color;
+  opacity: 0.6;
+}
+.itemIndex8 {
+  color: $warn-color;
+  opacity: 0.5;
+}
+.itemIndex9 {
+  color: $warn-color;
+  opacity: 0.4;
+}
+.itemIndex10 {
+  color: $warn-color;
+  opacity: 0.3;
+}

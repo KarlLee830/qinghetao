@@ -1,0 +1,125 @@
+@import '@common/styles/index.scss';
+
+.dzq-shop {
+  background: transparent;
+}
+
+.parse-goods-box {
+  color: $text-color-primary;
+  background-color: $white;
+  z-index: $zindex-popup;
+  width: 300px;
+
+  .parse-goods-title {
+    font-size: $font-size-base;
+    line-height: $font-line-height-small;
+  }
+
+  .parse-goods-image {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: rem($margin-6n) 0 rem($margin-4n);
+    font-size: 0;
+
+    .image-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-text {
+      margin-top: rem($margin-1n);
+      font-size: $font-size-label;
+      line-height: $font-line-height-base;
+    }
+  }
+
+  :global {
+    .dzq-textarea {
+      width: 100%;
+      border: $border-solid-1;
+      background-color: $body-bg-color;
+      font-size: 0;
+
+      .dzq-textarea__inner {
+        width: 100%;
+        font-size: $font-size-base;
+        background-color: $body-bg-color;
+        resize: none;
+      }
+    }
+  }
+
+  .parse-goods-btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top: $border-solid-1;
+    padding: rem($padding-2n) rem($padding-4n);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+
+    :global {
+      .dzq-button {
+        -webkit-tap-highlight-color: transparent;
+        @include button-default;
+        flex: 1;
+        height: rem(42);
+
+        &:first-child {
+          margin-right: rem($margin-10);
+        }
+
+        &:last-child {
+          @include button-primary;
+        }
+      }
+    }
+  }
+}
+
+.shopDialog {
+  :global {
+    .dzq-tabs__list {
+      justify-content: center;
+    }
+
+    .dzq-modal__container {
+      max-width: 880px !important;
+      width: fit-content !important;
+    }
+
+    .dzq-modal__body {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+
+  .shopDialogBody {
+    max-height: 600px;
+  }
+
+  .productItemWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-y: overlay;
+
+    @include scrollbar();
+  }
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  margin-top: 4px;
+  margin-bottom: 4px;
+}

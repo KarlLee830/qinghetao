@@ -1,0 +1,17 @@
+.box {
+  position: relative;
+  width: 100%;
+  height: 188px;
+  background-image: url('../../public/dzq-img/my-default-header-img.jpg');
+  background-position: center center;
+  background-size: 100% auto;
+}
+.box::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(11, 11, 55, 0.16);
+}

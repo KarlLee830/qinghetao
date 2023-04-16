@@ -1,0 +1,26 @@
+@import '@common/styles/index.scss';
+
+.loadingBox{
+    width: 100%;
+    min-height: rem(300);
+    background: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-base;
+    color: $text-color-regular;
+
+    .loading{
+      margin-right: $margin-10;
+      display: block;
+      animation: loading 1s linear infinite;
+      color: $loading-text-color;
+    }
+  }
+
+  @keyframes loading
+  {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+  }

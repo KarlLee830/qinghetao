@@ -1,0 +1,219 @@
+@import '@common/styles/index.scss';
+
+$baseHeight: 860px;
+
+.user_card_wrap {
+  width: 100%;
+  border-radius: $border-radius-small;
+  background-color: $primary-color;
+  background-image: url('/dzq-img/invite-card-bg.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  box-shadow: $border-shadow-color;
+  box-sizing: border-box;
+  padding: $padding-3n * 7 $padding-6n $padding-6n;
+  margin-bottom: $margin-10;
+
+  // 高度自适应
+  @include heightMedia($baseHeight) {
+    display: none;
+  }
+
+  .user_card_main {
+    width: 100%;
+    border-radius: $border-radius-small;
+    background: $white;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: $padding-1n * 17 $padding-4n $padding-4n;
+    text-align: center;
+    position: relative;
+
+    .user_card_avatar {
+      cursor: pointer;
+      width: 120px;
+      height: 120px;
+      box-sizing: border-box;
+      position: absolute;
+      left: 50%;
+      margin-left: -60px;
+      top: -60px;
+      border-radius: $border-radius-circle;
+      background: $white;
+      border: 1px solid $white;
+      overflow: hidden;
+      z-index: 3;
+
+      :global(.dzq-avatar__img),
+      :global(.dzq-avatar__text) {
+        width: 118px;
+        height: 118px;
+      }
+
+    }
+
+    .user_card_info {}
+
+    .user_info_name {
+      @include text-ellipsis;
+      font-weight: 600;
+      font-size: $font-size-middle;
+      line-height: $font-line-height-base;
+      color: $text-color-primary;
+      opacity: 1;
+    }
+
+    .user_info_tag {
+      font-size: $font-size-small;
+      line-height: $font-line-height-small;
+      color: $text-color-secondary;
+      padding-top: $padding-1n;
+    }
+
+    .user_info_invite {
+      width: 100%;
+      height: 78px;
+      border-radius: $border-radius-small;
+      background: $comment-bg-color;
+      margin: $margin-2n auto 0;
+    }
+
+    @mixin userInfoInvite {
+      width: 50%;
+      height: 78px;
+      display: inline-block;
+
+      .invite_num_title {
+        font-weight: normal;
+        font-size: $font-size-base;
+        line-height: $font-line-height-base;
+        color: $text-color-regular;
+        opacity: 1;
+        padding-top: $padding-4n;
+      }
+
+      .invite_num_content {
+        font-weight: 600;
+        font-size: $font-size-middle;
+        line-height: $font-line-height-middle;
+        color: $text-color-primary;
+        @include text-ellipsis;
+      }
+    }
+
+    .invite_num {
+      @include userInfoInvite;
+    }
+
+    .invite_money {
+      @include userInfoInvite;
+      width: calc(50% - 1px);
+      border-left: 1px solid $white;
+    }
+  }
+}
+.user_card_button {
+  @include cursor-on-pc;
+  width: 100%;
+  height: 36px;
+  border-radius: $border-radius-small;
+  background: $white;
+  margin-top: $margin-5n;
+  font-size: $font-size-base;
+  line-height: $font-line-height-base;
+  color: $primary-color;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  padding: rem($padding-10);
+  margin-bottom: rem($margin-10);
+  background-color: $primary-color;
+  border-radius: $border-radius-small;
+  display: none;
+  // 高度自适应
+  @include heightMedia($baseHeight) {
+    display: block;
+  }
+  .user {
+    padding: rem($padding-10) rem($padding-4n);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $white;
+    border-radius: $border-radius-small;
+  }
+  .userLeft {
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+    :global {
+      .dzq-avatar--primary,
+      .dzq-avatar__text,
+      .dzq-avatar__img {
+        margin: 0 auto;
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: $border-radius-circle;
+        line-height: 60px;
+      }
+    }
+    :global(.dzq-avatar--primary) {
+      cursor: pointer;
+    }
+    .mini__avatar {
+      max-width: none;
+    }
+    .userName {
+      @include lamp-clamp(2);
+      margin-top: rem($margin-1n);
+      font-size: $font-size-middle;
+      line-height: $font-line-height-base;
+      color: $text-color-primary;
+    }
+    .userGroup {
+      @include text-ellipsis;
+      font-size: $font-size-small;
+      line-height: $font-line-height-small;
+      color: $text-color-secondary;
+    }
+  }
+  .userRight {
+    padding: rem($padding-2n) 0;
+    display: flex;
+    flex-direction: column;
+    width: 112px;
+    background-color: $body-bg-color;
+    border-radius: $border-radius-small;
+    .userTag {
+      text-align: center;
+    }
+    .line {
+      margin: rem($margin-5) auto;
+      height: 1px;
+      width: 105px;
+      background-color: $white;
+    }
+    .userTag_title {
+      font-size: $font-size-base;
+      line-height: $font-line-height-base;
+      color: $text-color-regular;
+    }
+    .userTag_num {
+      font-size: $font-size-middle;
+      line-height: $font-line-height-middle;
+      color: $text-color-primary;
+      font-weight: $font-weight-bold;
+      @include text-ellipsis;
+    }
+  }
+  .user_card_button {
+    margin-top: rem($margin-10);
+  }
+}

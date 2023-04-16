@@ -1,0 +1,123 @@
+@import '@common/styles/index.scss';
+
+.container {
+  width: rem(409);
+  // min-height: rem(335);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  background: $white;
+  border-radius: rem($border-radius-big);
+  overflow: hidden;
+  padding: rem(24);
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .headerLeft {
+    flex: 1;
+    font-size: rem($font-size-middle);
+    font-weight: $font-weight-regular;
+    text-align: center;
+  }
+  .headerIcon {
+    text-align: center;
+    font-size: rem($font-size-middle);
+    cursor: pointer;
+    color: $text-color-secondary;
+  }
+}
+
+
+.body {
+  color: $text-color-regular;
+  font-size: rem($font-size-base);
+
+  .radioGroup {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: solid rem(1) $border-color;
+    padding-top: rem($padding-4n);
+    .reportTitle {
+      display: flex;
+      align-items: center;
+      font-size: rem($font-size-primary);
+      margin-right: rem($margin-6n);
+      margin-bottom: rem($margin-6n);
+      white-space: nowrap;
+      color: $text-color-primary;
+      line-height: rem($font-size-primary);
+
+      :global{
+        .dzq-checkbox-wrap {
+          padding: 0;
+        }
+      }
+    }
+  }
+  .other {
+    .reportTitle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: rem($font-size-primary);
+      color: $text-color-primary;
+      padding: rem($padding-4n) 0;
+      white-space: nowrap;
+    }
+    .reportIcon {
+      color: $text-color-secondary;
+    }
+  }
+}
+
+.textarea {
+  :global{
+    .dzq-textarea {
+      border: 1px solid transparent;
+      border-radius: 0;
+      .dzq-textarea__inner{
+        background: $body-bg-color;
+        resize: none;
+        padding: rem($padding-3n) rem($padding-4n);
+
+        &::placeholder {
+          color: $text-color-placeholder;
+        }
+      }
+    }
+  }
+  .input {
+    width: 100%;
+    // height: rem(114);
+    margin-bottom: rem($margin-4n);
+    border: $border-solid-1;
+    border-radius: rem($border-radius-small);
+  }
+}
+
+.button {
+  width: 100%;
+  height: rem(50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ok {
+    width: rem(116);
+    height: rem(36);
+  }
+  .cancel {
+    width: rem(116);
+    height: rem(36);
+    background: $button-info-bg-color;
+    border: none;
+    margin-right: rem($margin-4n);
+    color: $text-color-regular;
+  }
+}

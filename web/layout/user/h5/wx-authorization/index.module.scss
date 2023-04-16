@@ -1,0 +1,31 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.container {
+  height: 100vh;
+  .button {
+    @include button;
+  }
+  .exit {
+    @include button;
+    @include button_exit;
+    &:hover {
+      @include button_exit;
+    }
+    &:active{
+      @include button_exit;
+    }
+    margin-top: $margin-4n;
+  }
+}
+.content {
+  @include content;
+  .title {
+    @include title;
+  }
+  .tips{
+    @include titleTips;
+  }
+  .functionalRegion {
+    @include functionalRegion;
+  }
+}

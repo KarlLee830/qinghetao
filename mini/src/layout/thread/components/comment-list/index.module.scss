@@ -1,0 +1,240 @@
+@import '@common/styles/index.scss';
+.commentList {
+  padding: $padding-2n $padding-4n $padding-4n;
+  .header {
+    display: flex;
+    justify-content: flex-end;
+
+    .showGet {
+      width: 100%;
+      padding-left: 48px;
+      display: flex;
+      justify-content: space-between;
+
+      .revise {
+        font-size: $font-size-primary;
+        text-align: left;
+        color: $text-color-secondary;
+      }
+
+      .headerRigth {
+        display: flex;
+        .redpacket {
+          margin-left: $margin-4n;
+        }
+        .showMoneyNum {
+          font-size: $font-size-label;
+          text-align: left;
+          color: $text-color-primary;
+          margin-left: $margin-2n;
+          .moneyNumber {
+            color: $error-color;
+          }
+        }
+        .more {
+          margin-top: $margin-2n;
+          font-size: $font-size-label;
+          text-align: left;
+          color: $text-color-primary;
+          margin-left: $margin-6n;
+          .moreIcon {
+            margin-top: 1px;
+            line-height: 20px;
+            color: $text-color-secondary;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    display: flex;
+    padding-top: $padding-2n;
+    .commentListAvatar {
+      margin-right: $margin-2n;
+    }
+    .commentListContent {
+      width: 100%;
+      .commentListContentText {
+        padding: $padding-2n rem($padding-3n);
+        border-radius: $border-radius-small;
+        background: $body-bg-color;
+
+        &.active {
+          background: $primary-color10;
+        }
+
+        .commentHeader {
+          display: flex;
+          justify-content: space-between;
+          .userInfo {
+            display: flex;
+            .commentListName {
+              max-width: 100px;
+              font-weight: bold;
+              font-size: $font-size-primary;
+              line-height: 20px;
+              text-align: left;
+              color: $text-color-primary;
+              @include text-ellipsis();
+            }
+            .masterBox {
+              padding-left: rem($padding-2n);
+              display: flex;
+              align-items: center;
+              flex: none;
+              .masterText {
+                border-radius: 2px;
+                background: $primary-color;
+                display: inline-block;
+                font-size: 10px;
+                line-height: 14px;
+                padding: 0 4px;
+                text-align: left;
+                color: $white;
+              }
+            }
+            .groupsBox {
+              display: flex;
+              align-items: center;
+              padding-left: $padding-2n;
+            }
+            .groups {
+              color: $text-color-secondary;
+              font-size: $font-size-label;
+              max-width: 100px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              line-height: 20px;
+            }
+          }
+          .isApproved {
+            font-size: $font-size-primary;
+            color: $error-color;
+            line-height: rem(20);
+          }
+        }
+        .commentListText {
+          margin-top: $margin-1n;
+          font-size: $font-size-middle;
+          line-height: $font-line-height-base;
+          text-align: left;
+          word-break: break-all;
+          color: $text-color-primary;
+
+          :global {
+            .qq-emotion {
+              width: 22px;
+              height: 22px;
+            }
+          }
+
+          p {
+            line-height: $font-line-height-base;
+          }
+
+          img {
+            height: 22px;
+          }
+
+          &.isShowOne {
+            @include lamp-clamp(3);
+
+            p {
+              @include lamp-clamp(3);
+            }
+          }
+        }
+
+        .imageDisplay {
+          margin-top: $margin-2n;
+        }
+      }
+      .commentListFooter {
+        .commentBtn {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: rem($font-size-primary);
+          line-height: 16.8px;
+          text-align: left;
+          color: $text-color-secondary;
+          padding-top: rem($padding-2n);
+          .commentTime {
+            // flex: 1;
+            font-size: $font-size-label;
+          }
+          .commentLiked {
+            // flex: 1;
+          }
+          .commentLike {
+            // flex: 1;
+            color: $primary-color;
+          }
+          .commentReply {
+            // flex: 1;
+          }
+          .commentDelete {
+            // flex: 1;
+          }
+          .commentAdopt {
+            // flex: 1;
+          }
+        }
+        .moreReply {
+          // font-weight: $font-weight-regular;
+          font-weight: bold;
+          font-size: $font-size-primary;
+          line-height: $font-line-height-middle;
+          text-align: left;
+          color: $text-color-primary;
+          padding-top: $padding-4n;
+        }
+      }
+    }
+  }
+  .extra {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .extraBottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    > View {
+      margin-left: $margin-6n;
+    }
+  }
+}
+
+.imageNumber {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.image {
+  width: 13px;
+  height: 18px;
+}
+
+.rewardImage {
+  width: 18px;
+  height: 18px;
+}
+
+.hongbaoLikeNum{
+  display: flex;
+  align-items: center;
+  margin:0 5px;
+  font-size: 12px;
+  .iconzan{
+    color: $orange-color;
+    margin-right: 5px;
+  }
+  .redfont{
+    display: inline;
+    color: $error-color;
+  }
+}

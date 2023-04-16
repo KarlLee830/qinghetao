@@ -1,0 +1,110 @@
+@import '@common/styles/index.scss';
+.indexContent {
+  // margin-top: rem(68);
+  width: 100%;
+  position: relative;
+  // min-width: rem(652);
+  margin-bottom: rem(10);
+  .contnetTop {
+    width: 100%;
+    background: $white;
+    box-sizing: border-box;
+    border-bottom-left-radius: rem(5);
+    border-bottom-right-radius: rem(5);
+  }
+}
+.noBorder {
+  border-bottom: none !important;
+}
+.topWrapper {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 1000;
+  background: $body-bg-color;
+  // border-top-left-radius: rem(5);
+  // border-top-right-radius: rem(5);
+  @include media('s-pc') {
+    .PostTheme {
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  &:after {
+    content: '';
+    background-color: $border-color;
+    height: 1px;
+    position: absolute;
+    right: rem(24);
+    left: rem(24);
+    @include media('l-pc') {
+      right: rem(16);
+      left: rem(16);
+    }
+    @include media('s-pc') {
+      right: rem(16);
+      left: rem(16);
+    }
+    bottom: 0;
+  }
+
+  .topBox {
+    position: relative;
+    width: 100%;
+    padding: rem(6.5) rem(24);
+    @include media('l-pc') {
+      padding: 0 rem($padding-4n);
+    }
+    @include media('s-pc') {
+      padding: 0 rem($padding-4n) rem($padding-3n);
+    }
+    @media only screen and (min-width: 800px) and (max-width: 860px) {
+      :global {
+        .dzq-menu {
+          flex-wrap: wrap;
+          &-item,
+          .dzq-submenu {
+            padding: 0 !important;
+          }
+        }
+      }
+    }
+    // @media only screen and (min-width: 830px) and (max-width: 860px) {
+    //   padding: rem(6.5) rem($padding-1n);
+    // }
+    display: flex;
+    align-items: center;
+    background: $white;
+    border-top-left-radius: rem(5);
+    border-top-right-radius: rem(5);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.publishBtn {
+  width: rem(88);
+  height: rem(36);
+}
+
+.TopNewsBox {
+  padding: rem($padding-2n) 0;
+  margin: 0 rem($margin-6n);
+  @include media('l-pc') {
+    margin: 0 rem($padding-4n);
+  }
+  @include media('s-pc') {
+    margin: 0 rem($padding-4n);
+  }
+  border-bottom: 1px solid $border-color;
+}
+.topNewContent {
+  padding: rem($padding-10) 0;
+  margin: 0 rem($margin-6n);
+  border-bottom-left-radius: rem(5);
+  border-bottom-right-radius: rem(5);
+}

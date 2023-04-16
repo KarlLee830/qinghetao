@@ -1,0 +1,113 @@
+@import '../vars.scss';
+
+.h5InteractionBox {
+  display: flex;
+  // position: absolute;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  padding-top: rem($padding-2n);
+  padding-bottom: rem($padding-2n);
+  background-color: $white;
+  width: 100vw;
+
+  .inputWrapper {
+    display: flex;
+    background-color: $text-bg-color2;
+    border-radius: rem($border-radius-small);
+    flex: 2;
+    // justify-content: space-between;
+    margin-left: $im-pagebed-padding;
+    :global {
+      .dzq-input {
+        width: 100%;
+
+      }
+      .dzq-input__inner {
+        border: none;
+        background-color: $text-bg-color2;
+        border-top-right-radius: unset;
+        border-bottom-right-radius: unset;
+        &:focus-visible {
+          border: none;
+        }
+      }
+      .dzq-icon{
+        color: $icon-color-light;
+      }
+    }
+  }
+
+  .tools {
+    align-items: center;
+    padding: 0 rem($padding-3n);
+  }
+
+  .submit {
+    align-items: center;
+    margin-left: rem($margin-2n);
+    margin-right: $im-pagebed-padding;
+  }
+
+  .pictureUpload {
+    margin-left: rem($margin-2n);
+  }
+}
+
+.pcInteractionBox {
+  padding: 0 $padding-6n;
+  border-top: $border-solid-1;
+
+  .tools {
+    padding: rem($margin-4n) 0;
+    position: relative;
+  }
+
+  :global{
+    .dzq-icon{
+      color: $icon-color-light;
+    }
+
+    .dzq-textarea{
+      border: none !important;
+      .dzq-textarea__inner{
+        background-color: $white !important;
+      }
+    }
+  }
+
+  .pictureUpload {
+    margin-left: rem($margin-4n);
+  }
+
+  .typingArea {
+    width: 100%;
+    border: none;
+    textarea {
+      resize: none;
+      padding: 0;
+    }
+  }
+
+  .submit {
+    justify-content: flex-end;
+  }
+
+  .submitBtn {
+    width: rem(100px);
+    padding: rem($padding-2n) rem($padding-6n);
+    margin: rem($margin-4n) 0;
+  }
+}
+
+.tools {
+  display: flex;
+}
+
+.submit {
+  display: flex;
+}
+
+.emoji {
+  overflow: hidden;
+}

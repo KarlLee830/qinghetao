@@ -1,0 +1,35 @@
+@import '@common/styles/index.scss';
+
+.page {
+  height: 100vh;
+  display: flex;
+  padding-top: $padding-4n;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: $white;
+  .list {
+    flex: 1;
+  }
+}
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $white;
+  padding: $padding-4n;
+  padding-bottom: $padding-2n;
+}
+
+.userItem {
+  padding: $padding-4n;
+  &:after {
+    content: ' ';
+    position: absolute;
+    right: 16px;
+    left: 16px;
+    height: 1px;
+    bottom: 0;
+    background-color: $border-color;
+  }
+}

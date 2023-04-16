@@ -1,0 +1,42 @@
+@import '@common/styles/index.scss';
+// 这里的样式粉丝组件也有用到
+.friendWrap {
+  padding: $padding-4n 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  .friendItem {
+    @include cursor-on-pc;
+    cursor: pointer;
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .friendAvatar {
+    width: 38px;
+    height: 38px;
+    border-radius: $border-radius-circle;
+
+  }
+  .friendTextInfo {
+    width: 50px;
+    font-size: $font-size-base;
+    line-height: 18px;
+    color: $text-color-primary;
+    text-align: center;
+    @include text-ellipsis;
+  }
+}
+.loadMoreContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $text-color-placeholder;
+}
+.borderRadius {
+  border-radius: $border-radius-small;
+}

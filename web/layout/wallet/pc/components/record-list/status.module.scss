@@ -1,0 +1,28 @@
+@import '@common/styles/index.scss';
+
+.colorTrue {
+    color: $text-color-regular;
+}
+.payFalse {
+    color: $primary-color;
+}
+
+.moneyTrue {
+    color: $error-color;
+}
+.moneyFalse {
+    color: $text-color-primary;
+}
+
+.withdrawalStatus0 {
+    color: $primary-color;
+}
+.withdrawalStatus1 {
+    color: $text-color-regular;
+}
+.withdrawalStatus2 {
+    color: $error-color;
+}
+.withdrawalStatus3 {
+    color: $text-color-primary;
+}

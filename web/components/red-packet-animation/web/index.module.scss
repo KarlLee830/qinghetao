@@ -1,0 +1,117 @@
+@import '@common/styles/index.scss';
+.masking {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $mask-bg-color;
+    z-index: 1400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        position: relative;
+        width: rem(310);
+        height: rem(415);
+        position: relative;
+        background-image: url('https://cloudcache.tencentcs.com/operation/dianshi/other/redpacket.d2d2c8778413d454ef7d9b890221112fda06e66d.png');
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        border-radius: rem(10);
+        .moneyText {
+            opacity: 0;
+            transition: opacity 0.1s linear 0.7s;
+        }
+        .text {
+            line-height: rem(32);
+            font-size: rem(24);
+            color: #FFEEA2;
+            margin-top: rem(108);
+            text-align: center;
+        }
+        .money {
+            line-height: rem(63);
+            font-size: rem(48);
+            color: #FFEEA2;
+            margin-top: rem(16);
+            text-align: center;
+        }
+        .button {
+            margin: auto;
+            background-color: #ffeea2;
+            height: rem(120);
+            width: rem(120);
+            border-radius: 50%;
+            margin-top: rem(29);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-property: transform, visibility;
+            transition-duration: 0.8s, 0s;
+            transition-timing-function: linear, linear;
+            transition-delay: 0s, 0.8s;
+        }
+        .open {
+            font-size: 43px;
+            color: $text-color-regular;
+        }
+        .bottom {
+            width: 465px;
+            position: absolute;
+            bottom: -155px;
+            left: -78px;
+            visibility: hidden;
+        }
+        .animationBottom {
+            animation: bottomAnimation .7s linear 0.4s;
+        }
+        @keyframes bottomAnimation {
+            0% {
+                visibility: hidden;
+                opacity: 0;
+            }
+            15% {
+                visibility: visible;
+                opacity: 1;
+            }
+            85% {
+                visibility: visible;
+                opacity: 1;
+            }
+            100% {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+        .up {
+            width: 310px;
+            position: absolute;
+            top: -50px;
+            visibility: hidden;
+        }
+        .animationUp {
+            animation: upAnimation 0.7s linear 0.4s;
+        }
+        @keyframes upAnimation {
+            0% {
+                visibility: hidden;
+                opacity: 0;
+            }
+            15% {
+                visibility: visible;
+                opacity: 1;
+            }
+            85% {
+                visibility: visible;
+                opacity: 1;
+            }
+            100% {
+                visibility: hidden;
+                opacity: 0;
+                transform: scale(1.5,1.5);
+            }
+        }
+    }
+}

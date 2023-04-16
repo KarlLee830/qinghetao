@@ -1,0 +1,17 @@
+@import '@common/styles/index.scss';
+@import '@common/styles/mixin/login.scss';
+
+.h5Container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pc_body_background{
+  @include pc_body_background;
+}
+.pc_bottom {
+  @include pc_bottom;
+  height: auto;
+  padding: 0;
+}

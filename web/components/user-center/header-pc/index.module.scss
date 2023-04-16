@@ -1,0 +1,80 @@
+@import '@common/styles/index.scss';
+
+
+@mixin uploadStyles {
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $mask-bg-color;
+    color: $white;
+}
+
+.headerbox {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: rem(210);
+
+    @include media('s-pc') {
+        min-height: rem(200);
+    }
+}
+
+// 上传背景图片样式
+.uploadBgUrl {
+    @include uploadStyles();
+    z-index: 0;
+    border-radius: 0;
+
+    .uploadText {
+        margin-left: rem($margin-2n);
+    }
+}
+
+.uploadCon {
+    display: flex;
+    align-items: center;
+}
+
+.spinLoading {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: $white;
+    border-radius: rem(5);
+    color: $loading-text-color;
+
+    span {
+        color: $loading-text-color;
+    }
+}
+
+
+.headImgWrapper {
+    position: relative;
+    border-radius: rem($border-radius-small) rem($border-radius-small) 0 0;
+    overflow: hidden;
+    display: block;
+
+    >div {
+        height: rem(153);
+    }
+}
+
+.userHeader {
+    width: 100%;
+
+    @include media('s-pc') {
+        margin-top: rem($margin-10);
+    }
+}

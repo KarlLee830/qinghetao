@@ -1,0 +1,88 @@
+@import '@common/styles/index.scss';
+
+.homeContent {
+  background: $white;
+  // margin-bottom: 10px;
+  z-index: $zindex-backtotop;
+  border-bottom: 1px solid $border-color;
+  // position: sticky;
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+  }
+}
+.fixed {
+  width: 100%;
+  position: fixed;
+  top: -300px;
+  left: 0;
+  z-index: $zindex-backtotop;
+  &.showUp {
+    top: 0;
+  }
+}
+
+.homeContentTop {
+  padding: 0 $padding-4n;
+  background: $white;
+  margin: 10px 0;
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+  }
+}
+
+.tabsBox {
+  height: 52px;
+  :global {
+    .dzq-tabs__bar {
+      height: 52px;
+      .dzq-tabs__label {
+        font-size: $font-size-primary;
+        line-height: 20px;
+        margin-top: 16px;
+        // color: $text-color-regular;
+      }
+      .dzq-tabs__item.is-active {
+        color: $primary-color;
+      }
+      .dzq-tabs__item {
+        padding: 0 $padding-4n;
+        color: $text-color-regular;
+      }
+      .dzq-tabs__scroll {
+        display: flex;
+      }
+    }
+    .dzq-tabs__panel {
+      height: 0;
+    }
+  }
+}
+// .list {
+//   flex: 1;
+// }
+.tabIcon {
+  margin-left: $padding-2n;
+  margin-right: $padding-4n;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .buttonIcon {
+    color: $text-color-secondary;
+  }
+}
+
+// 当tab悬浮后的占位元素样式
+.tabPlaceholder {
+  width: 100%;
+  height: 58px;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;  
+}

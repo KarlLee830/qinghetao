@@ -1,0 +1,112 @@
+@import '@common/styles/index.scss';
+
+.wrapper {
+  margin-bottom: $margin-10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $body-bg-color;
+  border-radius: $border-radius-small;
+  cursor: pointer;
+  &-left {
+    padding: $padding-4n;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    &_left {
+      margin-right: $margin-4n;
+      width: 82px;
+      height: 82px;
+      object-fit: cover;
+      border-radius: $border-radius-small;
+    }
+    &_right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      &_title {
+        line-height: $font-line-height-base;
+        font-size: $font-size-base;
+        color: $text-color-regular;
+        @include lamp-clamp(2);
+      }
+      &_price {
+        margin-top: $margin-2n;
+        line-height: $font-line-height-large;
+        font-size: $font-size-large;
+        font-weight: 700;
+        color: $error-color;
+      }
+    }
+  }
+  &-right {
+    padding: $padding-4n $padding-4n $padding-4n 0;
+    width: 56px;
+    &_header {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+    }
+    &_footer {
+      margin-top: $margin-1n;
+      margin-right: -2px;
+      margin-left: -2px;
+      text-align: left;
+      line-height: 1;
+      font-size: $font-size-small;
+      color: $text-color-regular;
+    }
+    &.wrapper-platform {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      height: 114px;
+      width: 72px;
+      border-top-right-radius: $border-radius-small;
+      border-bottom-right-radius: $border-radius-small;
+      background-color: $error-color;
+      cursor: pointer;
+      .wrapper-right_footer {
+        margin-top: $margin-2n;
+        text-align: center;
+        color: $white;
+      }
+      :global {
+        .dzq-icon {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.dialog {
+  &-subtitle {
+    margin-bottom: $margin-6n;
+    font-size: $font-size-base;
+    color: $text-color-regular;
+    text-align: center;
+  }
+  &-image-wrapper {
+    display: inline-block;
+    padding: 12px;
+    border-radius: $border-radius-small;
+    border: $border-solid-1;
+  }
+  &-image {
+    width: 188px;
+    height: 188px;
+  }
+  :global {
+    .dzq-modal__body {
+      padding-top: 0;
+      text-align: center;
+    }
+    .dzq-modal__footer {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '@styles/index.scss';
+.wrapper {
+  :global {
+    .dzq-popup__overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .dzq-popup__container {
+      width: 100%;
+      background: $white;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  .content {
+    margin: 0 $padding-4n;
+    font-size: $font-size-middle;
+    text-align: center;
+    line-height: $font-line-height-small;
+    background: $white;
+
+    .item {
+      padding: $padding-4n;
+      color: $text-color-primary;
+      border-bottom: $border-solid-1;
+    }
+    .btn {
+      line-height: 54px;
+      color: $text-color-regular;
+      @include ios-safe-area-inset-bottom();
+    }
+  }
+}

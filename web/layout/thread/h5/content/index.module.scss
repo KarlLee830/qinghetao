@@ -1,0 +1,257 @@
+@import '@common/styles/index.scss';
+
+.container {
+  background: $white;
+  padding: rem($padding-4n);
+  :global{
+    iframe{
+      max-width: 100%;
+    }
+  }
+}
+
+.header {
+  background: $white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.userInfo {
+  flex: 1;
+}
+
+.more {
+  line-height: rem(20);
+  padding-left: rem($padding-2n);
+  color: $text-color-secondary;
+}
+
+.essence {
+  margin-right: rem($margin-2n);
+}
+
+.body {
+  margin-top: rem($margin-6n);
+
+  > * {
+    margin-bottom: rem($margin-4n);
+  }
+}
+
+.title {
+  color: $text-color-primary;
+  line-height: 21px;
+  font-weight: bold;
+  font-size: rem($font-size-middle);
+  word-break: break-all;
+}
+
+.image {
+  width: 100%;
+}
+
+.reward {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: rem($margin-4n);
+}
+
+.rewardBody {
+  text-align: center;
+  margin-bottom: rem($margin-4n);
+}
+
+.rewardContianer {
+  margin-bottom: rem($margin-6n);;
+}
+.kuqJuzhong {
+	margin: 0 auto;
+	padding: 0;
+	width: 156px;
+	height: 36px;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+}
+
+.redPacketLikeNum {
+  text-align: center;
+  margin-top: $margin-5n;
+  font-size: rem($font-size-label);
+  color: $text-color-secondary;
+}
+
+.rewardButton {
+  margin: 0 auto;
+  padding: 0;
+  width: rem(156);
+  height: rem(36);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payButton {
+  margin: 0 auto;
+  padding: 0;
+  width: rem(234);
+  height: rem(36);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(14);
+}
+
+.payIcon {
+  margin-right: rem($margin-2n);
+}
+
+.rewardext {
+  font-size: rem($font-size-base);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $text-color-secondary;
+  font-size: rem($font-size-primary);
+  height: rem(24);
+}
+
+.buyBtn {
+  margin-top: rem($margin-4n);
+  padding: 0;
+  width: 100%;
+  height: rem(36);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .buyText {
+    // margin-left: rem($margin-2n);
+    line-height: rem(20);
+  }
+}
+
+.tag {
+  display: inline-block;
+  color: $text-color-regular;
+  background: #f0f1f3; // TODO:token
+  font-size: rem($font-size-label);
+  padding: rem(6.5) rem($padding-1n);
+  border-radius: rem($border-radius-small);
+  margin-bottom: rem($padding-4n);
+  line-height: rem(12);
+}
+
+.thumbs {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: rem($font-size-primary);
+}
+
+.liked {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.actived {
+  color: $primary-color;
+}
+
+.likeReward {
+  margin-left: rem($margin-4n);
+}
+
+.examine {
+  padding: rem(8) 0;
+  background: $error-color;
+  color: $white;
+  text-align: center;
+  font-size: rem(14);
+}
+
+.rewardText {
+  padding: rem($padding-4n) rem($padding-4n) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: $border-radius-small;
+
+  .rewardMoney {
+    line-height: rem(20);
+    font-size: rem($font-size-primary);
+    color: $text-color-primary;
+    text-align: center;
+  }
+  .rewardNumber {
+    line-height: rem(17);
+    color: $error-color;
+    text-align: center;
+  }
+
+  .rewardTime {
+    margin-top: rem($margin-1n);
+    font-size: rem($font-size-label);
+    color: $text-color-secondary;
+    text-align: center;
+  }
+}
+
+.likedNumber {
+  margin-left: rem($margin-2n);
+}
+
+.shareCount {
+  font-size: rem(12);
+}
+
+.product {
+  padding: 0;
+  background: none;
+}
+
+.moneyList{
+  text-align: center;
+  width: 249px;
+  margin: 30px auto 0;
+  .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color:$text-color-primary;
+    &::after{
+      width: 76px;
+      height: 1px;
+      background-color: #EEEEEE;
+      content: '';
+      margin-left: 15px;
+    }
+    &::before{
+      content: '';
+      width: 76px;
+      height: 1px;
+      background-color: #EEEEEE;
+      margin-right: 15px;
+    }
+  }
+
+  .itemList{
+    padding: 15px 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .itemAvatar{
+      margin: 5px 3px 0;
+    }
+  }
+}

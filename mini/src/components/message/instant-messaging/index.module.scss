@@ -1,0 +1,13 @@
+@import './vars.scss';
+
+.container {
+  height: 100%;
+  @include im-pagebed;
+  position: relative;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+  background-color: $comment-bg-color;
+}

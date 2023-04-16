@@ -1,0 +1,69 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.container {}
+
+.content {
+  @include content;
+  .title {
+    @include title;
+  }
+  .input {
+    @include input;
+  }
+  .phoneInput {
+    position: relative;
+  }
+  .button {
+    @include button;
+  }
+  .otherLogin-title {
+    @include otherLoginText;
+    font-size: rem($font-size-base);
+  }
+  .otherLogin-button{
+    @include otherLogin_button;
+  }
+  .otherLogin-button-weixin {
+    @include otherLoginBtn;
+  }
+  .otherLogin-button-user {
+    @include otherLoginBtn;
+  }
+  .otherLogin-tips{
+    @include otherLoginText;
+  }
+}
+
+// ------------------PC
+.pc_body_background{
+  @include pc_body_background;
+}
+
+.pc_container {
+  @include pc_container;
+}
+.pc_content {
+  @include pc_content;
+  .pc_title {
+    @include pc_title;
+  }
+  .pc_button {
+    @include pc_button;
+  }
+  .pc_otherLogin_title {
+    @include pc_otherLoginText;
+    font-size: $font-size-base;
+  }
+  .pc_otherLogin_button{
+    @include otherLogin_button;
+    .button_left {
+      @include pc_otherLoginBtn;
+    }
+    .button_right{
+      @include pc_otherLoginBtn;
+    }
+  }
+  .pc_otherLogin_tips{
+    @include pc_otherLoginText;
+  }
+}

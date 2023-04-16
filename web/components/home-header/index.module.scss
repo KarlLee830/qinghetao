@@ -1,0 +1,128 @@
+
+@import '@common/styles/index.scss';
+.container {
+  overflow: hidden;
+  height: rem(165);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  :global(.dzq-popup__container) {
+    bottom: 0;
+  }
+  .topBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem($padding-4n);
+    box-sizing: border-box;
+    :global(.dzq-icon){
+      font-size: rem($font-size-middle-extra) !important;
+    }
+    .left{
+      font-size: rem($font-size-base);
+      line-height: rem($font-line-height-base);
+      color: $white;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      :global(.dzq-icon){
+        font-size: rem($font-size-base) !important;
+        margin-right: rem($margin-2n);
+      }
+    }
+    .goback{
+      transform: rotate(180deg);
+    }
+  }
+  .logoBox {
+    margin-top: rem(57.8);
+    max-height: rem(40);
+    overflow: hidden;
+    .logo {
+      display: block;
+      max-height: rem(40);
+      margin: 0 auto;
+    }
+  }
+  .joinLog {
+    margin-top: rem(36.1);
+    max-height: rem(69);
+    overflow: hidden;
+    .logo {
+      display: block;
+      max-height: rem(69);
+      margin: 0 calc(50% - 202px);
+    }
+  }
+  .digest{
+    margin-top: rem(32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .left{
+      margin-right: rem(16);
+    }
+    .left,.right{
+      font-weight: normal;
+      font-size: rem($font-size-primary);
+      line-height: rem($font-line-height-middle);
+      color: $white;
+    }
+  }
+  .siteInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 rem($padding-4n);
+    box-sizing: border-box;
+    position: absolute;
+    bottom: rem($font-line-height-primary);
+    .item {
+      display: flex;
+      align-items: center;
+    }
+    .text {
+      font-size: rem($font-size-middle);
+      line-height: rem(24);
+      color: $white;
+      font-weight: normal;
+      opacity: 0.6;
+    }
+    .shareText {
+      font-size: rem($font-size-middle);
+      line-height: rem(24);
+      color: $white;
+      font-weight: normal;
+    }
+    .content {
+      font-size: rem($font-size-middle);
+      color: $white;
+      font-weight: normal;
+      padding-left: rem($padding-2n);
+    }
+    .shareIcon {
+      display: inline-block;
+      color: $white;
+      padding-right: rem($padding-2n);
+      box-sizing: border-box;
+    }
+  }
+  .joinInfo {
+    justify-content: center;
+    .item {
+      padding: 0 $padding-2n;
+    }
+  }
+}
+.container_mode_login {
+  height: rem(128);
+}
+.container_mode_invite {
+  height: rem(156);
+}

@@ -1,0 +1,135 @@
+@import '@common/styles/index.scss';
+.user-link{
+  text-decoration: none;
+  display: block;
+}
+.contianer {
+  position: relative;
+  display: flex;
+  
+  flex: 1;
+}
+
+.cursor {
+  @include cursor-on-pc;
+}
+
+.avatar {
+  width: rem(38);
+  height: rem(38);
+}
+
+.right {
+  flex: 1;
+  margin-left: rem($margin-2n);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 65%;
+}
+
+.name {
+  color: $text-color-primary;
+  font-size: rem($font-size-primary);
+  font-weight: bold;
+  max-width: rem(100);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: rem(20);
+
+  &.pc {
+    max-width: rem(210);
+  }
+}
+
+.groupNameBox {
+  display: flex;
+  align-items: center;
+  margin-left: $margin-2n;
+}
+
+.groupName {
+  color: $text-color-secondary;
+  font-size: rem($font-size-label);
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: rem(20);
+  text-overflow: ellipsis;
+}
+.groupNameText {
+  max-width: rem(62.5);
+}
+.meta {
+  margin-top: rem(1);
+  color: $text-color-secondary;
+  display: flex;
+  align-items: center;
+  font-size: rem($font-size-label);
+  height: rem(17);
+}
+
+.time {
+  margin-right: rem($margin-10);
+  font-size: rem($font-size-label);
+}
+
+.location {
+  margin-right: rem($margin-2n);
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: rem($margin-1n);
+    font-size: rem($font-size-label);
+    max-width: rem(100);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.view {
+  margin-right: rem($margin-2n);
+  display: flex;
+  align-items: center;
+
+  :global(.dzq-icon) {
+    cursor: initial;
+  }
+
+  span {
+    margin-left: rem($margin-1n);
+    font-size: rem($font-size-label);
+  }
+
+  .viewIcon {
+    color: $text-color-secondary;
+  }
+}
+
+.tags {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+
+  :global {
+    .dzq-tag{
+      margin-left: rem(8);
+
+    }
+  }
+}
+.listItemIcon {
+  color: $primary-color;
+}

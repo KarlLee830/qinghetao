@@ -1,0 +1,55 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.phoneInput {
+  position: relative;
+  width: 100%;
+  .input {
+    @include input;
+    height: rem(62);
+    margin-top: rem($padding-3n);
+    padding: rem($padding-4n) 0 rem($padding-6n);
+    :global(.dzq-input__inner) {
+      height: rem(22);
+      &::placeholder {
+        color: $text-color-placeholder;
+      }
+    }
+  }
+}
+@mixin captchaBtn {
+  width: rem(94);
+  height: rem(36);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  bottom: rem($margin-4n);
+  border-radius: rem($border-radius-small);
+  color: $white;
+  font-size: rem($font-size-base);
+}
+.sendCaptcha {
+  @include captchaBtn;
+  background: $primary-color;
+}
+.countDown {
+  @include captchaBtn;
+  color: $text-color-secondary;
+  background: $border-color;
+}
+.captchaInput{
+  margin-top: rem($margin-6n);
+  width: 100%;
+  .captchaInput-title {
+    font-weight: normal;
+    font-size: rem($font-size-base);
+    line-height: rem($font-line-height-base);
+    text-align: left;
+    padding: rem(2) 0;
+    color: $text-color-secondary;
+  }
+  .captchaInput-input:last-child{
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,30 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.container {
+  height: 100vh;
+  .button {
+    @include button;
+  }
+  .btn_select {
+    @include btn_select;
+  }
+  .btn_wx {
+    @include btn_wx;
+  }
+  .btn_user {
+    @include btn_user;
+  }
+  .btn_phone {
+    @include btn_phone;
+  }
+}
+.content {
+  @include content;
+  .title {
+    @include title;
+  }
+  .tips{
+    @include titleTips;
+    margin-bottom: 0;
+  }
+}

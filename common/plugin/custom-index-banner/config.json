@@ -1,0 +1,23 @@
+{
+  "name_cn":"pc首页广告栏插件",
+  "name_en":"AdBanner",
+  "description":"pc首页广告栏插件",
+  "type":9,
+  "app_id":"asdasdasd",
+  "version": "1.0.0",
+  "status":1,
+  "icon":"https:\/\/discuz.chat\/dzq-img\/active.png",
+  "filter_enable":false,
+  "author":{
+      "name":"腾讯科技（深圳）有限公司",
+      "email":"coralchu@tencent.com"
+  },
+  "view": {
+      "replace": {
+        "target": "plugin_index",
+        "hookName": "qrcode_replace_hook",
+        "platform": ["pc"],
+        "disables": true
+      }
+  }
+}

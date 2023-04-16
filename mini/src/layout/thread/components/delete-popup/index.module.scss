@@ -1,0 +1,64 @@
+@import '@common/styles/index.scss';
+
+.container {
+  padding: $padding-6n;
+  width: 364px;
+  border-radius: $border-radius-small;
+  background: $white;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  .deleteTips {
+    color: $text-color-primary;
+    .tips {
+      width: 100%;
+      font-weight: 600;
+      font-size: $font-size-middle;
+      text-align: center;
+      line-height: 22px;
+    }
+    .content {
+      width: 100%;
+      font-weight: normal;
+      font-size: $font-size-primary;
+      text-align: center;
+      margin-top: $margin-2n;
+      line-height: 20px;
+    }
+  }
+  .btn {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: $font-size-primary;
+    line-height: 36px;
+
+    .close {
+      width: 116px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $button-info-bg-color;
+      margin-right: $margin-5n;
+      border: none;
+      color: $text-color-regular;
+      padding: 0;
+    }
+
+    .ok {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 116px;
+      height: 36px;
+      padding: 0;
+    }
+  }
+}
+
+.button {
+  width: 100%;
+}

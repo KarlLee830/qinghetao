@@ -1,0 +1,61 @@
+@import '@common/styles/index.scss';
+
+.userCenterPost {
+  padding: $padding-4n;
+  cursor: pointer;
+
+  .userCenterPostContent {
+    display: flex;
+    width: 100%;
+
+    .userCenterPostAvatar {
+      padding-top: $padding-4n;
+      margin-right: $margin-2n;
+    }
+  }
+
+  .userCenterPostTitle {
+    font-size: $font-size-middle;
+    color: $text-color-primary;
+    font-weight: $font-weight-regular;
+    height: $font-line-height-primary;
+    line-height: $font-line-height-primary;
+  }
+
+  .userCenterPostInfo {
+    display: flex;
+    padding-top: $padding-4n;
+
+    input {
+      -webkit-appearance: none;
+    }
+
+    .userCenterPostInput {
+      width: 100%;
+
+      :global {
+        .dzq-input__inner {
+          border-color: $border-color;
+          padding-left: $padding-4n;
+        }
+
+        .input-placeholder {
+          color: $text-color-placeholder;
+        }
+      }
+    }
+  }
+
+  .userCenterPostBtn {
+    width: 100%;
+    text-align: right;
+    margin-top: $margin-4n;
+
+    .btn {
+      width: 76px;
+      height: 36px;
+      padding: 0;
+      line-height: 36px;
+    }
+  }
+}

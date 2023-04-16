@@ -1,0 +1,29 @@
+@import '@common/styles/index.scss';
+
+
+.container {
+  margin-top: 16px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tag {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+}
+
+.todo {
+  height: 100%;
+  background: #0052d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  color: #fff;
+  font-size: 16px;
+}

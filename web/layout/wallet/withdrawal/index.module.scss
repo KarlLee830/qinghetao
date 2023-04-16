@@ -1,0 +1,93 @@
+@import '@common/styles/index.scss';
+
+.container {
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: $body-bg-color;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .totalAmount {
+    width: 100%;
+    height: rem(167);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: $white;
+    text-align: center;
+    background: $primary-color url('/dzq-img/walletbackground.png') 100% no-repeat padding-box;
+    background-size: 100% 100%;
+    .moneyTitle {
+      height: rem(20);
+
+      font-weight: normal;
+      font-size: rem($font-size-primary);
+      line-height: rem(20);
+    }
+    .moneyNum {
+      height: rem(42);
+
+      font-weight: 600;
+      font-size: rem(30);
+      line-height: rem(42);
+      margin: $margin-1n 0 rem(54);
+    }
+  }
+
+  .moneyInput {
+    width: rem(343);
+    height: rem(168);
+    border-radius: rem($border-radius-small);
+    background: $white;
+    margin-top: rem(-38);
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: rem($padding-2n) 0;
+  padding-bottom: calc(8px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+  padding-bottom: calc(8px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+
+  .button {
+    width: rem(343);
+    height: rem(42);
+    border-radius: rem($border-radius-small);
+    font-size: $font-size-middle;
+  }
+}
+
+.bgBtnColor {
+  :global {
+    .dzq-button--primary.is-mouseenter {
+      @include button-primary();
+    }
+  }
+}
+
+.payment {
+  flex: 1;
+  margin-top: rem(10);
+}
+
+
+.title {
+  font-size: rem($font-size-middle);
+  color: $text-color-primary;
+  margin-top: rem(rem($margin-4n));
+}
+
+.info {
+  margin-top: rem($margin-2n);
+  font-size: rem($font-size-base);
+  color: $text-color-regular;
+  line-height: $font-line-height-base;
+  word-break: break-all;
+}

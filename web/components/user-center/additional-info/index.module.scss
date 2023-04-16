@@ -1,0 +1,127 @@
+@import '@common/styles/index.scss';
+
+.additionalWrapper {
+  padding: rem($padding-4n);
+  overflow-x: hidden;
+  padding-bottom: calc(16px + constant(safe-area-inset-bottom));
+  padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+}
+
+.additionalContainer {
+  .additionInfoLoading {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    :global {
+      .dzq-spin {
+        color: $text-color-secondary;
+      }
+    }
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem($margin-2n);
+    height: rem(28);
+    line-height: rem(28);
+    margin-bottom: rem($margin-2n);
+  }
+  .titleValue {
+    flex: 1;
+    font-size: rem($font-size-large);
+    color: $text-color-primary;
+    font-weight: $font-weight-regular;
+  }
+  .additionItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: rem($font-size-primary);
+    padding: rem($padding-4n) 0;
+    border-bottom: $border-solid-1;
+    .additionLabel {
+      color: $text-color-regular;
+      height: rem(20);
+      line-height: rem(20);
+      flex-shrink: 0;
+      margin-right: rem(46);
+      max-width: rem(108);
+      @include text-ellipsis();
+    }
+    .additionValue {
+      color: $text-color-primary;
+      min-height: rem(20);
+      line-height: rem(20);
+      .additionFile {
+        margin-left: rem($margin-1n);
+      }
+    }
+    .additionNormalText {
+      color: $text-color-secondary;
+    }
+    .checkboxValue {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .singleText {
+      @include text-ellipsis();
+    }
+    .mutipleLineText {
+      word-break: break-all;
+    }
+  }
+  .additionIdentityCard {
+    flex-direction: column;
+    .additionLabel {
+      align-self: flex-start;
+      max-width: rem(108);
+      @include text-ellipsis();
+    }
+    .cardItem {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: rem($margin-4n);
+      flex-direction: column;
+    }
+    .identityCard {
+      width: 100%;
+      height: rem(215);
+      border-radius: rem(5);
+      background: #eee;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .iCardText {
+        position: absolute;
+        z-index: 1;
+        color: $text-color-regular;
+      }
+    }
+    .identityImg {
+      width: 100%;
+      height: rem(215);
+      border-radius: rem(5);
+    }
+    .identityCardBottom {
+      margin-bottom: rem($margin-10);
+    }
+  }
+  .additionTips {
+    margin-top: rem(14);
+    color: $text-color-secondary;
+    font-size: rem($font-size-small);
+    .note {
+      color: $error-color;
+    }
+  }
+}

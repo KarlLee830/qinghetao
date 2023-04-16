@@ -1,0 +1,72 @@
+@import '@common/styles/index.scss';
+
+.shieldBox {
+  width: 100%;
+  height: 100%;
+  background-color: $body-bg-color;
+}
+.titleBox {
+  width: 100%;
+  height: rem(53);
+  background-color: $white;
+  font-size: rem($font-size-primary);
+  color: $text-color-regular;
+  padding: 0 rem($padding-4n);
+  line-height: rem(53);
+  box-sizing: border-box;
+}
+
+.list {
+  flex: 1;
+  background-color: $white;
+  -webkit-overflow-scrolling: touch;
+}
+
+.blockSplitLine {
+  width: 100%;
+  height: rem(10);
+  background-color: $body-bg-color;
+}
+
+.haieldImg {
+  width: 100%;
+  height: rem(70);
+  padding: 0 rem($padding-4n);
+  background-color: $white;
+  box-sizing: border-box;
+}
+.haieldImgBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: rem($padding-4n) 0;
+  border-bottom: rem(1) solid $border-color;
+  box-sizing: border-box;
+}
+.haieldImgHead {
+  display: flex;
+  .haieldName {
+    font-weight: normal;
+    font-size: rem($font-size-primary);
+    line-height: rem(17);
+    color: $text-color-primary;
+    margin: rem(9) 0 0 rem(8);
+  }
+}
+.haieldName {
+  border-radius: rem(5);
+  margin-top: rem(7);
+}
+.haieldButton {
+  font-size: rem($font-size-label);
+  width: rem(72);
+  height: rem(25);
+  color: $white;
+  border-radius: rem(5);
+  line-height: rem(26);
+  text-align: center;
+  background: $loading-text-color;
+  padding: 0;
+  border: none;
+}

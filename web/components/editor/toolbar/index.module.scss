@@ -1,0 +1,328 @@
+@import '@common/styles/index.scss';
+
+$margin16: rem($margin-4n);
+
+.dvditor-toolbar {
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $body-bg-color;
+  &__left {
+    margin-left: $margin16;
+    font-size: $font-size-primary;
+  }
+  &__right {
+    margin-right: $margin16;
+    font-size: $font-size-primary;
+    color: $text-color-primary-color;
+  }
+  &__item {
+    position: relative;
+    margin-right: rem($margin-6n);
+    display: inline-flex;
+    font-size: $font-size-primary;
+    color: $icon-color;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      color: $icon-color-active;
+    }
+  }
+}
+@supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
+  .dvditor-toolbar {
+    padding-bottom: calc(1px + constant(safe-area-inset-bottom));
+    padding-bottom: calc(1px + env(safe-area-inset-bottom));
+  }
+  .dvditor-toolbar.emoji {
+    padding-bottom: 0;
+  }
+}
+
+.dvditor-attachment-toolbar {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $font-size-label;
+  background-color: $white;
+  /*border-top: 1px solid $border-color;*/
+  &__left {
+    height: 100%;
+    flex: 1 1 auto;
+    font-size: $font-size-label;
+    margin-left: rem($margin16);
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+  }
+  &__right {
+    flex: 0 0 auto;
+    margin-right: rem($margin-2n);
+    margin-left: rem($margin16);
+    &.show {
+      width: rem(36);
+      margin-right: rem($margin-2n);
+      text-align: right;
+      border-left: 1px solid $border-color;
+      background-clip: padding-box;
+    }
+    :global {
+      .dzq-icon {
+        color: $icon-color;
+        cursor: pointer;
+        &:first-child {
+          margin-left: rem(-$margin-1n);
+        }
+      }
+    }
+  }
+  &__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    border-radius: $border-radius-small;
+  }
+  &__item {
+    display: inline-flex;
+    margin-left: $margin-6n;
+    color: $icon-color;
+    cursor: pointer;
+    line-height: 22px !important;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    :global {
+      .dzq-icon {
+        color: $icon-color;
+        cursor: pointer;
+        vertical-align: bottom;
+        line-height: 22px;
+      }
+    }
+    &.active {
+      color: $icon-color-active;
+      :global {
+        .dzq-icon {
+          color: $icon-color-active;
+        }
+      }
+    }
+  }
+}
+
+.dvditor-seletion-toolbar {
+  margin: 0 $margin16;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  &__item {
+    margin-right: $margin-6n;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.pc {
+  background-color: $white;
+  .dvditor-toolbar {
+    &__item {
+      &:first-child {
+        margin-right: rem($margin-6n);
+      }
+    }
+  }
+  .kuqyou10 {
+	  padding-right: rem(15);
+	  font-size: 8px;
+  }
+  .kuqshang10 {
+  	  margin-top: rem(15);
+  }
+  :global {
+    .dzq-dropdown {
+      .dzq-dropdown-menu--center {
+        left: 6px;
+        top: 30px;
+      }
+    }
+  }
+}
+.dvditor-attachment-toolbarer {
+  width: 100%;
+  /*height: 95px;*/
+  /*display: flex;
+  align-items: center;
+  justify-content: space-between;*/
+  font-size: $font-size-label;
+  background-color: $white;
+  /*border-top: 1px solid $border-color;*/
+  &__left {
+    height: rem(45);
+    flex: 1 1 auto;
+    font-size: $font-size-label;
+    margin-left: rem($margin16);
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+  }
+  &__rights {
+    float: right;
+  	height: rem(45);
+    margin-right: rem($margin-2n);
+    margin-left: rem($margin16);
+  }
+  &__right {
+    flex: 0 0 auto;
+	height: rem(45);
+    margin-right: rem($margin-2n);
+    margin-left: rem($margin16);
+    &.show {
+      width: rem(36);
+      margin-right: rem($margin-2n);
+      text-align: right;
+      border-left: 1px solid $border-color;
+      background-clip: padding-box;
+    }
+    :global {
+      .dzq-icon {
+        color: $icon-color;
+        cursor: pointer;
+        &:first-child {
+          margin-left: rem(-$margin-1n);
+        }
+      }
+    }
+  }
+  &__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    border-radius: $border-radius-small;
+  }
+  &__item {
+    display: inline-flex;
+    margin-left: $margin-6n;
+    color: $icon-color;
+    cursor: pointer;
+    line-height: 22px !important;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    :global {
+      .dzq-icon {
+        color: $icon-color;
+        cursor: pointer;
+        vertical-align: bottom;
+        line-height: 22px;
+      }
+    }
+    &.active {
+      color: $icon-color-active;
+      :global {
+        .dzq-icon {
+          color: $icon-color-active;
+        }
+      }
+    }
+  }
+}
+.dvditor-attachment-toolbarsan {
+  width: 100%;
+  /*height: 95px;*/
+  display: flex;
+  /*align-items: center;
+  justify-content: space-between;*/
+  font-size: $font-size-label;
+  background-color: #f3f3f3;
+  /*border-top: 1px solid $border-color;*/
+  &__left {
+    height: rem(45);
+    flex: 1 1 auto;
+    font-size: $font-size-label;
+    margin-left: rem($margin16);
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+	
+  }
+  &__rights {
+    float: right;
+  	height: rem(45);
+    margin-right: rem($margin-2n);
+    margin-left: rem($margin16);
+  }
+  &__right {
+    flex: 0 0 auto;
+	height: rem(45);
+    margin-right: rem($margin-2n);
+    margin-left: rem($margin16);
+    &.show {
+      width: rem(36);
+      margin-right: rem($margin-2n);
+      text-align: right;
+      border-left: 1px solid $border-color;
+      background-clip: padding-box;
+    }
+    :global {
+      .dzq-icon {
+        color: $icon-color;
+        cursor: pointer;
+        &:first-child {
+          margin-left: rem(-$margin-1n);
+        }
+      }
+    }
+  }
+  &__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    border-radius: $border-radius-small;
+  }
+  &__item {
+    display: inline-flex;
+    margin-left: $margin-6n;
+    color: $icon-color;
+    cursor: pointer;
+    line-height: 22px !important;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    :global {
+      .dzq-icon {
+        color: $icon-color;
+        cursor: pointer;
+        vertical-align: bottom;
+        line-height: 22px;
+      }
+    }
+    &.active {
+      color: $icon-color-active;
+      :global {
+        .dzq-icon {
+          color: $icon-color-active;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import '@common/styles/index.scss';
+
+.wrapper {
+  padding: 0 $padding-6n;
+  background-color: $white;
+  border-radius: $border-radius-small;
+}
+.header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: $border-solid-1;
+  &-left {
+    display: flex;
+    align-items: center;
+    color: $text-color-primary;
+    font-weight: 600;
+    font-size: $font-size-middle-extra;
+    :global {
+      .dzq-icon {
+        margin-right: $margin-2n;
+        color: $icon-success-color;
+      }
+    }
+  }
+  &-right {
+    font-size: $font-size-small;
+    color: $text-color-regular;
+  }
+}
+.item {
+  padding: $padding-4n 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: $border-solid-1;
+  &:last-child{
+    border-bottom: none;
+  }
+  &-left {
+    // flex: 1;
+    width: 75%;
+  }
+  &-right {
+    width: 130px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-size: $font-size-base;
+  }
+  &-time {
+    margin-top: $margin-2n;
+    font-size: $font-size-small;
+    color: $text-color-secondary;
+  }
+  &-operate {
+    display: flex;
+    align-items: center;
+    color: $text-color-secondary;
+    cursor: pointer;
+    &:last-child {
+      margin-left: $margin-4n;
+    }
+    :global {
+      .dzq-icon {
+        margin-right: $margin-10;
+      }
+    }
+  }
+}
+
+.right {
+  max-width: rem(330px);
+}

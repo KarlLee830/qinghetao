@@ -1,0 +1,106 @@
+@import '@common/styles/index.scss';
+
+.container {
+  width: 100%;
+  background: $border-color;
+  overflow: hidden;
+  padding: 20px 20px 0 20px;
+  border-radius: $border-radius-big $border-radius-big 0 0;
+  box-sizing: border-box;
+
+  .oneRow {
+    display: flex;
+    justify-content: center;
+    .moreItem {
+      margin-right: 32px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .twoRows {
+    display: grid;
+    justify-content: space-between;
+  }
+
+  .more {
+    width: 100%;
+    grid-template-columns: repeat(5, 40px);
+    grid-row-gap: 16px;
+    padding-bottom: $padding-4n;
+    Button{
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+      line-height: 17px;
+      overflow: inherit;
+    }
+
+    .moreItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .icon {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        background: $white;
+        border-radius: $border-radius-small;
+        color: $text-color-regular;
+
+        > View {
+          font-size: 26px !important;
+        }
+      }
+      .experienceIcon {
+        > View {
+          font-size: 18px !important;
+        }
+      }
+
+      .text {
+        // width: 50px;
+        margin-top: $padding-2n;
+        text-align: center;
+        color: $text-color-regular;
+        font-size: $font-size-small;
+      }
+
+      &.actived {
+        .icon,
+        .text {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  padding: 12px 0;
+  width: 100%;
+  background: $white;
+  text-align: center;
+  height: 44px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .cancel {
+    border: none;
+    padding: 0;
+    width: 100%;
+    font-size: $font-size-base;
+    color: $text-color-regular;
+  }
+}
+
+
+.body {
+  border-radius: $border-radius-big $border-radius-big 0 0;
+  padding-bottom: constant(safe-area-inset-bottom); ///兼容 IOS<11.2/
+  padding-bottom: env(safe-area-inset-bottom); ///兼容 IOS>11.2/
+  background: $white;
+}

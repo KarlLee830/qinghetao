@@ -1,0 +1,62 @@
+@import '@common/styles/index.scss';
+
+// 外部容器
+.amountWrapper {
+  background: $white;
+  // height: rem(300);
+  font-size: rem($font-size-large);
+  padding: rem($padding-4n);
+  overflow-y: auto;
+  min-height: rem(337);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .btnBox {
+    margin-top: rem($margin-2n);
+    box-sizing: border-box;
+    padding-bottom: calc(16px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+    padding-bottom: calc(16px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+
+    &::before {
+      content: '';
+      display: block;
+      // width: 100%;
+      height: rem(1);
+      background: $border-color;
+      position: relative;
+      top: rem(-8);
+      margin: 0 rem(-$margin-4n);
+    }
+
+    .btn {
+      height: rem(42);
+      font-size: rem($font-size-base);
+      line-height: rem($font-line-height-base);
+      border-radius: 5px;
+      padding: 0;
+      line-height: rem(42);
+    }
+  }
+
+  .giftInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.payBoxCloseIcon {
+  position: absolute;
+  right: rem(3);
+  top: rem(5);
+  width: rem(40);
+  height: rem(40);
+  // background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-color-secondary;
+  cursor: pointer;
+}

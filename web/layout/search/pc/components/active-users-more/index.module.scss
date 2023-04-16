@@ -1,0 +1,125 @@
+@import '@common/styles/index.scss';
+
+.list {
+  padding: rem($padding-4n) 0 rem($padding-6n);
+  .item {
+    width: 100%;
+    margin-bottom: rem($margin-4n);
+    height: rem(82);
+    border-radius: rem($border-radius-small);
+    background-color: $body-bg-color;
+    display: flex;
+    align-items: center;
+    padding: rem($padding-4n) rem($padding-6n);
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .content {
+      width: 100%;
+      height: 100%;
+      padding-left: rem($padding-4n);
+    }
+    .top {
+      margin-bottom: rem($margin-2n);
+      &.memberUser {
+        display: flex;
+        align-items: center;
+      }
+      .name {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: rem(500);
+        height: rem(18);
+        font-weight: 700;
+        font-size: rem($font-size-middle);
+        line-height: rem(18);
+        color: $text-color-primary;
+        margin-right: rem($margin-2n);
+        @include text-ellipsis();
+      }
+      .group {
+        vertical-align: middle;
+        font-size: rem($font-size-primary);
+        line-height: rem($font-line-height-small);
+        color: $text-color-secondary;
+      }
+    }
+    .num {
+      display: flex;
+      align-items: center;
+      color: $text-color-regular;
+      .numItem {
+        font-size: rem($font-size-primary);
+        line-height: rem($font-line-height-small);
+        color: $primary-color;
+        padding: 0 rem($padding-2n);
+        margin-right: rem(1);
+        position: relative;
+        &:after {
+          position: absolute;
+          right: -1px;
+          top: -1px;
+          content: '|';
+          font-size: rem(12);
+          line-height: rem($font-line-height-small);
+          color: $border-color;
+        }
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          border-right: none;
+          &:after {
+            content: '';
+          }
+        }
+      }
+      .numTitle {
+        color: $text-color-regular;
+        margin-right: rem($margin-5);
+      }
+    }
+    .button {
+      width: rem(113);
+      height: rem(36);
+      font-size: rem($font-size-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .addIcon {
+        margin-right: rem($margin-5);
+      }
+      .addText {
+        margin-right: rem(4);
+      }
+    }
+
+    .follow {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      &:hover {
+        border-color: $primary-color;
+        background-color: $primary-color;
+      }
+    }
+    .isFollow {
+      background-color: $primary-disabled-color;
+      border-color: $primary-disabled-color;
+      &:hover {
+        background-color: $primary-disabled-color;
+        border-color: $primary-disabled-color;
+      }
+    }
+    .withdraw {
+      background-color: $warn-color;
+      border-color: $warn-color;
+      &:hover {
+        background-color: $warn-color;
+        border-color: $warn-color;
+      }
+    }
+  }
+}

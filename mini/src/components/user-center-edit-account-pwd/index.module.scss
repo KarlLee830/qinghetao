@@ -1,0 +1,71 @@
+@import '@common/styles/index.scss';
+@import '@common/styles/mixin/login.scss';
+
+.content {
+  padding: $padding-6n;
+  padding-bottom: 0;
+  height: 100%;
+  .title {
+    font-size: $font-size-large;
+    color: $text-color-primary;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  .labelInfo {
+    // padding: rem($margin-10) 0 rem($margin-6n);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px;
+    line-height: 62px;
+    box-sizing: border-box;
+    // padding-top: rem($padding-6n);
+    .labelValue {
+      color: $text-color-primary;
+      font-size: $font-size-middle;
+      flex: 1;
+      .input {
+        @include input;
+        @include passwordInput;
+      }
+    }
+  }
+}
+
+.tips {
+  text-align: right;
+  color: $primary-color;
+  // padding-right: rem($padding-6n);
+  font-size: rem($font-size-primary);
+  margin-top: rem($margin-6n);
+}
+#accountPwdContent {
+  height: 100vh;
+  background-color: $white;
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    // border-top: 1px solid $border-color;
+    padding: $padding-2n $padding-4n $padding-4n;
+    display: flex;
+    justify-content: center;
+    padding-bottom: calc(16px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+    padding-bottom: calc(16px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+    .btn {
+      height: 42px;
+      font-size: $font-size-middle;
+      border-radius: $border-radius-small;
+      padding: 0;
+      line-height: 42px;
+    }
+  }
+}
+
+.bgBtnColor {
+  :global {
+    .dzq-button--primary.is-mouseenter {
+      @include button-primary();
+    }
+  }
+}

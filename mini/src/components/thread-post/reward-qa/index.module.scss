@@ -1,0 +1,106 @@
+@import "@common/styles/index.scss";
+@mixin flex() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  height: 100vh;
+  padding: 0 $padding-4n;
+  overflow: hidden;
+  background: $white;
+  border-top: $border-solid-1;
+
+  .reward-item {
+    @include flex();
+    padding: $padding-4n 0;
+    font-size: $font-size-primary;
+    color: $text-color-primary;
+    border-top: $border-solid-1;
+    &:first-child {
+      border-top: none;
+    }
+
+    .reward-text {
+      width: 125px;
+      color: $text-color-regular;
+      line-height: 18px;
+      text-align: left;
+    }
+
+    .reward-money {
+      @include flex();
+    }
+
+    .reward-time {
+      flex: 1;
+      @include flex();
+      .selected-time {
+        flex: 1;
+        margin-right: $margin-2n;
+        text-align: right;
+        &.default-time {
+          color: $text-color-placeholder;
+        }
+      }
+      .time-arrow{
+        width: 16px;
+        display: flex;
+      }
+    }
+
+    :global {
+      .dzq-input {
+        .dzq-input__inner {
+          text-align: right;
+          border: none;
+        }
+
+        .input-placeholder{
+          color: $text-color-placeholder ;
+        }
+
+      }
+
+      .dzq-icon-RightOutlined {
+        margin: auto;
+        color: $icon-color-light;
+      }
+    }
+  }
+
+  .btn {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: constant(safe-area-inset-bottom);
+    bottom: env(safe-area-inset-bottom);
+    margin: 0 $margin-10;
+    padding: $padding-2n 0;
+    background: $white;
+    border-top: $border-solid-1;
+
+    :global {
+      .dzq-button {
+        width: 48%;
+        height: 42px;
+        padding: $padding-10 0;
+        font-size: $font-size-middle;
+        color: $text-color-regular;
+        border: none;
+        border-radius: $border-radius-small;
+        background: $text-bg-color2;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+
+    .btn-confirm {
+      color: $white;
+      background-color: $primary-color;
+    }
+  }
+}

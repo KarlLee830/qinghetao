@@ -1,0 +1,159 @@
+@import '@common/styles/index.scss';
+
+.container {
+  width: rem(409);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto;
+  background: $white;
+  border-radius: rem($border-radius-big);
+  overflow: hidden;
+  padding: rem(24);
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .headerLeft {
+    flex: 1;
+    font-size: rem($font-size-middle);
+    color: $text-color-primary;
+    font-weight: $font-weight-regular;
+    text-align: center;
+  }
+  .headerIcon {
+    text-align: center;
+    font-size: rem($font-size-middle);
+    cursor: pointer;
+    color: $text-color-secondary;
+  }
+}
+
+.body {
+  width: 100%;
+  .percentage {
+    display: flex;
+    flex-direction: column;
+    border-bottom: $border-solid-1;
+
+    .text {
+      font-weight: normal;
+      color: $text-color-regular;
+      font-size: rem($font-size-base);
+      line-height: rem(17.8);
+      text-align: left;
+      padding: rem($padding-6n) 0 rem($padding-2n) 0;
+    }
+    .slider {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: rem($padding-3n);
+      font-size: rem($font-size-small);
+      position: relative;
+      .perCent {
+        color: $text-color-primary;
+      }
+      .maxMoney {
+        color: $error-color;
+        font-size: $font-size-small;
+        position: absolute;
+        right: 0;
+        bottom: rem(1);
+      }
+      :global {
+        .dzq-slider__progress--active {
+          height: rem(4);
+          border-radius: rem(2) 0 0 rem(2);
+        }
+        .dzq-slider__progress--stick {
+          height: rem(4);
+        }
+        .dzq-slider__progress--max {
+          height: rem(4);
+          border-radius: 0 rem(2) rem(2) 0;
+        }
+        .dzq-slider__feature {
+          height: rem(4);
+          // background: $border-shadow-color;
+          // border-radius: 0 rem(2) rem(2) 0;
+        }
+
+        .dzq-slider__progress__button {
+          width: rem(10);
+          height: rem(10);
+          border: rem(8) solid $primary-color;
+        }
+        .dzq-slider__value {
+          font-size: rem($font-size-small);
+          margin-left: rem(4);
+          width: rem(20);
+          text-align: right;
+        }
+      }
+    }
+  }
+  .rewardMoney {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: rem($font-size-base);
+    font-weight: normal;
+    padding: rem($padding-4n) 0;
+    border-bottom: $border-solid-1;
+
+    .text {
+      line-height: rem(17.8);
+      text-align: left;
+      color: $text-color-regular;
+      font-size: rem($font-size-base);
+    }
+    .moneyNum {
+      
+      text-align: left;
+      color: $text-color-primary;
+    }
+    .money {
+      color: $text-color-primary;
+    }
+    .unit {
+      color: $text-color-primary;
+      padding-left: rem(4);
+    }
+    :global {
+      .dzq-input {
+        width: rem(90);
+        height: rem(30);
+        .dzq-input__inner {
+          width: rem(90);
+          height: rem(30);
+        }
+      }
+    }
+  }
+}
+
+.button {
+  margin-top: rem($margin-6n);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ok {
+    width: rem(116);
+    height: rem(36);
+  }
+  .cancel {
+    width: rem(116);
+    height: rem(36);
+    background: $button-info-bg-color;
+    border: none;
+    margin-right: rem($margin-4n);
+    color: $text-color-regular;
+  }
+}

@@ -1,0 +1,50 @@
+@import '@common/styles/index.scss';
+
+.container {
+  padding: rem($padding-4n);
+  background: $white;
+  border-radius: rem($border-radius-small);
+  overflow: hidden;
+  .title {
+    font-size: rem($font-size-middle);
+    line-height: rem($font-line-height-primary);
+    color: $primary-color;
+    margin-bottom: rem($margin-4n);
+    font-weight: 700;
+  }
+  .siteInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    li {
+      margin-right: rem(40);
+    }
+    .text {
+      font-size: rem($font-size-primary);
+      color: $text-color-secondary;
+    }
+    .content {
+      font-size: rem($font-size-primary);
+      color: $text-color-secondary;
+      padding: 0 rem($padding-2n);
+    }
+    .share {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+    .shareIcon {
+      display: inline-block;
+      padding-right: rem($padding-2n);
+    }
+  }
+  .allTopic {
+    cursor: pointer;
+    a {
+      font-size: rem($font-size-primary);
+      color: $text-color-secondary;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import '@common/styles/index.scss';
+
+.contianer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.image {
+  width: rem(13);
+  height: rem(18);
+}
+
+.text {
+  font-size: rem($font-size-primary);
+  text-align: left;
+  color: $text-color-primary;
+  margin-left: rem($margin-2n);
+}
+
+.number {
+  color: $error-color;
+}

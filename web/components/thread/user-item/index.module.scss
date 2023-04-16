@@ -1,0 +1,132 @@
+@import '@common/styles/index.scss';
+
+.listItem {
+  @include cursor-on-pc;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: $white;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 75%;
+  }
+
+  .header {
+    position: relative;
+    height: rem(38);
+    margin-right: rem(12);
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: rem($font-size-primary);
+    .title {
+      @include lamp-clamp(1);
+      color: $text-color-primary;
+      line-height: rem(20);
+    }
+    .subTitle {
+      color: $text-color-secondary;
+      line-height: rem(17);
+      font-size: rem($font-size-small);
+    }
+  }
+
+  .footer {
+    font-size: rem($font-size-label);
+    color: $text-color-secondary;
+    display: flex;
+    align-items: center;
+    .label {
+      margin-right: rem(7);
+    }
+    .rightIcon {
+      margin-right: rem(3);
+    }
+  }
+  .button {
+    height: rem(26);
+    width: rem(72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    span {
+      font-size: rem(12);
+      line-height: rem(12);
+    }
+  }
+}
+
+.additional {
+  display: block;
+  padding: 0 !important;
+  &-wrapper {
+    padding: $padding-4n;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border-bottom: $border-solid-1;
+    white-space: nowrap;
+    &:last-child {
+      border-bottom: 0;
+    }
+
+  }
+  &-user {
+    @include lamp-clamp(1);
+    display: inline-flex;
+    width: 100px;
+    align-items: center;
+    font-size: $font-size-base;
+    color: $text-color-primary;
+
+    .img {
+      display: inline-block;
+    }
+    .title {
+      width: 56px;
+      margin-left: 4px;
+      @include text-ellipsis();
+    }
+  }
+  &-right {
+    flex: 1;
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  &-scrollX {
+    overflow-x: auto;
+    overflow-x: overlay;
+    @include verticalScrollbar();
+  }
+  &-name {
+    width: 25%;
+    @include lamp-clamp(1);
+    font-size: $font-size-base;
+    color: $text-color-primary;
+  }
+  &-item {
+    flex: 1 0 22%;
+    margin-right: 3%;
+    font-size: $font-size-base;
+    color: $text-color-primary;
+    &:last-child{
+      flex-basis: 25%;
+      margin-right: 0;
+    }
+  }
+  .button {
+    display: inline-flex !important;
+  }
+}

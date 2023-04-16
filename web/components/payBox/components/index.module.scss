@@ -1,0 +1,126 @@
+@import '@common/styles/index.scss';
+
+// 金额确认标题
+.amountTitle {
+  font-weight: $font-weight-regular;
+  font-size: rem($font-size-middle);
+  color: $text-color-primary;
+  text-align: center;
+}
+// 金额确认主要内容
+.amountContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: rem($margin-4n) 0 0;
+  font-size: rem($font-size-primary);
+  // 交易内容item
+  .acExplain {
+    display: flex;
+    align-items: center;
+    line-height: rem(24);
+    margin: rem($margin-2n) 0;
+    font-size: rem($font-size-primary);
+    color: $text-color-primary;
+  }
+  .acExplainH5 {
+    margin-bottom: rem($margin-2n);
+  }
+  // 交易类型label提示
+  .acExplainLabel {
+    color: $text-color-regular;
+    margin-right: rem($margin-4n);
+    flex-shrink: 0;
+  }
+  // 交易内容value
+  .acExplainValue {
+    color: $text-color-primary;
+    flex-wrap: nowrap;
+    @include text-ellipsis();
+  }
+  .acExplainNum {
+    color: $error-color;
+    font-size: rem($font-size-middle);
+    font-weight: 600;
+  }
+  .acExplainDivider {
+    margin: rem($margin-2n) 0;
+  }
+  .ampuntLineWrap {
+    margin: 0 rem(-$margin-4n);
+  }
+  .ampuntLine {
+    width: 100%;
+    height: rem(10);
+    background-color: $comment-bg-color;
+    margin: rem($margin-2n) 0;
+  }
+}
+
+.title {
+  color: $text-color-primary;
+  font-size: rem($font-size-large);
+  padding: rem($padding-4n);
+  margin-top: rem($margin-4n);
+}
+
+.payList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: rem(251);
+  .payListItem {
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+
+    border: $border-solid-1;
+    width: rem(40);
+    height: rem(40);
+    text-align: center;
+    line-height: rem(40);
+    font-size: rem(10);
+    &:not(:last-child) {
+      // margin-right: rem($margin-2n);
+      border-right: 0px;
+    }
+
+    // &.curr{
+    //   border-bottom-color: $text-color-placeholder;
+    // }
+    // &.activation{
+    //   border-bottom-color: $text-color-placeholder;
+    // }
+  }
+
+  .payListItem01 {
+    border: $border-solid-1;
+    width: rem(40);
+    height: rem(40);
+    text-align: center;
+    line-height: rem(40);
+    font-size: rem(10);
+    color: $text-color-primary;
+    &:not(:last-child) {
+      // margin-right: rem($margin-2n);
+      border-right: 0px;
+    }
+
+    // &.curr{
+    //   border-color: $text-color-placeholder;
+    // }
+    // &.activation{
+    //   border-color: $text-color-placeholder;
+    // }
+  }
+}
+.amountContentPC {
+  margin: rem($margin-6n) 0 rem($margin-6n);
+  .acExplain {
+    line-height: rem($font-line-height-base);
+  }
+}

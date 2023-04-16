@@ -1,0 +1,203 @@
+@import '@common/styles/index.scss';
+.container {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+  .wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 193px;
+    width: 144px;
+    color: #ffeea2;
+  }
+
+  .img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .title {
+    z-index: 2;
+    font-size: $font-size-primary;
+    margin-bottom: $padding-2n;
+    font-weight: normal;
+    margin-top: 38px;
+    line-height: 17px;
+  }
+  .money {
+    z-index: 2;
+    font-size: $font-size-large;
+    font-weight: bold;
+    line-height: 28px;
+  }
+}
+
+.root{
+  @include cursor-on-pc;
+  margin:0 auto;
+
+  @media screen and (max-width: 343px)  {
+      .hongbao ,.xuanshang{
+        width: 282px!important;
+      }
+  }
+
+  .hongbao{
+    margin:0 auto;
+    width: rem(343);
+    height:rem(91);
+    background-image: linear-gradient(to bottom, #E33042 , #C61A2F);;
+    border-radius: 5px;
+    display: flex;
+    .left{
+      flex:1;
+      padding-left: rem(25);
+      .top{
+        height:rem(56);
+        border-bottom: 0.5px dashed #FFEEA2 ;
+        font-family: "PingFang SC";
+        font-weight: normal;
+        font-size: 16px;
+        line-height: rem(60);
+        text-align: left;
+        color: #ffeea2;
+      }
+      .bottom{
+        font-family: "PingFang SC Light";
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 20px;
+        margin-top: 4px;
+        text-align: left;
+        color: #ffeea2;
+        opacity: 0.8;
+      }
+    }
+    .right{
+      width: rem(80);
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .pie{
+        background-color: #FFEEA2;
+        width:rem(42);
+        height:rem(42);
+        border-radius: 50%;
+        text-align: center;
+        line-height: rem(50);
+        .miniIcon{
+          display: inline-block;
+          width: rem(18);
+          height: rem(24);
+          position: relative;
+          top:2px;
+        }
+      }
+    }
+  }
+
+  .xuanshang{
+
+    margin:0 auto;
+    width: rem(343);
+    height:rem(74);
+    background-color: #F66B25;
+    display: flex;
+    border-radius: 5px;
+    position: relative;
+    &::after , &::before{
+      content: '';
+      background-color: $white;
+      width: 8px;
+      height:rem(38);
+      border-radius: 4px;
+      position: absolute;
+      top:19px;
+      z-index: 3;
+    }
+    &::before{
+      left:-4px
+    }
+    &::after{
+      right:-4px;
+    }
+    .left{
+      flex:1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .mid{
+        font-family: "PingFang SC";
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 14px;
+        text-align: left;
+        color: #ffeea2;
+      }
+      .remain{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #ffeea2;
+      }
+      .cur{
+        font-family: "PingFang SC Light";
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        color: #ffeea2;
+        opacity: 0.8;
+      }
+    }
+    .right{
+      width: rem(120);
+      border-left: 0.5px dashed #FFEEA2 ;
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .shang{
+        background-color: #FFEEA2;
+        width:rem(42);
+        height:rem(42);
+        border-radius: 50%;
+        font-family: "PingFang SC Bold";
+        font-weight: bold;
+        font-size: rem(16);
+        color: $text-color-regular;
+        line-height: rem(42);
+        text-align: center;
+      }
+      &::after ,&::before{
+        width: 8px;
+        height:8px;
+        background-color: $white;
+        position: absolute;
+        left:-4px;
+        content: '';
+        border-radius: 50%;
+        z-index: 3;
+      }
+      &::after{
+        top:-4px;
+      }
+      &::before{
+        bottom:-4px;
+      }
+
+    }
+  }
+}

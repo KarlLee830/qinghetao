@@ -1,0 +1,115 @@
+@import '@common/styles/index.scss';
+.userContent {
+  .section {
+    background: $white;
+    border-radius: rem($border-radius-small);
+    margin-bottom: rem($margin-10);
+  }
+}
+
+.borderRadius {
+  border-radius: $border-radius-small;
+}
+.wrapper {
+  padding: 0;
+}
+
+.userCenterHeader {
+
+}
+
+.userCenterBody {
+  display: flex;
+
+  .userCenterBodyItem {
+
+  }
+
+  .userCenterBodyRightItem {
+    position: sticky;
+    margin-left: rem($margin-10);
+    top: rem(0);
+    padding-top: rem($margin-10);
+    width: 32%;
+  }
+
+  .userCenterBodyLeftItem {
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    margin-top: rem($margin-10);
+  }
+}
+
+.hr {
+  height: rem($padding-10);
+  background-color: $body-bg-color;
+}
+.threadHr {
+  height: rem($padding-10);
+  background-color: $body-bg-color;
+  margin: 0 rem(-24);
+}
+
+.userInfoWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: rem($padding-4n);
+  padding-bottom: rem($padding-4n);
+  justify-content: space-between;
+  border-bottom: 1px solid $body-bg-color;
+  height: rem(20);
+  line-height: rem(20);
+  &:last-child {
+    border-bottom: none;
+  }
+  .userInfoKey {
+    color: $text-color-regular;
+    font-size: rem($font-size-primary);
+    flex-shrink: 0;
+  }
+
+  .userInfoValue {
+    color: $text-color-primary;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    font-size: rem($font-size-primary);
+    margin-left: rem($margin-1n);
+    @include text-ellipsis();
+  }
+
+  .wxContent {
+    display: flex;
+    align-items: center;
+  }
+
+  .wecahtNickname {
+    margin-left: rem(8);
+    @include text-ellipsis();
+  }
+}
+
+.friendsWrapper {
+  overflow: hidden !important;
+  margin: 0 rem(-16);
+}
+
+.threadStyle {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.postTitle {
+  padding: 0 rem($padding-6n);
+  border-top-left-radius: rem($border-radius-small);
+  border-top-right-radius: rem($border-radius-small);
+  background: $white;
+}
+
+.MemberShipCardWrapperPc {
+  margin: 0 0 rem($margin-10);
+  height: rem(169);
+  padding: rem($padding-6n) rem($padding-4n);
+}

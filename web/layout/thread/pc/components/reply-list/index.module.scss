@@ -1,0 +1,239 @@
+@import '@common/styles/index.scss';
+.replyList {
+  display: flex;
+  padding-top: rem($padding-4n);
+  .replyListAvatar {
+    margin-right: rem($margin-10);
+    margin-top: rem($margin-10);
+    width: rem(24);
+  }
+  .replyListContent {
+    width: 100%;
+    .replyListContentText {
+      // padding-right: rem($padding-4n);
+      border-radius: rem($border-radius-small);
+      background-color: $comment-bg-color;
+
+      &.active {
+        background: $primary-color10;
+      }
+
+      .replyHeader {
+        display: flex;
+        justify-content: space-between;
+        .userInfo {
+          display: flex;
+          .replyListName {
+            max-width: rem(200);
+            padding-top: rem($padding-2n);
+            padding-left: rem($padding-3n);
+            padding-right: rem($padding-2n);
+            font-weight: $font-weight-regular;
+            font-size: rem($font-size-primary);
+            line-height: rem(20);
+            text-align: left;
+            color: $text-color-primary;
+            @include text-ellipsis();
+          }
+          .masterBox {
+            padding:rem($padding-2n + 2) rem($padding-2n) 0 0;
+            flex: none;
+            .masterText {
+              border-radius: rem(2);
+              background: $primary-color;
+              display: inline-block;
+              font-size: rem(12);
+              -webkit-text-size-adjust:none;
+              -webkit-transform : scale(0.83,0.83);
+              line-height: rem(14);
+              padding: rem(0) rem(4);
+              text-align: center;
+              width: rem(25);
+              color: $white;
+            }
+          }
+          .groupsBox {
+            display: flex;
+            align-items: center;
+            padding-top: rem(5);
+          }
+          .groups {
+            color: $text-color-secondary;
+            font-size: $font-size-label;
+            max-width: rem(100);
+            white-space: nowrap;
+            overflow: hidden;
+            padding-top: rem(3);
+            line-height: rem(20);
+            text-overflow: ellipsis;
+          }
+        }
+        .isApproved {
+          font-size: $font-size-primary;
+          color: $error-color;
+          padding: $padding-2n $padding-3n 0;
+        }
+      }
+
+      .replyListText {
+        padding-bottom: rem($padding-3n);
+        padding-left: rem($padding-3n);
+        padding-right: rem($padding-3n);
+        font-size: rem($font-size-middle);
+        margin-top: rem(4);
+        text-align: left;
+        color: $text-color-primary;
+        width: 100%;
+        word-break: break-all;
+        line-height: $font-line-height-middle;
+        box-sizing: border-box;
+
+        .content {
+          display: inline;
+          font-weight: normal;
+          font-size: $font-size-middle;
+          line-height: rem(16);
+          text-align: left;
+          color: $text-color-primary;
+          vertical-align: super;
+          position: relative;
+          top: rem(3);
+
+          :global {
+            .qq-emotion {
+              width: rem(22);
+              height: rem(22);
+            }
+
+            .dzq-p {
+              margin-bottom: 0;
+              font-size: $font-size-middle !important;
+            }
+          }
+        }
+
+        .imageDisplay{
+          margin-top: rem(10);
+        }
+        
+        .commentUser {
+          display: inline-flex;
+          word-break: initial;
+          align-items: center;
+          justify-content: flex-start;
+          height: rem(20);
+          position: relative;
+          top: rem(1);
+          .iconAt{
+            color: $primary-color;
+          }
+          .replyedAvatar {
+            display: inline-block;
+            margin-right: rem($margin-1n);
+
+            .avatar {
+              width: rem(24);
+              height: rem(24);
+              font-size: rem($font-size-small);
+              line-height: rem(24);
+              transform: scale(0.75);
+            }
+          }
+
+          .replyedUserName {
+            max-width: rem(200);
+            display: inline-block;
+            font-weight: $font-weight-regular;
+            font-size: rem($font-size-primary);
+            margin-right: rem($margin-2n);
+            line-height: rem(20);
+            text-align: left;
+            color: $primary-color;
+            @include text-ellipsis();
+          }
+          .masterBox {
+            padding:0 rem($padding-2n) 0 0;
+            line-height: rem(20);
+            display: flex;
+            align-items: center;
+            flex: none;
+            .masterText {
+              border-radius: rem(2);
+              background: $primary-color;
+              display: inline-block;
+              font-size: rem(12);
+              -webkit-text-size-adjust:none;
+              -webkit-transform : scale(0.83,0.83);
+              line-height: rem(14);
+              padding: rem(0) rem(4);
+              text-align: center;
+              width: rem(25);
+              color: $white;
+            }
+          }
+        }
+        .positionTop {
+          top: 0;
+        }
+      }
+    }
+    .replyListFooter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: rem($font-size-primary);
+      text-align: left;
+      color: $text-color-secondary;
+      padding-top: rem($padding-2n);
+      .replyTime {
+        font-size: rem($font-size-label);
+      }
+      .commentLiked {
+        color: $primary-color;
+      }
+      .commentLike {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
+      }
+      .replyReply {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
+      }
+      .replyDelete {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .extraBottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    > div {
+      margin-left: rem(24);
+    }
+  }
+}
+.icon {
+  margin-right: rem(8);
+  font-size: rem(14) !important;
+}
+
+.active {
+  color: $primary-color;
+}
+
+.commentInput {
+  margin-top: rem(16);
+}
+
+.commentReply {
+  cursor: pointer;
+}

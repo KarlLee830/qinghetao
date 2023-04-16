@@ -1,0 +1,31 @@
+@import '@common/styles/index.scss';
+
+.content {
+  width: 100%;
+  min-width: rem(652);
+}
+.title {
+  padding: 0 rem($padding-6n);
+  border-radius: rem($border-radius-small);
+  background: $white;
+}
+.right {
+  // width: rem(286);
+  overflow: hidden;
+}
+
+.threadStyle {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.postTitle {
+  padding: 0 rem($padding-6n);
+  border-top-left-radius: rem($border-radius-small);
+  border-top-right-radius: rem($border-radius-small);
+  background: $white;
+}
+
+.rightSide {
+  position: relative !important;
+}

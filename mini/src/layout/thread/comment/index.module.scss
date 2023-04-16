@@ -1,0 +1,99 @@
+@import '@common/styles/index.scss';
+.index {
+  height: 100vh;
+  width: 100vw;
+  background: $white;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  .header {
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 $padding-4n;
+    .show {
+      .showGet {
+        display: flex;
+        justify-content: flex-end;
+        .icon {
+          line-height: 50px;
+        }
+        .showMoneyNum {
+          font-weight: $font-weight-regular;
+          font-size: var($font-size-label);
+          line-height: 50px;
+          text-align: left;
+          color: $text-color-primary;
+          margin-left: $margin-2n;
+          .moneyNumber {
+            color: $error-color;
+          }
+        }
+      }
+    }
+    .more {
+      line-height: 20px;
+      padding-left: $padding-2n;
+      color: $text-color-secondary;
+    }
+  }
+
+  .body {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+// .footer {
+//   position: fixed;
+//   bottom: 0;
+//   width: 100%;
+// }
+.inputFooterContainer {
+  height: 50px;
+  width: 100%;
+  flex:0 0 50px;
+  background: $white;
+}
+
+.inputFooter {
+  position: fixed;
+  bottom: 0;
+  bottom: constant(safe-area-inset-bottom); ///兼容 IOS<11.2/
+  bottom: env(safe-area-inset-bottom); ///兼容 IOS>11.2/
+  left: 0;
+  width: 100%;
+  z-index: $zindex-backtotop;
+  min-height: 50px;
+  padding-left: $padding-4n;
+  padding-right: $padding-4n;
+  box-sizing: border-box;
+  background: $white;
+  border-top: $border-solid-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.zindex {
+  z-index: -1;
+}
+
+.box {
+  height: env(safe-area-inset-bottom)
+}
+
+.originThread{
+  color:$primary-color3;
+  margin:5px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+

@@ -1,0 +1,59 @@
+@import '@common/styles/index.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $white;
+  padding: $padding-4n;
+  padding-bottom: $padding-2n;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: $padding-4n;
+  padding-right: $padding-4n;
+  width: 100%;
+  height: 36px;
+  border-radius: 5px;
+  background-color: $text-bg-color2;
+  box-sizing: border-box;
+  .inputWrapperIcon {
+    color: $text-color-secondary;
+  }
+  .deleteIcon {
+    color: $border-color-hover;
+  }
+  .input {
+    flex: 1;
+    margin-left: 8.6px;
+    background-color: transparent;
+    width: inherit;
+    border: 0;
+    background-color: inherit;
+    font-size: $font-size-primary;
+    line-height: $font-line-height-primary;
+  }
+  .placeholder {
+    color: $text-color-placeholder;
+  }
+}
+.cancel {
+  margin-left: $padding-4n;
+  font-size: $font-size-primary;
+  line-height: $font-line-height-primary;
+  color: $text-color-secondary;
+  word-break: keep-all;
+}
+
+.hiddenBottom {
+  padding-bottom: 0;
+}
+
+.siteLogo {
+  width: 60px;
+  height: 24px;
+  cursor: pointer;
+  object-fit: contain;
+}

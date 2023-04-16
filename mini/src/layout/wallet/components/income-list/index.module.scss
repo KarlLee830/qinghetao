@@ -1,0 +1,59 @@
+@import '@common/styles/index.scss';
+
+.container {
+    padding: $padding-4n $padding-4n 0;
+    background: $white;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    font-weight: normal;
+    padding-bottom: $padding-2n;
+    .text {
+        font-size: $font-size-primary;
+        text-align: left;
+        color: $text-color-primary;
+        line-height: 20px;
+
+        :global {
+            .qq-emotion {
+                width: 20px;
+                height: 20px;
+                display: inline-block !important;
+                flex-shrink: 0;
+                vertical-align: middle;
+              }
+
+              .dzq-richText--mini {
+                height: 20px;
+                font-size: $font-size-primary;
+                overflow: hidden;
+                word-break: break-all;
+                max-width: 200px;
+                line-height: 20px;
+                @include text-ellipsis();
+
+                .dzq-a {
+                  display: inline;
+                }
+              }
+            }
+        }
+    .money {
+        font-size: $font-size-middle;
+        text-align: left;
+        color: $error-color;
+        line-height: 20px;
+    }
+}
+
+.time {
+    font-weight: normal;
+    font-size: $font-size-label;
+    text-align: left;
+    color: $text-color-secondary;
+    padding-bottom: $padding-4n;
+    border-bottom: solid 1px $border-color;
+    line-height: 17px;
+}

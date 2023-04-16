@@ -1,0 +1,60 @@
+@import '@common/styles/index.scss';
+.post-video {
+  position: relative;
+  margin: rem($padding-4n) auto;
+
+  :global {
+    .dzq-video {
+      width: 100%!important;
+      height: rem(176);
+      border-radius: $border-radius-small;
+      .video-js{
+        width: 100%;
+      }
+    }
+
+    div[data-vjs-player=true] {
+      width: 100% !important;
+      height: 100% !important;
+      border-radius: $border-radius-small;
+    }
+  }
+  &__delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top-left-radius: $border-radius-small;
+    border-top-right-radius: $border-radius-small;
+    background-color: $mask-bg-color;
+    z-index: 1;
+
+    :global {
+      .dzq-icon {
+        margin-right: $margin-10;
+        color: $white;
+      }
+    }
+  }
+}
+.post-video.pc {
+  width: 700px;
+  height: 460px;
+  margin-top: 0;
+  margin-left: 0;
+  border-radius: $border-radius-small;
+  :global {
+    .dzq-video {
+      width: 700px;
+      height: 460px;
+    }
+  }
+}
+.post-video.h5 {
+  margin: rem($padding-4n);
+  margin-top: 0;
+}

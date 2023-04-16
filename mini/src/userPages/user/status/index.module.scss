@@ -1,0 +1,24 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.container {
+  @include mini_container;
+}
+.content {
+  @include mini_content;
+  .button {
+    @include mini_button;
+  }
+  .functionalRegion {
+    @include mini_functionalRegion;
+    margin-top: $margin-4n * 2;
+  }
+  .icon{
+    width: 327px;
+    text-align: center;
+    .icon__img {
+      width: 150px;
+      height: 150px;
+      display: inline-block;
+    }
+  }
+}

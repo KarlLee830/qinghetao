@@ -1,0 +1,203 @@
+@import '@common/styles/index.scss';
+
+.numkeyboard {
+  position: relative;
+  z-index: $zindex-dialog + 1;
+}
+
+.dialogPaymentWrapper {
+  width: 100%;
+  min-height: 500px;
+}
+
+.paypwdDialogWrapper {
+  :global {
+    .dzq-modal__container {
+      width: 283px !important;
+      top: 36%;
+      box-sizing: border-box;
+      border-radius: $border-radius-small;
+      padding: $padding-4n $padding-4n 0 $padding-4n;
+    }
+
+    .dzq-checkbox-wrap {
+      padding: 0;
+    }
+  }
+
+  :global {
+    .dzq-modal__body {
+      padding: 0;
+    }
+  }
+
+  line-height: 21px;
+
+  .moneyUnit {
+    font-size: $font-size-large;
+  }
+}
+
+.keyboard {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: $zindex-toast;
+  padding-bottom: calc(8px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+  padding-bottom: calc(8px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+  background-color: #ededed;
+  // @include ios-safe-area-inset-bottom;
+  .line {
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    .column {
+      box-sizing: border-box;
+      flex: 1;
+      font-size: $font-size-large;
+      color: $text-color-primary;
+      height: 50px;
+      text-align: center;
+      border: 1px solid $border-color;
+      border-bottom: none;
+      border-right: none;
+      line-height: 50px;
+    }
+    .special {
+      box-sizing: border-box;
+      flex: 1;
+      font-size: $font-size-middle;
+      color: $text-color-primary;
+      height: 50px;
+      text-align: center;
+      border: 1px solid $border-color;
+      border-bottom: none;
+      border-right: none;
+      line-height: 50px;
+      background-color: #ededed;
+    }
+  }
+}
+
+.title {
+  color: $text-color-primary;
+  font-size: 20px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.payList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  .payListItem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+    border: $border-solid-1;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: rem(10);
+    &:not(:last-child) {
+      border-right: 0px;
+    }
+
+    // &.curr{
+    //   border-color: $text-color-placeholder;
+    // }
+    // &.activation{
+    //   border-color: $text-color-placeholder;
+    // }
+  }
+  .payListItem01 {
+    border: $border-solid-1;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: rem(10);
+    color: $text-color-primary;
+    &:not(:last-child) {
+      border-right: 0px;
+    }
+
+    // &.curr{
+    //   border-color: $text-color-placeholder;
+    // }
+    // &.activation{
+    //   border-color: $text-color-placeholder;
+    // }
+  }
+}
+
+.paypwdDialogContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .paypwdTitle {
+    font-size: $font-size-middle;
+    color: $text-color-primary;
+    margin-top: $margin-2n;
+    width: 100%;
+    text-align: center;
+  }
+  .paypwdAmount {
+    font-size: $font-line-height-large;
+    font-weight: 600;
+    margin: $margin-4n 0;
+  }
+  .paypwdMesg {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $font-size-primary;
+    margin-bottom: $margin-4n;
+    font-size: $font-size-base;
+    .payText {
+      font-size: $font-size-primary;
+      color: $text-color-regular;
+    }
+  }
+  .walletIcon {
+    color: $primary-color2;
+    margin-right: $margin-2n;
+  }
+  .paypwdDivider {
+    margin: 0 0 $margin-4n;
+  }
+  .payBoxCloseIcon {
+    position: absolute;
+    right: 3px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text-color-secondary;
+    cursor: pointer;
+  }
+}
+
+.forgetPasswordContainer {
+  width: 100%;
+  margin: $margin-4n $margin-4n $margin-6n 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: $text-color-regular;
+  font-size: rem($font-size-small);
+}

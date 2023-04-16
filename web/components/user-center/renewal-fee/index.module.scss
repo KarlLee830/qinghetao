@@ -1,0 +1,121 @@
+@import '@common/styles/index.scss';
+
+.renewalDialog {
+  z-index: 1400;
+  :global {
+    .dzq-modal__container {
+      width: rem(409);
+      height: rem(496);
+      border-radius: rem(5);
+      padding: 0;
+    }
+
+    .dzq-modal__body {
+      padding: 0;
+    }
+  }
+}
+
+.renewalFeeWrapper {
+
+  .renewalFeeClose {
+    position: absolute;
+    right: rem(24);
+    top: rem(30);
+  }
+
+  .siteBg {
+    // background-color: palevioletred;
+    height: rem(120);
+    width: 100%;
+    border-radius: rem(5) rem(5) 0 0;
+    overflow: hidden;
+
+    .siteBgImage {
+      height: rem(120);
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    &.defaultSiteBg{
+      background-color: rgb(36, 105, 246);
+
+      .siteBgImage {
+        object-fit: scale-down;
+      }
+    }
+  }
+
+  .menuInfo {
+    height: rem(280);
+    overflow-y: auto;
+    padding: rem($padding-6n);
+    padding-top: rem($padding-1n);
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+      display: block;
+      margin-right: rem(-8);
+      width: rem(4);
+      border-radius: $border-radius-small;
+    }
+
+    // 滚动条轨道
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    // 滚动条上的滚动滑块
+    &::-webkit-scrollbar-thumb {
+      background: $border-shadow-color;
+      border-radius: rem(4);
+    }
+
+    .menuItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: rem($padding-4n) 0;
+      border-bottom: $border-solid-1;
+      font-size: rem($font-size-primary);
+
+      &:nth-last-child(1) {
+        border-bottom: none;
+      }
+    }
+
+    .menuTitle {
+      color: $text-color-primary;
+      flex-shrink: 0;
+      margin-right: rem($margin-2n);
+    }
+
+    .menuValue {
+      color: $text-color-regular;
+      @include text-ellipsis();
+    }
+  }
+
+  .feeBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn {
+      width: rem(360);
+      padding: 0;
+      height: rem(36);
+      line-height: rem(36);
+      margin-bottom: rem($margin-4n);
+    }
+
+    .effectTimer {
+      font-size: rem($font-size-primary);
+      color: $text-color-primary;
+      height: rem(20);
+      line-height: rem(20);
+    }
+  }
+}

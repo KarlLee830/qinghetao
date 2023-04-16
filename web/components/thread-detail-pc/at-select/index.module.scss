@@ -1,0 +1,219 @@
+@import "@common/styles/index.scss";
+@mixin single-line() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@mixin flex() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup {
+  :global {
+    .dzq-popup__overlay {
+      background-color: $white;
+    }
+    .dzq-popup__container {
+      height: 100%;
+    }
+  }
+}
+
+.wrapper {
+  // position: relative;
+  width: 100%;
+  height: 100vh;
+  height: -webkit-fill-available;
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+
+  .input {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background: $text-bg-color2;
+    margin: $margin-4n $margin-4n $margin-2n;
+    padding-left: $padding-4n;
+    padding-right: $padding-4n;
+    border-radius: $border-radius-small;
+
+    .inputWrapperIcon {
+      color: $text-color-secondary;
+    }
+    .deleteIcon {
+      color: $disabled-color;
+    }
+  }
+
+  :global {
+    .dzq-input {
+      width: 100%;
+      .dzq-input__inner {
+        box-sizing: border-box;
+        height: rem(36);
+        width: 100%;
+        background: $text-bg-color2;
+        border: none;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .at-wrap {
+    height: calc(100vh - 120px);
+    // .scroll-view {
+    //   height: 100% !important;
+    // }
+  }
+
+  .at-item {
+    @include flex();
+    padding: $padding-4n 0;
+    border-bottom: $border-solid-1;
+    margin: 0 $margin-4n;
+
+    .avatar {
+      width: rem(38);
+      height: rem(38);
+
+      :global {
+        .dzq-avatar {
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          line-height: rem(38);
+          border-radius: $border-radius-circle;
+
+          .dzq-avatar__img {
+            width: 100%;
+            height: 100%;
+            border-radius: $border-radius-circle;
+          }
+        }
+      }
+    }
+
+    .info {
+      flex: 1;
+      @include flex();
+      margin: 0 $margin-2n;
+      font-size: $font-size-base;
+      .username {
+        max-width: rem(170);
+        @include single-line();
+        line-height: $font-line-height-small;
+        font-size: $font-size-base;
+        text-align: left;
+        color: $text-color-primary;
+      }
+      .group {
+        max-width: rem(80);
+        @include single-line();
+        font-size: $font-size-small;
+        text-align: left;
+        color: $text-color-secondary;
+      }
+    }
+
+    :global {
+      .dzq-checkbox-wrap {
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+        .dzq-checkbox {
+          width: rem(24);
+          height: rem(24);
+          // border: $border-solid-1;
+          border-radius: $border-radius-small !important;
+          background-color: $text-bg-color2;
+          &:after {
+            border: none;
+          }
+        }
+        &.is-checked {
+          .dzq-checkbox {
+            border: none;
+            background-color: $primary-color;
+          }
+          .dzq-icon {
+            font-size: $font-size-label;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    @include flex();
+    flex-wrap: nowrap;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    bottom: constant(safe-area-inset-bottom);
+    bottom: env(safe-area-inset-bottom);
+    padding: rem($padding-2n) rem($padding-4n);
+    background: $white;
+    justify-content: center;
+    border-top: $border-solid-1;
+    width: 100%;
+    box-sizing: border-box;
+    :global {
+      .dzq-button {
+        @include button-default;
+        flex:1;
+        height: rem(42);
+        -webkit-tap-highlight-color: transparent;
+        &:first-child {
+          margin-right: rem($margin-10);
+        }
+        &.is-selected {
+          @include button-primary;
+        }
+      }
+    }
+  }
+}
+.pc {
+  .wrapper {
+    height: 500px;
+    .btn {
+      border-radius: $border-radius-small;
+      border-top: none;
+      padding-bottom: $padding-4n;
+      :global {
+        .dzq-button {
+          width: rem(116);
+        }
+      }
+    }
+    .at-wrap{
+      .list__inner{
+        @include scrollbar();
+      }
+    }
+    .at-item {
+      margin-left: 0;
+      margin-right: $margin-5n;
+    }
+
+    .input {
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .at-wrap {
+    height: calc(50vh - 120px);
+  }
+
+  :global {
+    .dzq-modal__body {
+      height: 50vh;
+      min-height: 50vh;
+    }
+  }
+}

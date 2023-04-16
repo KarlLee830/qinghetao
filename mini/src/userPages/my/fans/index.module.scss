@@ -1,0 +1,10 @@
+@import '@common/styles/index.scss';
+
+.splitEmelent {
+ padding: 0 $padding-4n;
+ :global {
+   .dzq-divider {
+     margin: 0;
+   }
+ }
+}

@@ -1,0 +1,17 @@
+@import '@common/styles/index.scss';
+.container {
+  background: $body-bg-color;
+}
+
+.body {
+  background: $white;
+
+  .commentItems {
+    border-bottom: $border-solid-1;
+    margin: 0 -16px;
+
+    &.isLastOne {
+      border-bottom: none;
+    }
+  }
+}

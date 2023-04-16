@@ -1,0 +1,41 @@
+@import '@common/styles/index.scss';
+
+.setTop {
+  width: 100%;
+  height: rem(52);
+  background: $success-color9;
+  position: absolute;
+  top: rem(60);
+  text-align: center;
+  line-height: rem(52);
+  color: $success-color;
+  display: none;
+  z-index: $zindex-popup;
+  font-size: rem($font-size-base);
+
+  .setTopIcon {
+    display: inline-block;
+    width: rem(20);
+    height: rem(20);
+    border-radius: $border-radius-circle;
+    line-height: rem(20);
+    color: $white;
+    background: $success-color;
+    margin-right: rem($margin-2n);
+
+    .icon {
+      font-size: rem($font-size-small) !important;
+    }
+  }
+}
+.inTop {
+  display: block;
+  transition: all 2s;
+  // TODO: 更换token
+  opacity: 1;
+}
+.outTop {
+  transition: all 2s;
+  // TODO:
+  opacity: 0;
+}

@@ -1,0 +1,49 @@
+@import '@common/styles/index.scss';
+.content {
+  padding: 0 $padding-6n;
+  height: calc(100vh - 48px);
+  padding-bottom: $padding-6n * 2;
+  background: $white;
+  z-index: $zindex-popup;
+  overflow-y: auto;
+}
+.title {
+  padding: $padding-2n 0 $padding-4n 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: $font-size-middle;
+  line-height: $font-line-height-large;
+  color: $text-color-primary;
+}
+.item_title {
+  font-weight: 700;
+}
+.item_content {
+  font-weight: normal;
+  font-size: $font-size-middle;
+  line-height: $font-line-height-middle;
+  color: $text-color-primary;
+  margin-bottom: $margin-6n;
+  pre {
+    white-space: pre-wrap;
+  }
+}
+.bottom {
+  width: 100%;
+  padding: 0 $padding-6n;
+  box-sizing: border-box;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: $white;
+  .bottom_content {
+    padding: $padding-3n 0;
+    font-weight: normal;
+    font-size: $font-size-base;
+    line-height: $font-line-height-small;
+    color: $text-color-regular;
+    border-top: $border-solid-1;
+    cursor: pointer;
+  }
+}

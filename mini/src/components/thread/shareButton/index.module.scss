@@ -1,0 +1,50 @@
+@import '@common/styles/index.scss';
+
+.fabulous {
+    @include cursor-on-pc;
+    display: flex;
+    align-items: center;
+    padding: $padding-10 0;
+    margin:0px;
+        padding:0px;
+        border: 0px !important;
+    .fabulousIcon {
+        :global(View) {
+          font-size: $font-size-primary !important;
+        }
+      }
+      .fabulousPost {
+        margin-left: 8px;
+        font-size: $font-size-primary;
+        color: $text-color-secondary;
+      }
+      .fabulousCancel {
+        margin-left: 8px;
+        font-size: $font-size-primary;
+        color: $primary-color;
+      }
+      :global{
+        .like, .share{
+          position: relative;
+          top: -1px;
+        }
+      }
+      .icon {
+        color: $text-color-secondary;
+
+        &.likedColor {
+          color: $primary-color;
+        }
+        &.dislikedColor {
+          color: $text-color-secondary;
+        }
+      }
+}
+
+.fabulous2{
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  color: $text-color-secondary;
+  border: 0px !important;
+}

@@ -1,0 +1,366 @@
+@import '@common/styles/index.scss';
+
+.container {
+  width: 100%;
+  background: $white;
+  padding: rem($padding-4n) rem($padding-6n) rem($padding-4n) rem($padding-6n);
+  border-radius: $border-radius-small;
+  box-sizing: border-box;
+}
+
+.header {
+  background: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.headerTag {
+  margin-left: rem($margin-6n);
+}
+
+.userInfo {
+  flex: 1;
+}
+
+.more {
+  margin-left: rem($margin-6n);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: rem(21);
+}
+
+.moreDivider {
+  margin: 0;
+  height: rem(16);
+}
+
+.iconText {
+  margin-left: rem($margin-6n);
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+
+  :global {
+    .dzq-dropdown-menu.dzq-dropdown-menu--center {
+      top: rem(30);
+    }
+  }
+
+  .text {
+    margin-left: rem($margin-2n);
+    color: $text-color-secondary;
+  }
+
+  .icon {
+    font-size: rem(14);
+    color: $text-color-secondary;
+  }
+
+  &.disabled {
+    .text {
+      color: $disabled-color;
+    }
+
+    .icon {
+      color: $disabled-color;
+    }
+  }
+}
+.essence {
+  margin-right: rem($margin-2n);
+}
+.divider {
+  margin-top: rem($margin-4n);
+}
+.title {
+  color: $text-color-primary;
+  line-height: 21px;
+  font-weight: $font-weight-regular;
+  font-size: rem($font-size-middle);
+  word-break: break-all;
+  margin-bottom: rem($margin-4n) !important;
+  @include widthAndHeightMedia($media-min-width, $media-min-height) {
+    font-size: $font-size-primary;
+  }
+}
+
+.body {
+  margin-top: rem($margin-4n);
+
+  > * {
+    margin-bottom: rem($margin-6n);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.image {
+  width: 100%;
+}
+
+.reward {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rewardButton {
+  display: block;
+  margin: 0 auto;
+  width: rem(156);
+}
+
+.buttonIconText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// .buttonIcon {
+//   font-size: rem(18);
+// }
+
+.buttonText {
+  margin-left: rem($margin-2n);
+  font-size: rem($font-size-primary);
+}
+
+.payButton {
+  width: rem(234);
+}
+
+.pay {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payIcon {
+  margin-right: rem($margin-2n);
+}
+
+.footer {
+  margin-top: rem($margin-6n);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $text-color-secondary;
+  font-size: rem($font-size-primary);
+}
+
+.share {
+  font-size: rem($font-size-label);
+  color: $text-color-secondary;
+  height: rem(17);
+  line-height: rem(17);
+}
+
+.goods {
+  display: flex;
+  height: rem(114);
+}
+
+.buyBtn {
+  width: rem(113);
+  height: calc(100% - 2px);
+  box-sizing: content-box;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.buyContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .buyText {
+    margin-top: rem($margin-2n);
+  }
+}
+
+.tag {
+  display: inline-block;
+  // TODO:token  $text-color-regular不生效
+  // color: $text-color-regular;
+  color: $text-color-regular;
+  background: #f0f1f3; // TODO:token
+  font-size: rem($font-size-label);
+  padding: rem($padding-1n) rem($padding-1n);
+  border-radius: rem($border-radius-small);
+  line-height: rem(17);
+  cursor: pointer;
+}
+
+.thumbs {
+  display: flex;
+  align-items: center;
+  font-size: rem($font-size-primary);
+}
+
+.likeReward {
+  @include cursor-on-pc;
+  margin-right: rem($margin-2n);
+}
+
+.examine {
+  padding: rem($padding-2n) 0;
+  background: $error-color;
+  color: $white;
+  text-align: center;
+  font-size: rem(14);
+}
+
+.bottomOperate {
+  padding: 0 rem(54);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: rem($font-size-primary);
+    cursor: pointer;
+    color: $text-color-secondary;
+
+    span {
+      margin-left: rem($margin-2n);
+    }
+
+    &.active {
+      color: $primary-color !important;
+    }
+  }
+}
+
+.divider {
+  margin: rem($margin-4n) 0;
+}
+
+.rewardBody {
+  text-align: center;
+  margin-bottom: rem($margin-6n);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rewardMoney {
+  margin-top: rem(20);
+  line-height: rem(20);
+  font-size: rem($font-size-primary);
+  color: $text-color-primary;
+}
+.rewardNumber {
+  color: $error-color;
+}
+
+.rewardTime {
+  margin-top: rem(4);
+  font-size: rem($font-size-label);
+  color: $text-color-secondary;
+}
+
+.redPacketLikeNum {
+  text-align: center;
+  margin-top: $margin-5n;
+  font-size: rem($font-size-label);
+  color: $text-color-secondary;
+}
+
+.browseCategory {
+  display: flex;
+  p {
+    width: rem(40);
+    height: rem(21);
+    border-radius: rem($border-radius-small);
+    font-size: rem($font-size-label);
+    line-height: rem(21);
+    text-align: center;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      top: 0;
+      left: 0;
+    }
+  }
+  .categoryText {
+    color: $success-color;
+    border: rem(1) solid $success-color;
+    &::after {
+      background-color: $success-color;
+    }
+  }
+  .categoryEssence {
+    color: $tag-text-color1;
+    border: rem(1) solid $tag-text-color1;
+    &::after {
+      background-color: $tag-text-color1;
+    }
+  }
+  .categoryRed {
+    color: $error-color;
+    border: rem(1) solid $error-color;
+    &::after {
+      background-color: $error-color;
+    }
+  }
+  .categoryReward {
+    color: $warn-color;
+    border: rem(1) solid $warn-color;
+    &::after {
+      background-color: $warn-color;
+    }
+  }
+}
+
+
+.moneyList{
+  text-align: center;
+  width: 343px;
+  margin: 30px auto 0;
+  .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color:$text-color-primary;
+    &::after{
+      width: 80px;
+      height: 1px;
+      background-color: #EEEEEE;
+      content: '';
+      margin-left: 15px;
+    }
+    &::before{
+      content: '';
+      width: 80px;
+      height: 1px;
+      background-color: #EEEEEE;
+      margin-right: 15px;
+    }
+  }
+
+  .itemList{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .itemAvatar{
+      margin: 5px 3px 0;
+      cursor: pointer;
+    }
+  }
+}

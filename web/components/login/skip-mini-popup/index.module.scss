@@ -1,0 +1,57 @@
+@import '@common/styles/index.scss';
+
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto;
+  background: $white;
+  border-radius: rem($border-radius-big);
+  overflow: hidden;
+  padding: rem(24);
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .headerLeft {
+    flex: 1;
+    font-size: rem($font-size-middle);
+    color: $text-color-primary;
+    font-weight: $font-weight-regular;
+    text-align: center;
+  }
+  .headerIcon {
+    text-align: center;
+    font-size: rem($font-size-middle);
+    cursor: pointer;
+    color: $text-color-secondary;
+  }
+}
+
+.body {
+  width: 100%;
+}
+
+.button {
+  margin-top: rem($margin-6n);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ok {
+    flex: 1;
+  }
+  .cancel {
+    flex: 1;
+    background: $button-info-bg-color;
+    border: none;
+    margin-right: rem($margin-4n);
+    color: $text-color-regular;
+  }
+}

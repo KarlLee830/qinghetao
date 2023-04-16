@@ -1,0 +1,59 @@
+@import '@common/styles/index.scss';
+.rightside {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.stepper-container {
+  width: 100%;
+  margin-bottom: $margin-10;
+}
+
+/**
+* PC 消息页右侧关注列表自适应
+*
+*/
+:global {
+  .mymessage-page {
+    @include heightMedia(1005px, 895px) {
+      .user-center-follow-list {
+        max-height: 320px !important;
+      }
+    }
+
+    @include heightMedia(895px, 840px) {
+      .user-center-follow-list {
+        max-height: 270px !important;
+      }
+    }
+
+    @include heightMedia(840px, 785px) {
+      .user-center-follow-list {
+        max-height: 225px !important;
+      }
+    }
+
+    @include heightMedia(785px, 730px) {
+      .user-center-follow-list {
+        max-height: 210px !important;
+      }
+    }
+
+    @include heightMedia(730px, 675px) {
+      .user-center-follow-list {
+        max-height: 155px !important;
+      }
+    }
+
+    @include heightMedia(675px) {
+      .user-center-follow-mini {
+        display: flex !important;
+      }
+
+      .user-center-follow-item {
+        display: none;
+      }
+    }
+  }
+}

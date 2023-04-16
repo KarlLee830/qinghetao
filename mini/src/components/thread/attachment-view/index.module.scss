@@ -1,0 +1,120 @@
+@import '@common/styles/index.scss';
+.wrapper {
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $padding-4n;
+  height: 50px;
+  border-radius: $border-radius-small;
+  background: $body-bg-color;
+  margin-bottom: 8px;
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      width: 70%;
+    }
+
+    .right {
+      width: 68px;
+      font-size: $font-size-label;
+      color: $text-color-regular;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  .span {
+    cursor: pointer;
+  }
+
+  .containerText {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 2px;
+    flex: 1;
+  }
+  .size {
+    color: $text-color-regular;
+    font-size: $font-size-label;
+    line-height: 17px;
+  }
+  .containerIcon {
+    width: 17px;
+    height: 20px;
+  }
+  .content {
+    color: $text-color-primary;
+    font-size: $font-size-primary;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 17px;
+  }
+  .a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+.containerPay {
+  justify-content: center;
+  cursor: pointer;
+
+  .content {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 8px;
+    margin-right: 8px;
+    max-width: 70%;
+  }
+}
+
+.audioContainer {
+  margin-bottom: $margin-2n;
+}
+
+.label {
+  margin-left: 16px;
+}
+
+.spinner {
+  width: 22px;
+}
+
+.loadMore {
+  @include cursor-on-pc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  font-size: rem($font-size-primary);
+  line-height: rem($font-line-height-primary);
+  color: $primary-color;
+  padding-top: $padding-2n;
+  .icon {
+    margin-left: $margin-2n;
+    transform: rotateZ(90deg);
+  }
+}

@@ -1,0 +1,62 @@
+@import '@common/styles/index.scss';
+.datepicker-modal {
+  position: fixed !important;
+  z-index: $zindex-toast !important;
+}
+
+.datepicker.default {
+  background-color: $white !important;
+  border-top-left-radius: $border-radius-big;
+  border-top-right-radius: $border-radius-big;
+  font-size: $font-size-middle;
+  .datepicker-header {
+    display: none;
+  }
+  .datepicker-scroll {
+    li:nth-child(4),
+    li:nth-child(8) {
+      // margin-left: rem($margin-4n);
+      font-size: $font-size-small;
+      opacity: .2;
+    }
+    li:nth-child(5),
+    li:nth-child(7) {
+      // margin-left: rem($margin-2n);
+      font-size: $font-size-base;
+      opacity: .4;
+    }
+    li:nth-child(6) {
+      margin: 0;
+      font-size: $font-size-middle;
+    }
+  }
+
+  .datepicker-wheel {
+    border-top: 1px solid #eee !important;
+    border-bottom: 1px solid #eee !important;
+  }
+
+  .datepicker-navbar {
+    padding: rem($padding-2n) 0;
+    border-top: $border-solid-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    .datepicker-navbar-btn {
+      @include button-default;
+      display: flex;
+      width: rem(166);
+      height: 42px;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+
+      &:first-child {
+        margin-left: rem($margin-10);
+        @include button-primary;
+      }
+    }
+  }
+}

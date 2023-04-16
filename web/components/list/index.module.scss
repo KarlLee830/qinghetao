@@ -1,0 +1,150 @@
+@import '@common/styles/index.scss';
+
+.container {
+  overflow: hidden;
+
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-y: overlay;
+  }
+
+  &.h5 {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .wrapperH5Center {
+    display: flex;
+    flex-direction: column;
+    .bottomView {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white;
+      width: 100%;
+    }
+  }
+
+  .hideScrollBar {
+    scrollbar-width: none; // 火狐浏览器无滑动条
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &:hover {
+      // 整个滚动条
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    // 滚动条轨道
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
+
+    // 滚动条上的滚动滑块
+    &::-webkit-scrollbar-thumb {
+      display: none;
+    }
+  }
+}
+
+.refreshView {
+  min-height: rem(40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem($font-size-primary);
+  color: $text-color-placeholder;
+  padding: rem(11) 0 $padding-5;
+  line-height: rem($font-line-height-small);
+  width: 100%;
+  .loading {
+    width: 100%;
+    text-align: center;
+  }
+  .spin {
+    margin-right: rem(4);
+    color: $text-color-placeholder;
+  }
+  .noMoreLeft{
+    background-color: #e5e5e5;
+    width: rem(79);
+    height: rem(1);
+    float: left;
+    margin-right: rem($margin-4n);
+  }
+  .noMoreRight{
+    background-color: #e5e5e5;
+    width: rem(79);
+    height: rem(1);
+    float: right;
+    margin-left: rem($margin-4n);
+  }
+  &.custom{
+    padding-top: 0;
+    display: block;
+  }
+  .lineSty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.bottomViewBox {
+  height: rem(380);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backtotop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: $zindex-backtotop;
+  width: 40px;
+  height: 40px;
+  border: $border-solid-1;
+  border-radius: $border-radius-small;
+  box-shadow: $shadow-color2;
+  background-color: $white;
+  cursor: pointer;
+  &.pc:hover {
+    background-color: $primary-color6;
+    path {
+      fill: $white;
+    }
+  }
+  &.h5 {
+    right: 8px;
+    bottom: calc(constant(safe-area-inset-bottom) + 20px);
+    bottom: calc(env(safe-area-inset-bottom) + 20px);
+  }
+  &.tabbar.h5 {
+    right: 8px;
+    bottom: calc(constant(safe-area-inset-bottom) + 80px);
+    bottom: calc(env(safe-area-inset-bottom) + 80px);
+  }
+}
+
+.bottomViewContainer {
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

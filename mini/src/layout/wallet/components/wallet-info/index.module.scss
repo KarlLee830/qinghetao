@@ -1,0 +1,75 @@
+@import '@common/styles/index.scss';
+
+.container {
+  padding: {
+    top: 90px;
+    bottom: 27px;
+    left: 16px;
+    right: 16px;
+  }
+  // background: $primary-color url('https://cloudcache.tencentcs.com/operation/dianshi/other/walletbackground.d038c3fcc736f8c7bb086e90c5abe4df9b946fc0.png') 100% no-repeat padding-box;
+  background-color: $primary-color;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+  background-size: cover;
+}
+
+.totalAmount {
+  color: $white;
+  text-align: left;
+
+  .moneyTitle {
+    height: 20px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: $margin-1n;
+  }
+
+  .moneyNum {
+    height: 42px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: $margin-4n;
+  }
+}
+
+.amountStatus {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  text-align: left;
+
+  .statusTitle {
+    height: 20px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 3px;
+  }
+
+  .statusNum {
+    height: 28px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .withdrawalAmount {
+    margin-right: 40px;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 26px 0;
+
+  .button {
+    width: 282px;
+    height: 36px;
+    border-radius: 5px;
+  }
+}

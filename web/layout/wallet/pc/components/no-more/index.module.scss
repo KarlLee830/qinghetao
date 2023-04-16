@@ -1,0 +1,16 @@
+@import '@common/styles/index.scss';
+
+.container {
+  padding: rem($padding-4n) 0;
+  text-align: center;
+  color: $text-color-placeholder;
+  font-weight: normal;
+  font-size: rem($font-size-primary);
+}
+
+.empty {
+  height: rem(116);
+  line-height: rem(116);
+  font-size: rem($font-size-primary);
+  color: $text-color-placeholder;
+}

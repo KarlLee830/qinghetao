@@ -1,0 +1,105 @@
+@import '@common/styles/index.scss';
+.parse-goods-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: -webkit-fill-available;
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+  
+  color: $text-color-primary;
+  background-color: $white;
+  z-index: $zindex-popup;
+  .wrapper {
+    padding: 0 rem($margin-4n);
+  }
+  .parse-goods-title {
+    margin-top: rem($margin-4n);
+    font-size: $font-size-base;
+    line-height: $font-line-height-small;
+  }
+  .parse-goods-image {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: rem($margin-6n) 0 rem($margin-4n);
+    font-size: 0;
+    .image-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .image-text {
+      margin-top: rem($margin-1n);
+      font-size: $font-size-label;
+      line-height: $font-line-height-base;
+    }
+  }
+  :global{
+    .dzq-textarea {
+      width: 100%;
+      border: $border-solid-1;
+      background-color: $body-bg-color;
+      font-size: 0;
+      .dzq-textarea__inner {
+        width: 100%;
+        font-size: $font-size-base;
+        background-color: $body-bg-color;
+        resize: none;
+      }
+    }
+  }
+  .parse-goods-btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top: $border-solid-1;
+    padding: rem($padding-2n) rem($padding-4n);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    :global {
+      .dzq-button {
+        -webkit-tap-highlight-color: transparent;
+        @include button-default;
+        flex: 1;
+        height: rem(42);
+
+        &:first-child {
+          margin-right: rem($margin-10);
+        }
+
+        &:last-child {
+          @include button-primary;
+        }
+      }
+    }
+  }
+}
+.pc {
+  :global {
+    .dzq-modal__body {
+      padding: 0;
+    }
+  }
+  .wrapper {
+    padding: 0;
+  }
+  .parse-goods-box {
+    position: static;
+    padding: 0;
+    height: 252px;
+    min-height: 252px;
+    border-radius: $border-radius-small;
+    :global {
+      .dzq-textarea {
+        height: 140px;
+      }
+    }
+  }
+}

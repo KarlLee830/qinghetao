@@ -1,0 +1,134 @@
+@import '@common/styles/index.scss';
+@import '@common/styles/mixin/index.scss';
+.numkeyboard {
+  position: relative;
+  z-index: $zindex-dialog + 1;
+}
+.keyboard {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: $zindex-toast;
+  background-color: #ededed;
+  padding-bottom: calc(8px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+  padding-bottom: calc(8px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+  .line {
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    .column {
+      box-sizing: border-box;
+      flex: 1;
+      font-size: rem($font-size-large);
+      color: $text-color-primary;
+      height: rem(50);
+      text-align: center;
+      border: 1px solid $border-color;
+      border-bottom: none;
+      border-right: none;
+      line-height: rem(50);
+    }
+    .special {
+      box-sizing: border-box;
+      flex: 1;
+      font-size: rem($font-size-middle);
+      color: $text-color-primary;
+      height: rem(50);
+      text-align: center;
+      border: 1px solid $border-color;
+      border-bottom: none;
+      border-right: none;
+      line-height: rem(50);
+      background-color: #ededed;
+    }
+  }
+}
+.paypwdDialogWrapper {
+  :global {
+    .dzq-modal__container {
+      width: rem(283) !important;
+      top: 36%;
+      box-sizing: border-box;
+      border-radius: $border-radius-small;
+      padding: rem($padding-4n) rem($padding-4n) 0 rem($padding-4n);
+    }
+
+    .dzq-checkbox-wrap {
+      padding: 0;
+    }
+  }
+
+  :global {
+    .dzq-modal__body {
+      padding: 0;
+    }
+  }
+
+  line-height: 21px;
+
+  .moneyUnit {
+    font-size: $font-size-large;
+  }
+}
+.paypwdDialogContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .paypwdTitle {
+    font-size: rem($font-size-middle);
+    color: $text-color-primary;
+    margin-top: rem($margin-2n);
+  }
+  .paypwdAmount {
+    font-size: rem($font-line-height-large);
+    font-weight: 600;
+    margin: rem($margin-4n) 0;
+  }
+  .paypwdMesg {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: rem($font-size-primary);
+    margin-bottom: rem($margin-4n);
+    font-size: rem($font-size-base);
+    .payLabel {
+      color: $text-color-regular;
+    }
+  }
+  .walletIcon {
+    color: $primary-color2;
+    margin-right: rem($margin-2n);
+  }
+  .paypwdDivider {
+    margin: 0 0 rem($margin-4n);
+  }
+  .payBoxCloseIcon {
+    position: absolute;
+    right: rem(24);
+    top: rem(20);
+    // width: rem(40);
+    // height: rem(40);
+    // background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text-color-secondary;
+    cursor: pointer;
+  }
+}
+
+.forgetPasswordContainer {
+  width: 100%;
+  margin: rem($margin-4n) 0 rem($margin-6n) 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  span {
+    color: $text-color-regular;
+    font-size: rem($font-size-small);
+  }
+}

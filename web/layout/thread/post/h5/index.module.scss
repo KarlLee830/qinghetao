@@ -1,0 +1,140 @@
+@import '@common/styles/index.scss';
+.dzq-post-body {
+  height: 100vh;
+  width: 100vw;
+}
+.post-inner {
+  width: 100%;
+  height: calc(100vh - 134px - 44px);
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background-color: $white;
+}
+.post-bottombar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: $zindex-popup;
+
+  .post-localdata {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background-color: transparent;
+    text-align: right;
+
+    :global {
+      .dzq-tag {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+    }
+  }
+}
+@supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
+  .post-bottombar {
+    max-height: calc(100vh - 134px - constant(safe-area-inset-bottom));
+    max-height: calc(100vh - 134px - env(safe-area-inset-bottom));
+  }
+}
+
+.audio-record {
+  margin: 0 rem($padding-4n) rem($padding-4n);
+}
+.audio-record-display {
+  position: relative;
+  :global {
+    .dzq-audio {
+      .dzq-audio-bg-view__right {
+        padding-right: $padding-5n + $padding-4n;
+        &-text {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .delete {
+    position: absolute;
+    right: rem($padding-4n);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: $font-size-middle;
+    color: $icon-color-light;
+  }
+}
+
+.position-box {
+  display: flex;
+  // flex-direction: row-reverse;
+  height: 35px;
+  padding: 0 rem(16);
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: $white;
+  :global { /* stylelint-disable-line */
+    .dzq-tag {
+      display: flex;
+      font-size: $font-size-small;
+      border-radius: 5px;
+      background-color: $primary-color10;
+      border-color: $primary-color10;
+      align-items: center;
+    }
+    .dzq-tag-text {
+      display: inline-block !important;
+      max-width: rem(200);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: break-all;
+    }
+  }
+  .post-autosave {
+    display: inline-flex;
+    align-items: center;
+    height: 25px;
+    font-size: $font-size-small;
+    color: $text-color-secondary;
+  }
+}
+
+.reward-qa-box {
+  border-top: 1px solid #eee;
+  &-content {
+    @include tag-default;
+    margin-left: rem($margin-4n);
+    margin-top: rem($margin-10);
+  }
+}
+
+.imageUpload {
+  $width: 45.06vw;
+  $margin: 1.333vw;
+
+  :global {
+    .dzq-upload {
+      padding: 0 4.26vw 4.26vw;
+      &.is-card {
+        .dzq-upload-list-card {
+          margin-right: -$margin !important;
+        }
+
+        .dzq-upload__area,
+        .dzq-upload-list-card__item {
+          margin: 0 $margin $margin 0 !important;
+          width: $width !important;
+          height: $width !important;
+        }
+        .dzq-upload__area,
+        .dzq-upload-list-card__item.is-error {
+          margin-right: 0.5vw !important;
+        }
+      }
+    }
+  }
+}

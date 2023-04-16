@@ -1,0 +1,108 @@
+@import '@common/styles/index.scss';
+
+.inputClick {
+  flex: 1;
+  :global {
+    .dzq-input__prefix-icon {
+      color: $text-color-regular;
+      width: rem(48);
+    }
+
+    .dzq-input__inner {
+      border-radius: rem(18);
+      background-color: $text-bg-color !important;
+      border: 1px solid #fefefe !important;
+      padding-left: rem(42) !important;
+      &::placeholder {
+        color: $text-color-regular!important;
+        font-size: rem(14);
+        line-height: rem(24);
+        text-align: left;
+      }
+    }
+    .dzq-input.is-disabled .dzq-input__inner {
+      background-color: $body-bg-color;
+      -webkit-appearance: none; // ios下去除上面阴影
+    }
+  }
+  .input {
+    width: 100%;
+  }
+
+  &.hasHongbao{
+    display: flex;
+    align-items: center;
+    border-radius: 18px;
+    background-color: $text-bg-color;
+    overflow: hidden;
+    padding-left: rem(20);
+    :global {
+      .dzq-input{
+        background-color: $text-bg-color!important;
+      }
+    }
+    .hongbaoMini{
+        display: inline-block;
+        width: rem(14);
+        height: rem(18);
+    }
+  }
+
+}
+
+.icon {
+  margin-left: rem($margin-6n);
+  display: inline-block;
+  position: relative;
+
+  // TODO:暂未提供token
+  color: $text-color-secondary;
+
+  :first-child {
+    margin-left: 0;
+  }
+  &.isliked {
+    color: $primary-color;
+  }
+}
+.content {
+  position: absolute;
+  font-size: rem(12);
+  text-align: left;
+  color: $text-color-secondary;
+  line-height: rem(17);
+  width: rem(26);
+  background-color: $white;
+  left: rem(10);
+  bottom: rem(12);
+}
+.badge {
+  min-width: rem(17);
+  height: rem(17);
+  font-size: rem(12);
+  text-align: center;
+  color: $white;
+  background: $error-color;
+  border-radius: rem(8.5);
+  padding: 0 rem(6);
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: rem(-8.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(50%);
+  .text{
+    font-size: rem(12);
+    line-height: rem(17);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.83);
+  }
+}
+
+.isCricle {
+  width: rem(17);
+}

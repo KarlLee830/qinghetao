@@ -1,0 +1,49 @@
+@import '@common/styles/index.scss';
+.header{
+  height: rem(40);
+  display: block;
+  .headerContent{
+    display: flex;
+    padding: 0 rem($padding-4n);
+    box-sizing: border-box;
+    background: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(40);
+    /*border-bottom: 1px solid $border-color;*/
+    z-index: $zindex-backtotop;
+    align-items: center;
+    .left{
+      width: 50%;
+      font-size: rem($font-size-base);
+      color: $text-color-primary;
+      display: flex;
+      align-items: center;
+      .icon{
+        position: relative;
+        top: rem(-1);
+      }
+      .text {
+        font-size: rem($font-size-base);
+        // line-height: rem(24);
+        padding-left: $padding-base;
+      }
+    }
+    .right{
+      width: 50%;
+      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .icon{
+        font-size: rem(18) !important;
+        color: $text-color-secondary;
+      }
+    }
+  }
+  :global(.dzq-icon) {
+    cursor: initial;
+  }
+}

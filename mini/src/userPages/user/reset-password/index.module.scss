@@ -1,0 +1,27 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.container {
+  @include mini_container;
+}
+
+.content {
+  @include mini_content;
+  .title {
+    @include mini_title;
+  }
+  .input {
+    @include mini_input;
+  }
+  .button {
+    @include mini_button;
+  }
+  .tips{
+    @include mini_tips;
+    img {
+      width: 30px;
+      height: 30px;
+      margin: 0 $margin-2n;
+    }
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,16 @@
+@import './text.scss';
+@import './border.scss';
+@import 'tag';
+@import 'button';
+@import 'cursor';
+@import 'scrollbar';
+
+/**
+ * ios系统底部横条多出的高度
+ * safe-area-inset-bottom是苹果官方推荐使用的系统预定义变量，指安全区域距离底部边界的距离
+ */
+@mixin ios-safe-area-inset-bottom {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: content-box;
+}

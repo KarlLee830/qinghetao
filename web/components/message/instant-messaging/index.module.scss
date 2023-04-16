@@ -1,0 +1,41 @@
+@import "./vars.scss";
+
+.pcPage {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 10px);
+  max-height: 940px;
+  max-width: 750px;
+  background: $white;
+  position: relative;
+  border-radius: $border-radius-small;
+  overflow: hidden;
+}
+
+.h5Page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: $body-bg-color;
+}
+
+.pc-header {
+  background: $white;
+  padding: 0 $padding-6n;
+  border-bottom: $border-solid-1;
+  border-radius: $border-radius-small $border-radius-small 0 0;
+  overflow: hidden;
+
+  .pc-header__inner {
+    height: rem(54px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $font-size-middle-extra;
+    color: $text-color-primary;
+    font-weight: 600;
+    text-align: left;
+  }
+}

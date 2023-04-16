@@ -1,0 +1,35 @@
+@import '@common/styles/index.scss';
+.container{
+  display: flex;
+  .captchaInput-input {
+    flex: 1;
+    text-align: center;
+    display: inline-block;
+    height: rem(52);
+    margin-right: rem($margin-4n);
+    box-sizing: border-box;
+    padding: rem($padding-4n) 0;
+    border-bottom: rem(1) solid $border-color;
+    -webkit-tap-highlight-color: transparent;
+    :global(.dzq-input__inner) {
+      text-align: center;
+      font-size: rem($font-size-middle);
+      width: rem(40);
+      height: rem(24);
+      line-height: rem($font-line-height-base);
+      padding: 0;
+      border: none;
+      border-radius: $border-radius-zero;
+      -webkit-tap-highlight-color: transparent;
+      &::placeholder {
+        color: $text-color-placeholder;
+      }
+    }
+  }
+  .captchaInput-input_val {
+    border-bottom: rem(1) solid $text-color-placeholder;
+  }
+  .captchaInput-input:last-child {
+    margin-right: 0;
+  }
+}

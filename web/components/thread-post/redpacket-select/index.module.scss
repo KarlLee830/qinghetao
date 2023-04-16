@@ -1,0 +1,132 @@
+@import '@common/styles/index.scss';
+
+.redpacket-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: -webkit-fill-available;
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+  background-color: $white;
+  z-index: $zindex-popup;
+  .line-box {
+    display: flex;
+    margin: 0 rem($margin-4n);
+    height: 52px;
+    font-size: $font-size-base;
+    border-bottom: $border-solid-1;
+    align-items: center;
+    justify-content: space-between;
+    color: $text-color-primary;
+    &:last-child,
+    &:nth-child(4) {
+      border-bottom: none;
+    }
+  }
+  .label {
+    color: $text-color-regular;
+  }
+  :global {
+    .dzq-card__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .dzq-checkbox-wrap {
+      -webkit-tap-highlight-color: transparent;
+
+      &:last-child {
+        margin: 0;
+      }
+      .dzq-checkbox {
+        border: $border-solid-1;
+        border-radius: $border-radius-small !important;
+        background-color: $text-bg-color2;
+        &:after {
+          border: none !important;
+        }
+      }
+      .dzq-checkbox__label.is-checked {
+        color: $text-color-primary;
+      }
+      &.is-checked {
+        .dzq-checkbox__icon {
+          color: $primary-color;
+          font-size: $font-size-label !important;
+        }
+        .dzq-checkbox {
+          background-color: $checkbox-checked-bg-color;
+          border: none;
+        }
+      }
+    }
+
+    .dzq-input {
+      display: inline-block;
+      margin-right: 3px;
+      width: rem(200);
+      .dzq-input__inner {
+        border: none;
+        padding: 0;
+        text-align: right;
+        padding-right: $padding-1n;
+      }
+    }
+  }
+}
+
+.likenum {
+  display: flex;
+  padding: 0 rem($padding-4n);
+  margin-top: rem(-$margin-4n);
+  flex-direction: row-reverse;
+  .likenum-input {
+    display: flex;
+    align-items: center;
+    height: rem(52);
+    border-bottom: $border-solid-1;
+    :global {
+      .dzq-input {
+        width: rem(70);
+      }
+    }
+  }
+}
+.btn {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: rem(343);
+  border-top: $border-solid-1;
+  padding: rem($padding-2n) rem($padding-4n);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  :global {
+    .dzq-button {
+      flex:1;
+      @include button-default;
+      height: rem(42px);
+      &:first-child {
+        margin-right: rem($margin-10);
+      }
+      &:last-child {
+        @include button-primary;
+      }
+    }
+  }
+}
+
+.pc {
+  z-index: $zindex-dialog;
+  .redpacket-box {
+    position: static;
+    width: 100%;
+    height: 240px;
+    min-height: 240px;
+  }
+}

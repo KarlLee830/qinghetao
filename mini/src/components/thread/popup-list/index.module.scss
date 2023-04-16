@@ -1,0 +1,80 @@
+@import '@common/styles/index.scss';
+.export {
+  color: $primary-color !important;
+}
+.list {
+  overflow-y: auto;
+  height: 70vh;
+  .userItem {
+    padding: $padding-2n $padding-4n;
+
+  }
+}
+
+.tabs {
+  max-width: 572px;
+  margin: 0 auto;
+  border-top-left-radius: $border-radius-big;
+  border-top-right-radius: $border-radius-big;
+  padding-bottom: constant(safe-area-inset-bottom);  ///兼容 IOS<11.2/
+  padding-bottom: env(safe-area-inset-bottom);  ///兼容 IOS>11.2/
+  :global(.dzq-tabs__bar.is-card) {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: none;
+    padding-left: $padding-1n;
+    height: 48px;
+  }
+  :global {
+    .dzq-tabs__panel {
+      border-top: 1px solid rgba(238, 238, 238, 0.75);
+      min-height: 71vh;
+    }
+    .dzq-tabs__item {
+      justify-content: flex-start;
+      flex: none;
+      padding: 0 12px;
+    }
+    .dzq-tabs__item.is-active {
+      font-weight: 600;
+    }
+    .dzq-tabs__scroll {
+      width: auto;
+    }
+    .dzq-tabs__external {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.tabIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 10px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: rem(16);
+
+  .icon {
+    margin-right: 8px;
+  }
+  .title {
+    line-height: 20px;
+    margin-right: 5px;
+  }
+  .num {
+  }
+}
+
+.spinner {
+  height: 70vh;
+  width: 100%;
+  color: $text-color-placeholder;
+}

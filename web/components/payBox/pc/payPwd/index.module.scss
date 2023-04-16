@@ -1,0 +1,51 @@
+@import '@common/styles/index.scss';
+
+.payPwdWrapper{
+  background: $white;
+  // min-height: rem(452);
+  // width: rem(379);
+  font-size: rem($font-size-large);
+  padding: rem($padding-6n);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.payTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .payTitle {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+    font-size: rem($font-size-middle);
+    color: $text-color-primary;
+  }
+}
+
+.payInput {
+  margin: rem($margin-6n) 0 rem(32);
+  width: 100% !important;
+  :global {
+    .dzq-input__inner {
+      height: rem(44) !important;
+    }
+    .dzq-icon {
+      line-height: rem(44);
+    }
+  }
+}
+
+.payBtn {
+  width: rem(248);
+  height: rem(36);
+}
+
+.payBoxCloseIcon{
+  color: $text-color-secondary;
+  cursor: pointer;
+  font-size: rem($font-size-small);
+}

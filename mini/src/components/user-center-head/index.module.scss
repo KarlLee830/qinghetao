@@ -1,0 +1,180 @@
+@import '@common/styles/index.scss';
+
+.h5box {
+  width: 100%;
+  min-height: 196px;
+  position: relative;
+  // top: -10;
+  margin-top: -$margin-10;
+  // border-bottom: var($border-solid-1;
+  background-color: $white;
+  // background-color: pink;
+  padding: 0 $padding-4n $padding-4n $padding-4n;
+  box-sizing: border-box;
+  // display: flex;
+  // align-items: flex-end;
+  // justify-content: center;
+  border-radius: $border-radius-big $border-radius-big 0 0;
+  .h5boxTop {
+    position: relative;
+    height: 60px;
+    margin-bottom: $margin-4n;
+  }
+  .headImgBox {
+    position: absolute;
+    left: 0;
+    top: -60px;
+    border-radius: 60px;
+    box-sizing: border-box;
+    width: 120px;
+    height: 120px;
+
+    :global(.dzq-avatar) {
+      border: 3px solid $white;
+    }
+  }
+
+  .actionButtonContentWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .userBtnText {
+      display: block;
+      height: 22px;
+      line-height: $font-line-height-small;
+    }
+  }
+
+  .text {
+    display: block;
+    width: 100%;
+    // text-align: center;
+    font-size: $font-size-primary;
+    color: $text-color-primary;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 21px;
+    color: $text-color-regular;
+    margin-top: $margin-2n;
+  }
+  .userMessageList {
+    display: flex;
+    position: absolute;
+    left: 120px;
+    align-items: center;
+    line-height: $font-line-height-base;
+    padding-left: $padding-5n;
+    width: 100%;
+  }
+  .userMessageListItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .useText {
+      padding: 0 $padding-5n;
+      margin-top: $margin-4n;
+      line-height: 22px;
+    }
+    // width: 76%;
+    > text:nth-child(1) {
+      font-size: $font-size-base;
+      color: $text-color-primary;
+    }
+    > text:nth-child(2) {
+      font-size: $font-size-middle;
+      font-weight: 600;
+      color: $text-color-primary;
+      line-height: 26px;
+    }
+  }
+  .userNameOrTeam {
+    // height: rem(28);
+    line-height: rem(22);
+    display: flex;
+    align-items: center;
+    .userNickname {
+      font-size: $font-size-large;
+      font-weight: 600;
+      color: $text-color-primary;
+      margin-right: $margin-2n;
+      height: rem(28);
+      display: block;
+      @include text-ellipsis();
+    }
+    .memberBadge {
+      flex-shrink: 0;
+    }
+    .groupName {
+      font-size: $font-size-small;
+      color: $text-color-regular;
+      flex-shrink: 0;
+    }
+  }
+  .userBtn {
+    margin-top: $margin-4n;
+    display: flex;
+    justify-content: flex-start;
+    .btn {
+      width: 100%;
+      height: 42px;
+      line-height: 42px;
+      font-size: $font-size-middle;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border-radius: 5px;
+    }
+    .btn:nth-child(2) {
+      margin-left: $margin-2n;
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+    .userBtnText {
+      margin-left: $margin-2n;
+    }
+  }
+  .userFriendsBtn {
+    background: $warn-color;
+    border-color: $warn-color;
+  }
+  .userFollowedBtn {
+    background: $button-primary-disabled-bg-color;
+    border-color: $button-primary-disabled-bg-color;
+  }
+  .shieldBtn {
+    position: absolute;
+    top: -48px;
+    right: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    min-width: 86px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 5px;
+    background-color: rgba(11, 11, 55, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    box-sizing: border-box;
+    :global {
+      .dzq-icon {
+        font-size: $font-size-base;
+        color: $white;
+      }
+    }
+    .shieldText {
+      font-size: $font-size-base;
+      color: $white;
+      margin-left: $margin-1n;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "indexPages/thread/index",
+          "pathName": "indexPages/thread/index",
+          "query": "id=47261",
+          "scene": null
+        },
+        {
+          "name": "indexPages/thread/index",
+          "pathName": "indexPages/thread/index",
+          "query": "id=49644",
+          "scene": null
+        },
+        {
+          "name": "subPages/500/index",
+          "pathName": "subPages/500/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "indexPages/thread/index",
+          "pathName": "indexPages/thread/index",
+          "query": "id=47261",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import '@common/styles/index.scss';
+
+.mobileLayout {
+    background: $white;
+}
+
+.unit {
+    &::before {
+        content: '';
+        display: block;
+        height: rem(10);
+        // 目前没有定义这个颜色变量
+        background: #F4F6F7;
+    }
+}
+
+.dividerContainer {
+    padding-left: rem($padding-4n);
+    padding-right: rem($padding-4n);
+
+    :global {
+        .dzq-divider {
+            margin: 0;
+        }
+    }
+}
+
+.divider {
+    margin: rem($margin-2n) 0;
+}
+
+.threadUnit {
+    padding: rem($padding-4n);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .threadTitle {
+        font-weight: 600;
+        font-size: rem($font-size-middle);
+        color: $text-color-primary;
+        margin-right: rem(12);
+    }
+
+    .threadCount {
+        font-size: rem($font-size-small);
+        // 这个目前也没有定义
+        color: $text-color-secondary;
+    }
+}
+
+.loadingSpin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 380px;
+    color: $loading-text-color;
+}

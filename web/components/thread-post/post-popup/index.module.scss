@@ -1,0 +1,37 @@
+@import '@common/styles/index.scss';
+
+.container {
+  width: 100%;
+  height: rem(168);
+  font-weight: normal;
+  border-radius: $border-radius-big $border-radius-big 0 0;
+  background: $white;
+}
+
+.list {
+  padding: 0 $padding-4n;
+  border-bottom: $border-solid-1;
+  .item {
+    text-align: center;
+    font-size: $font-size-middle;
+    font-weight: normal;
+    line-height: $font-line-height-base;
+    padding: 16px 0;
+    color: $text-color-primary;
+    border-bottom: $border-solid-1;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+
+.cancel {
+  width: 100%;
+  font-size: $font-size-middle;
+  line-height: $font-line-height-small;
+  text-align: center;
+  color: $text-color-regular;
+  border-top: $border-solid-1;
+  padding: $padding-3n 0;
+}

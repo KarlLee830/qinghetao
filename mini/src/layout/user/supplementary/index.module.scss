@@ -1,0 +1,144 @@
+@import '../../../../../common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.content {
+  padding: rem($padding-4n) rem($padding-6n) rem($padding-6n);
+  height: 100%;
+  background: $white;
+  .item {
+    padding: rem($margin-2n) 0;
+    &:after {
+      content: '';
+      height: 0;
+      width: 0;
+      visibility: hidden;
+      clear: both;
+      display: block;
+    }
+    :global(.tea-checkbox-group) {
+      display: inline-flex;
+      flex-wrap: wrap;
+      & > view {
+        word-break: keep-all;
+        white-space: nowrap;
+      }
+    }
+  }
+  .input_value {
+    width: 100%;
+    :global(.dzq-input__inner) {
+      font-size: rem($font-size-base);
+      line-height: rem($font-line-height-base);
+      -webkit-appearance: none;
+    }
+  }
+  .button {
+    @include button;
+    margin-top: rem($margin-6n);
+  }
+  .required {
+    color: $text-color-error;
+    display: inline;
+  }
+  .label {
+    font-size: $font-size-base;
+    line-height: $font-line-height-middle;
+    text-align: left;
+    color: $text-color-regular;
+    padding-bottom: rem($margin-2n);
+  }
+  .imgUpload {
+    .imgUpload-dom {
+      width: rem(100);
+      height: rem(100);
+      border-radius: rem($border-radius-small);
+      background: $body-bg-color;
+      border: $border-solid-1;
+      text-align: center;
+      line-height: rem(100);
+      font-size: rem($font-size-large);
+      color: $text-color-secondary;
+    }
+    :global(.imgUpload-item) {
+      width: rem(100);
+      height: rem(100);
+      margin-right: $margin-1n;
+    }
+    :global(.dzq-upload) {
+      padding: 0;
+    }
+    :global(.upload-img-custom) {
+      height: rem(100);
+      width: rem(100);
+      border: $border-solid-1;
+    }
+  }
+  .attachmentsUpload {
+    float: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .attachmentsUpload-left {
+      display: inline-block;
+      font-size: rem($font-size-base);
+      line-height: rem($font-line-height-middle);
+      text-align: left;
+      color: $text-color-regular;
+    }
+    .attachmentsUpload-right {
+      cursor: pointer;
+      display: inline-block;
+      font-size: rem($font-size-base);
+      line-height: $font-size-base;
+      color: $text-color-primary;
+      // float: right;
+      :global(.dzq-upload) {
+        padding: 0;
+      }
+      :global(.dzq-button--text) {
+        background-color: $white;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+      }
+      :global(.dzq-icon) {
+        padding-right: $padding-1n;
+        font-size: $font-size-large !important;
+      }
+      :global(.upload-atta-custom) {
+        background-color: $white;
+        color: $text-color-primary;
+        height: auto;
+        margin-bottom: auto;
+        view,
+        text {
+          line-height: normal !important;
+        }
+      }
+    }
+  }
+  .textarea {
+    .textarea_item {
+      width: 100%;
+      box-sizing: border-box;
+      :global(.dzq-textarea__inner) {
+        padding: $padding-2n;
+      }
+      :global(.dzq-textarea__limit) {
+        width: calc(100% - 15px);
+        position: absolute;
+        bottom: 0;
+        padding-right: 0;
+      }
+    }
+  }
+  .placeholder {
+    color: $text-color-placeholder;
+  }
+  .checkbox {
+    :global(.dzq-checkbox-wrap) {
+      margin-right: $margin-4n;
+    }
+  }
+}

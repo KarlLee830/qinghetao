@@ -1,0 +1,285 @@
+@import '@common/styles/index.scss';
+@import '@common/styles/index.scss';
+
+.payconfirmWrapper {
+  background: $white;
+  // min-height: rem(452);
+  width: rem(400);
+  font-size: rem($font-size-large);
+  padding: rem($padding-6n);
+  box-sizing: border-box;
+  .icon {
+    margin-right: rem($margin-2n);
+    vertical-align: middle;
+    margin-top: rem(-$margin-1n);
+  }
+  .payTitle {
+    font-weight: 600;
+    text-align: center;
+    font-size: rem($font-size-middle);
+    line-height: rem(21);
+    color: $text-color-primary;
+  }
+  .payMoney {
+    margin: rem($margin-6n) 0 rem($margin-6n);
+    font-size: rem($font-size-base);
+    height: rem(60);
+    border-radius: rem(5);
+    background: var(--color-warn10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color-primary;
+  }
+  .payM {
+    color: $error-color;
+    font-weight: 600;
+    font-size: rem($font-size-large);
+  }
+  .payTab_top {
+    // margin-bottom: rem(16);
+    text-align: center;
+    :global {
+      .is-checked {
+        .dzq-checkbox--radio {
+          &::after {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+  .payTab {
+    margin-right: rem($margin-6n);
+    font-size: rem($font-size-primary);
+    font-weight: 600;
+    // &:hover {
+    //   text-decoration: underline;
+    //   color: #333;
+    //   cursor: pointer;
+    //   font-weight: 800;
+    // }
+    // &:active {
+    //   text-decoration: underline;
+    //   color: #333;
+    // }
+  }
+  :global {
+    .dzq-checkbox-wrap .dzq-checkbox.dzq-checkbox--radio {
+      border-radius: rem(3);
+    }
+    .dzq-checkbox-wrap {
+      padding: 0;
+    }
+    .dzq-checkbox-wrap .dzq-checkbox.dzq-checkbox--radio::after {
+      border-radius: rem(5);
+    }
+    // .dzq-divider--horizontal {
+    //   margin: rem(16) 0;
+    // }
+  }
+
+  .payLine {
+    margin: rem($margin-6n) 0;
+  }
+
+  .payTabActive {
+    text-decoration: underline;
+    color: #333;
+    cursor: pointer;
+    font-weight: 800;
+  }
+  .wechatPayment {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // padding-top: rem(8);
+    .wPaymentDec {
+      flex: 1;
+      padding-left: rem($margin-4n);
+    }
+    .wPayment_01 {
+      font-size: rem($font-size-middle);
+      line-height: rem(24);
+      font-weight: 600;
+    }
+    .wPayment_02 {
+      display: flex;
+      align-items: center;
+      margin-top: rem($margin-4n);
+      font-size: rem($font-size-small);
+      line-height: rem(22);
+      color: $text-color-regular;
+    }
+  }
+  .wPayment_03 {
+    font-size: rem($font-size-small);
+    color: $text-color-secondary;
+    line-height: rem(24);
+    margin-top: rem($margin-4n);
+  }
+  .wPaymentCode {
+    position: relative;
+    width: rem(106);
+    height: rem(106);
+    border: 1px solid #eee;
+    padding: rem(5);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > img {
+      width: 100%;
+      height: 100%;
+      // background-color: pink;
+    }
+  }
+  .walletPayment {
+    padding-left: rem(30);
+    .walletTitle {
+      font-size: rem($font-size-middle);
+      font-weight: 600;
+      margin: rem($margin-6n) 0 rem($margin-4n);
+      display: flex;
+      align-items: center;
+    }
+    .walletDec {
+      font-size: rem($font-size-small);
+      // line-height: rem(36);
+      margin-bottom: rem($margin-4n);
+    }
+    .walletPay {
+      display: flex;
+      align-items: center;
+    }
+    .walletPayPwd {
+      margin-bottom: rem(24);
+    }
+    .walletBalance {
+      font-size: rem($font-size-large);
+      font-weight: 600;
+      word-break: break-all;
+    }
+    .walletSettingPwd {
+      font-size: rem($font-size-primary);
+      color: $primary-color3;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .walletText {
+      font-size: rem($font-size-primary);
+      color: $text-color-regular;
+    }
+    .walletWarn {
+      color: $text-color-placeholder;
+      font-size: rem($font-size-primary);
+      margin-left: rem($margin-4n);
+    }
+    .walletChangePwd {
+      display: inline-block;
+      height: rem(40);
+    }
+    .walletConfirmBc {
+      width: calc(100% - 55px);
+      margin: auto;
+    }
+    .walletConfirmBtn {
+      display: block;
+      width: rem(248);
+      height: rem(36);
+      border-radius: rem(5);
+      font-size: $font-size-base;
+      padding: 0;
+      line-height: rem(36);
+      :global {
+        .dzq-spin__icon {
+          width: rem(14);
+          height: rem(14);
+        }
+      }
+    }
+  }
+  .walletPayment_01 {
+    padding-left: 0;
+  }
+  .walletDec > span:nth-child(1) {
+    color: $text-color-regular;
+    margin-right: rem($margin-4n);
+    font-size: rem($font-size-small);
+  }
+  .paymentCloseBtn {
+    position: absolute;
+    right: rem(24);
+    top: rem(22);
+    cursor: pointer;
+    color: $text-color-secondary;
+    text-shadow: 0 -1 0 0;
+    &:hover {
+      color: #a1aabb;
+    }
+  }
+}
+.forgetPassword {
+  font-size: rem($font-size-small);
+  line-height: rem(24);
+  margin-top: rem($margin-2n);
+  text-align: center;
+  color: $text-color-regular;
+}
+
+.walletPayPwd {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem($margin-6n) !important;
+  height: rem(40);
+}
+
+.payList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .payListItem {
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+    box-sizing: border-box;
+    border: $border-solid-1;
+    width: rem(40);
+    height: rem(40);
+    text-align: center;
+    line-height: rem(40);
+    font-size: rem(10);
+    color: $text-color-primary;
+    &:not(:last-child) {
+      // margin-right: rem($margin-2n);
+      border-right: 0px;
+    }
+
+    // &.curr{
+    //   border-color: $text-color-placeholder;
+    // }
+    // &.activation{
+    //   border-color: $text-color-placeholder;
+    // }
+  }
+}
+
+.timeout {
+  cursor: pointer;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size-small;
+}

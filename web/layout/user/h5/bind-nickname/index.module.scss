@@ -1,0 +1,39 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.container {}
+
+.content {
+  @include content;
+  .title {
+    @include title;
+  }
+  .input {
+    @include input;
+  }
+  .button {
+    @include button;
+  }
+  .functionalRegion {
+    @include functionalRegion;
+  }
+}
+
+// ------------------PC
+.pc_container {
+  @include pc_container;
+}
+.pc_content {
+  @include pc_content;
+  .pc_title {
+    @include pc_title;
+  }
+  .pc_input {
+    @include pc_input;
+  }
+  .pc_button {
+    @include pc_button;
+  }
+  .pc_functionalRegion {
+    @include pc_functionalRegion;
+  }
+}

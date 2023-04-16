@@ -1,0 +1,53 @@
+@import '@common/styles/index.scss';
+
+.container {
+  background-color: $white;
+  margin-bottom: $margin-10;
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin: 0 $padding-4n;
+    padding: $padding-10 0;
+    font-size: $font-size-middle;
+    line-height: $font-line-height-primary;
+    border-bottom: $border-solid-1;
+    box-sizing: content-box;
+
+    &:last-child {
+      border: none;
+    }
+
+    .left {
+      flex: 0 0 38px;
+      margin-right: $margin-4n;
+
+      :global{
+        .dzq-icon {
+          background-color: $primary-color;
+          padding: 9px;
+          border-radius: 50%;
+          color: $white;
+        }
+      }
+    }
+
+    .center {
+      flex: 1;
+      font-size: $font-size-middle;
+      text-align: left;
+      color: $text-color-primary;
+    }
+
+    .right {
+      padding: $padding-4n;
+      padding-right: 0;
+
+      .right-arrow {
+        color: $icon-color-light;
+      }
+    }
+  }
+}

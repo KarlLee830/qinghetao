@@ -1,0 +1,13 @@
+@import "@common/styles/index.scss";
+
+
+// 这两个page样式用于保证私聊页面的灰色背景
+page {
+  background-color: $comment-bg-color !important;
+  min-height: 100% !important;
+}
+
+.page {
+  background-color: $comment-bg-color !important;
+  min-height: 100% !important;
+}

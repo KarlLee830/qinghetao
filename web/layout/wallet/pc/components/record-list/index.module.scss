@@ -1,0 +1,232 @@
+@import '@common/styles/index.scss';
+
+.container {
+  box-sizing: border-box;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  height: rem(36);
+  padding: 0 rem($padding-4n);
+  border-radius: rem(5) rem(5) 0 0;
+  background-color: $comment-bg-color;
+
+  font-weight: normal;
+  font-size: rem($font-size-primary);
+  text-align: left;
+  line-height: rem(36);
+  color: $text-color-regular;
+
+  .left {
+    width: 40%;
+  }
+  .leftWidth {
+    width: 30%;
+  }
+  .rigthWidth {
+    width: 70%;
+  }
+
+  .rigth {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    .type {
+      width: 33%;
+    }
+    .money {
+      width: 33%;
+    }
+    .status {
+      width: 33%;
+    }
+    .time {
+      width: 33%;
+    }
+    .payWidth {
+      width: 25%;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  height: rem(36);
+  padding: rem($padding-2n) rem($padding-4n);
+  font-weight: normal;
+  font-size: rem($font-size-primary);
+  text-align: left;
+  line-height: rem(36);
+  border-bottom: $border-solid-1;
+
+  .left {
+    width: 40%;
+
+    font-weight: normal;
+    font-size: rem($font-size-primary);
+  }
+  .leftWidth {
+    width: 30%;
+  }
+  .rigthWidth {
+    width: 70%;
+  }
+
+  .rigth {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    .type {
+
+      width: 33%;
+      font-weight: normal;
+      color: $text-color-primary;
+    }
+    .status {
+
+      width: 33%;
+      font-weight: normal;
+      // color: $text-color-primary;
+    }
+    .money {
+      width: 33%;
+
+      font-weight: 600;
+      font-size: rem($font-size-middle);
+      color: $error-color;
+    }
+    .time {
+      width: 33%;
+
+      font-weight: normal;
+      color: $text-color-secondary;
+    }
+    .payWidth {
+      width: 25%;
+    }
+  }
+}
+
+.tabelList {
+  :global {
+    .listTitleWrapper {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      height: rem(36);
+      padding: 0 rem($padding-4n);
+      border-radius: rem(5);
+      background-color: $body-bg-color;
+      font-size: rem($font-size-primary);
+      text-align: left;
+      line-height: rem(36);
+      color: $text-color-regular;
+    }
+    .listItem {
+      display: flex;
+      justify-content: space-between;
+      min-height: rem(36);
+      padding: rem($padding-2n) rem($padding-4n);
+      font-weight: normal;
+      font-size: rem($font-size-primary);
+      text-align: left;
+      line-height: rem(36);
+      border-bottom: $border-solid-1;
+    }
+    .listColumn {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      // white-space: nowrap;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.normalText {
+  font-size: rem($font-size-primary);
+  color: $text-color-primary;
+  display: inline-flex;
+  :global {
+    .qq-emotion {
+      width: rem(14);
+      height: rem(14);
+      display: inline-block !important;
+      flex-shrink: 0;
+    }
+    .dzq-richText {
+      font-size: $font-size-primary;
+      color: $text-color-primary;
+      overflow: hidden;
+      word-break: break-all;
+      max-width: rem(120);
+      @include text-ellipsis();
+
+      .dzq-a {
+        display: inline;
+      }
+    }
+  }
+}
+
+.payStatus {
+  font-size: rem($font-size-primary);
+  color: $text-color-regular;
+}
+
+.incomeAmount {
+  color: $error-color;
+  font-size: rem($font-size-middle);
+  font-weight: 600;
+}
+
+.timer {
+  font-size: rem($font-size-primary);
+  color: $text-color-secondary;
+}
+
+.receiveAccount {
+  font-size: rem($font-size-primary);
+  color: $text-color-secondary;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+
+.withdrawalAmount, .payAmount, .frozenAmount {
+  color: $text-color-primary;
+  font-size: rem($font-size-middle);
+  font-weight: 600;
+}
+
+// 待审核
+.wait {
+  color: $primary-color;
+}
+// 通过
+.pass {
+  color: $success-color;
+}
+
+// 不通过
+.overrule {
+  color: $error-color;
+}
+
+// 待打款
+.remiting {
+  color: $success-color;
+}
+
+// 已打款
+.remited {
+  color: $text-color-regular;
+}
+
+// 打款失败
+.remitedFailed {
+  color: $error-color;
+}

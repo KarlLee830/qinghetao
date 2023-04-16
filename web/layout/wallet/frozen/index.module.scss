@@ -1,0 +1,98 @@
+@import '@common/styles/index.scss';
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: $comment-bg-color;
+}
+
+.header {
+  height: rem(50);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $white;
+  font-size: rem($font-size-primary);
+  font-weight: bold;
+  padding: 0 rem($padding-4n);
+  margin-bottom: rem($margin-2n);
+
+
+  font-weight: normal;
+  text-align: left;
+  color: $text-color-secondary;
+}
+
+.totalMoney {
+
+  font-weight: normal;
+  font-size: rem($font-size-base);
+  line-height: rem(16);
+  color: $text-color-regular;
+}
+
+.num {
+  font-weight: 600;
+  margin-left: rem($margin-2n);
+}
+
+.content {
+  position: relative;
+  background-color: $white;
+  font-weight: normal;
+  padding: rem($padding-4n);
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: rem($padding-4n);
+    left: rem($padding-4n);
+    height: 1px;
+    background-color: $border-color;
+  }
+
+  .upper {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: rem($font-size-primary);
+    text-align: left;
+    color: $text-color-primary;
+    overflow: hidden;
+  }
+  .lower {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: rem($font-size-label);
+    text-align: left;
+    color: $text-color-secondary;
+    padding-top: rem($padding-5n);
+  }
+  .amount {
+    margin-left: rem($margin-2n);
+    flex-shrink: 0;
+  }
+  .normalText {
+    overflow: hidden;
+    :global {
+      .qq-emotion {
+        width: rem(14);
+        height: rem(14);
+        display: inline-block;
+        flex-shrink: 0;
+      }
+      .dzq-richText {
+        font-size: rem($font-size-primary);
+        color: $text-color-primary;
+        overflow: hidden;
+        word-break: break-all;
+        @include text-ellipsis();
+
+        .dzq-a {
+          display: inline;
+        }
+      }
+    }
+  }
+}

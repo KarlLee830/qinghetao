@@ -1,0 +1,33 @@
+@import '@common/styles/index.scss';
+
+.container {
+  margin: 0 $margin-4n;
+  border-bottom: $border-solid-1;
+
+  :global {
+    .dzq-input {
+      width: 100%;
+      padding: $margin-4n 0 $margin-2n;
+      border: none;
+
+      .dzq-input__inner {
+        height: 26px;
+        padding: 0;
+        font-size: 16px;
+        color: $text-color-primary;
+        line-height: 20px;
+        text-align: left;
+        border: none;
+      }
+
+      .input-placeholder {
+        font-size: 20px;
+        color: $text-color-placeholder;
+      }
+    }
+  }
+}
+
+.is-display {
+  display: none;
+}

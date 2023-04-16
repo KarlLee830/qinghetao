@@ -1,0 +1,65 @@
+@import '@common/styles/index.scss';
+
+.container {
+  padding: rem($padding-4n) rem($padding-4n);
+  background: $white;
+  font-size: $font-size-middle;
+  border-bottom: $border-solid-1;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  font-weight: normal;
+  padding-bottom: rem($padding-2n);
+  color: $text-color-primary;
+  height: rem(20);
+  line-height: rem(20);
+  .text {
+    
+    font-size: rem($font-size-primary);
+    text-align: left;
+    // line-height: rem(16);
+  }
+  .money {
+    
+    font-weight: 600;
+    font-size: rem($font-size-middle);
+    text-align: left;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: rem($margin-2n);
+  font-weight: normal;
+  font-size: rem($font-size-label);
+  color: $text-color-secondary;
+  
+  .time {
+    text-align: left;
+    color: $text-color-secondary;
+    word-break: break-all;
+  }
+  .withdrawalStatus1 {
+    color: $primary-color;
+  }
+  .withdrawalStatus2 {
+    color: $text-color-regular;
+  }
+  .withdrawalStatus3 {
+    color: $error-color;
+  }
+  .withdrawalStatus4 {
+    color: $success-color;
+  }
+}
+
+.receiveAccount {
+  line-height: $font-size-middle;
+}

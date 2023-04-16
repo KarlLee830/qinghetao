@@ -1,0 +1,89 @@
+@import '@common/styles/index.scss';
+
+
+.hidePart{
+  overflow-y: hidden;
+  position: relative;
+  margin-bottom: 10px;
+  &::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height:15px;
+    content: '';
+    background: #fff;
+  }
+  .hideImage{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:200px;
+    display: inline-block;
+    z-index: 9;
+  }
+}
+.container {
+    background: $white;
+    padding: rem($padding-4n);
+  }
+  
+  .header {
+    background: $white;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .userInfo {
+    flex: 1;
+  }
+  :global(.dzq-richText) {
+    word-break: break-all
+  }
+  .body {
+    margin-top: rem($margin-6n);
+    max-height: 1900px;
+    overflow: hidden;
+    > * {
+      margin-bottom: rem($margin-4n);
+    }
+    .content {
+      :global(a) {
+        text-decoration: none; 
+      }
+    }
+  }
+  .imgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: rem(40) !important;
+    margin-top: rem(24) !important;
+    .priceimg {
+      width: rem(259);
+    }
+  }
+  .lookmoreBox {
+    margin-top: rem(24);
+    margin-bottom: rem(16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .lookmoreImg {
+      height: rem(20);
+    }
+  }
+  .title {
+    color: $text-color-primary;
+    line-height: 21px;
+    font-weight: bold;
+    font-size: rem($font-size-middle);
+    word-break: break-all;
+  }
+ 
+  .commentText{
+    color: var(--color-text-primary);
+    font-size:rem(16);
+  }

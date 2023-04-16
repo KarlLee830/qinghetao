@@ -1,0 +1,70 @@
+@import '@common/styles/index.scss';
+
+.renewalFeeWrapper {
+  .siteBg {
+    // background-color: palevioletred;
+    height: rem(120);
+    width: 100%;
+    .siteBgImage {
+      height: rem(120);
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    &.defaultSiteBg{
+      background-color: rgb(36, 105, 246);
+
+      .siteBgImage {
+        object-fit: scale-down;
+      }
+    }
+  }
+  .menuInfo {
+    padding: rem($padding-6n);
+    padding-top: rem($padding-1n);
+    box-sizing: border-box;
+    padding-bottom: rem(96);
+    background-color: $white;
+    .menuItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: rem($padding-4n) 0;
+      border-bottom: $border-solid-1;
+      font-size: rem($font-size-primary);
+      &:nth-last-child(1) {
+        border-bottom: none;
+      }
+    }
+    .menuTitle {
+      color: $text-color-primary;
+      flex-shrink: 0;
+      margin-right: rem($margin-2n);
+    }
+    .menuValue {
+      color: $text-color-regular;
+      @include text-ellipsis();
+    }
+  }
+  .feeBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    padding: rem($padding-2n) rem($padding-4n) rem($padding-10);
+    padding-bottom: calc(10px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+    padding-bottom: calc(10px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+    box-sizing: border-box;
+    background-color: $white;
+    border-top: $border-solid-1;
+    .btn {
+      width: 100%;
+      padding: 0;
+      height: rem(42);
+      line-height: rem(42);
+      margin-bottom: rem($margin-4n);
+    }
+  }
+}

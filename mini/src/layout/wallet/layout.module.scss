@@ -1,0 +1,181 @@
+@import '@common/styles/index.scss';
+
+.walletWrapper {
+  padding-bottom: 62px;
+  padding-bottom: calc(62px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+  padding-bottom: calc(62px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+  background-color: $body-bg-color;
+  :global {
+    .datepicker-modal {
+      z-index: 1 !important;
+    }
+  }
+
+  @include scrollbar();
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.walletWrapperRecharge {
+  padding-bottom: 114px;
+  padding-bottom: calc(114px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+  padding-bottom: calc(114px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+}
+
+.header {
+  width: 100%;
+}
+
+.choiceTime {
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $comment-bg-color;
+  padding: 0 $padding-4n;
+  min-height: 52px;
+
+  .status {
+    font-family: 'PingFangSC-Regular';
+    font-weight: normal;
+    color: $text-color-regular;
+    font-size: $font-size-primary;
+
+    .icon {
+      margin-left: 9px;
+    }
+  }
+}
+
+.tabs {
+  width: 100%;
+  border-bottom: $border-solid-1;
+
+  .tagbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  :global {
+    .dzq-tabs__panel {
+      height: 0;
+    }
+
+    .dzq-tabs__list {
+      display: flex;
+    }
+
+    .dzq-tabs__content {
+      padding-top: 1px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .dzq-tabs__label {
+      padding-bottom: 15px !important;
+      font-family: 'PingFang SC';
+      font-weight: 600;
+      font-size: $font-size-primary;
+      line-height: 20px;
+    }
+
+    .dzq-tabs__item {
+      height: 53px;
+      box-sizing: border-box;
+      flex: 1;
+      padding: 0 $padding-4n;
+
+      &::after {
+        width: 80px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+.tag {
+  margin-right: $margin-2n;
+}
+
+.tag-active-green {
+  color: $success-color;
+}
+
+.tag-active-blue {
+  color: $warn-color;
+}
+
+.tag-active-red {
+  color: $error-color;
+}
+
+.footer {
+  width: 100%;
+  // height: rem(69);
+  box-sizing: border-box;
+  padding: $padding-2n $padding-4n;
+  background: $white;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  padding-bottom: calc(8px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+  padding-bottom: calc(8px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+
+  .button {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    line-height: 42px;
+    border-radius: $border-radius-small;
+    color: $white;
+    background-color: $primary-color;
+    border: none;
+    font-weight: normal;
+    font-size: $font-size-middle;
+    margin-bottom: $margin-3n;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* 顶部title样式 */
+.topBarTitle {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: $padding-4n;
+  box-sizing: border-box;
+  text-align: center;
+  max-width: calc(100% - 100px);
+  justify-content: space-between;
+  .customCapsule {
+    font-size: $font-size-middle;
+    line-height: $font-line-height-base;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-shrink: 0;
+    margin-right: $margin-2n;
+    :global(.dzq-icon) {
+      font-weight: bold;
+      color: $white;
+    }
+  }
+  .fullScreenTitle {
+    font-size: $font-size-middle;
+    color: $white;
+    max-width: 200px;
+    @include text-ellipsis();
+  }
+}

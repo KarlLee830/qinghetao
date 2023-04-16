@@ -1,0 +1,196 @@
+@import '@common/styles/index.scss';
+.avatarBox {
+  max-width: rem(38);
+  .cursor {
+    @include cursor-on-pc;
+  }
+  :global(.dzq-avatar--circle) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.userInfoBox {
+  z-index: $zindex-backtotop;
+
+  .userInfoContent {
+    box-sizing: border-box;
+    padding: rem(16) rem(24) rem(24);
+    width: rem(423);
+
+    &.myContent {
+      padding: rem(16);
+    }
+
+    @include media('s-pc') {
+      width: rem(320);
+    }
+    // height: rem(257);
+    border-radius: rem(5);
+    background: $white;
+    box-shadow: 0 0 rem(8) $border-shadow-color;
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-bottom: rem(16);
+      border-bottom: $border-solid-1;
+      overflow: hidden;
+      .left {
+        width: rem(60);
+        .customAvatar {
+          width: rem(60);
+          height: rem(60);
+          font-size: rem($font-size-large);
+        }
+      }
+      .right {
+        overflow: hidden;
+        margin-left: rem(16);
+        flex: 1;
+        .name {
+          display: inline-block;
+          width: auto;
+          font-weight: 600;
+          font-size: rem($font-size-middle);
+          line-height: rem($font-line-height-primary);
+          text-align: left;
+          color: $text-color-primary;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          cursor: pointer;
+        }
+        .text {
+          width: 100%;
+          font-weight: normal;
+          font-size: rem($font-size-primary);
+          line-height: rem($font-line-height-small);
+          text-align: left;
+          color: $text-color-primary;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+    .content {
+      padding-top: rem(16);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      .item {
+        flex-shrink: 1;
+        flex: 1;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .title {
+          font-weight: normal;
+          font-size: rem($font-size-primary);
+          line-height: rem($font-line-height-small);
+          text-align: center;
+          color: $text-color-regular;
+        }
+        .text {
+          margin-top: rem($margin-2n);
+          font-weight: 600;
+          font-size: rem($font-size-large);
+          line-height: rem($font-line-height-large);
+          text-align: center;
+          color: $text-color-primary;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+    .footer {
+      margin-top: rem(16);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .btn {
+        width: rem(114);
+        @include media('s-pc') {
+          width: rem(80);
+        }
+        height: rem(36);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .icon {
+          margin-right: rem($margin-1n);
+        }
+        &.blocked {
+          border-color: $primary-color3;
+          background-color: $primary-color3;
+          &:hover {
+            border-color: $primary-color6;
+            background-color: $primary-color6;
+          }
+        }
+      }
+      .ghost {
+        background: $white;
+        color: $primary-color;
+        &:hover {
+          border-color: $primary-color;
+          background-color: $primary-color10;
+        }
+      }
+    }
+  }
+}
+
+.follow {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  &:hover {
+    border-color: $primary-disabled-color;
+    background-color: $primary-color6;
+  }
+}
+.isFollow {
+  background-color: $primary-disabled-color;
+  border-color: $primary-disabled-color;
+  &:hover {
+    border-color: $primary-disabled-color;
+    background-color: $primary-disabled-color;
+  }
+}
+.withdraw {
+  background-color: $warn-color;
+  border-color: $warn-color;
+  &:hover {
+    border-color: $warn-color;
+    background-color: $warn-color;
+  }
+}
+
+.avatarWrapper {
+  position: relative;
+}
+
+.userIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: rem(-2);
+  right: rem(-4);
+  border-radius: 50%;
+  height: rem(20);
+  width: rem(20);
+  border: $white solid rem(1);
+  text-align: center;
+  line-height: rem(20);
+  color: $white;
+  &.like {
+    background-color: $error-color;
+  }
+  &.heart {
+    background-color: $warn-color;
+  }
+}

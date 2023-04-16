@@ -1,0 +1,156 @@
+@import '@common/styles/index.scss';
+
+.container {
+  :global {
+    .datepicker-modal {
+      z-index: 1 !important;
+    }
+  }
+
+  @include scrollbar();
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: $comment-bg-color;
+}
+
+.header {
+  width: 100%;
+}
+
+.choiceTime {
+  height: rem(52);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $comment-bg-color;
+  padding: 0 rem($padding-4n);
+  min-height: rem(52);
+
+  .status {
+
+    font-weight: normal;
+    color: $text-color-regular;
+    font-size: rem($font-size-primary);
+
+    .icon {
+      margin-left: rem(9);
+    }
+  }
+}
+
+.tabs {
+  width: 100%;
+  border-bottom: $border-solid-1;
+
+  .tagbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  :global {
+    .dzq-tabs__panel {
+      height: 0;
+    }
+
+    .dzq-tabs__list {
+      display: flex;
+    }
+
+    .dzq-tabs__content {
+      padding-top: rem(1);
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .dzq-tabs__panel {
+      height: 0;
+    }
+
+    .dzq-tabs__list {
+      display: flex;
+    }
+
+    .dzq-tabs__content {
+      padding-top: rem(1);
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .dzq-tabs__label {
+      margin-top: rem(13) !important;
+      padding-bottom: rem(11) !important;
+
+      font-weight: 600;
+      font-size: rem($font-size-primary);
+    }
+
+    .dzq-tabs__item {
+      height: rem(50);
+      box-sizing: border-box;
+      flex: 1;
+
+      &:after {
+        width: rem(82);
+        margin: auto;
+      }
+    }
+  }
+}
+
+.tag {
+  margin-right: $margin-2n;
+}
+
+.tag-active-green {
+  color: $success-color;
+}
+
+.tag-active-blue {
+  color: $warn-color;
+}
+
+.tag-active-red {
+  color: $error-color;
+}
+
+.footer {
+  height: rem(69);
+}
+
+.footerInner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: rem(69);
+  box-sizing: border-box;
+  padding: $padding-2n $padding-4n 0;
+  background: $white;
+
+  .button {
+    width: 100%;
+    height: rem(42);
+    border-radius: rem($border-radius-small);
+    color: $white;
+    background-color: $primary-color;
+    border: none;
+    font-weight: normal;
+    font-size: rem($font-size-middle);
+    margin-bottom: $margin-3n;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.footer-recharge {
+  height: rem(123);
+  .footerInner {
+    height: rem(123);
+  }
+}

@@ -1,0 +1,21 @@
+@import '@discuzqsdk/theme/src/_core.scss';
+
+// 下面👇是项目本身有的一些 mixin，暂时统一放到这里，后期需要移走 TODO: 带移走
+@import './mixin/button';
+@import './mixin/cursor';
+@import './mixin/scrollbar';
+@import './mixin/tag';
+@import './mixin/border.scss';
+// @import './mixin/login.scss';
+@import './mixin/text.scss';
+@import './fn/media.scss';
+
+/**
+ * ios系统底部横条多出的高度
+ * safe-area-inset-bottom是苹果官方推荐使用的系统预定义变量，指安全区域距离底部边界的距离
+ */
+@mixin ios-safe-area-inset-bottom {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: content-box;
+}

@@ -1,0 +1,210 @@
+@import '@common/styles/index.scss';
+@mixin flex() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  padding: 0 $padding-4n;
+  background-color: $white;
+  border-top: $border-solid-1;
+
+  :global {
+    .dzq-input {
+      max-width: 200px;
+
+      .dzq-input__inner {
+        padding: $padding-2n 0;
+        text-align: right;
+        border: none;
+      }
+
+      .input-placeholder {
+        color: $text-color-placeholder;
+      }
+    }
+
+    .dzq-checkbox-wrap {
+      margin-right: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .dzq-slider {
+      .dzq-slider__progress--stick,
+      .dzq-slider__feature {
+        background: $text-bg-color2;
+        height: 4px;
+      }
+      .dzq-slider__progress--active {
+        height: 4px;
+      }
+
+      .dzq-slider__progress__button {
+        background: $primary-color;
+        border: 1px solid $white;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 10px;
+          height: 10px;
+          background: $white;
+          border-radius: $border-radius-circle;
+        }
+      }
+    }
+
+    .dzq-divider {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+
+  .paid-item {
+    @include flex();
+    padding: $padding-4n 0;
+    font-size: $font-size-primary;
+    color: $text-color-primary;
+
+    .left {
+      width: 130px;
+      color: $text-color-regular;
+      line-height: 18px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .right {
+      flex: 1;
+      height: 20px;
+      @include flex();
+      justify-content: flex-end;
+    }
+  }
+
+  .free {
+    display: flex;
+    flex-direction: column;
+
+    .free-title {
+      padding: $padding-2n 0;
+      font-size: $font-size-primary;
+      color: $text-color-secondary;
+      line-height: $font-line-height-small;
+      text-align: left;
+    }
+  }
+
+  .btn {
+    @include flex();
+    flex-wrap: nowrap;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: constant(safe-area-inset-bottom);
+    bottom: env(safe-area-inset-bottom);
+    margin: 0 $margin-10;
+    padding: $padding-2n 0;
+    background: $white;
+    border-top: $border-solid-1;
+
+    :global {
+      .dzq-button {
+        width: 48%;
+        height: 42px;
+        padding: $padding-10 0;
+        font-size: $font-size-middle;
+        color: $text-color-regular;
+        border: none;
+        border-radius: $border-radius-small;
+        background: $text-bg-color2;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+
+    .btn-confirm {
+      color: $white;
+      background-color: $primary-color;
+    }
+  }
+}
+
+.videoWrapper {
+  position: relative;
+
+  :global {
+    .dzq-video {
+      video {
+        width: 100%;
+        max-height: 300px;
+      }
+    }
+  }
+
+  .videoCheckBox {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+
+  .imageCheckBox {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
+
+  .image {
+    width: 100%;
+    max-height: 600px;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.paid-unit {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  .paid-unit-desc {
+    color: $text-color-secondary;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 12px;
+  }
+}
+
+.paid-wrapper {
+  &::-webkit-scrollbar {
+    z-index: 9999;
+  }
+  &::-webkit-scrollbar-track {
+    z-index: 9999;
+  }
+  &::-webkit-scrollbar-corner {
+    z-index: 9999;
+  }
+  &::-webkit-scrollbar-button {
+    z-index: 9999;
+  }
+
+  overflow-y: scroll;
+
+  /* fix: 消除IOS小程序显示的滚动条*/
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+
+  max-height: calc(100vh - 60px - env(safe-area-inset-bottom));
+}

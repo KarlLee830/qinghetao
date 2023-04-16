@@ -1,0 +1,23 @@
+{
+  "name_cn":"首页头部替换",
+  "name_en":"ReplaceCustomIndexHeader",
+  "description":"首页头部替换为搜索+banner广告",
+  "type":9,
+  "app_id":"asdasdasd",
+  "version": "1.0.0",
+  "status":1,
+  "icon":"https:\/\/discuz.chat\/dzq-img\/active.png",
+  "filter_enable":false,
+  "author":{
+      "name":"腾讯科技（深圳）有限公司",
+      "email":"coralchu@tencent.com"
+  },
+  "view": {
+      "replace": {
+        "target": "plugin_index",
+        "hookName": "header_replace_hook",
+        "platform": ["h5", "mini"],
+        "disables": true
+      }
+  }
+}

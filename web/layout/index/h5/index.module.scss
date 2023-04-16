@@ -1,0 +1,147 @@
+@import '@common/styles/index.scss';
+
+.homeContent {
+  background: $white;
+  margin-bottom: rem(10);
+  z-index: $zindex-backtotop;
+  /*border: 1px solid $border-color;*/
+}
+.fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.homeContentTop {
+  padding: 0 rem($padding-4n);
+  background: $white;
+  margin: 0 10px 10px 10px;
+  border-radius: 6px;
+  
+}
+.tabsBox {
+  height: rem(52);
+  :global {
+    .dzq-tabs__bar {
+      height: rem(52);
+      .dzq-tabs__label {
+        font-size: rem(18); // 字体大小为18像素
+        line-height: rem(20);
+        margin-top: rem(16);
+        // color: $text-color-regular;
+      }
+      .dzq-tabs__item.is-active {
+        color: $primary-color;
+      }
+      .dzq-tabs__item {
+        padding: 0 $padding-4n;
+        color: $text-color-regular;
+      }
+      .dzq-tabs__scroll {
+        display: flex;
+      }
+    }
+    .dzq-tabs__panel {
+      height: 0;
+    }
+  }
+}
+// .list {
+//   flex: 1;
+// }
+.tabIcon {
+  margin-left: rem($padding-2n);
+  margin-right: rem($padding-4n);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .buttonIcon {
+    color: $text-color-secondary;
+  }
+}
+
+// 当tab悬浮后的占位元素样式
+.tabPlaceholder {
+  width: 100%;
+  height: rem(58);
+}
+
+.vTabs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: rem(58);
+  width: 100%;
+  visibility: hidden;
+}
+
+.vFixed {
+  visibility: visible;
+  z-index: $zindex-backtotop;
+}
+
+.placeholder {
+  width: 100%;
+  background: $white;
+  border-radius: $border-radius-small;
+  margin-bottom: $margin-10;
+  padding: 0 rem($padding-6n);
+  box-sizing: border-box;
+  .header{
+    padding: $padding-4n 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .avatar{
+      width: rem(38);
+      height: rem(38);
+      border-radius: 50%;
+      background: $box-color-placeholder;
+      // background: $box-color-placeholder;
+      flex-shrink: 0;
+    }
+    .box {
+      height: rem(38);
+      background: $box-color-placeholder;
+      margin-left: rem($margin-2n);
+      flex: 1;
+      border-radius: $border-radius-small;
+      animation: loading 6s linear infinite;
+      background-image: linear-gradient(50deg, $box-color-placeholder, $box-color-placeholder 52%, #fff 55%, $box-color-placeholder 58%, $box-color-placeholder);
+      background-size: 400% 100%;
+    }
+  }
+  .content{
+    height: rem(24);
+    background: $box-color-placeholder;
+    border-radius: $border-radius-small;
+    margin-top: rem($margin-4n);
+    animation: loading 6s linear infinite;
+    background-image: linear-gradient(50deg, $box-color-placeholder, $box-color-placeholder 52%, #fff 55%, $box-color-placeholder 58%, $box-color-placeholder);
+    background-size: 400% 100%;
+  }
+  .footer{
+    margin-top: rem($margin-4n);
+    border-top: 1px solid $box-color-placeholder;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: rem(52);
+    .box {
+      height: rem(24);
+      width: rem(50);
+      background: $box-color-placeholder;
+      border-radius: $border-radius-small;
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+      background-position: 400% 50%
+  }
+  to {
+      background-position: 0% 50%
+  }
+}

@@ -1,0 +1,15 @@
+.page {
+  position: static !important;
+  width: 100%;
+  height: 100%;
+}
+
+.list {
+  width: 100%;
+  height: 100%;
+}
+
+.ReactVirtualized__List,
+.ReactVirtualized__Grid__innerScrollContainer {
+  min-height: 100%;
+}

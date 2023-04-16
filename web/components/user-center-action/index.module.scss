@@ -1,0 +1,54 @@
+@import '@common/styles/index.scss';
+
+.userCenterColumnStyle {
+  justify-content: space-between;
+}
+
+.userCenterAction {
+  display: flex;
+  flex-wrap: wrap;
+
+  .userCenterActionItem, .userCenterPluginActionItem {
+    cursor: pointer;
+    min-width: rem(60);
+  }
+
+  .userCenterActionItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .userCenterActionItemIcon {
+    }
+
+    .userCenterActionItemDesc {
+      margin-top: rem($margin-2n);
+      color: $text-color-regular;
+      font-size: rem($font-size-small);
+    }
+  }
+}
+
+.userCenterAction {
+  &.pc {
+    padding: 0 rem($padding-2n);
+
+    .userCenterActionItem, .userCenterPluginActionItem {
+      width: percentage(100/9/100);
+    }
+    .userCenterActionItem {
+      padding: rem($padding-6n) 0;
+
+    }
+  }
+
+  &.h5 {
+    .userCenterActionItem, .userCenterPluginActionItem {
+      width: percentage(100/4/100);
+    }
+    .userCenterActionItem {
+      padding: rem($padding-4n) 0;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import '@common/styles/index.scss';
+.userContent {
+  .section {
+    background: $white;
+    border-radius: rem($border-radius-small);
+    margin-bottom: rem($margin-10);
+  }
+}
+.wrapper {
+  padding: 0;
+}
+.hr {
+  height: rem($margin-10);
+  background-color: $body-bg-color;
+  margin: 0 rem(-30);
+}
+.userInfoWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: rem($padding-4n);
+  padding-bottom: rem($padding-4n);
+  justify-content: space-between;
+
+  .userInfoKey {
+    color: $text-color-regular;
+    font-size: rem($font-size-primary);
+  }
+
+  .userInfoValue {
+    color: $text-color-primary;
+  }
+}
+
+.friendsWrapper {
+  overflow: hidden !important;
+  margin: 0 rem(-16);
+}
+
+.userCenterHeader {}
+
+.userCenterBody {
+  display: flex;
+
+  .userCenterBodyItem {}
+
+  .userCenterBodyRightItem {
+    position: sticky;
+    margin-left: rem($margin-10);
+    top: rem(0);
+    padding-top: rem($margin-10);
+    width: 32%;
+  }
+
+  .userCenterBodyLeftItem {
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    margin-top: rem($margin-10);
+  }
+}

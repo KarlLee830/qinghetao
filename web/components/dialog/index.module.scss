@@ -1,0 +1,67 @@
+@import '@common/styles/index.scss';
+.pc {
+  z-index: $zindex-dialog;
+  // height: auto;
+  :global {
+    .dzq-modal__container {
+      padding: $padding-6n;
+      width: 362px;
+      border-radius: $border-radius-small;
+    }
+    .dzq-modal__body {
+      padding: 0;
+    }
+  }
+  &-header {
+    padding-right: 25px;
+    position: relative;
+    text-align: center;
+    font-size: $font-size-middle;
+    font-weight: 600;
+    @include lamp-clamp(2);
+    :global {
+      .dzq-icon {
+        color: $icon-color;
+      }
+    }
+  }
+  &-closeicon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $icon-color;
+  }
+  .btn {
+    position: static;
+    width: 100%;
+    padding: 0;
+    margin-top: $margin-6n;
+    justify-content: center;
+    border: none;
+    text-align: center;
+
+    :global {
+      .dzq-button {
+        width: 116px;
+        height: 36px;
+        @include button-default;
+
+        &:first-child {
+          margin-right: $margin-4n;
+        }
+        &:last-child {
+          @include button-primary;
+        }
+        &.is-disabled {
+          color: $white;
+          background-color: $disabled-color;
+        }
+      }
+    }
+    .confirmbtn {
+      margin-right: 0 !important;
+      @include button-primary;
+    }
+  }
+}
+

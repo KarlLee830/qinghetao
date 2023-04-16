@@ -1,0 +1,16 @@
+@import '@common/styles/index.scss';
+
+.titleBox {
+  width: 100%;
+  height: 53px;
+  background-color: $white;
+  font-size: 14px;
+  color: $text-color-regular;
+  padding: 0 16px;
+  line-height: 53px;
+  margin-bottom: 10px;
+  .num {
+    font-weight: 600;
+    margin-right: $margin-base;
+  }
+}

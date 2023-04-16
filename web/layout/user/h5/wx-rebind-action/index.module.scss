@@ -1,0 +1,54 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .button {
+    @include button;
+  }
+  .exit {
+    @include button;
+    @include button_exit;
+    &:hover {
+      @include button_exit;
+    }
+    &:active{
+      @include button_exit;
+    }
+    margin-top: $margin-4n;
+  }
+}
+.content {
+  @include content;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: rem(110);
+  .title {
+    @include title;
+  }
+  .tips{
+    @include titleTips;
+  }
+  .functionalRegion {
+    @include functionalRegion;
+  }
+  .statusIcon {
+    margin-bottom: rem($margin-6n);
+  }
+  .statusBottom {
+    font-size: $font-size-large;
+    line-height: $font-line-height-primary;
+    color: $text-color-primary;
+    font-weight: 700;
+  }
+  .hint {
+    font-size: $font-size-base;
+    line-height: $font-line-height-base;
+    color: $text-color-secondary;
+    margin-top: rem($margin-2n);
+  }
+}

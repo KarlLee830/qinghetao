@@ -1,0 +1,21 @@
+@import '@common/styles/mixin/login.scss';
+
+.container {
+  @include mini_container;
+  .button {
+    @include mini_button;
+  }
+  .input {
+    @include mini_input;
+  }
+}
+.content {
+  @include mini_content;
+  .title {
+    @include mini_title;
+  }
+  .tips{
+    @include mini_tips;
+    margin-bottom: 0;
+  }
+}

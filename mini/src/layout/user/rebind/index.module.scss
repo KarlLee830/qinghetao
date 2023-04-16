@@ -1,0 +1,44 @@
+@import '@common/styles/mixin/login.scss';
+.container {
+  @include mini_container;
+}
+.content {
+  @include mini_content;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: flex-start;
+  .title {
+    @include mini_title;
+  }
+  .tips{
+    @include mini_tips;
+    margin-bottom: 0;
+  }
+  .functionalRegion {
+    @include functionalRegion;
+  }
+}
+
+.rebind_explain_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(38);
+  .rebind_explain_index {
+    width: rem(28);
+    height: rem(28);
+    background: $primary-color;
+    border-radius: $border-radius-circle;
+    text-align: center;
+    line-height: rem(28);
+    color: $white;
+  }
+  .rebind_explain_value {
+    font-size: $font-size-middle;
+    line-height: $font-line-height-small;
+    color: $text-color-primary;
+    margin-left: rem(14);
+  }
+}

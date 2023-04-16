@@ -1,0 +1,41 @@
+@import "@common/styles/index.scss";
+@mixin custom-scrollbar() {
+  &::-webkit-scrollbar {
+    display: block;
+    width: 4px;
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      display: block;
+      width: 4px;
+      border-radius: $border-radius-small;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $border-color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $border-shadow-color;
+      border-radius: 4px;
+    }
+  }
+}
+
+.friendsWrapper {
+  overflow: hidden !important;
+}
+
+.friendsWrapperScroll {
+  overflow-y: auto !important;
+  @include custom-scrollbar();
+
+}
+
+.followsWrapper {
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+}
+.borderRadius {
+  border-radius: $border-radius-small;
+}

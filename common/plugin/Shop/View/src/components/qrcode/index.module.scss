@@ -1,0 +1,63 @@
+@import '@common/styles/index.scss';
+
+.dzq-qrcode-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: rem(306);
+  justify-content: center;
+  
+  .dzq-qrcode-img {
+    margin-bottom: rem(25);
+    width: rem(198);
+    text-align: center;
+  }
+
+  .dzq-qrcode-msg {
+    display: flex;
+    align-items: center;
+    font-size: rem(16);
+
+    .dzq-qrcode-scan-icon {
+      margin-right: rem(8);
+    }
+    &.pc {
+      flex-direction: row;
+    }
+    &.h5 {
+      flex-direction: column;
+      line-height: rem(24);
+    }
+  }
+
+  .dzq-qrcode-error-border {
+    border: 1px solid #EEEEEE;
+    padding: rem(16)
+  }
+  .dzq-qrcode-error-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #C5C6CB;
+    width: rem(188);
+    height: rem(188);
+
+    .dzq-qrcode-error-msg {
+      font-size: 16px;
+      color: $white;
+      margin-top: rem(10);
+    }
+    
+    .dzq-qrcode-error-icon {
+      color: $white;
+    }
+    .dzq-qrcode-refresh {
+      color: #2469f3;;
+    }
+  }
+  .dzq-no-qrcode-msg {
+    font-size: 16px;
+    color: $white;
+  }
+}

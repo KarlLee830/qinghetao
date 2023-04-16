@@ -1,0 +1,216 @@
+@import '@common/styles/index.scss';
+
+.dzq-shop {
+  background: transparent;
+}
+
+.parse-goods-box {
+  color: $text-color-primary;
+  background-color: $white;
+  z-index: $zindex-popup;
+  padding: 16px;
+
+  .parse-goods-title {
+    font-size: $font-size-base;
+    line-height: $font-line-height-small;
+  }
+
+  .parse-goods-image {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: rem($margin-6n) 0 rem($margin-4n);
+    font-size: 0;
+
+    .image-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-text {
+      margin-top: rem($margin-1n);
+      font-size: $font-size-label;
+      line-height: $font-line-height-base;
+    }
+  }
+
+  :global {
+    .dzq-textarea {
+      width: 100%;
+      border: $border-solid-1;
+      background-color: $body-bg-color;
+      font-size: 0;
+
+      .dzq-textarea__inner {
+        width: 100%;
+        font-size: $font-size-base;
+        background-color: $body-bg-color;
+        resize: none;
+      }
+    }
+  }
+
+  .parse-goods-btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top: $border-solid-1;
+    padding: rem($padding-2n) rem($padding-4n);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+
+    :global {
+      .dzq-button {
+        -webkit-tap-highlight-color: transparent;
+        @include button-default;
+        flex: 1;
+        height: rem(42);
+
+        &:first-child {
+          margin-right: rem($margin-10);
+        }
+
+        &:last-child {
+          @include button-primary;
+        }
+      }
+    }
+  }
+}
+
+.shopPageWrapperMini {
+  .productItemWrapper {
+    padding-top: 56px !important;
+  }
+
+  .parse-goods-box {
+    padding-top: 56px !important;
+  }
+
+  :global {
+    .dzq-tabs__bar {
+      width: 100%;
+      position: fixed;
+      background: $white;
+      z-index: 1;
+    }
+  }
+}
+
+.shopPageWrapper {
+  // 防止横向滚动
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+
+  .shopDialogBody {
+    max-height: 600px;
+  }
+
+  .productItemWrapper {
+
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 50px); ///兼容 IOS<11.2/
+    padding-bottom: calc(env(safe-area-inset-bottom) + 50px); ///兼容 IOS>11.2/
+
+
+    .spinner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+  }
+
+  .productItemWrapperH5 {
+    position: relative;
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100vh - constant(safe-area-inset-bottom) - 50px - 40px - 86px);
+    height: calc(100vh - env(safe-area-inset-bottom) - 50px - 40px - 86px);
+    overflow: scroll;
+
+    .spinner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: $white;
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 8px); ///兼容 IOS<11.2/
+    padding-bottom: calc(env(safe-area-inset-bottom) + 8px); ///兼容 IOS>11.2/
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-left: 16px;
+
+    :global {
+      .dzq-button {
+        border-radius: 5px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .footerH5 {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    background: $white;
+
+    :global {
+      .dzq-button {
+        border-radius: 5px;
+        height: 42px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: calc(constant(safe-area-inset-bottom) + 8px); ///兼容 IOS<11.2/
+        margin-bottom: calc(env(safe-area-inset-bottom) + 8px); ///兼容 IOS>11.2/
+
+        margin-top: 8px;
+        margin-right: 16px;
+        margin-left: 16px;
+      }
+    }
+  }
+
+  :global {
+    .dzq-tabs__list {
+      justify-content: space-evenly;
+      width: 100%;
+    }
+
+    .dzq-divider--horizontal {
+      margin-right: 16px;
+      margin-left: 16px;
+      margin-top: 0;
+      margin-bottom: 0;
+      width: calc(100% - 32px);
+    }
+  }
+}

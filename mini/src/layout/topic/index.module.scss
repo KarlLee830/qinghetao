@@ -1,0 +1,14 @@
+@import '@common/styles/index.scss';
+.topicWrap {
+  background: $text-bg-color2;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .list {
+    flex: 1;
+  }
+  .topBox {
+    padding: 16px;
+    background: $white;
+  }
+}

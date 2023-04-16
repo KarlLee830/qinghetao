@@ -1,0 +1,123 @@
+@import '@common/styles/index.scss';
+
+.container {
+  background: $white;
+  border-radius: $border-radius-big $border-radius-big 0 0;
+}
+
+.main {
+  padding: $padding-4n $padding-4n 0;
+  border-bottom: $border-solid-1;
+}
+
+.header {
+  font-weight: bold;
+  font-size: $font-size-middle;
+  line-height: 17.8px;
+  text-align: left;
+  color: $text-color-primary;
+}
+
+.body {
+  width: 100%;
+  .percentage {
+    display: flex;
+    flex-direction: column;
+    border-bottom: $border-solid-1;
+    .text {
+      font-weight: normal;
+      font-size: $font-size-primary;
+      line-height: 17.8px;
+      text-align: left;
+      color: $text-color-regular;
+      padding: $padding-4n 0 $padding-2n 0;
+    }
+    .slider {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: $padding-3n;
+      position: relative;
+      .perCent {
+        color: $text-color-primary;
+      }
+      .maxMoney {
+        color: $error-color;
+        font-size: $font-size-small;
+        position: absolute;
+        right: 0;
+        bottom: 1px;
+      }
+      :global {
+        .dzq-slider__progress__button {
+          width: 0px;
+          height: 0px;
+          padding: 5px;
+          border-radius: 50%;
+          border: solid 8px $primary-color;
+        }
+        .dzq-slider__progress--active {
+          height: 4px;
+        }
+        .dzq-slider__feature {
+          height: 4px;
+          // background: $border-shadow-color;
+        }
+        .dzq-slider__progress--max {
+          height: 4px;
+          border-radius: 0 2px 2px 0;
+        }
+      }
+    }
+  }
+  .rewardMoney {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $font-size-primary;
+    font-weight: normal;
+    padding: $padding-4n 0;
+    .text {
+      line-height: 17.8px;
+      text-align: left;
+      color: $text-color-regular;
+    }
+    .moneyNum {
+      line-height: 16.8px;
+      text-align: left;
+      color: $text-color-primary;
+    }
+    :global {
+      .dzq-input {
+        width: 90px;
+        height: 30px;
+        .dzq-input__inner {
+          width: 90px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  padding: $padding-2n $padding-4n 19px;
+
+  .cancel {
+    width: 167px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: $border-radius-small;
+    color: $text-color-primary;
+    background: $text-bg-color2;
+  }
+  .ok {
+    width: 167px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: $border-radius-small;
+    background: $primary-color;
+  }
+}

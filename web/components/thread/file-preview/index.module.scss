@@ -1,0 +1,70 @@
+@import '@common/styles/index.scss';
+
+.dialog {
+  :global {
+    .dzq-modal__container {
+      padding: $padding-6n;
+      width: 80vw;
+      min-width: 600px;
+      min-height: 400px;
+      height: 80vh;
+      border-radius: $border-radius-small;
+    }
+    .dzq-modal__body {
+      padding: 0;
+      height: 100%;
+    }
+    #preview,
+    iframe {
+      height: calc(100% - 30px);
+      width: 100%;
+    }
+  }
+}
+.popup {
+  z-index: $zindex-dialog;
+
+  .header {
+    position: relative;
+    height: 24px;
+    line-height: $font-line-height-primary;
+    padding: $padding-2n 0 $padding-2n 9 * $margin-base;
+    font-size: $font-size-middle;
+    // background-color: $disabled-color;
+    background-color: $white;
+    border-bottom: 2px solid $border-color;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .header-close {
+      position: absolute;
+      left: $margin-4n;
+      top: 50%;
+      margin-top: - $margin-2n;
+      color: $icon-color;
+    }
+  }
+
+  :global {
+    .dzq-popup__container {
+      height: 100vh;
+      
+      #preview,
+      iframe {
+        height: calc(100% - 42px);
+      }
+    }
+    .dzq-popup__overlay {
+      background-color: $white;
+    }
+  }
+}
+
+.errMsg {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size-small;
+}

@@ -1,0 +1,101 @@
+@import '@common/styles/index.scss';
+@import '@common/styles/mixin/login.scss';
+
+.content {
+  padding: rem($padding-6n);
+  padding-bottom: 0;
+  h3 {
+    font-size: rem($font-size-large);
+    color: $text-color-primary;
+    margin-bottom: rem($margin-5n);
+    letter-spacing: 1px;
+  }
+  .labelInfo {
+    padding: rem($margin-3n) 0 rem($margin-4n);
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem($margin-6n);
+    .labelName {
+      color: $text-color-regular;
+      font-size: $font-size-primary;
+      margin-right: rem($margin-4n);
+    }
+    .labelValue {
+      color: $text-color-primary;
+      font-size: $font-size-middle;
+    }
+    .codeBtn {
+      height: rem(36);
+      font-size: rem($font-size-primary);
+    }
+    .labelInput {
+      :global {
+        .dzq-input__inner {
+          border: none;
+        }
+      }
+    }
+  }
+  .bindCode {
+    color: $text-color-regular;
+    font-size: $font-size-primary;
+  }
+}
+
+#findPayPwdContent {
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 32px);
+    border-top: 1px solid $border-color;
+    padding: rem($padding-2n) rem($padding-4n) rem($padding-4n);
+    display: flex;
+    justify-content: center;
+    background-color: $white;
+    padding-bottom: calc(16px + constant(safe-area-inset-bottom)); ///兼容 IOS<11.2/
+    padding-bottom: calc(16px + env(safe-area-inset-bottom)); ///兼容 IOS>11.2/
+    .btn {
+      height: rem(42);
+      font-size: $font-size-middle;
+      border-radius: $border-radius-small;
+      line-height: rem(42);
+      padding: 0;
+    }
+  }
+}
+
+.bgBtnColor {
+  :global {
+    .dzq-button--primary.is-mouseenter {
+      @include button-primary();
+    }
+  }
+}
+
+.labelInfo {
+  padding: rem($padding-6n) rem($padding-6n) rem($padding-4n);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: rem(62);
+  box-sizing: border-box;
+  .labelValue {
+    color: $text-color-primary;
+    font-size: $font-size-middle;
+    // border-bottom: 1px solid $border-color;
+    flex: 1;
+    line-height: rem(62);
+    .input {
+      @include input;
+      @include passwordInput;
+    }
+  }
+}
+
+#findPayPwdContent {
+  .btnPosition {
+    bottom: rem(200);
+  }
+}

@@ -1,0 +1,24 @@
+@import '@common/styles/index.scss';
+.container {
+}
+.searchWrap {
+  background: $body-bg-color;
+  width: 100%;
+  height: 100vh;
+  .searchRight {
+    width: 100%;
+    overflow: hidden;
+  }
+  .searchContent {
+    width: 100%;
+    min-width: rem(652);
+  }
+  .section {
+    margin-bottom: rem($margin-10);
+    padding: 0 rem($padding-6n);
+    background: $white;
+    border-radius: rem($border-radius-small);
+    box-shadow: 0 0 rem($padding-2n) rgba(241, 243, 244, 0.16);
+  }
+}
+

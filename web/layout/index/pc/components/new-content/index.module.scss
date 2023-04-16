@@ -1,0 +1,28 @@
+
+@import '@common/styles/index.scss';
+.container {
+  width: 100%;
+  height: rem(36);
+  line-height: rem(36);
+  border-radius: rem($border-radius-small);
+  background: $primary-color10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: rem(5);
+  .text {
+    font-size: rem($font-size-primary);
+    color: #0065ff;
+    margin-right: rem($margin-2n);
+  }
+  .refreshBtn {
+    font-size: rem($font-size-primary);
+    color: #90b2f8;
+    margin-right: rem($margin-10);
+    cursor: pointer;
+  }
+  .spin {
+    color: #90b2f8;
+  }
+}

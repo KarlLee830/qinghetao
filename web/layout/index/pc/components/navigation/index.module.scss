@@ -1,0 +1,164 @@
+@import '@common/styles/index.scss';
+.container {
+  border-radius: $border-radius-small;
+  :global {
+    .dzq-card {
+      border-radius: rem($border-radius-small);
+      background-color: $body-bg-color;
+    }
+    .dzq-card__body {
+      padding: 0 5%;
+      background-color: $white;
+    }
+    .dzq-submenu__title {
+      padding-right: 0;
+      padding-bottom: rem(19);
+      padding-top: rem(19);
+      line-height: 0;
+    }
+    .dzq-submenu__title.is-active {
+      font-weight: 600;
+      color: $primary-color;
+    }
+
+    .dzq-menu .dzq-menu-item.is-active {
+      font-weight: 600;
+      color: $primary-color;
+    }
+
+    .dzq-submenu > .dzq-menu .dzq-menu-item.is-active {
+      font-weight: initial;
+    }
+
+    .dzq-submenu > .dzq-menu .dzq-menu-item {
+      padding-bottom: rem(6);
+      padding-top: rem(6);
+    }
+
+    .dzq-submenu__title.is-active,
+    .dzq-menu > li {
+      border-bottom: rem(1) solid $border-color;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .dzq-submenu > .dzq-menu > li {
+      border-bottom: none;
+    }
+
+    .dzq-menu,
+    .dzq-menu-item,
+    .dzq-submenu__title,
+    .dzq-submenu {
+      border-bottom: none;
+    }
+
+    .dzq-submenu > .dzq-menu {
+      padding-bottom: rem(6);
+      padding-top: rem(6);
+      padding-left: rem(20);
+      line-height: rem(20);
+    }
+
+    .dzq-submenu > .dzq-menu .dzq-menu-item {
+      padding-right: 0;
+      line-height: rem(20);
+    }
+    .dzq-menu-item {
+      padding-right: 0;
+      padding-bottom: rem(14);
+      padding-top: rem(14);
+      padding-left: rem(16);
+    }
+    .dzq-submenu{
+      padding-left: 0;
+      padding-right: 0;
+      .dzq-submenu__title{
+        line-height: 1;
+        div {
+          max-width: 93%;
+        }
+      }
+    }
+    .dzq-submenu__icon {
+      font-size: rem(10) !important;
+      color: $text-color-secondary;
+      margin-right: rem($margin-1n);
+    }
+  }
+}
+
+.subMenuBox{
+  display: block;
+  width: 100%;
+  max-height: rem(26);
+}
+
+.activeItem {
+  color: $primary-color !important;
+  font-weight: 600;
+}
+
+.span {
+  color: $text-color-secondary;
+  float: right;
+  font-weight: normal;
+  font-size: rem($font-size-base);
+}
+
+.subSpan {
+  color: $border-color-hover;
+  float: right;
+  font-weight: normal;
+  font-size: rem($font-size-base);
+}
+
+.ellipsis {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
+  min-height: rem($font-size-base);
+}
+
+.verticalScrollbar {
+  margin-right: -4px;
+  &::-webkit-scrollbar {
+    display: block;
+    width: 4px;
+    height: 4px;
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: $border-radius-small;
+    }
+
+    // 滚动条轨道
+    &::-webkit-scrollbar-track {
+      background: $border-color;
+    }
+
+    &::-webkit-scrollbar-corner {
+      background: $border-color;
+    }
+
+    // 滚动条上的滚动滑块
+    &::-webkit-scrollbar-thumb {
+      background: $border-shadow-color;
+      border-radius: 4px;
+    }
+  }
+
+}
+
+/* 兼容火狐滚动条 */
+@supports not (overflow-y: overlay){
+  .verticalScrollbar{
+    scrollbar-width: thin;
+    scrollbar-color: $border-shadow-color $border-color;
+  }
+}

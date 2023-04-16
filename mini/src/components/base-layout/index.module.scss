@@ -1,0 +1,52 @@
+@import '@common/styles/index.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: $body-bg-color;
+
+  .wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .list {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .listHeight {
+    height: 100%;
+  }
+  
+  .center {
+    width: 100%;
+  }
+
+  :global {/* stylelint-disable-line */
+    .dzq-pull-refresh__loading {
+      font-size: $font-size-primary;
+      top: -20px;
+    }
+  }
+
+  ::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+  }
+  .shadow {
+    display: block;
+    height: 100vh;
+    width: 100vh;
+    z-index: $zindex-toast;
+    background-color: $black;
+  }
+
+}

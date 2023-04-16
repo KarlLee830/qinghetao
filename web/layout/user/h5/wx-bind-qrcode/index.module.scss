@@ -1,0 +1,54 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.container {
+  height: 100vh;
+  .button {
+    @include button;
+  }
+}
+.content {
+  @include content;
+  .title {
+    @include title;
+  }
+  .tips{
+    @include titleTips;
+  }
+}
+
+// ------------------PC
+.pc_body_background{
+  @include pc_body_background;
+}
+
+.pc_container {
+  @include pc_container;
+}
+.pc_content {
+  @include pc_content;
+  .pc_title {
+    @include pc_title;
+  }
+  .pc_otherLogin_title {
+    @include pc_otherLoginText;
+    font-size: $font-size-base;
+  }
+  .pc_otherLogin_tips{
+    @include pc_otherLoginText;
+  }
+  .pc_tips{
+    @include pc_titleTips;
+    text-align: center;
+  }
+}
+
+.skip {
+  display: inline-block;
+  font-size: rem($font-size-middle);
+  line-height: rem($font-line-height-middle);
+  color: $primary-color;
+  color: $text-color-secondary;
+  padding-top: rem($padding-4n);
+  cursor: pointer;
+  border-bottom: $border-solid-1;
+}

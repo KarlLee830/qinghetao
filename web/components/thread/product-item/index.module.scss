@@ -1,0 +1,52 @@
+@import '@common/styles/index.scss';
+
+.container {
+  @include cursor-on-pc;
+  width: 100%;
+  padding: rem($padding-4n);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-radius: rem(5);
+  background: $body-bg-color;
+  .image {
+    flex: none;
+    width: rem(82);
+    height: rem(82);
+    object-fit: cover;
+    border-radius: rem(5);
+    &.empty{
+      background-color: $mask-bg-color;
+    }
+  }
+  .content {
+    flex: 1;
+    margin-left: rem($padding-4n);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    .title {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      font-weight: normal;
+      font-size: rem($font-size-primary);
+      line-height: rem($font-line-height-primary);
+      text-align: left;
+      color: $text-color-regular;
+      max-height: rem(44);
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .amount {
+      margin-top: rem($padding-2n);
+      font-weight: 600;
+      font-size: rem(20);
+      line-height: rem(30);
+      text-align: left;
+      color: $error-color;
+    }
+  }
+}

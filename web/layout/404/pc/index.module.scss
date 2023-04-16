@@ -1,0 +1,42 @@
+@import '@common/styles/index.scss';
+
+.body{
+    background: $body-bg-color;
+    min-height: 100vh;
+}
+.page{
+    width: 1100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: rem(21) auto 0;
+    background: $white;
+    .img{
+        width: rem(234);
+        height: rem(156);
+    }
+    .text{
+        padding: 0 rem(40);
+        margin-top: rem(24);
+        font-weight: normal;
+        font-size: rem($font-size-primary);
+        line-height: rem($font-line-height-primary);
+        text-align: center;
+        color: $text-color-secondary;
+    }
+    .btn{
+        margin-top: rem(40);
+        width: 100%;
+        height: rem(42);
+        width: rem(343);
+    }
+}
+.text{
+    margin: rem(24) 0;
+    font-weight: normal;
+    font-size: rem(12);
+    line-height: rem(22);
+    color: $text-color-placeholder;
+    text-align: center;
+}

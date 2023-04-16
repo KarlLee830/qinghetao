@@ -1,0 +1,166 @@
+@import '@common/styles/index.scss';
+
+.contianer {
+  @include cursor-on-pc;
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+}
+
+.right {
+  flex: 1;
+  margin-left: $margin-2n;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.name {
+  color: $text-color-primary;
+  font-size: $font-size-primary;
+  font-weight: bold;
+  max-width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
+}
+.groupNameBox {
+  display: flex;
+  align-items: center;
+  margin-left: $margin-1n;
+}
+
+.groupName {
+  color: $text-color-secondary;
+  font-size: $font-size-label;
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.groupName2 {
+  max-width: 82.5px;
+}
+
+.groupName3 {
+  max-width: 58px;
+}
+
+.meta {
+  margin-top: 1px;
+  color: $text-color-secondary;
+  display: flex;
+  align-items: center;
+  font-size: $font-size-label;
+  height: 17px;
+}
+
+.time {
+  margin-right: $margin-10;
+  font-size: $font-size-label;
+}
+
+.location {
+  margin-right: $margin-2n;
+  display: flex;
+  align-items: center;
+
+  Text {
+    margin-left: $margin-1n;
+    font-size: $font-size-label;
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.view {
+  margin-right: $margin-2n;
+  display: flex;
+  align-items: center;
+
+  Text {
+    margin-left: $margin-1n;
+    font-size: $font-size-label;
+  }
+
+  .viewIcon {
+    color: $text-color-secondary;
+    margin-top: 1px;
+  }
+}
+
+.tags {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+
+  .categoryEssence {
+    box-sizing: border-box;
+    color: $tag-text-color1;
+    border: 1px solid var(--color-orange6);
+
+    &:after {
+      background-color: $tag-text-color1;
+    }
+  }
+
+  .pay {
+    color: $success-color;
+    border: 1px solid $success-color;
+
+    &:after {
+      background-color: $success-color;
+    }
+  }
+
+  .reward {
+    color: $warn-color;
+    border: 1px solid $warn-color;
+
+    &:after {
+      background-color: $warn-color;
+    }
+  }
+
+  .red {
+    color: $text-color-error;
+    border: 1px solid $text-color-error;
+
+    &:after {
+      background-color: $text-color-error;
+    }
+  }
+
+  > View {
+    margin-left: 8px;
+  }
+
+  :global {
+    .dzq-tag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:after {
+        z-index: 1;
+      }
+    }
+  }
+}

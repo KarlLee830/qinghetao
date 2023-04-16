@@ -1,0 +1,63 @@
+{
+    "name_cn": "商品贴插件",
+    "name_en": "shop",
+    "description": "商品贴插件",
+    "type": 9,
+    "app_id": "61540fef8f4de8",
+    "version": "1.0.0",
+    "status": 1,
+    "icon": "https:\/\/discuz.chat\/dzq-img\/active.png",
+    "filter_enable": false,
+    "author": {
+        "name": "fishcui",
+        "email": "fishcui@tencent.com"
+    },
+    "view": {
+        "display": {
+            "target": ["plugin_index", "plugin_detail"],
+            "hookName": "thread_extension_display_hook",
+            "platform": ["pc", "h5", "mini"],
+            "disables": false
+        },
+        "postDisplay": {
+            "version": "1.0.0",
+            "target": "plugin_post",
+            "hookName": "post_extension_content_hook",
+            "platform": ["pc", "h5", "mini"],
+            "disables": false
+        },
+        "postEntry": {
+            "target": "plugin_post",
+            "hookName": "post_extension_entry_hook",
+            "platform": ["pc", "h5", "mini"],
+            "disables": false
+        },
+        "qrCodePage": {
+            "target": "plugin_system",
+            "hookName": "add_page_hook",
+            "platform": ["pc", "h5"],
+            "path": "/minishop/qrcode",
+            "miniPageConfig": {
+              "navigationBarTitleText": "二维码"
+            },
+            "disables": false
+          },
+          "selectProductPage": {
+            "target": "plugin_system",
+            "hookName": "add_page_hook",
+            "platform": ["pc", "h5", "mini"],
+            "path": "/selectProduct",
+            "miniPageConfig": {
+              "navigationBarTitleText": "选择商品"
+            },
+            "disables": false
+          },
+          "userCenterEntry": {
+            "target": "plugin_user",
+            "hookName": "user_extension_action_hook",
+            "platform": ["pc", "h5", "mini"],
+            "disables": false
+          }
+          
+    }
+}

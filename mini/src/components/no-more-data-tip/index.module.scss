@@ -1,0 +1,31 @@
+@import '@common/styles/index.scss';
+
+.no_more_data_tip {
+  height: rem(68);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  View {
+    display: inline-block;
+  }
+
+  .left_line,
+  .right_line {
+    height: 1px;
+    width: rem(79);
+    background-color: #E5E5E5;
+  }
+  .left_line {
+    margin-right: rem(16);
+  }
+  .right_line {
+    margin-left: rem(16);
+  }
+
+  .text_tip {
+    color: $text-color-placeholder;
+    font-size: $font-size-primary;
+    line-height: $font-size-primary;
+  }
+}

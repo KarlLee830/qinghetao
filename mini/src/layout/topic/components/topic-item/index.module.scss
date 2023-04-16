@@ -1,0 +1,34 @@
+@import '@common/styles/index.scss';
+
+
+.item {
+  padding: 16px;
+  background: $white;
+  margin-bottom: 10px;
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-color-primary;
+  }
+  .content {
+    font-size: 14px;
+    line-height: 18px;
+    color: $text-color-primary;
+    margin: 8px 0;
+  }
+  .footer {
+    display: flex;
+    margin-top: 8px;
+    .numBox {
+      font-size: 12px;
+      line-height: 16px;
+      color: $text-color-secondary;
+      margin-right: 10px;
+      .title {
+        margin-right: 4px;
+      }
+    }
+  }
+}
+

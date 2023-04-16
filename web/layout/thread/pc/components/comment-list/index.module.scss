@@ -1,0 +1,246 @@
+@import '@common/styles/index.scss';
+.commentList {
+  padding: rem($padding-6n) 0;
+
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: rem($margin-4n);
+  }
+
+  .redpacket {
+    margin-left: rem($margin-4n);
+  }
+
+  .content {
+    display: flex;
+    .commentListAvatar {
+      margin-right: rem($margin-2n);
+      width: rem(38);
+    }
+    .avatar {
+      cursor: pointer;
+    }
+    .commentListContent {
+      width: 100%;
+      .commentListContentText {
+        //padding: rem($padding-2n) rem($padding-3n);
+        border-radius: rem($border-radius-small);
+        background-color: $body-bg-color;
+
+        &.active {
+          background: $primary-color10;
+        }
+
+        .commentHeader {
+          display: flex;
+          justify-content: space-between;
+          .userInfo {
+            display: flex;
+            .commentListName {
+              max-width: rem(200);
+              padding-top: rem($padding-2n);
+              padding-left: rem($padding-3n);
+              padding-right: rem($padding-2n);
+              font-weight: $font-weight-regular;
+              font-size: rem($font-size-primary);
+              line-height: rem(20);
+              text-align: left;
+              color: $text-color-primary;
+              @include text-ellipsis();
+            }
+            .masterBox {
+              padding:rem($padding-2n + 2) rem($padding-2n) 0 0;
+              flex: none;
+              .masterText {
+                border-radius: rem(2);
+                background: $primary-color;
+                display: inline-block;
+                font-size: rem(14);
+                -webkit-text-size-adjust:none;
+                -webkit-transform : scale(0.83,0.83);
+                line-height: rem(15);
+                padding: rem(2) rem(4);
+                text-align: center;
+                width:rem(45) ;
+                color: $white;
+              }
+            }
+            .groupsBox {
+              display: flex;
+              align-items: center;
+              padding-top: rem(5);
+            }
+            .groups {
+              color: $text-color-secondary;
+              font-size: $font-size-label;
+              max-width: rem(100);
+              white-space: nowrap;
+              overflow: hidden;
+              padding-top: rem(3);
+              line-height: rem(20);
+              text-overflow: ellipsis;
+            }
+          }
+          .isApproved {
+            font-size: $font-size-primary;
+            color: $error-color;
+            padding: $padding-2n $padding-3n 0;
+          }
+        }
+
+        .commentListText {
+          padding-bottom: rem($padding-2n);
+          padding-left: rem($padding-3n);
+          padding-right: rem($padding-3n);
+          margin-top: rem(4);
+          font-size: rem($font-size-middle);
+          line-height: rem(22);
+          text-align: left;
+          color: $text-color-primary;
+          word-break: break-word;
+
+          :global {
+            .qq-emotion {
+              width: rem(22);
+              height: rem(22);
+            }
+
+            .dzq-p  {
+              margin-bottom: 0;
+              font-size: $font-size-middle !important;
+            }
+          }
+
+          // p {
+          //   line-height: rem(24);
+          // }
+
+          // img {
+          //   height: rem(22);
+          // }
+
+          // &.isShowOne {
+          //   @include lamp-clamp(2);
+
+          //   // p {
+          //   //   @include lamp-clamp(2);
+          //   // }
+          // }
+        }
+        .imageDisplay {
+          margin-top: rem($margin-2n);
+        }
+      }
+
+      .commentListFooter {
+        .commentBtn {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: rem($font-size-primary);
+          text-align: left;
+          color: $text-color-secondary;
+          padding-top: rem($padding-2n);
+          line-height: rem(20);
+
+          .commentTime {
+            font-size: rem($font-size-label);
+          }
+          .commentLike {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+          }
+          .commentReply {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+          }
+          .commentAdopt {
+            // flex: 1;
+            cursor: pointer;
+          }
+          .commentDelete{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+          }
+          .commentReport{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+          }
+        }
+        .moreReply {
+          font-weight: $font-weight-regular;
+          font-size: rem($font-size-primary);
+          text-align: left;
+          color: $text-color-primary;
+          padding-top: rem($padding-4n);
+          line-height: rem(22);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .extraBottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    //cursor: pointer;
+    > div {
+      margin-left: rem(24);
+    }
+  }
+}
+
+.icon {
+  margin-right: rem(8);
+  font-size: rem(16) !important;
+  color: $text-color-secondary;
+}
+
+.active {
+  color: $primary-color;
+
+  .icon {
+    color: $primary-color;
+  }
+}
+
+.commentInput {
+  margin-top: rem(16);
+}
+
+.divider {
+  margin-bottom: rem($margin-2n);
+}
+
+.revise {
+  display: flex;
+  align-items: center;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+
+.hongbaoLikeNum{
+  display: flex;
+  align-items: center;
+  margin:0 5px;
+  .iconzan{
+    color: $orange-color;
+    margin-right: 5px;
+  }
+  >span{
+    color: $error-color;
+  }
+}

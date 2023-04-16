@@ -1,0 +1,35 @@
+@import "@common/styles/index.scss";
+
+.wrapper {
+  height: 100vh;
+  height: calc(100vh - constant(safe-area-inset-bottom));
+  height: calc(100vh - env(safe-area-inset-bottom));
+  background-color: $body-bg-color;
+  
+}
+
+.header {
+  padding: 0 $padding-4n;
+  margin-bottom: $margin-10;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  font-size: $font-size-base;
+  background-color: $white;
+  color: $text-color-regular;
+}
+.item {
+  margin: 0 $margin-4n;
+  padding: $padding-4n 0;
+  width: calc(100vw - 0.08rem * 2);
+  border-bottom: $border-solid-1;
+  overflow: hidden;
+  &.border-none {
+    border: none;
+  }
+  &-time {
+    margin-top: $margin-2n;
+    font-size: $font-size-small;
+    color: $text-color-secondary;
+  }
+}

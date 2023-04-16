@@ -1,0 +1,14 @@
+@import '@common/styles/index.scss';
+
+.pc {
+  :global {
+    .dzq-modal__container {
+      border-radius: $border-radius-small;
+      padding: 0;
+      overflow: hidden;
+    }
+    .dzq-modal__body {
+      padding: 0;
+    }
+  }
+}

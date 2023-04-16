@@ -1,0 +1,207 @@
+@import '@common/styles/index.scss';
+.replyList {
+  display: flex;
+  padding-top: rem($padding-4n);
+  .replyListAvatar {
+    margin-right: rem($margin-2n);
+    margin-top: rem($margin-1n);
+  }
+  .replyListContent {
+    width: 100%;
+    .replyListContentText {
+      padding: rem($padding-2n) rem($padding-3n);
+      border-radius: rem($border-radius-small);
+      background: $body-bg-color;
+
+      &.active {
+        background: $primary-color10;
+      }
+
+      .replyListName {
+        display: flex;
+        justify-content: space-between;
+        .userInfo {
+          display: flex;
+          .replyListName {
+            font-size: rem($font-size-primary);
+            font-weight: bold;
+            line-height: rem(20);
+            text-align: left;
+            color: $text-color-primary;
+            .replyListNameText {
+              @include text-ellipsis();
+              max-width: rem(100);
+            }
+          }
+          .masterBox {
+            padding-top:rem(2);
+            padding-left: rem($padding-2n);
+            flex: none;
+            .masterText {
+              border-radius: rem(2);
+              background: $primary-color;
+              display: inline-block;
+              font-size: rem(12);
+              -webkit-text-size-adjust:none;
+              -webkit-transform : scale(0.83,0.83);
+              line-height: rem(14);
+              padding: rem(0) rem(4);
+              text-align: center;
+              width: rem(25);
+              color: $white;
+            }
+          }
+          .groupsBox {
+            display: flex;
+            align-items: center;
+            padding-left: $padding-2n;
+          }
+          .groups {
+            color: $text-color-secondary;
+            font-size: $font-size-label;
+            max-width: rem(100);
+            white-space: nowrap;
+            overflow: hidden;
+            line-height: rem(20);
+            text-overflow: ellipsis;
+          }
+        }
+        .isApproved {
+          font-size: $font-size-primary;
+          color: $error-color;
+          line-height: rem(20);
+        }
+      }
+      .replyListText {
+        // margin-top: rem($margin-1n);
+        font-size: rem($font-size-middle);
+        text-align: left;
+        color: $text-color-primary;
+        width: 100%;
+        word-break: break-all;
+        line-height: $font-line-height-middle;
+
+        .content {
+          display: inline;
+          font-weight: normal;
+          font-size: $font-size-middle;
+          line-height: rem(16);
+          text-align: left;
+          color: $text-color-primary;
+          vertical-align: super;
+          position: relative;
+          top: rem(3);
+
+          :global {
+            .qq-emotion {
+              width: rem(22);
+              height: rem(22);
+            }
+
+            .dzq-p {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .imageDisplay{
+          margin-top: rem(10);
+        }
+
+        .commentUser {
+          display: inline-flex;
+          word-break: initial;
+          align-items: center;
+          justify-content: flex-start;
+          height: rem(28);
+          position: relative;
+          top: rem(0);
+          .iconAt{
+            color: $primary-color;
+          }
+          .replyedUserName {
+            max-width: rem(100);
+            font-weight: bold;
+            font-size: rem($font-size-primary);
+            margin-right: rem($margin-2n);
+            line-height: rem(18);
+            text-align: left;
+            color: $primary-color;
+            @include text-ellipsis();
+          }
+          .masterBox {
+            padding-right: rem($padding-2n);
+            line-height: rem(18);
+            display: flex;
+            align-items: center;
+            flex: none;
+            .masterText {
+              border-radius: rem(2);
+              background: $primary-color;
+              display: inline-block;
+              font-size: rem(12);
+              -webkit-text-size-adjust:none;
+              -webkit-transform : scale(0.83,0.83);
+              line-height: rem(14);
+              padding: rem(0) rem(4);
+              text-align: center;
+              width: rem(25);
+              color: $white;
+            }
+          }
+          .replyedAvatar {
+            display: inline-block;
+            margin-right: rem($margin-1n);
+
+            .avatar {
+              width: rem(24);
+              height: rem(24);
+              font-size: rem($font-size-small);
+              line-height: rem(24);
+              transform: scale(0.75);
+            }
+          }
+        }
+        .positionTop {
+          top: 0;
+        }
+      }
+    }
+    .replyListFooter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: rem($font-size-primary);
+      line-height: rem(16.8);
+      text-align: left;
+      color: $text-color-secondary;
+      padding-top: rem($padding-2n);
+      .replyTime {
+        // flex: 1;
+        font-size: rem($font-size-label);
+      }
+      .replyLiked {
+        // flex: 1;
+      }
+      .replyLike {
+        // flex: 1;
+        color: $primary-color;
+      }
+      .replyReply {
+        // flex: 1;
+      }
+      .replyDelete {
+        // flex: 1;
+      }
+    }
+  }
+
+  .extraBottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    > div {
+      margin-left: rem(24);
+    }
+  }
+}

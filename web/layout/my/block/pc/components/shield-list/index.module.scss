@@ -1,0 +1,55 @@
+@import '@common/styles/index.scss';
+
+.list {
+  width: 100%;
+  .item {
+    display: flex;
+    padding: rem($padding-4n) 0;
+    border-bottom: 1px solid $border-color;
+    &:last-child {
+      border-bottom: none;
+    }
+    .content {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: space-between;
+      .name {
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: rem($font-size-primary);
+        color: $text-color-primary;
+        font-weight: 700;
+      }
+    }
+    .avatar {
+      width: rem(38);
+      height: rem(38);
+      margin-right: rem($margin-4n);
+      cursor: pointer;
+    }
+    .unBlockButton {
+      width: 72px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      font-size: 12px;
+      border-radius: 5px;
+      background: #c4c9d6;
+      color: $white;
+    }
+
+    .blockButton {
+      width: 72px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      font-size: 12px;
+      border-radius: 5px;
+    }
+  }
+}

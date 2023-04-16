@@ -1,0 +1,24 @@
+@import '@common/styles/index.scss';
+
+$im-pagebed-padding: 16px;
+$im-profile-icon-size: 38px;
+$im-gap-btw-icon-and-msg: 16px;
+$im-msg-space-aside: $im-pagebed-padding + $im-profile-icon-size + $im-gap-btw-icon-and-msg;
+$im-space-in-between-btns: $padding-3n;
+
+@mixin im-pagebed {
+  padding: 0 $im-pagebed-padding;
+}
+
+@mixin text-font(
+  $font-size: $font-size-middle,
+  $font-weight: 400,
+  $line-height: $font-line-height-middle,
+  $color: $white
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}

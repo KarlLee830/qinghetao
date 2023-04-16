@@ -1,0 +1,93 @@
+@import "@common/styles/index.scss";
+
+.container {
+  background-color: $white;
+  margin-bottom: $margin-10;
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin: 0 $padding-4n;
+    padding: $padding-10 0;
+    font-size: $font-size-middle;
+    line-height: $font-line-height-primary;
+    border-bottom: $border-solid-1;
+
+    &:last-child {
+      border: none;
+    }
+
+    .left {
+      flex: 0 0 38px;
+      margin-right: 16px;
+
+      :global {
+        .dzq-icon {
+          background-color: $primary-color;
+          padding: 9px;
+          border-radius: 50%;
+          color: $white;
+        }
+      }
+    }
+
+    .center {
+      flex: 1;
+      font-size: $font-size-middle;
+      text-align: left;
+      color: $text-color-primary;
+    }
+
+    .right {
+      padding: $padding-4n;
+      padding-right: 0;
+
+      .right-arrow {
+        color: $icon-color-light;
+      }
+    }
+  }
+}
+
+// PC样式
+.pc-container {
+  padding: 0 $padding-4n;
+  background-color: $white;
+
+  .container-inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: rem(52px);
+    border-bottom: $border-solid-1;
+
+    .item {
+      margin-right: rem(32px);
+      font-size: $font-size-base;
+      color: $text-color-regular;
+      line-height: rem(52px);
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+
+      &.item-active {
+        color: $primary-color;
+        font-weight: 600;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          width: 80%;
+          height: rem(2px);
+          transform: translateX(-50%);
+          border-radius: 1px;
+          background: $primary-color;
+        }
+      }
+    }
+  }
+}

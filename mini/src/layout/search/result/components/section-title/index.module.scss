@@ -1,0 +1,37 @@
+@import '@common/styles/index.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem($padding-4n) 0;
+  box-sizing: border-box;
+  background-color: $white;
+  .left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.title {
+  font-weight: $font-weight-regular;
+  font-size: rem($font-size-middle);
+  line-height: rem($font-line-height-primary);
+  text-align: left;
+  color: $text-color-primary;
+}
+.more {
+  font-size: rem($font-size-primary);
+  line-height: rem($font-line-height-middle);
+  text-align: left;
+  color: $text-color-primary;
+  margin-right: rem($padding-2n);
+}

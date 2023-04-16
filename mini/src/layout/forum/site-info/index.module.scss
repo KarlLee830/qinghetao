@@ -1,0 +1,74 @@
+@import '@common/styles/index.scss';
+
+.wrap {
+  border-bottom: rem(10) solid $comment-bg-color; // todo 这个颜色未定义scss变量
+  padding-bottom: rem($padding-4n);
+}
+.site{
+  padding: 0 rem($padding-4n);
+  &.popularContents{
+    padding-bottom: 0;
+  }
+  .site_title{
+    padding-bottom: rem($padding-4n);
+    border-bottom: $border-solid-1;
+    font-size: rem($padding-4n);
+    line-height: rem($font-line-height-primary);
+    color: $text-color-primary;
+  }
+  .site_introduce{
+    padding: rem($padding-4n) 0;
+    font-size: rem($font-size-primary);
+    font-weight: normal;
+    line-height: rem($font-line-height-primary);
+    text-align: left;
+    color: $text-color-primary;
+    border-bottom: $border-solid-1;
+  }
+}
+.site_status{
+  padding-top: rem($padding-4n);
+  display: flex;
+  .site_status_list{
+    flex: 1;
+    display: flex;
+    float: left;
+    text-align: center;
+    justify-content: center;
+    font-size: rem($font-size-primary);
+    &:nth-child(2) {
+      position: relative;
+    }
+    &:nth-child(2):after, &:nth-child(2):before {
+      float: left;
+      content: '';
+      height: 14px;
+      width: 1px;
+      position: absolute;
+      top: rem(3);
+      background-color: $border-color;
+    }
+    &:nth-child(2):after{
+      left: 0;
+    }
+    &:nth-child(2):before {
+      right: 0;
+    }
+  }
+  .site_status_label{
+    @include text-ellipsis;
+    float: left;
+    color: $text-color-regular;
+    margin-right: rem($margin-2n);
+    line-height: rem(20);
+  }
+  .site_status_item{
+    float: left;
+    color: $primary-color;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: rem(20);
+  }
+}

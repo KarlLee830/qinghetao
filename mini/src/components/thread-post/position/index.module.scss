@@ -1,0 +1,35 @@
+@import "@common/styles/index.scss";
+
+.position {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  border-radius: 5px;
+  background: #f0f1f3;
+  color: $text-color-regular;
+  margin: 9px 8px 9px 0;
+  max-width: 70%;
+
+  .position-icon {
+    margin: 0 $margin-1n 0 $margin-2n;
+  }
+
+  .text {
+    align-self: stretch;
+    line-height: 27px;
+    font-size: $font-size-label;
+    text-align: left;
+    @include text-ellipsis();
+  }
+
+  .remove-icon {
+    align-self: stretch;
+    line-height: 27px;
+    padding: 0 $padding-2n;
+  }
+}
+
+.chose {
+  color: $primary-color;
+  background: #E8F0FE;
+}

@@ -1,0 +1,238 @@
+@import "@common/styles/index.scss";
+
+.wrapper {
+  width: 100%;
+  background: $white;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  -webkit-tap-highlight-color: transparent;
+
+  /*内容展示区*/
+  .block {
+    flex: 1 0 100%;
+    width: 100%;
+    padding-top: $margin-4n;
+    display: flex;
+    justify-content: flex-start;
+    transition: all 0.5s;
+  }
+
+  .block-pc {
+    // flex: 1 0 100%;
+    width: 100%;
+    padding: $margin-4n $margin-2n 0 $margin-2n;
+    display: flex;
+    justify-content: flex-start;
+    transition: all 0.5s;
+  }
+
+  .avatar {
+    flex: 0 0 rem(38);
+    height: rem(38);
+    margin-left: $margin-2n;
+    padding: 0 $padding-2n;
+    cursor: pointer;
+
+    :global {
+      .dzq-badge {
+        width: 100%;
+        height: 100%;
+      }
+
+      .dzq-avatar {
+        width: rem(38px);
+        height: rem(38px);
+        font-size: $font-size-large;
+        color: $white;
+        text-align: center;
+        line-height: rem(38);
+        background: $text-color-secondary;
+
+        .dzq-avatar__img {
+          width: 100%;
+          height: 100%;
+          vertical-align: top;
+        }
+
+        .dzq-avatar__text {
+          width: 100%;
+          height: 100%;
+          line-height: rem(38);
+        }
+      }
+    }
+  }
+
+  .detail {
+    flex: 1;
+    overflow: hidden;
+    padding-bottom: $padding-4n;
+    margin-right: $margin-4n;
+    font-size: $font-size-middle;
+    border-bottom: $border-solid-1;
+    overflow: hidden;
+    &.border-none {
+      border: none;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      height: rem(20);
+
+      .name {
+        max-width: rem(120px);
+        font-weight: 600;
+        font-size: $font-size-primary;
+        text-align: left;
+        line-height: rem(20);
+        color: $text-color-primary;
+        cursor: pointer;
+      }
+
+      .amount {
+        font-size: $font-size-middle;
+        line-height: rem(20);
+        text-align: right;
+        color: $error-color;
+        font-weight: bold;
+      }
+    }
+
+    .middle {
+      position: relative;
+      padding-top: $margin-1n;
+      font-size: $font-size-primary;
+      color: $text-color-secondary;
+      line-height: rem(20);
+      cursor: pointer;
+
+      .content-html{
+        overflow: hidden;
+        word-break: break-all;
+        text-decoration: none;
+      }
+
+      :global {
+        .qq-emotion {
+          width: 20px;
+          height: 20px;
+          vertical-align: top;
+        }
+
+        a {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .bottom {
+      margin-top: $margin-2n;
+    }
+
+    .time {
+      font-weight: normal;
+      font-size: $font-size-small;
+      line-height: rem(22);
+      text-align: left;
+      color: $text-color-secondary;
+    }
+
+    /*私信详情*/
+    &.detail-chat {
+      margin-left: $margin-2n;
+      .middle {
+        .content-html {
+          max-width: 320px;
+        }
+      }
+    }
+    /*帖子详情*/
+    &.detail-account {
+      margin-left: $margin-2n;
+      .middle {
+        line-height: rem(22);
+        cursor: unset;
+      }
+    }
+    /*财务详情*/
+    &.detail-financial {
+      top: 0;
+      .middle {
+        .content-html {
+          .financial-content {
+            height: 20px;
+          }
+        }
+      }
+    }
+    /*账号详情*/
+    &.detail-thread {
+      .top {
+        padding: rem(8) rem(8) 0;
+        background: $body-bg-color;
+        border-radius: rem(5) rem(5) 0 0;
+      }
+      .middle {
+        padding: rem(8);
+        padding-top: rem(4);
+        font-size: $font-size-middle;
+        color: $text-color-primary;
+        line-height: rem(24);
+        background: $body-bg-color;
+        border-radius: 0 0 rem(5) rem(5);
+        .content-html {
+          .tip {
+            color: $primary-color;
+            padding-right: $padding-5;
+          }
+        }
+      }
+    }
+  }
+
+  /* pc */
+  .detail-pc {
+    .delete {
+      visibility: hidden;
+      position: absolute;
+      right: 0;
+      bottom: 50%;
+      transform: translateY(50%);
+      width: rem(20);
+      height: rem(20);
+      text-align: right;
+      cursor: pointer;
+      z-index: 9;
+      .icon {
+        color: $text-color-secondary;
+      }
+    }
+
+    &.detail-thread .delete{
+      bottom: 0;
+      transform: translateY(26px);
+    }
+  }
+
+  &:hover .delete {
+    visibility: visible !important;
+  }
+
+  .single-line {
+    @include text-ellipsis();
+  }
+
+  .multiple-line {
+    @include lamp-clamp(3);
+  }
+
+  .unset-cursor {
+    cursor: unset !important;
+  }
+}
+
+.set-radius{
+  border-radius:  0 0 $border-radius-small $border-radius-small;
+}

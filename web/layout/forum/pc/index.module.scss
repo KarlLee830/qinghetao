@@ -1,0 +1,276 @@
+@import '@common/styles/index.scss';
+@mixin titlePaddingTop {
+  padding-top: $padding-4n;
+}
+
+// 模块标题
+.mode_title {
+  font-size: $font-size-base;
+  line-height: $font-line-height-xs;
+  color: $text-color-secondary;
+}
+// 模块文本
+.mode_text {
+  padding-top: $padding-2n;
+  padding-bottom: $padding-4n;
+  font-size: $font-size-base;
+  line-height: $font-line-height-small;
+  border-bottom: $border-solid-1;
+  span {
+    color: $error-color;
+  }
+}
+// 用户信息标签一栏
+.user_info_label {
+  width: 100%;
+  border-radius: $border-radius-small $border-radius-small 0 0;
+  height: 36px;
+  background: $body-bg-color;
+  box-sizing: border-box;
+  padding: $padding-2n $padding-4n;
+  display: flex;
+  .user_label_item{
+    @include text-ellipsis;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    font-size: $font-size-base;
+    line-height: $font-line-height-xs;
+    color: $text-color-regular;
+  }
+}
+// 用户信息内容一栏
+.user_info_value {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 54px;
+  box-sizing: border-box;
+  padding: $padding-2n $padding-4n;
+  border-bottom: $border-solid-1;
+  .user_value_item {
+    @include text-ellipsis;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    font-size: $font-size-base;
+    line-height: $font-line-height-base;
+    color: $text-color-primary;
+    span {
+      @include text-ellipsis;
+    }
+    .user_value_avatar {
+      border-radius: $border-radius-circle;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .user_value_name {
+      @include text-ellipsis;
+      padding-left: $padding-4n;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  background-color: $white;
+  box-sizing: border-box;
+  padding: $padding-6n;
+  margin-bottom: $margin-6n;
+  .title {
+    padding-bottom: $padding-6n;
+    display: flex;
+    align-items: center;
+    font-size: $font-size-middle;
+    line-height: $font-line-height-base;
+    font-weight: 600;
+    color: $text-color-primary;
+    .title_text {
+      padding-left: $padding-2n;
+    }
+  }
+  .forum_agent {
+  }
+  .site_introduction,.site_mode,.my_role,.my_permission {
+    @include titlePaddingTop;
+  }
+  .site_mode {
+  }
+  .my_role {
+    .user_info_label {
+      margin-top: $margin-4n;
+    }
+  }
+}
+.my_permission {
+  position: relative;
+  @mixin item {
+    padding: $padding-2n $padding-14;
+  }
+  @mixin scrollbar_forum {
+    &::-webkit-scrollbar {
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: $border-radius-small;
+    }
+    &::-webkit-scrollbar-track {
+      background: $border-color;
+    }
+    &::-webkit-scrollbar-corner {
+      background: $border-color;
+    }
+    &::-webkit-scrollbar-button {
+      width: 8px;
+      height: 8px;
+      background: $border-color;
+    }
+
+  }
+  .my_permission_plate {
+    @include scrollbar;
+    @include scrollbar_forum;
+    width: 100%;
+    height: 543px;
+    border-radius: $border-radius-small;
+    margin-top: $margin-4n;
+    overflow: scroll;
+    border-right: 5px solid $border-color;
+    border-bottom: 5px solid $border-color;
+    box-sizing: border-box;
+    border-left: $border-solid-1;
+    border-top: $border-solid-1;
+  }
+  .plate_left_label {
+    border-right: $border-solid-1;
+    border-bottom: $border-solid-1;
+  }
+  .plate_td {
+    @include item;
+    white-space: nowrap;
+    font-weight: normal;
+    font-size: $font-size-base;
+    line-height: $font-line-height-xs;
+    text-align: center;
+    color: $text-color-regular;
+    border: $border-solid-1;
+    border-right: none;
+    border-bottom: none;
+  }
+  .plate_th {
+    background: $body-bg-color;
+    height: 36px;
+    .plate_td {
+      border-top: none;
+      &:nth-child(1) {
+        border-left: none;
+      }
+    }
+  }
+  .plate_tr {
+    height: 48px;
+    .plate_td {
+      padding: $padding-14;
+      &:nth-child(1) {
+        border-left: none;
+      }
+    }
+  }
+  .my_permission_common {
+    width: 100%;
+    height: 343px;
+    box-sizing: border-box;
+    margin-top: $margin-4n;
+    display: flex;
+    border: $border-solid-1;
+    border-right: 5px solid $border-color;
+    border-radius: $border-radius-small;
+    overflow: hidden;
+  }
+  .permission_common_left {
+    background: $body-bg-color;
+    display: flex;
+    width: 84px;
+    justify-content: center;
+    align-items: center;
+  }
+  .permission_common_right {
+    @include scrollbar;
+    @include scrollbar_forum;
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+    &::-webkit-scrollbar-button {
+      height: 4px;
+    }
+  }
+  .common_label_item {
+    width: 420px;
+    height: 48px;
+    padding: $font-size-base;
+    line-height: $font-line-height-middle;
+    text-align: left;
+    box-sizing: border-box;
+    display: flex;
+    color: $text-color-primary;
+    align-items: center;
+    border: $border-solid-1;
+    border-right: none;
+    border-bottom: none;
+    &:nth-child(1) {
+      border-top: none;
+    }
+  }
+  .permission_common_value {
+    flex: 1;
+  }
+  .common_value_item {
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: $border-solid-1;
+    border-bottom: none;
+    &:nth-child(1) {
+      border-top: none;
+    }
+  }
+  @mixin scroll_border {
+    position: absolute;
+    background: $border-color;
+  }
+  .plate_right_scroll {
+    width: 5px;
+    height: 543px;
+    right: 13px;
+    top: 50px;
+    @include scroll_border;
+  }
+  .plate_left_scroll {
+    width: 100%;
+    height: 5px;
+    left: 0;
+    bottom: 372px;
+    @include scroll_border;
+  }
+  .common_right_scroll {
+    width: 5px;
+    height: 343px;
+    right: 13px;
+    bottom: 0;
+    @include scroll_border;
+  }
+}
+.content_header {
+  min-height: 10px;
+}

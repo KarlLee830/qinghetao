@@ -1,0 +1,74 @@
+@import '@common/styles/index.scss';
+
+.list {
+  padding: rem($padding-4n) 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    font-size: rem($font-size-primary);
+    margin-bottom: rem(12);
+    .index {
+      font-size: inherit;
+      line-height: rem($font-line-height-primary);
+      margin-right: rem($padding-2n);
+      width: rem(14);
+      text-align: center;
+    }
+    .text {
+      font-size: inherit;
+      line-height: rem($font-line-height-primary);
+      width: rem(140);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .footerItem {
+    margin-bottom: 0;
+  }
+}
+
+.itemIndex1 {
+  color: $error-color;
+}
+.itemIndex2 {
+  color: $error-color;
+  opacity: 0.8;
+}
+.itemIndex3 {
+  color: $error-color;
+  opacity: 0.6;
+}
+.itemIndex4 {
+  color: $error-color;
+  opacity: 0.5;
+}
+.itemIndex5 {
+  color: $warn-color;
+}
+.itemIndex6 {
+  color: $warn-color;
+  opacity: 0.8;
+}
+.itemIndex7 {
+  color: $warn-color;
+  opacity: 0.6;
+}
+.itemIndex8 {
+  color: $warn-color;
+  opacity: 0.5;
+}
+.itemIndex9 {
+  color: $warn-color;
+  opacity: 0.4;
+}
+.itemIndex10 {
+  color: $warn-color;
+  opacity: 0.3;
+}

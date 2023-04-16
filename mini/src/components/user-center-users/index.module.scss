@@ -1,0 +1,14 @@
+@import '@common/styles/index.scss';
+.loadMoreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spinner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color-placeholder;
+    height: 60px;
+}

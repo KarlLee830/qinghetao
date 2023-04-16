@@ -1,0 +1,26 @@
+@import '@common/styles/index.scss';
+@import '@common/styles/index.scss';
+
+.loadMoreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color-placeholder;
+    padding-top: rem(16);
+    padding-bottom: rem(16);
+
+    :global {
+        .dzq-spin--spinner {
+            color: $text-color-placeholder;
+        }
+    }
+}
+
+.userCenterFriends {
+    background: $white;
+}
+
+.fansBody + View {
+    margin-bottom: constant(safe-area-inset-bottom); ///兼容 IOS<11.2/
+    margin-bottom: env(safe-area-inset-bottom); ///兼容 IOS>11.2/
+}

@@ -1,0 +1,149 @@
+@import '@common/styles/index.scss';
+.indexImage {
+  margin-bottom: 16px;
+  .imageBox {
+    width: 100%;
+    .images1 {
+      width: 343px;
+      height: 260px;
+      margin: 0 auto;
+      .imagesBox1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .images2 {
+      width: 343px;
+      height: 260px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .imagesBox2 {
+        display: block;
+        width: 170px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .images3 {
+      display: flex;
+      width: 343px;
+      height: 260px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      .imagesTop3 {
+        width: 343px;
+        height: 128px;
+        .imagesTopData3 {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .imagesBotom3 {
+        width: 343px;
+        height: 126px;
+        display: flex;
+        justify-content: space-between;
+        .imagesBotomData3 {
+          width: 170px;
+          height: 126px;
+          position: relative;
+          .imagesBotomDataPath3 {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    .images4 {
+      display: flex;
+      width: 343px;
+      height: 260px;
+      margin: 0 auto;
+      overflow: hidden;
+      justify-content: space-around;
+      .imagesTop4 {
+        width: 210px;
+        height: 260px;
+        .imagesTopData4 {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .imagesBotom4 {
+        width: 129px;
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .imagesBotomData4 {
+          width: 100%;
+          height: 84px;
+          .imagesBotomDataPath4 {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    .images5 {
+      display: flex;
+      width: 343px;
+      height: 260px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      .imagesTop5 {
+        width: 100%;
+        height: 126px;
+        display: flex;
+        justify-content: space-around;
+        .imagesTopData5 {
+          display: block;
+          width: 169px;
+          height: 126px;
+          object-fit: cover;
+        }
+      }
+      .imagesBotom5 {
+        width: 100%;
+        height: 111px;
+        display: flex;
+        justify-content: space-around;
+        .imagesBotomData5 {
+          width: 111px;
+          height: 111px;
+          position: relative;
+          .imagesBotomDataPath5 {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .modalBox {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #666;
+            opacity: 0.5;
+            top: 0;
+            text-align: center;
+            line-height: 111px;
+            .imgSpan {
+              font-size: 20px;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

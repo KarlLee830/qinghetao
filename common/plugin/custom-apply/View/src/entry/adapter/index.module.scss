@@ -1,0 +1,274 @@
+@import '@common/styles/index.scss';
+.flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.apply-options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dzqp-act {
+  :global {
+    .dzq-modal__body {
+      padding: 0;
+    }
+  }
+
+  .dzqp-act--item {
+    padding-top: $padding-4n;
+    padding-bottom: $padding-4n;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: $border-solid-1;
+    &.options {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &.act-name {
+      padding-top: $padding-2n;
+      padding-bottom: $padding-2n;
+    }
+
+    &.act-detail {
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      .dzqp-act--item_title {
+        margin-bottom: $margin-4n;
+      }
+    }
+
+    &_title {
+      width: 70px;
+      font-size: $font-size-base;
+      color: $text-color-regular;
+
+      span,
+      text {
+        font-size: $font-size-label;
+        color: $text-color-secondary;
+      }
+
+      &.width-auto {
+        width: auto;
+      }
+    }
+
+    &_right {
+      display: inline-flex;
+      align-items: center;
+      flex: 1;
+      justify-content: flex-end;
+      cursor: pointer;
+
+      :global {
+        .dzq-input__inner {
+          border: 0;
+          font-size: $font-size-base;
+          text-align: right;
+          color: $text-color-primary;
+
+          &::placeholder {
+            font-size: $font-size-base;
+            color: $text-color-placeholder;
+          }
+        }
+      }
+
+      span,
+      text {
+        margin-right: $margin-10;
+        display: inline-block;
+        font-size: $font-size-base;
+        color: $text-color-primary;
+      }
+
+      :global {
+        .dzq-icon-RightOutlined {
+          color: $text-color-primary;
+        }
+      }
+    }
+
+    :global {
+      .dzq-textarea {
+        width: 100%;
+      }
+
+      .dzq-textarea__inner {
+        resize: none;
+
+        &::placeholder {
+          font-size: $font-size-base;
+          color: $text-color-placeholder;
+        }
+      }
+      .textarea-placeholder {
+        font-size: $font-size-base;
+        color: $text-color-placeholder;
+      }
+
+      .dzq-checkbox__label {
+        display: flex;
+        align-items: center;
+        font-size: $font-size-base;
+        color: $text-color-primary;
+      }
+
+      .dzq-checkbox-wrap {
+        .dzq-input {
+          margin-right: $margin-1n;
+          margin-left: $margin-1n;
+          width: 50px;
+        }
+
+        .dzq-input__inner {
+          height: 30px;
+          line-height: 30px;
+          border: 1px solid $text-color-placeholder;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .dzqp-act--more {
+    padding: $padding-4n 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    span,
+    text {
+      margin-right: $margin-10;
+      display: inline-block;
+      font-size: $font-size-base;
+      color: $text-color-regular;
+    }
+
+    &.fold {
+      :global {
+        .dzq-icon-RightOutlined {
+          transform: rotateZ(90deg);
+        }
+      }
+    }
+
+    &.expand {
+      :global {
+        .dzq-icon-RightOutlined {
+          transform: rotateZ(-90deg);
+        }
+      }
+    }
+  }
+
+  :global {
+    .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box{
+      border-radius: 0 !important;
+    }
+    .react-datepicker__time-list{
+      overflow-x: hidden !important;
+    }
+  }
+}
+.dzqp-act.pc {
+  :global {
+    .dzq-modal__body {
+      padding-right: 16px;
+      max-height: 500px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      overflow-y: overlay;
+      @include scrollbar();
+    }
+  }
+}
+.dzqp-act.h5 {
+  :global {
+    .dzq-modal__overlay {
+      display: none;
+    }
+    .dzq-modal__container {
+      width: 100% !important;
+      height: 100% !important;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .dzq-modal__header {
+      margin: $padding-4n $padding-6n;
+      padding: 0;
+    }
+    .dzq-modal__body,
+    .dzq-modal__footer {
+      padding: 0 $padding-6n;
+    }
+    .dzq-modal__body {
+      flex: 1;
+      margin-bottom: 60px;
+      margin-bottom: calc(60px + constant(safe-area-inset-bottom));
+      margin-bottom: calc(60px + env(safe-area-inset-bottom));
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .dzq-modal__footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: $padding-2n $padding-6n;
+      border-top: $border-solid-1;
+      background: $white;
+      display: flex;
+      justify-content: space-between;
+      .dzq-button {
+        flex: 1;
+        height: 42px;
+        line-height: 42px;
+      }
+    }
+  }
+}
+.dzqp-act.mini {
+  :global {
+    .dzq-modal__container {
+      padding-top: 0;
+    }
+    .dzq-modal__header {
+      padding: 0;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dzq-header__closeicon {
+      display: none;
+    }
+    .dzq-modal__body {
+      height: calc(100vh - 150px - constant(safe-area-inset-bottom));
+      height: calc(100vh - 150px - env(safe-area-inset-bottom));
+    }
+  }
+}
+
+.dzqp-act__limit_input {
+  :global {
+    .dzq-input__inner {
+      text-align: center;
+      padding: 0;
+    }
+  }
+}

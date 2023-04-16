@@ -1,0 +1,50 @@
+@import '@common/styles/index.scss';
+.container {
+  background: $body-bg-color;
+}
+
+.header {
+  height: rem(54);
+  padding: 0 rem($padding-4n);
+  display: flex;
+  justify-content: space-between;
+  background: $white;
+  border-bottom: $border-solid-1;
+  flex: 0 0 rem(54);
+
+  .number {
+    font-size: rem($font-size-middle);
+    text-align: left;
+    color: $text-color-primary;
+    line-height: rem(54);
+  }
+  .sort {
+    display: flex;
+    align-items: center;
+    font-size: rem($font-size-primary);
+    line-height: rem(54);
+    text-align: left;
+    color: $text-color-secondary;
+    .sortText {
+      padding-left: rem($padding-1n);
+    }
+    .sortIcon {
+      font-size: rem($font-size-primary) !important;
+      position: relative;
+      top: -1.2px;
+    }
+  }
+}
+
+.body {
+  background: $white;
+
+  .commentItems {
+    border-bottom: $border-solid-1;
+
+    &.isLastOne {
+      border-bottom: none;
+    }
+  }
+}
+

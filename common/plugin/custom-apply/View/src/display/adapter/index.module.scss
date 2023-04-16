@@ -1,0 +1,155 @@
+@import '@common/styles/index.scss';
+
+.wrapper {
+  padding: $padding-6n;
+  background-color: $text-bg-color;
+  border-radius: $border-radius-small;
+  &-header {
+    margin-bottom: $margin-4n;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1;
+    &__left {
+      flex: 1;
+      font-weight: bold;
+      font-size: $font-size-middle;
+      color: $text-color-primary;
+      @include text-ellipsis();
+    }
+    &__right {
+      width: 190px;
+      font-size: $font-size-label;
+      text-align: right;
+      color: $text-color-secondary;
+    }
+  }
+  &-content {
+    margin-bottom: $margin-4n;
+    &__detail {
+      font-size: $font-size-base;
+      line-height: $font-line-height-middle;
+      color: $text-color-primary;
+      white-space: pre-wrap;
+      word-break: break-all;
+      &.text-clamp {
+        @include lamp-clamp(2);
+      }
+    }
+    .more {
+      font-size: $font-size-base;
+      line-height: $font-line-height-middle;
+      text-align: right;
+      cursor: pointer;
+    }
+    &__tip {
+      margin-bottom: $margin-2n;
+      display: flex;
+      align-items: flex-start;
+      font-size: $font-size-label;
+      color: $text-color-secondary;
+      :global {
+        .dzq-icon {
+          margin-right: $margin-2n;
+          line-height: 20px;
+        }
+      }
+      .wrapper-tip__content {
+        line-height: 20px;
+      }
+      .wrapper-tip_title {
+        font-size: $font-size-label;
+        margin-right: $margin-1n;
+      }
+      .wrapper-tip_detail {
+        font-size: $font-size-label;
+      }
+      &.mt4n {
+        margin-top: $margin-4n;
+      }
+    }
+    &__limit {
+      margin-top: $margin-4n;
+      font-size: $font-size-base;
+      color: $text-color-secondary;
+    }
+  }
+  &-footer {
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .users {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        :global {
+          .dzq-avatar {
+            border: 1px solid $white;
+            &:nth-child(1) {
+              position: absolute;
+              left: 0;
+              z-index: 3;
+            }
+            &:nth-child(2) {
+              position: absolute;
+              left: 20px;
+              z-index: 2;
+            }
+            &:nth-child(3) {
+              position: absolute;
+              left: 40px;
+              z-index: 1;
+            }
+          }
+        }
+        &.one {
+          padding-left: 32px;
+        }
+        &.two {
+          padding-left: 52px;
+        }
+        &.three {
+          padding-left: 72px;
+        }
+      }
+      .m10 {
+        font-size: $font-size-base;
+        color: $text-color-primary;
+      }
+    }
+  }
+  &.h5 {
+    .wrapper-content__tip {
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    // .wrapper-tip_title {
+    //   margin-bottom: $margin-2n;
+    // }
+    .wrapper-tip__content {
+      display: inline-flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+}
+.text-primary {
+  color: $primary-color;
+}
+.donebtn {
+  margin-top: $margin-4n;
+  color: $white !important;
+  background-color: $text-color-placeholder !important;
+  border-radius: $border-radius-small !important;
+  border: 0;
+}
+.isregisterd {
+  background-color: $text-bg-color2 !important;
+  color: $text-color-primary !important;
+  border: none !important;
+}
+.applybtn {
+  width: 116px !important;
+}

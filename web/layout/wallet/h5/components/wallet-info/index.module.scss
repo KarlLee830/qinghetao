@@ -1,0 +1,135 @@
+@import '@common/styles/index.scss';
+
+.containerH5 {
+    background:$primary-color url('/dzq-img/walletbackground.png') 100%  no-repeat padding-box;
+    background-size: cover;
+    padding: {
+        top: rem(22);
+        bottom: rem(27);
+        left: rem(16);
+        right: rem(16);
+    }
+}
+.containerPC {
+    width: rem(330);
+    background: $primary-color;
+    border-radius: rem($border-radius-small);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: rem($padding-5n);
+    .avatar {
+        border: solid rem(3) $white;
+    }
+    .name {
+        
+        font-weight: normal;
+        font-size: rem($font-size-middle);
+        line-height: rem(16.8);
+        text-align: left;
+        color: $white;
+        padding: rem($padding-4n) 0;
+    }
+}
+.totalAmountPC {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    text-align: center;
+    .moneyTitle {
+        
+        font-weight: normal;
+        font-size: rem($font-size-primary);
+        line-height: rem(16.8);
+        padding: rem($padding-2n) 0;
+    }
+    .moneyNum {
+        font-weight: 600;
+        font-size: rem(30);
+        line-height: rem($font-line-height-large);
+        padding: rem($padding-2n) 0 rem($padding-5n) 0;
+    }
+}
+.totalAmountH5 {
+    color: $white;
+    text-align: left;
+    .moneyTitle {
+        
+        font-weight: normal;
+        font-size: rem($font-size-primary);
+        line-height: rem(16.8);
+        padding: rem($padding-2n) 0;
+    }
+    .moneyNum {
+        font-weight: 600;
+        font-size: rem(30);
+        line-height: rem($font-line-height-large);
+        padding: rem($padding-2n) 0 rem($padding-5n) 0;
+    }
+}
+.amountStatusPC {
+    display: flex;
+    justify-content: space-around;
+    color: $white;
+    text-align: center;
+    .statusTitle {
+        
+        font-weight: normal;
+        font-size: rem($font-size-primary);
+        line-height: rem($font-line-height-primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        .icon {
+            margin-left: rem($margin-2n);
+        }
+    }
+    .statusNum {
+        
+        font-weight: normal;
+        font-size: rem($font-size-large);
+        line-height: rem(16.8);
+        padding-top: rem(14) 0;
+    }
+}
+.amountStatusH5 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    text-align: left;
+    .statusTitle {
+        
+        font-weight: normal;
+        font-size: rem($font-size-primary);
+        line-height: rem($font-line-height-primary);
+
+    }
+    .statusNum {
+        
+        font-weight: normal;
+        font-size: rem($font-size-large);
+        line-height: rem(16.8);
+        padding-top: rem(14);
+    }
+    .withdrawalAmount {
+        margin-right: rem(40);
+    }
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: rem(26) 0;
+    .button {
+        width: rem(282);
+        height: rem(36);
+        border-radius: rem($border-radius-small);
+    }
+}

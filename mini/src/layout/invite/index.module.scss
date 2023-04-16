@@ -1,0 +1,270 @@
+@import '@common/styles/index.scss';
+.scroll {
+  width: 100%;
+  height: calc(100vh - 58px - constant(safe-area-inset-bottom));
+  height: calc(100vh - 58px - env(safe-area-inset-bottom));
+  overflow-y: scroll;
+  flex: 1 0 auto;
+  background: $white;
+}
+
+.top_bg {
+  height: rem(180);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: $zindex-backtotop;
+  .top_bg_image {
+    top: 0;
+    left: 0;
+    width: 65%;
+  }
+}
+.content{
+  position: relative;
+  background: $body-bg-color;
+  z-index: $zindex-backtotop;
+  // 用户信息 start
+  .user_info{
+    height: rem(167);
+    background: $comment-bg-color;
+    position: relative;
+  }
+  .user_info_author{
+    width: rem(120);
+    height: rem(120);
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    margin-left: rem(-60);
+    top: rem(-115);
+    border-radius: $border-radius-circle;
+    background: $white;
+    border: rem(3) solid $white;
+    overflow: hidden;
+    z-index: $zindex-backtotop;
+    :global(.dzq-avatar__img),:global(.dzq-avatar__text) {
+      width: rem(118);
+      height: rem(118);
+      line-height: rem(118);
+    }
+  }
+  .user_info_content{
+    width: rem(343);
+    height: rem(213);
+    position: absolute;
+    margin-left: rem(-171.5);
+    left: 50%;
+    top: rem(-55);
+    background: $white;
+    border-radius: $border-radius-small;
+    text-align: center;
+    padding: 0 $padding-4n;
+    box-sizing: border-box;
+  }
+  .user_info_name{
+    font-weight: 600;
+    font-size: $font-size-middle;
+    line-height: $font-line-height-base;
+    color: $text-color-primary;
+    opacity: 1;
+    margin-top: rem(68);
+    max-width: rem(343);
+    @include text-ellipsis();
+  }
+  .user_info_tag{
+    font-weight: normal;
+    font-size: $font-size-small;
+    line-height: $font-line-height-small;
+    color: $text-color-secondary;
+  }
+  .memberBadgeBox {
+    padding-top: $padding-1n;
+  }
+  .user_info_invite{
+    width: rem(311);
+    height: rem(78);
+    margin-top: $margin-5;
+    border-radius: $border-radius-small;
+    background: $body-bg-color;
+  }
+  @mixin userInfoInvite {
+    width: rem(154);
+    height: rem(78);
+    display: inline-block;
+    text-align: center;
+    .invite_num_title{
+      font-weight: normal;
+      font-size: $font-size-base;
+      line-height: $font-line-height-base;
+      color: $text-color-regular;
+      opacity: 1;
+      padding-top: $padding-4n;
+    }
+    .invite_num_content{
+      font-weight: 600;
+      font-size: $font-size-middle;
+      line-height: $font-line-height-base;
+      color: $text-color-primary;
+    }
+  }
+  .invite_num{
+    @include userInfoInvite;
+  }
+  .invite_money{
+    @include userInfoInvite;
+    border-left: rem(1) solid $white;
+  }
+  // 用户信息 end
+
+  // 邀请列表 start
+  .invite_list{
+    box-sizing: border-box;
+    padding: $padding-4n;
+    padding-bottom: 0;
+    background: $white;
+    border-radius: $border-radius-big $border-radius-big 0 0;
+  }
+  .invite_list_title{
+    font-size: $font-size-middle;
+    vertical-align: middle;
+    height: rem(24);
+    margin-bottom: $margin-4n;
+  }
+  .invite_list_titleIcon{
+    line-height: $font-line-height-base;
+    float: left;
+  }
+  .invite_list_titleText{
+    line-height: $font-line-height-base;
+    float: left;
+    font-weight: 600;
+    color: $text-color-primary;
+    padding-left: $padding-2n;
+  }
+  .invite_list_header{
+    height: rem(36);
+    padding: 0 $padding-2n;
+    box-sizing: border-box;
+    border-radius: $border-radius-small $border-radius-small 0 0;
+    background: $comment-bg-color;
+    font-weight: normal;
+    font-size: $font-size-base;
+    text-align: left;
+    color: $text-color-regular;
+  }
+  @mixin inviteListName {
+    display: inline-block;
+    width: rem(110);
+    float: left;
+    line-height: rem(36);
+  }
+  @mixin inviteListMoney {
+    display: inline-block;
+    width: rem(96);
+    float: left;
+    line-height: rem(36);
+  }
+  @mixin inviteListTime {
+    display: inline-block;
+    float: left;
+    line-height: rem(36);
+  }
+  .invite_list_headerName,.invite_list_itemName{
+    @include inviteListName;
+  }
+  .invite_list_headerMoney{
+    @include inviteListMoney;
+  }
+  .invite_list_headerTime{
+    @include inviteListTime;
+  }
+  .invite_list_item{
+    position: relative;
+    align-items: center;
+    display: flex;
+    height: rem(54);
+    line-height: rem(54);
+    padding: 0 $padding-2n;
+    box-sizing: border-box;
+    font-size: $font-size-base;
+  }
+  .invite_list_itemName{
+    @include inviteListName;
+    box-sizing: border-box;
+    padding-right: $padding-2n;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    .invite_list_itemAvatar {
+      width: rem(18);
+      height: rem(18);
+      border-radius: $border-radius-circle;
+      line-height: rem(18);
+      margin-right: $margin-2n;
+    }
+    .invite_list_username {
+      width: calc(100% - 34px);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    view{
+      font-weight: normal;
+      color: $text-color-primary;
+    }
+  }
+  .invite_list_itemMoney{
+    @include inviteListMoney;
+    box-sizing: border-box;
+    padding-right: $padding-2n;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: normal;
+    font-size: $font-size-middle;
+    color: $error-color;
+  }
+  .invite_list_itemTime{
+    @include inviteListTime;
+    @include text-ellipsis;
+    color: $text-color-secondary;
+  }
+  .invite_list_itemLine{
+    height: rem(1);
+    width: calc(100vw - 64px);
+    background: $border-color;
+    position: absolute;
+    left: rem(16);
+    bottom: 0;
+  }
+}
+
+.footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: $padding-2n $padding-4n;
+  background: $white;
+  border-top: $border-solid-1;
+  position: fixed;
+  bottom: $padding-2n;
+  bottom: constant(safe-area-inset-bottom); ///兼容 IOS<11.2/
+  bottom: env(safe-area-inset-bottom); ///兼容 IOS>11.2/
+
+  .button {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: rem(42);
+    border-radius: rem($border-radius-small);
+    color: $white;
+    background-color: $primary-color;
+    border: none;
+    font-weight: normal;
+    font-size: rem($font-size-middle);
+  }
+}

@@ -1,0 +1,47 @@
+@import '@common/styles/index.scss';
+
+.container {
+  width: 100%;
+}
+
+.header {
+
+  font-weight: normal;
+  font-size: rem($font-size-primary);
+  text-align: left;
+  color: $text-color-regular;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  padding: rem($padding-6n) 0;
+  border-bottom: $border-solid-1;
+
+  :global {
+    .dzq-input__inner {
+      border: none;
+
+      font-weight: 600;
+      font-size: rem(30);
+      text-align: left;
+      color: $text-color-placeholder;
+    }
+  }
+
+  .moneyIcon {
+
+    font-weight: 600;
+    font-size: rem(30);
+    text-align: left;
+    color: $text-color-primary;
+  }
+}
+
+.leastMoney {
+  font-weight: normal;
+  font-size: rem($font-size-label);
+  text-align: left;
+  color: $text-color-secondary;
+  padding: rem($padding-6n) 0;
+}

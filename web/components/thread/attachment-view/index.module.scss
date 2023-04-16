@@ -1,0 +1,132 @@
+@import '@common/styles/index.scss';
+.wrapper {
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 rem($padding-4n);
+  height: rem(50);
+  border-radius: rem($border-radius-small);
+  background: $body-bg-color;
+  margin-bottom: rem(8);
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .right {
+      min-width: rem(110);
+      font-size: rem($font-size-label);
+      color: $text-color-regular;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-shrink: 0;
+      & > * {
+        cursor: pointer;
+      }
+      & > * + * {
+        margin-left: rem($padding-4n);
+      }
+      .playIcon {
+        color: $text-color-secondary;
+      }
+    }
+  }
+
+  .span {
+    cursor: pointer;
+  }
+
+  .containerText {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: rem(10);
+    margin-right: rem(8);
+    margin-top: rem(2);
+    flex: 1;
+  }
+  .size {
+    color: $text-color-regular;
+    font-size: rem($font-size-label);
+    line-height: rem(17);
+  }
+  .containerIcon {
+    width: rem(17);
+    height: rem(20);
+  }
+  .content {
+    color: $text-color-primary;
+    font-size: rem($font-size-primary);
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: rem(17);
+  }
+  .a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+.containerPay {
+  justify-content: center;
+  cursor: pointer;
+
+  .content {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: rem(8);
+    margin-right: rem(8);
+    max-width: 70%;
+  }
+}
+
+.audioContainer {
+  margin-bottom: $margin-2n;
+}
+
+.spinner {
+  width: 22px;
+}
+
+:global {
+  .web-office-default-container {
+    z-index: $zindex-backtotop;
+  }
+}
+
+.loadMore {
+  @include cursor-on-pc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  font-size: rem($font-size-primary);
+  line-height: rem($font-line-height-primary);
+  color: $primary-color;
+  padding-top: $padding-2n;
+  .icon {
+    margin-left: $margin-2n;
+    transform: rotateZ(90deg);
+  }
+}

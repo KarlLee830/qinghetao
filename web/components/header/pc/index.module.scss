@@ -1,0 +1,189 @@
+@import '@common/styles/index.scss';
+.header {
+  height: rem(100);
+  width: 100%;
+  display: block;
+  .headerFixedBox {
+    display: flex;
+    justify-content: center;
+    padding: rem($padding-2n);
+    @include media('l-pc') {
+      padding: rem($padding-2n) 1.5%;
+    }
+    @include media('s-pc') {
+      padding: rem($padding-2n) 2%;
+    }
+    box-sizing: border-box;
+    background: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: rem(100);
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+    z-index: $zindex-backtotop;
+    .headerContent {
+      max-width: rem(1420);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left {
+        width: 20%; /*50*/
+        display: flex;
+        align-items: center;
+		text-align: center;
+        .siteLogo {
+		  margin: 0 auto;
+		  text-align: center;
+          /*width: rem(140);
+          height: rem(24);*/
+          /*cursor: pointer;
+          object-fit: contain;*/
+		  
+        }
+      }
+	  .center {
+		  /*display: flex;*/
+		  width: 54.5%;
+		  
+		  .inputBox {
+			left: calc((100vw - 52% - 20% - 22% - 2.7%) / 2 + 21.4%) !important;
+		    margin-left: rem(0);
+			margin-right: rem(28);
+		    flex: 1;
+		    :global {
+		      .dzq-input {
+		        width: 100%;
+		      }
+		      input {
+		        line-height: normal;
+		        /*max-width: rem(580);*/
+		        width: 100%;
+		      }
+		    }
+		  }
+		  .you {
+		  	float: flex;
+			margin-top: rem(10);
+			margin-right: rem(30);
+		  }
+		  .you10 {
+			margin-right: rem(10);
+		  }
+		  .iconList {
+		    float: left;
+		    display: flex;
+			margin-top: rem(15);
+		    align-items: center;
+		    justify-content: flex-start;
+			
+		    .iconItem {
+		      display: flex;
+		      align-items: center;
+		      cursor: pointer;
+		  
+		      .message {
+		        display: flex;
+		        flex-wrap: nowrap;
+		        align-items: center;
+		      }
+		  
+		      &:hover {
+		        p,
+		        div {
+		          color: $primary-color;
+		        }
+		      }
+		      &:not(:last-child) {
+		        margin-right: rem(32);
+		      }
+		      div {
+		        color: $text-color-secondary;
+		      }
+		      .iconText {
+		        font-size: rem($font-size-primary);
+		        margin-left: rem($margin-2n);
+		        color: $text-color-regular
+		      }
+		      @include media('xl-pc') {
+		        .iconText {
+		          display: block;
+		        }
+		      }
+		      @include media('l-pc') {
+		        .iconText {
+		          display: block;
+		        }
+		      }
+		      @include media('s-pc') {
+		        .iconText {
+		          display: none;
+		        }
+		      }
+		    }
+		  }
+	  }
+      .right {
+        display: flex;
+        align-items: center;
+		width: 20%; /*50*/
+
+        :global {
+          .dzq-dropdown-menu {
+            top: rem(45);
+          }
+          .dzq-dropdown-menu__item {
+            padding: rem($padding-10) 0;
+            line-height: rem(26);
+            color: $text-color-regular;
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+
+        
+        .border {
+          height: rem(24);
+          width: rem(1);
+          background-color: $border-color;
+          margin: 0 rem(24);
+		  float: left;
+        }
+
+        .userInfo {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+
+          .userName {
+            margin-left: rem(8);
+            color: $text-color-regular;
+            font-size: rem($font-size-primary);
+            max-width: rem(200);
+            @include text-ellipsis();
+            height: rem(20);
+            line-height: rem(20);
+          }
+          .userBtn {
+            margin-right: rem(16);
+            padding: rem($padding-1n) rem(29);
+            line-height: rem(26);
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+          .registerBtn {
+            color: $primary-color;
+            border-color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  .headerDropMenuIcon {
+    margin-right: rem(4);
+  }
+}

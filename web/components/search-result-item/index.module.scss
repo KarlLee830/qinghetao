@@ -1,0 +1,102 @@
+@import '@common/styles/index.scss';
+
+/* user */
+.user {
+  height: rem(70);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $border-color;
+  margin: 0 rem($padding-4n);
+  .left {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .right {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .image {
+    flex: none;
+    width: rem(38);
+    height: rem(38);
+    object-fit: cover;
+    margin-right: rem($padding-2n);
+    border-radius: 50%;
+    &.empty {
+      background-color: $mask-bg-color;
+    }
+  }
+  .name {
+    flex: 1;
+    font-size: rem($font-size-primary);
+    line-height: rem($font-line-height-primary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+  }
+  .group {
+    flex: 1;
+    font-size: rem($font-size-label);
+    line-height: rem($font-line-height-primary);
+    color: $text-color-secondary;
+    margin-right: rem($padding-2n);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+  }
+}
+/* topic */
+.topic {
+  padding: rem($padding-2n) rem($padding-4n);
+  background-color: $white;
+  .title {
+    font-size: rem($font-size-middle);
+    line-height: rem($font-line-height-primary);
+    font-weight: $font-weight-bold;
+  }
+  .content {
+    display: box;
+    font-size: rem($font-size-middle);
+    line-height: rem(26);
+    max-height: rem(50);
+    margin: rem($padding-4n) 0;
+    @include lamp-clamp($line: 2);
+    .richText{
+      text-overflow: -o-ellipsis-lastline;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      font-size: rem($font-size-middle);
+    }
+  }
+  .tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: rem($padding-2n);
+    border-bottom: 1px solid $border-color;
+    .tag {
+      font-size: rem($font-size-label);
+      line-height: rem($font-line-height-small);
+      margin-right: rem($padding-2n);
+      color: $text-color-secondary;
+    }
+  }
+}
+
+.hr {
+  height: rem(10);
+  background-color: $body-bg-color;
+}

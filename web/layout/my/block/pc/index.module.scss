@@ -1,0 +1,100 @@
+@import '@common/styles/index.scss';
+.container {
+  background-color: $comment-bg-color;
+  width: 100%;
+  .content {
+    width: 100%;
+    min-width: rem(652);
+    .section {
+      padding: 0 rem($padding-6n);
+      background: $white;
+      border-radius: rem($border-radius-small);
+      box-shadow: 0 0 rem($padding-2n) rgba(241, 243, 244, 0.16);
+      margin-bottom: rem($margin-10);
+    }
+  }
+  .title {
+    padding: 0 rem($padding-6n);
+    border-radius: rem($border-radius-small);
+    background: $white;
+  }
+  .right {
+    // width: rem(286);
+    overflow: hidden;
+  }
+  .threadContent {
+    border-radius: rem($border-radius-small);
+    padding: 0 rem($padding-6n);
+    margin-bottom: rem($margin-10);
+    overflow: hidden;
+  }
+}
+
+:global {
+  .myblock {
+
+    @include heightMedia(855px, 800px) {
+      .user-center-follow-item:nth-last-child(-n + 2) {
+        display: none;
+      }
+      .user-center-follow-item:nth-child(n + 2),
+      .user-center-follow-item:nth-child(1) {
+        display: block;
+      }
+    }
+
+    @include heightMedia(800px, 745px) {
+      .user-center-follow-item:nth-last-child(-n + 3) {
+        display: none;
+      }
+      .user-center-follow-item:nth-child(n + 2),
+      .user-center-follow-item:nth-child(1) {
+        display: block;
+      }
+    }
+
+    @include heightMedia(745px) {
+      .user-center-follow-mini {
+        display: flex !important;
+      }
+
+      .user-center-follow-item {
+        display: none !important;
+      }
+    }
+
+    @include heightMedia(660px, 605px) {
+      .user-center-friends-item:nth-last-child(-n + 2) {
+        display: none;
+      }
+      .user-center-friends-item:nth-child(n + 2),
+      .user-center-friends-item:nth-child(1) {
+        display: block;
+      }
+    }
+
+    @include heightMedia(605px, 550px) {
+      .user-center-friends-item:nth-last-child(-n + 3) {
+        display: none;
+      }
+      .user-center-friends-item:nth-child(n + 2),
+      .user-center-friends-item:nth-child(1) {
+        display: block;
+      }
+    }
+    @include heightMedia(550px) {
+      .user-center-friends-mini {
+        display: flex !important;
+      }
+
+      .user-center-friends-item {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.rightSide {
+  position: relative !important;
+}
+

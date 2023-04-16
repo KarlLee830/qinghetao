@@ -1,0 +1,8 @@
+@import '@common/styles/mixin/login.scss';
+
+.otherLogin-tips{
+  @include otherLoginText;
+}
+.pc_otherLogin_tips{
+  @include pc_otherLoginText;
+}

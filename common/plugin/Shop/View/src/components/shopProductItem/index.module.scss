@@ -1,0 +1,75 @@
+@import '@common/styles/index.scss';
+
+.productItem {
+    margin-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .productPic {
+        img {
+            width: 120px;
+            height: 120px;
+        }
+
+        image {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    .productItemBackgroundWrapper {
+        padding: 12px;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            background-color: $body-bg-color;
+        }
+    }
+
+    .productItemWrapper {
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid #eff1f3;
+        cursor: pointer;
+
+        .productInfoWrapper {
+            max-width: 120px;
+            overflow: hidden;
+            box-sizing: border-box;
+
+            .productInfoId {
+                background-color: $text-bg-color2;
+                color: $text-color-secondary;
+                padding: 2px 4px;
+                width: auto;
+                display: inline-block;
+                margin-bottom: 4px;
+            }
+
+
+            .productInfoTitle {
+                margin-bottom: 4px;
+            }
+
+            .productInfoPrice {
+                color: $error-color;
+                font-weight: 600;
+            }
+
+            background-color: $white;
+            padding: 8px;
+        }
+    }
+}
+
+.productItemMini {
+    width: 50%;
+    margin-right: 0px;
+
+    :global {
+        .dzq-checkbox-wrap {
+            margin-inline-end: 0;
+        }
+    }
+}

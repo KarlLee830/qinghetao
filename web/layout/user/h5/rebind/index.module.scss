@@ -1,0 +1,113 @@
+@import '@common/styles/mixin/login.scss';
+@import '@common/styles/index.scss';
+.container {
+  height: 100vh;
+}
+
+.content {
+  @include content;
+  flex: 1;
+  .title {
+    @include title;
+  }
+  .input {
+    @include input;
+  }
+  .button {
+    @include button;
+  }
+  .functionalRegion {
+    @include functionalRegion;
+  }
+}
+
+// ------------------PC
+.pc_container {
+  @include pc_container;
+}
+.pc_content {
+  @include pc_content;
+  margin-top: rem(66);
+  .pc_title {
+    @include pc_title;
+  }
+  .pc_otherLogin_title {
+    @include pc_otherLoginText;
+    font-size: $font-size-base;
+  }
+  .pc_otherLogin_tips{
+    @include pc_otherLoginText;
+  }
+  .pc_tips{
+    @include pc_titleTips;
+    text-align: center;
+  }
+}
+
+.statusWrap {
+  .hint {
+    margin-top: rem($margin-4n);
+    font-size: $font-size-middle;
+    line-height: $font-line-height-base;
+    color: $text-color-regular;
+    text-align: center;
+  }
+  .statusBottom {
+    color: $text-color-secondary;
+    font-size: $font-size-middle;
+    line-height: $font-line-height-small;
+    margin-top: rem($margin-4n * 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @keyframes loading
+    {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+    }
+    .statusBottomIcon {
+      animation: loading 2s linear infinite;
+      margin-right: rem($margin-2n);
+    }
+  }
+}
+.rebind_explain_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  place-self: flex-start;
+  margin-top: rem(38);
+  .rebind_explain_index {
+    width: rem(28);
+    height: rem(28);
+    background: $primary-color;
+    border-radius: $border-radius-circle;
+    text-align: center;
+    line-height: rem(28);
+    color: $white;
+  }
+  .rebind_explain_value {
+    font-size: $font-size-middle;
+    line-height: $font-line-height-small;
+    color: $text-color-primary;
+    margin-left: rem(14);
+  }
+}
+
+.userCenterReturn {
+  width: 100%;
+  margin-top: rem($margin-6n);
+  padding-right: rem($padding-6n);
+  box-sizing: border-box;
+  font-size: rem($font-size-base);
+  line-height: 22px;
+  color: $text-color-secondary;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  .userCenterReturnIcon {
+    margin-right: rem(6);
+  }
+}

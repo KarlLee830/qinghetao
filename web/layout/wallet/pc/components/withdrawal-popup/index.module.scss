@@ -1,0 +1,99 @@
+@import '@common/styles/index.scss';
+
+.container {
+  box-sizing: content-box;
+  width: rem(361);
+  margin: 0 auto;
+  border-radius: rem(5);
+  background: $white;
+  padding: rem($padding-6n);
+}
+.rechargeContainer {
+  height: rem(234);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: rem(12);
+
+  .title {
+    
+    font-weight: 600;
+    font-size: rem($font-size-middle);
+    text-align: left;
+    color: $text-color-primary;
+    padding-left: rem($padding-4n);
+  }
+}
+.rechargeHeader {
+  padding-bottom: $padding-6n;
+}
+
+.availableAmount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: rem($padding-6n);
+  .text {
+    
+    font-weight: normal;
+    font-size: rem($font-size-primary);
+    text-align: left;
+    color: $text-color-regular;
+    padding: rem(12) 0;
+    opacity: 1;
+  }
+  .moneyNum {
+    
+    font-weight: 600;
+    font-size: 30px;
+    text-align: left;
+    color: $text-color-primary;
+  }
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  :global {
+    .dzq-button {
+      width: rem(248);
+      height: rem(36);
+    }
+  }
+}
+.rechargeButton {
+  margin-top: $margin-2n;
+}
+
+.bgBtnColor {
+  :global {
+    .dzq-button--primary.is-mouseenter {
+      @include button-primary()
+    }
+  }
+}
+
+.payment {
+  margin: 0 rem(-$margin-6n);
+  padding-top: rem($padding-10);
+  background: $body-bg-color
+}
+
+
+.title {
+  font-size: rem($font-size-middle);
+  color: $text-color-primary;
+  margin-top: rem(rem($margin-4n));
+}
+
+.info {
+  margin-top: rem($margin-2n);
+  font-size: rem($font-size-base);
+  color: $text-color-regular;
+  line-height: $font-line-height-base;
+  word-break: break-all;
+}

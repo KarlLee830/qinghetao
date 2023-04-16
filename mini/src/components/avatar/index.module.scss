@@ -1,0 +1,27 @@
+@import '@common/styles/index.scss';
+
+.avatarWrapper {
+    // width: 36px;
+    // height: 36px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text {
+        color: $white;
+        font-size: $font-size-middle;
+    }
+    :global {
+        .dzq-avatar__img {
+            border-radius: 50%;
+            background-color: transparent;
+        }
+
+        .dzq-avatar--big {
+            text {
+                font-size: 48px;
+            }
+        }
+    }
+}

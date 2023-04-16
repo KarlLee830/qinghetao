@@ -1,0 +1,166 @@
+@import '@common/styles/index.scss';
+
+.containerH5 {
+  background: $primary-color;
+  padding: rem($padding-4n);
+}
+.containerPC {
+  height: 100%;
+  width: 100%;
+  background: $primary-color url('/dzq-img/wallet-pc-bg.png') 100% no-repeat padding-box;
+  background-size: cover;
+  border-radius: rem($border-radius-small);
+  padding: rem($padding-6n);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .avatarWrap {
+    max-width: none;
+  }
+
+  .avatar {
+    width: rem(120);
+    height: rem(120);
+    border: solid rem(3) $white;
+    box-sizing: border-box;
+  }
+  .name {
+    font-weight: normal;
+    font-size: rem($font-size-middle);
+    text-align: left;
+    color: $white;
+    height: rem(22);
+    line-height: rem($font-line-height-small);
+    margin: rem($margin-2n) 0 rem($margin-6n);
+    max-width: calc(100% - 24px);
+    @include text-ellipsis();
+  }
+}
+.totalAmountPC {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  text-align: center;
+  margin-bottom: rem($margin-4n);
+  .moneyTitle {
+    font-weight: normal;
+    font-size: rem($font-size-primary);
+    line-height: rem($font-line-height-small);
+    height: rem(22);
+    margin-bottom: rem($margin-2n);
+  }
+  .moneyNum {
+    font-weight: 600;
+    font-size: rem(30);
+    line-height: rem(42);
+    height: rem(42);
+  }
+}
+.totalAmountH5 {
+  color: $white;
+  text-align: left;
+  padding-top: rem(40);
+  .moneyTitle {
+    font-weight: normal;
+    font-size: rem($font-size-primary);
+    line-height: rem(16.8);
+    padding: rem($padding-2n) 0;
+  }
+  .moneyNum {
+    font-weight: 600;
+    font-size: rem(30);
+    line-height: rem($font-line-height-large);
+    padding: rem($padding-2n) 0 rem($padding-5n) 0;
+  }
+}
+.amountStatusPC {
+  display: flex;
+  justify-content: space-around;
+  color: $white;
+  text-align: center;
+  .statusTitle {
+    font-weight: normal;
+    font-size: rem($font-size-primary);
+    line-height: rem(20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(20);
+    .icon {
+      margin-left: rem($margin-2n);
+    }
+  }
+  .statusTitleFreeze {
+    font-weight: normal;
+    font-size: rem($font-size-primary);
+    line-height: rem(20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .statusNum {
+    font-weight: normal;
+    font-size: rem($font-size-large);
+    margin-top: rem($margin-2n);
+    height: rem(28);
+    line-height: rem(28);
+  }
+  .frozenAmount {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .frozenIcon {
+    line-height: rem(20);
+    margin-left: rem($margin-2n);
+  }
+}
+.amountStatusH5 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  text-align: left;
+  .statusTitle {
+    font-weight: normal;
+    font-size: rem($font-size-primary);
+    line-height: rem($font-line-height-primary);
+  }
+  .statusNum {
+    font-weight: normal;
+    font-size: rem($font-size-large);
+    line-height: rem(16.8);
+    padding: rem(14) 0;
+  }
+  .withdrawalAmount {
+    margin-right: rem(40);
+  }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: rem($margin-6n);
+  .buttonBox {
+    .button {
+      width: rem(282);
+      height: rem(36);
+      border-radius: rem($border-radius-small);
+      background: $white;
+      margin-bottom: $margin-4n;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

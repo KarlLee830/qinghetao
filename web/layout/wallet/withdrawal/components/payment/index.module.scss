@@ -1,0 +1,63 @@
+@import '@common/styles/index.scss';
+
+.pay {
+  background: $white;
+  padding: 0 rem($padding-4n);
+  border-radius: rem(10px) rem(10px) 0 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.payItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: rem($padding-4n) 0;
+  border-bottom: $border-solid-1;
+  font-size: rem($font-size-base);
+
+  &.title {
+    font-size: rem($font-size-middle);
+    color: $text-color-primary;
+    line-height: $font-line-height-base;
+  }
+
+  &.noborder {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  &.tips {
+    color: $text-color-secondary;
+  }
+
+  .label {
+    color: $text-color-primary;
+    margin-right: rem($margin-2n);
+
+    &.checked {
+      color: $primary-color;
+    }
+  }
+
+  .input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    :global {
+      .dzq-input__inner {
+        color: $text-color-regular;
+        border: none;
+        height: rem(20);
+        padding-left: 0;
+        padding: 0;
+        line-height: 1;
+      }
+    }
+  }
+
+  .check {
+    margin-left: auto;
+    padding: 0;
+  }
+}
